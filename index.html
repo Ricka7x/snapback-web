@@ -3,297 +3,431 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Snapback - Organize Your Mac Windows Instantly</title>
-  <meta name="description" content="Organize your Mac windows instantly. Save your perfect workspace. Restore it with one click. Snapback transforms chaotic window management into a streamlined workflow.">
+  <title>Snapback - Your Perfect Workspace. Instantly.</title>
+  <meta name="description" content="Snap windows into place. Save your layout. Restore everything with one shortcut. Snapback is the premium window manager for macOS.">
   <link rel="icon" href="src/assets/logo.ico" type="image/x-icon">
-  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="src/css/style.css?v=8">
 </head>
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar text-primary">
+  <nav class="navbar">
     <div class="container">
       <div class="logo">
         <img src="src/assets/logo.svg" alt="Snapback Logo">
         Snapback
       </div>
       <div class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#workspaces">Workspaces</a>
-        <a href="#compare">Compare</a>
+        <a href="#experience">Experience</a>
+        <a href="#displays">Displays</a>
+        <a href="#faq">FAQ</a>
         <a href="#download" class="btn btn-sm btn-primary">Download Free</a>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- 1. Hero — Minimal. Bold. Confident. -->
   <header class="hero">
     <h1 class="reveal">Your Perfect Workspace, <br>One Click Away</h1>
     <p class="reveal" style="transition-delay: 0.1s;">Stop wasting time arranging windows. Snap them instantly, save your ideal layouts, and restore your entire workspace with a single keystroke.</p>
     
     <div class="hero-ctas reveal" style="transition-delay: 0.2s;">
-      <a href="#download" class="btn btn-primary">Download Free for macOS</a>
+      <a href="#download" class="btn btn-primary">Download Free</a>
       <button class="btn btn-secondary" id="watch-demo-btn">Watch Demo</button>
     </div>
 
-    <!-- Animated Hero Visual -->
-    <div class="hero-visual reveal" style="transition-delay: 0.3s;" id="hero-animation" data-state="messy">
-      <div class="animated-window win-1">
-        <div class="window-header">
-          <div class="window-dot dot-red"></div>
-          <div class="window-dot dot-yellow"></div>
-          <div class="window-dot dot-green"></div>
+    <!-- Animated Hero Visual — Mac Mockup -->
+    <div class="hero-mac-container reveal" style="transition-delay: 0.3s;">
+      <div class="hero-mac-camera"></div>
+      <div class="hero-visual" id="hero-animation" data-state="messy">
+        <!-- Keyboard Shortcut Overlay -->
+        <div class="shortcut-overlay" id="shortcut-overlay">
+          <span class="key">&#x2303;</span>
+          <span class="key">&#x2325;</span>
+          <span class="key">1</span>
         </div>
-        <!-- Mock Content -->
-        <div style="padding: 20px; color: var(--text-secondary);">
-          <div style="width: 50%; height: 12px; background: var(--card-border); border-radius: 6px; margin-bottom: 12px;"></div>
-          <div style="width: 80%; height: 8px; background: var(--card-border); border-radius: 4px; margin-bottom: 8px;"></div>
-          <div style="width: 70%; height: 8px; background: var(--card-border); border-radius: 4px; margin-bottom: 8px;"></div>
+
+        <div class="animated-window win-1">
+          <div class="window-header">
+            <div class="window-dot dot-red"></div>
+            <div class="window-dot dot-yellow"></div>
+            <div class="window-dot dot-green"></div>
+          </div>
+          <div class="window-body">
+            <div class="skel-line w-50"></div>
+            <div class="skel-line w-80"></div>
+            <div class="skel-line w-65"></div>
+          </div>
         </div>
-      </div>
-      
-      <div class="animated-window win-2">
-        <div class="window-header">
-          <div class="window-dot dot-red"></div>
-          <div class="window-dot dot-yellow"></div>
-          <div class="window-dot dot-green"></div>
+        
+        <div class="animated-window win-2">
+          <div class="window-header">
+            <div class="window-dot dot-red"></div>
+            <div class="window-dot dot-yellow"></div>
+            <div class="window-dot dot-green"></div>
+          </div>
+          <div class="window-body">
+            <div class="skel-block"></div>
+            <div class="skel-block"></div>
+            <div class="skel-block accent"></div>
+          </div>
         </div>
-        <!-- Mock Content -->
-        <div style="padding: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
-          <div style="width: 60px; height: 60px; background: var(--card-border); border-radius: 12px;"></div>
-          <div style="width: 60px; height: 60px; background: var(--card-border); border-radius: 12px;"></div>
-          <div style="width: 60px; height: 60px; background: rgba(0,122,255,0.1); border-radius: 12px;"></div>
-        </div>
-      </div>
-      
-      <div class="animated-window win-3">
-        <div class="window-header">
-          <div class="window-dot dot-red"></div>
-          <div class="window-dot dot-yellow"></div>
-          <div class="window-dot dot-green"></div>
-        </div>
-        <!-- Mock Content -->
-        <div style="padding: 20px;">
-          <div style="width: 100%; height: 8px; background: var(--card-border); border-radius: 4px; margin-bottom: 8px;"></div>
-          <div style="width: 90%; height: 8px; background: var(--card-border); border-radius: 4px; margin-bottom: 8px;"></div>
-          <div style="width: 95%; height: 8px; background: var(--card-border); border-radius: 4px; margin-bottom: 8px;"></div>
-          <div style="width: 85%; height: 8px; background: var(--card-border); border-radius: 4px; margin-bottom: 8px;"></div>
+        
+        <div class="animated-window win-3">
+          <div class="window-header">
+            <div class="window-dot dot-red"></div>
+            <div class="window-dot dot-yellow"></div>
+            <div class="window-dot dot-green"></div>
+          </div>
+          <div class="window-body">
+            <div class="skel-line w-full"></div>
+            <div class="skel-line w-90"></div>
+            <div class="skel-line w-80"></div>
+            <div class="skel-line w-95"></div>
+          </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Features Grid -->
-  <section id="features" class="features container">
-    <div class="section-header reveal">
-      <h2>Transform Chaotic to Organized</h2>
-      <p>Everything you need to master your macOS workflow without touching a mouse.</p>
+  <!-- 2. The "Experience" Section -->
+  <section id="experience" class="experience-section">
+
+    <!-- 2a. Precision in Every Movement -->
+    <div class="experience-block reveal">
+      <div class="container text-center">
+        <h2>Precision in Every Movement</h2>
+        <p>Snap windows to halves, quarters, or custom zones with fully customizable keyboard shortcuts.</p>
+      </div>
+      <div class="container">
+        <div class="snap-demo-visual">
+          <div class="snap-mac-container">
+            <div class="snap-screen">
+              <div class="snap-window snap-win-main">
+                <div class="window-header"><div class="window-dot dot-red"></div><div class="window-dot dot-yellow"></div><div class="window-dot dot-green"></div></div>
+                <div class="window-body"><div class="skel-line w-65"></div><div class="skel-line w-full"></div><div class="skel-line w-80"></div></div>
+              </div>
+              <div class="snap-window snap-win-side">
+                <div class="window-header"><div class="window-dot dot-red"></div><div class="window-dot dot-yellow"></div><div class="window-dot dot-green"></div></div>
+                <div class="window-body"><div class="skel-block"></div><div class="skel-block accent"></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="floating-keys">
+            <span class="key">&#x2303;</span>
+            <span class="key">&#x2325;</span>
+            <span class="key">&#x2190;</span>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="feature-grid">
-      <!-- Feature 1 -->
-      <div class="feature-card reveal" style="transition-delay: 0.1s;">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><path d="M4 8V4M4 4H8M4 4L9 9M20 8V4M20 4H16M20 4L15 9M4 16V20M4 20H8M4 20L9 15M20 16V20M20 20H16M20 20L15 15" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>Instant Window Control</h3>
-        <p>Snap windows to halves, quarters, thirds, or custom positions with global keyboard shortcuts. Drag-to-snap functionality included with visual indicators.</p>
+    <!-- 2b. Save Your Setup -->
+    <div class="experience-block reveal">
+      <div class="container text-center">
+        <h2>Save Your Setup</h2>
+        <p>Capture your entire workspace — every window, every display, exactly as you left it.</p>
       </div>
-
-      <!-- Feature 2 -->
-      <div class="feature-card reveal" style="transition-delay: 0.2s;">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><path d="M8 7H5A2 2 0 003 9v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="container">
+        <div class="workspace-panel">
+          <div class="panel-header">
+            <span class="panel-title">Saved Workspaces</span>
+            <span class="panel-action">+ New</span>
+          </div>
+          <div class="workspace-entry">
+            <div class="workspace-info">
+              <span class="workspace-name">Morning Focus</span>
+              <span class="workspace-meta">3 apps &middot; Main display</span>
+            </div>
+            <div class="workspace-shortcut">
+              <span class="key small">&#x2303;</span>
+              <span class="key small">&#x2325;</span>
+              <span class="key small">1</span>
+            </div>
+          </div>
+          <div class="workspace-entry active">
+            <div class="workspace-info">
+              <span class="workspace-name">Deep Work</span>
+              <span class="workspace-meta">2 apps &middot; Full screen</span>
+            </div>
+            <div class="workspace-shortcut">
+              <span class="key small">&#x2303;</span>
+              <span class="key small">&#x2325;</span>
+              <span class="key small">2</span>
+            </div>
+          </div>
+          <div class="workspace-entry">
+            <div class="workspace-info">
+              <span class="workspace-name">Meetings</span>
+              <span class="workspace-meta">4 apps &middot; 2 displays</span>
+            </div>
+            <div class="workspace-shortcut">
+              <span class="key small">&#x2303;</span>
+              <span class="key small">&#x2325;</span>
+              <span class="key small">3</span>
+            </div>
+          </div>
         </div>
-        <h3>Save Your Setup</h3>
-        <p>Capture your entire workspace layout in one click. Save positions, app combinations, and monitor layouts into custom workspaces with visual previews.</p>
       </div>
+    </div>
 
-      <!-- Feature 3 -->
-      <div class="feature-card reveal" style="transition-delay: 0.3s;">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14H11V21L20 10H13Z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <h3>One-Click Restore</h3>
-        <p>Switch between tasks seamlessly. Assign custom shortcuts (e.g., ⌃⌥1 for Core Dev, ⌃⌥2 for Email) to instantly restore complex multi-window setups.</p>
+    <!-- 2c. Your Shortcuts. Your Rules. -->
+    <div class="experience-block reveal">
+      <div class="container text-center">
+        <h2>Your Shortcuts. Your Rules.</h2>
+        <p>Set your own keybindings. Disable any feature you don't need. Zero conflicts with other apps.</p>
       </div>
+      <div class="container">
+        <div class="customize-visual">
+          <!-- Shortcut Customization Mock -->
+          <div class="customize-card">
+            <div class="customize-header">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span>Shortcut Preferences</span>
+            </div>
+            <div class="shortcut-row">
+              <span class="shortcut-label">Snap Left</span>
+              <div class="shortcut-keys">
+                <span class="key small">&#x2303;</span>
+                <span class="key small">&#x2325;</span>
+                <span class="key small">&#x2190;</span>
+              </div>
+            </div>
+            <div class="shortcut-row">
+              <span class="shortcut-label">Snap Right</span>
+              <div class="shortcut-keys">
+                <span class="key small">&#x2303;</span>
+                <span class="key small">&#x2325;</span>
+                <span class="key small">&#x2192;</span>
+              </div>
+            </div>
+            <div class="shortcut-row">
+              <span class="shortcut-label">Restore Workspace</span>
+              <div class="shortcut-keys">
+                <span class="key small">&#x2303;</span>
+                <span class="key small">&#x2325;</span>
+                <span class="key small">1</span>
+              </div>
+            </div>
+          </div>
 
-      <!-- Feature 4 -->
-      <div class="feature-card reveal" style="transition-delay: 0.4s;">
-        <div class="feature-icon">
-          <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" stroke-linecap="round"/><path d="M8 21H16M12 17V21" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <!-- Feature Toggle Mock -->
+          <div class="customize-card">
+            <div class="customize-header">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+              <span>Menu Bar Controls</span>
+            </div>
+            <div class="toggle-row">
+              <span class="toggle-label">Window Snapping</span>
+              <div class="toggle-switch on"><div class="toggle-knob"></div></div>
+            </div>
+            <div class="toggle-row">
+              <span class="toggle-label">Workspace Restore</span>
+              <div class="toggle-switch on"><div class="toggle-knob"></div></div>
+            </div>
+            <div class="toggle-row">
+              <span class="toggle-label">Launch at Login</span>
+              <div class="toggle-switch"><div class="toggle-knob"></div></div>
+            </div>
+          </div>
         </div>
-        <h3>Multi-Monitor Magic</h3>
-        <p>Works flawlessly across all your displays. Smart display detection remembers which windows belong on which monitor even after undocking your laptop.</p>
       </div>
     </div>
   </section>
 
-  <!-- Interactive Workspaces Demo -->
-  <section id="workspaces" class="workspaces-demo container text-center">
-    <div class="section-header reveal">
-      <h2>Context Switching, Perfected</h2>
-      <p>Click a workspace below to see how Snapback instantly rearranges your screen.</p>
-    </div>
-
-    <div class="demo-container reveal">
-      <div class="demo-content">
-        <h2 id="demo-title">Morning Focus</h2>
-        <p id="demo-desc">Start your day organizing emails and calendar before jumping into deep work.</p>
-        
-        <div class="demo-tabs" role="tablist">
-          <!-- Tab 1 -->
-          <button class="demo-tab" role="tab" aria-selected="true" data-target="morning">
-            <div class="demo-tab-info">
-              <span class="tab-title">Morning Focus</span>
-              <span class="tab-shortcut"><span class="kbd">⌃</span> + <span class="kbd">⌥</span> + <span class="kbd">M</span></span>
-            </div>
-          </button>
-          
-          <!-- Tab 2 -->
-          <button class="demo-tab" role="tab" aria-selected="false" data-target="deepwork">
-            <div class="demo-tab-info">
-              <span class="tab-title">Deep Work</span>
-              <span class="tab-shortcut"><span class="kbd">⌃</span> + <span class="kbd">⌥</span> + <span class="kbd">D</span></span>
-            </div>
-          </button>
-          
-          <!-- Tab 3 -->
-          <button class="demo-tab" role="tab" aria-selected="false" data-target="meetings">
-            <div class="demo-tab-info">
-              <span class="tab-title">Meetings</span>
-              <span class="tab-shortcut"><span class="kbd">⌃</span> + <span class="kbd">⌥</span> + <span class="kbd">V</span></span>
-            </div>
-          </button>
-        </div>
-      </div>
-
-      <!-- Demo Windows Grid -->
-      <div class="demo-visual" id="workspace-visual">
-        <div class="window win-a">
-          <div class="window-header"><div class="window-dot dot-red"></div></div>
-          <div style="padding: 10px; font-size: 0.8rem; font-weight: 500; color:var(--text-secondary)">Mail</div>
-        </div>
-        <div class="window win-b">
-          <div class="window-header"><div class="window-dot dot-red"></div></div>
-          <div style="padding: 10px; font-size: 0.8rem; font-weight: 500; color:var(--text-secondary)">Calendar</div>
-        </div>
-        <div class="window win-c">
-          <div class="window-header"><div class="window-dot dot-red"></div></div>
-          <div style="padding: 10px; font-size: 0.8rem; font-weight: 500; color:var(--text-secondary)">To-Do</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Comparison Section -->
-  <section id="compare" class="comparison text-center">
+  <!-- 3. Multi-Display Intelligence -->
+  <section id="displays" class="display-section">
     <div class="container reveal">
-      <div class="section-header">
-        <h2>More Than Just Window Snapping</h2>
-        <p>See why users are switching from classic window managers to Snapback workspaces.</p>
-      </div>
-
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th>Features</th>
-            <th>Default macOS</th>
-            <th>Rectangle / Magnet</th>
-            <th class="snapback-col">Snapback</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Keyboard Snapping</td>
-            <td class="cross">✕</td>
-            <td class="check">✓</td>
-            <td class="snapback-col check">✓ Instant</td>
-          </tr>
-          <tr>
-            <td>Drag-to-Snap Corners</td>
-            <td class="cross">✕</td>
-            <td class="check">✓</td>
-            <td class="snapback-col check">✓</td>
-          </tr>
-          <tr>
-            <td>Save Entire Layouts</td>
-            <td class="cross">✕</td>
-            <td class="cross">✕</td>
-            <td class="snapback-col check">✓ Workspaces</td>
-          </tr>
-          <tr>
-            <td>Visual Layout Previews</td>
-            <td class="cross">✕</td>
-            <td class="cross">✕</td>
-            <td class="snapback-col check">✓ Mini UI</td>
-          </tr>
-          <tr>
-            <td>Smart Monitor Detection</td>
-            <td class="cross">✕</td>
-            <td class="cross">✕</td>
-            <td class="snapback-col check">✓ Fingerprinting</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Social Proof -->
-  <section class="social-proof container reveal">
-    <h2>Loved by Mac Power Users</h2>
-    <div class="testimonial-grid">
-      <div class="testimonial">
-        <p>"Saves me 15 minutes every morning. I undock my laptop, bring it home, plug it in, hit ⌃⌥1 and my entire dev environment snaps exactly where it goes."</p>
-        <div class="author">
-          <div class="author-avatar">J</div>
-          <div>
-            <strong>James K.</strong>
-            <div style="font-size: 0.85rem; color: var(--text-secondary)">Lead Developer</div>
-          </div>
+      <div class="display-content">
+        <div class="display-text">
+          <h2>Built for Real Workstations</h2>
+          <p>Snapback understands your monitors. It remembers where everything belongs — and restores it intelligently.</p>
         </div>
-      </div>
-      <div class="testimonial">
-        <p>"Rectangle + Workspaces = Perfect workflow. I've always wanted a way to save my Figma / Reference images / Browser layouts. Game changer for context switching."</p>
-        <div class="author">
-          <div class="author-avatar" style="background:var(--success-green)">S</div>
-          <div>
-            <strong>Sarah M.</strong>
-            <div style="font-size: 0.85rem; color: var(--text-secondary)">UI/UX Designer</div>
+        <div class="display-visual">
+          <div class="display-setup">
+            <div class="display-monitor big">
+              <div class="display-screen"><div class="display-win dw-1"></div><div class="display-win dw-2"></div></div>
+              <div class="display-stand"></div>
+            </div>
+            <div class="display-laptop">
+              <div class="display-screen"><div class="display-win dw-3"></div></div>
+              <div class="laptop-base"></div>
+            </div>
+            <div class="display-monitor small">
+              <div class="display-screen"><div class="display-win dw-4"></div></div>
+              <div class="display-stand"></div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="testimonial">
-        <p>"Essential for my dual-monitor setup. When I disconnect for a meeting and reconnect, Snapback puts the Zoom window on my laptop and my notes on the big screen instantly."</p>
-        <div class="author">
-          <div class="author-avatar" style="background:var(--alert-amber)">T</div>
-          <div>
-            <strong>Tom R.</strong>
-            <div style="font-size: 0.85rem; color: var(--text-secondary)">Product Manager</div>
-          </div>
+          <div class="display-glow"></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Final CTA -->
-  <section id="download" class="cta-section reveal">
+  <!-- 4. Crafted for macOS -->
+  <section class="native-section">
+    <div class="container reveal text-center">
+      <h2>Designed to Feel Native</h2>
+      <p>Follows Apple design principles from the ground up.</p>
+      <div class="native-features">
+        <div class="native-item">
+          <div class="native-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="2" rx="1"/><path d="M7 8h10M7 12h6"/></svg>
+          </div>
+          <span>Menu bar app</span>
+        </div>
+        <div class="native-item">
+          <div class="native-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <span>SwiftUI animations</span>
+        </div>
+        <div class="native-item">
+          <div class="native-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <span>macOS 12.4+</span>
+        </div>
+        <div class="native-item">
+          <div class="native-icon">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          </div>
+          <span>Native macOS design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. How It Works — 3 Steps -->
+  <section class="steps-section">
+    <div class="container reveal text-center">
+      <h2>Three Steps. That's It.</h2>
+      <p>No setup wizards. No learning curve.</p>
+    </div>
     <div class="container">
-      <h2>Ready for a seamless workflow?</h2>
-      <p>Join 10,000+ productive Mac users instantly organizing their screens.</p>
-      <a href="#" class="btn btn-primary" style="padding: 16px 40px; font-size: 1.2rem;">Download Free (macOS)</a>
-      <p style="margin-top: 16px; font-size: 0.9rem;">Free tier includes full window snapping + 3 workspaces.<br>Requires macOS 12.4+</p>
+      <div class="steps-grid">
+        <div class="step-item reveal" style="transition-delay: 0.1s">
+          <div class="step-number">1</div>
+          <h3>Arrange your windows</h3>
+          <p>Position everything where you want it — code on the left, browser on the right, Slack in the corner.</p>
+        </div>
+        <div class="step-item reveal" style="transition-delay: 0.2s">
+          <div class="step-number">2</div>
+          <h3>Save the layout</h3>
+          <p>Click "Save Workspace" from the menu bar. Give it a name and assign a keyboard shortcut.</p>
+        </div>
+        <div class="step-item reveal" style="transition-delay: 0.3s">
+          <div class="step-number">3</div>
+          <h3>Restore anytime</h3>
+          <p>Hit your shortcut. Every window snaps back to exactly where it was. Works even after a restart.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Pricing (Hidden — app is currently free) -->
+  <!--
+  <section id="pricing" class="pricing-section">
+    <div class="container reveal text-center">
+      <h2>Free to Start</h2>
+      <p>No trials. No gimmicks. Just a tool that works.</p>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <h3>Free</h3>
+          <div class="pricing-price">$0</div>
+          <ul class="pricing-features">
+            <li>Full window snapping</li>
+            <li>Keyboard shortcuts</li>
+            <li>3 saved workspaces</li>
+          </ul>
+          <a href="#download" class="btn btn-secondary">Download Free</a>
+        </div>
+        <div class="pricing-card featured">
+          <h3>Pro</h3>
+          <div class="pricing-price">$9</div>
+          <ul class="pricing-features">
+            <li>Unlimited workspaces</li>
+            <li>Multi-monitor restore</li>
+            <li>Future premium features</li>
+          </ul>
+          <a href="#download" class="btn btn-primary">Get Pro</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  -->
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq-section">
+    <div class="container reveal text-center">
+      <h2>Frequently Asked Questions</h2>
+      <p>Everything you need to know.</p>
+    </div>
+    <div class="container">
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Is Snapback safe to download?</summary>
+          <div class="faq-answer">
+            <p>Absolutely. Snapback is built natively with Swift and distributed directly by the developer. It is code-signed and notarized by Apple, which means macOS has verified the app is free of known malware. You may see a Gatekeeper prompt on first launch — this is normal for apps distributed outside the Mac App Store.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Why isn't Snapback on the Mac App Store?</summary>
+          <div class="faq-answer">
+            <p>Snapback uses system-level accessibility APIs to manage window positions across your desktop. These capabilities are restricted by the Mac App Store's sandboxing requirements. Distributing directly lets us deliver the full experience without limitations.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Is Snapback really free?</summary>
+          <div class="faq-answer">
+            <p>Yes. Snapback is completely free to use with full window snapping, keyboard shortcuts, and workspace saving. No trials, no hidden fees, no subscriptions.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What macOS versions are supported?</summary>
+          <div class="faq-answer">
+            <p>Snapback requires macOS 12.4 (Monterey) or later. It runs natively on both Apple Silicon and Intel Macs.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>Does Snapback work with multiple monitors?</summary>
+          <div class="faq-answer">
+            <p>Yes. Snapback intelligently detects your display configuration using hardware fingerprinting. When you disconnect or reconnect monitors, it remembers where each window belongs and restores them to the correct display.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How is Snapback different from Rectangle or Magnet?</summary>
+          <div class="faq-answer">
+            <p>Rectangle and Magnet are great for snapping individual windows. Snapback goes further — it saves your entire workspace layout (every window, every display) and restores it with a single shortcut. Think of it as window snapping plus workspace memory.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>What if my shortcuts conflict with another app?</summary>
+          <div class="faq-answer">
+            <p>No problem. Every keyboard shortcut in Snapback is fully customizable — change any keybinding to whatever you prefer. You can also disable individual features entirely (like window snapping) from the menu bar if you prefer using another app for that part of your workflow.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Final CTA -->
+  <section id="download" class="final-cta">
+    <div class="container reveal text-center">
+      <h2>Stop Rearranging. Start Working.</h2>
+      <a href="#" class="btn btn-primary btn-lg">Download Snapback Free</a>
+      <p class="cta-subtext">macOS 12.4+ &middot; Menu Bar App</p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer>
-    <div class="container">
-      <div class="logo" style="justify-content: center; margin-bottom: 16px; font-size: 1.2rem; color: var(--text-primary)">
+    <div class="container text-center">
+      <div class="logo" style="justify-content: center; margin-bottom: 16px; font-size: 1.2rem;">
         <img src="src/assets/logo.svg" alt="Snapback Logo">
         Snapback
       </div>
-      <p>Made by Ricardo Ramirez</p>
+      <p class="footer-credit">Made by Ricardo Ramirez</p>
       <div class="footer-links">
         <a href="mailto:support@snapback.app">support@snapback.app</a>
         <a href="https://snapbackapp.com">snapbackapp.com</a>
