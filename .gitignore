@@ -1,0 +1,27 @@
+# Local environment overrides (for sensitive configuration)
+.env.local
+.env.*.local
+
+# Build artifacts
+/scripts/build.log
+/build/
+/tmp/
+
+# macOS
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+
+# Private keys (if stored locally for testing)
+*.key
+*.pem
+!public.key
+
+# Temporary files
+*.tmp
+*.temp
