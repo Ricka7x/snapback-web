@@ -108,4 +108,33 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
+
+    // 4. Video Modal Logic
+    const watchDemoBtn = document.getElementById('watch-demo-btn');
+    const videoModal = document.getElementById('video-modal');
+    const closeModalBtn = document.getElementById('close-modal');
+    const promoVideo = document.getElementById('promo-video');
+
+    if (watchDemoBtn && videoModal && closeModalBtn && promoVideo) {
+        watchDemoBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            videoModal.classList.add('active');
+            promoVideo.play();
+        });
+
+        const closeModal = () => {
+            videoModal.classList.remove('active');
+            promoVideo.pause();
+            promoVideo.currentTime = 0;
+        };
+
+        closeModalBtn.addEventListener('click', closeModal);
+
+        // Close on background click
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                closeModal();
+            }
+        });
+    }
 });

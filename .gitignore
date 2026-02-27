@@ -25,3 +25,8 @@
 # Temporary files
 *.tmp
 *.temp
+
+# Node
+node_modules/
+promo-video/out/
+promo-video/dist/
