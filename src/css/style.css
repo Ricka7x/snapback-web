@@ -176,10 +176,11 @@ img, svg {
   gap: 8px;
 }
 
-.logo svg {
-  width: 28px;
-  height: 28px;
-  fill: var(--primary-accent);
+.logo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .nav-links {
