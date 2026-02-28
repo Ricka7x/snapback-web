@@ -263,11 +263,10 @@ img, svg {
 }
 
 /* Hero Animation - Mac Desktop Metaphor */
-.hero-mac-container {
+/* Shared Mac Mockup Aesthetics */
+.mac-mockup {
   position: relative;
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
   background: var(--surface-color);
   border-radius: 20px;
   border: 1px solid var(--card-border);
@@ -275,7 +274,7 @@ img, svg {
   padding: 12px 12px 16px; 
 }
 
-.hero-mac-camera {
+.mac-camera {
   position: absolute;
   top: 6px;
   left: 50%;
@@ -285,6 +284,11 @@ img, svg {
   border-radius: 50%;
   background: var(--text-primary);
   opacity: 0.2;
+}
+
+.hero-mac-container {
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .hero-visual {
@@ -308,6 +312,7 @@ img, svg {
   box-shadow: var(--shadow-md);
   opacity: 0;
   transition: all 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
 }
 
 .window-header {
@@ -323,6 +328,7 @@ img, svg {
   width: 10px;
   height: 10px;
   border-radius: 50%;
+  flex-shrink: 0;
 }
 .dot-red { background: #FF5F56; }
 .dot-yellow { background: #FFBD2E; }
@@ -346,56 +352,78 @@ img, svg {
   opacity: 1; z-index: 4;
 }
 
-/* 2. Stage State (1 Center, 2 Sidekicks) */
-.hero-visual[data-state="stage"] .win-1 {
+/* 2. pos-1 State (Stage Layout) */
+.hero-visual[data-state="pos-1"] .win-1 {
   top: 15%; left: 15%; width: 70%; height: 75%;
   transform: rotate(0);
   opacity: 1; z-index: 4;
 }
-.hero-visual[data-state="stage"] .win-2 {
+.hero-visual[data-state="pos-1"] .win-2 {
   top: 25%; left: -5%; width: 30%; height: 50%;
   transform: rotate(-5deg);
   opacity: 0.6; z-index: 2;
 }
-.hero-visual[data-state="stage"] .win-3 {
+.hero-visual[data-state="pos-1"] .win-3 {
   top: 25%; left: 75%; width: 30%; height: 50%;
   transform: rotate(5deg);
   opacity: 0.6; z-index: 2;
 }
 
-/* 3. Split State (Half and Half) */
-.hero-visual[data-state="split"] .win-1 {
+/* 3. pos-2 State (Split Layout) */
+.hero-visual[data-state="pos-2"] .win-1 {
   top: 2%; left: 2%; width: 47%; height: 96%;
   transform: rotate(0);
   opacity: 1; z-index: 3;
 }
-.hero-visual[data-state="split"] .win-2 {
+.hero-visual[data-state="pos-2"] .win-2 {
   top: 2%; left: 51%; width: 47%; height: 96%;
   transform: rotate(0);
   opacity: 1; z-index: 3;
 }
-.hero-visual[data-state="split"] .win-3 {
+.hero-visual[data-state="pos-2"] .win-3 {
   top: 50%; left: 50%; width: 0%; height: 0%;
   transform: rotate(0) scale(0);
   opacity: 0; z-index: 1;
 }
 
-/* 4. Grid State (Previously Custom Snapped) */
-.hero-visual[data-state="grid"] .win-1 {
+/* 4. pos-3 State (Grid Layout) */
+.hero-visual[data-state="pos-3"] .win-1 {
   top: 2%; left: 2%; width: 47%; height: 96%;
   transform: rotate(0);
   opacity: 1; z-index: 1;
 }
-.hero-visual[data-state="grid"] .win-2 {
+.hero-visual[data-state="pos-3"] .win-2 {
   top: 2%; left: 51%; width: 47%; height: 47%;
   transform: rotate(0);
   opacity: 1; z-index: 1;
 }
-.hero-visual[data-state="grid"] .win-3 {
+.hero-visual[data-state="pos-3"] .win-3 {
   top: 51%; left: 51%; width: 47%; height: 47%;
   transform: rotate(0);
   opacity: 1; z-index: 1;
 }
+
+/* Shortcut Visibility Mapping */
+.hero-visual[data-state^="shortcut"] .shortcut-overlay {
+  transform: translateX(-50%) scale(1);
+  opacity: 1;
+}
+
+/* Keep previous positions during shortcut phase */
+.hero-visual[data-state="shortcut-1"] .animated-window { transition: none; opacity: 1; }
+.hero-visual[data-state="shortcut-1"] .win-1 { top: 10%; left: 20%; width: 45%; height: 50%; transform: rotate(-3deg); z-index: 3; }
+.hero-visual[data-state="shortcut-1"] .win-2 { top: 30%; left: 45%; width: 45%; height: 55%; transform: rotate(2deg); z-index: 2; }
+.hero-visual[data-state="shortcut-1"] .win-3 { top: 45%; left: 10%; width: 40%; height: 45%; transform: rotate(-1deg); z-index: 4; }
+
+.hero-visual[data-state="shortcut-2"] .animated-window { transition: none; opacity: 1; }
+.hero-visual[data-state="shortcut-2"] .win-1 { top: 15%; left: 15%; width: 70%; height: 75%; transform: rotate(0); z-index: 4; }
+.hero-visual[data-state="shortcut-2"] .win-2 { top: 25%; left: -5%; width: 30%; height: 50%; transform: rotate(-5deg); opacity: 0.6; z-index: 2; }
+.hero-visual[data-state="shortcut-2"] .win-3 { top: 25%; left: 75%; width: 30%; height: 50%; transform: rotate(5deg); opacity: 0.6; z-index: 2; }
+
+.hero-visual[data-state="shortcut-3"] .animated-window { transition: none; opacity: 1; }
+.hero-visual[data-state="shortcut-3"] .win-1 { top: 2%; left: 2%; width: 47%; height: 96%; transform: rotate(0); z-index: 3; }
+.hero-visual[data-state="shortcut-3"] .win-2 { top: 2%; left: 51%; width: 47%; height: 96%; transform: rotate(0); z-index: 3; }
+.hero-visual[data-state="shortcut-3"] .win-3 { top: 50%; left: 50%; width: 0%; height: 0%; transform: rotate(0) scale(0); opacity: 0; z-index: 1; }
 
 /* ============================================
    SECTION STYLES — Premium Apple Aesthetic
@@ -446,9 +474,9 @@ img, svg {
   transition: all 0.25s ease;
 }
 
-.hero-visual[data-state="shortcut"] .shortcut-overlay {
-  transform: translateX(-50%) scale(1);
-  opacity: 1;
+.hero-visual .shortcut-overlay {
+  transform: translateX(-50%) scale(0);
+  opacity: 0;
 }
 
 .key {
@@ -513,18 +541,15 @@ img, svg {
 }
 
 .snap-mac-container {
-  background: var(--surface-color);
-  border: 1px solid var(--card-border);
-  border-radius: 16px;
-  box-shadow: var(--shadow-hero);
-  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .snap-screen {
   aspect-ratio: 16/10;
   background: var(--bg-color);
   position: relative;
-  padding: 24px;
+  /* Removed 24px padding to match Hero style */
 }
 
 .snap-window {
@@ -536,12 +561,58 @@ img, svg {
   overflow: hidden;
 }
 
-.snap-win-main {
-  top: 8%; left: 4%; width: 48%; height: 84%;
+.animated-snap-win {
+  top: 4%; left: 4%; width: 44%; height: 92%;
+  transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.snap-win-side {
-  top: 8%; right: 4%; width: 44%; height: 84%;
+/* Snap Grid Guides */
+.snap-grid-guides {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+}
+
+.grid-line {
+  position: absolute;
+  top: 4%;
+  bottom: 4%;
+  width: 1px;
+  background: var(--card-border);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-left: 1px dashed var(--text-secondary);
+}
+
+/* Guide Visibility Logic */
+.snap-demo-visual[data-state="half"] .line-half { opacity: 0.3; }
+.snap-demo-visual[data-state="vertical-half"] .line-v-half { opacity: 0.3; }
+.snap-demo-visual[data-state="third"] .line-third-1,
+.snap-demo-visual[data-state="third"] .line-third-2 { opacity: 0.3; }
+.snap-demo-visual[data-state="fourth"] .line-fourth-1,
+.snap-demo-visual[data-state="fourth"] .line-fourth-2,
+.snap-demo-visual[data-state="fourth"] .line-fourth-3 { opacity: 0.3; }
+
+.line-half { left: 50%; }
+.line-v-half { top: 50%; width: 96%; height: 1px; left: 2%; border-left: none; border-top: 1px dashed var(--text-secondary); }
+.line-third-1 { left: 33.33%; }
+.line-third-2 { left: 66.66%; }
+.line-fourth-1 { left: 25%; }
+.line-fourth-2 { left: 50%; }
+.line-fourth-3 { left: 75%; }
+
+/* Snap Demo States */
+.snap-demo-visual[data-state="half"] .animated-snap-win {
+  top: 2%; left: 2%; width: 47%; height: 96%;
+}
+.snap-demo-visual[data-state="vertical-half"] .animated-snap-win {
+  top: 2%; left: 2%; width: 96%; height: 47%;
+}
+.snap-demo-visual[data-state="third"] .animated-snap-win {
+  top: 2%; left: 2%; width: 30.66%; height: 96%;
+}
+.snap-demo-visual[data-state="fourth"] .animated-snap-win {
+  top: 2%; left: 2%; width: 22.5%; height: 96%;
 }
 
 .floating-keys {
@@ -1870,4 +1941,112 @@ footer {
 #promo-video {
   display: block;
   outline: none;
+}
+/* ========== RESPONSIVENESS ========== */
+
+@media (max-width: 1024px) {
+  :root {
+    --section-padding: 100px 24px;
+  }
+  
+  .display-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+  }
+  
+  .display-text {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-mac-container {
+    max-width: 100%;
+    padding: 8px 8px 12px;
+  }
+  
+  .app-mockups {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .app-mock {
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .steps-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .display-setup {
+    transform: scale(0.8);
+  }
+  
+  .native-features {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .native-item {
+    flex: 1 1 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 140px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .hero-ctas .btn {
+    width: 100%;
+  }
+  
+  .display-setup {
+    transform: scale(0.6);
+  }
+  
+  .footer-links {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  /* Fix for squished windows on mobile */
+  .window-header {
+    height: 20px;
+    padding: 0 8px;
+    gap: 4px;
+  }
+  
+  .window-dot {
+    width: 7px;
+    height: 7px;
+  }
+  
+  .window-body {
+    padding: 10px;
+    overflow: hidden;
+  }
+
+  .skel-block {
+    width: 32px;
+    height: 32px;
+  }
 }
