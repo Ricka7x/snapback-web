@@ -30,7 +30,32 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 2. Hero Animation Sequence: messy → shortcut-1 → pos-1 → shortcut-2 → pos-2 → shortcut-3 → pos-3
+    // 2. Responsive Navigation Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('nav-active');
+            
+            if (navLinks.classList.contains('nav-active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'initial';
+            }
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('nav-active');
+                document.body.style.overflow = 'initial';
+            });
+        });
+    }
+
+    // 3. Hero Animation Sequence
     const heroAnimation = document.getElementById('hero-animation');
     const shortcutOverlay = document.getElementById('shortcut-overlay');
     const shortcutKey = shortcutOverlay ? shortcutOverlay.querySelector('.key:last-child') : null;
