@@ -207,12 +207,42 @@ img, svg {
   color: var(--text-primary);
 }
 
-/* Desktop Only Navigation */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
+/* Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
 }
+
+.menu-toggle .bar {
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Toggle Animation */
+.menu-toggle.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-20px);
+}
+
+.menu-toggle.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+
 
 /* Hero Section */
 .hero {
@@ -1980,6 +2010,37 @@ footer {
     max-width: 400px;
   }
   
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 280px;
+    height: 100vh;
+    background: var(--nav-bg);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    flex-direction: column;
+    padding: 100px 40px;
+    gap: 32px;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1000;
+    border-left: 1px solid var(--card-border);
+    align-items: flex-start;
+    display: none; /* Hidden by default on mobile */
+  }
+
+  .nav-links.nav-active {
+    display: flex; /* Visible when active */
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
   .steps-grid {
     grid-template-columns: 1fr;
     gap: 40px;
