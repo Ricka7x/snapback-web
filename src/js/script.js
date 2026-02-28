@@ -30,17 +30,38 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
-    // 2. Hero Animation Sequence: messy → shortcut → snapped (grid)
+    // 2. Hero Animation Sequence: messy → shortcut-1 → pos-1 → shortcut-2 → pos-2 → shortcut-3 → pos-3
     const heroAnimation = document.getElementById('hero-animation');
+    const shortcutOverlay = document.getElementById('shortcut-overlay');
+    const shortcutKey = shortcutOverlay ? shortcutOverlay.querySelector('.key:last-child') : null;
     
     if (heroAnimation) {
-        const sequence = ['messy', 'shortcut', 'grid'];
+        const sequence = [
+            { state: 'messy', duration: 2000 },
+            { state: 'shortcut-1', duration: 800, key: '1' },
+            { state: 'pos-1', duration: 2500 },
+            { state: 'shortcut-2', duration: 800, key: '2' },
+            { state: 'pos-2', duration: 2500 },
+            { state: 'shortcut-3', duration: 800, key: '3' },
+            { state: 'pos-3', duration: 2500 }
+        ];
         let idx = 0;
 
-        setInterval(() => {
-            idx = (idx + 1) % sequence.length;
-            heroAnimation.setAttribute('data-state', sequence[idx]);
-        }, 2200);
+        const runSequence = () => {
+            const step = sequence[idx];
+            heroAnimation.setAttribute('data-state', step.state);
+            
+            if (step.key && shortcutKey) {
+                shortcutKey.textContent = step.key;
+            }
+
+            setTimeout(() => {
+                idx = (idx + 1) % sequence.length;
+                runSequence();
+            }, step.duration);
+        };
+
+        runSequence();
     }
 
     // 3. Workflow Timeline Interactivity
@@ -52,14 +73,28 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 4. Setup Card Interactivity
-    const setupCards = document.querySelectorAll('.setup-card');
-    setupCards.forEach(card => {
-        card.addEventListener('click', () => {
-            setupCards.forEach(c => c.classList.remove('active'));
-            card.classList.add('active');
-        });
-    });
+    // 5. Snap Demo Animation: half → vertical-half → third → fourth
+    const snapDemo = document.getElementById('snap-demo-animation');
+    const snapKeys = snapDemo ? snapDemo.querySelectorAll('.floating-keys .key:last-child') : null;
+
+    if (snapDemo) {
+        const snapSequence = [
+            { state: 'half', key: '←' },
+            { state: 'vertical-half', key: '↑' },
+            { state: 'third', key: 'D' },
+            { state: 'fourth', key: 'F' }
+        ];
+        let snapIdx = 0;
+
+        setInterval(() => {
+            snapIdx = (snapIdx + 1) % snapSequence.length;
+            const step = snapSequence[snapIdx];
+            snapDemo.setAttribute('data-state', step.state);
+            
+            const lastKey = snapDemo.querySelector('.floating-keys .key:last-child');
+            if (lastKey) lastKey.textContent = step.key;
+        }, 3000);
+    }
 
     // 5. Video Modal Logic
     const watchDemoBtn = document.getElementById('watch-demo-btn');

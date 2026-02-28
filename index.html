@@ -37,8 +37,8 @@
     </div>
 
     <!-- Animated Hero Visual — Mac Mockup -->
-    <div class="hero-mac-container reveal" style="transition-delay: 0.3s;">
-      <div class="hero-mac-camera"></div>
+    <div class="hero-mac-container mac-mockup reveal" style="transition-delay: 0.3s;">
+      <div class="mac-camera"></div>
       <div class="hero-visual" id="hero-animation" data-state="messy">
         <!-- Keyboard Shortcut Overlay -->
         <div class="shortcut-overlay" id="shortcut-overlay">
@@ -100,16 +100,24 @@
         <p>Snap windows to halves, quarters, or custom zones with fully customizable keyboard shortcuts.</p>
       </div>
       <div class="container">
-        <div class="snap-demo-visual">
-          <div class="snap-mac-container">
+        <div class="snap-demo-visual" id="snap-demo-animation" data-state="half">
+          <div class="snap-mac-container mac-mockup">
+            <div class="mac-camera"></div>
             <div class="snap-screen">
-              <div class="snap-window snap-win-main">
+              <!-- Grid Guides -->
+              <div class="snap-grid-guides">
+                <div class="grid-line line-half"></div>
+                <div class="grid-line horizontal line-v-half"></div>
+                <div class="grid-line line-third-1"></div>
+                <div class="grid-line line-third-2"></div>
+                <div class="grid-line line-fourth-1"></div>
+                <div class="grid-line line-fourth-2"></div>
+                <div class="grid-line line-fourth-3"></div>
+              </div>
+              
+              <div class="snap-window animated-snap-win">
                 <div class="window-header"><div class="window-dot dot-red"></div><div class="window-dot dot-yellow"></div><div class="window-dot dot-green"></div></div>
                 <div class="window-body"><div class="skel-line w-65"></div><div class="skel-line w-full"></div><div class="skel-line w-80"></div></div>
-              </div>
-              <div class="snap-window snap-win-side">
-                <div class="window-header"><div class="window-dot dot-red"></div><div class="window-dot dot-yellow"></div><div class="window-dot dot-green"></div></div>
-                <div class="window-body"><div class="skel-block"></div><div class="skel-block accent"></div></div>
               </div>
             </div>
           </div>
