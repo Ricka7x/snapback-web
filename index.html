@@ -45,6 +45,35 @@
     <div class="hero-mac-container mac-mockup reveal" style="transition-delay: 0.3s;">
       <div class="mac-camera"></div>
       <div class="hero-visual" id="hero-animation" data-state="messy">
+        <!-- macOS Menu Bar -->
+        <div class="mac-menu-bar">
+          <div class="menu-left">
+            <div class="apple-logo"></div>
+            <span class="menu-item" style="font-weight: 800;">Snapback</span>
+            <span class="menu-item">File</span>
+            <span class="menu-item">Edit</span>
+            <span class="menu-item">View</span>
+            <span class="menu-item">Window</span>
+          </div>
+          <div class="menu-right">
+            <div class="status-dots">
+              <div class="status-dot"></div>
+              <div class="status-dot"></div>
+              <div class="status-dot"></div>
+            </div>
+            <span class="menu-item">Thu 14:18</span>
+          </div>
+        </div>
+
+        <!-- macOS Dock -->
+        <div class="mac-dock">
+          <div class="dock-icon finder"></div>
+          <div class="dock-icon snapback"><img src="src/assets/logo.svg" alt=""></div>
+          <div class="dock-icon browser"></div>
+          <div class="dock-icon code"></div>
+          <div class="dock-icon slack"></div>
+        </div>
+
         <!-- Keyboard Shortcut Overlay -->
         <div class="shortcut-overlay" id="shortcut-overlay">
           <span class="key">&#x2303;</span>
@@ -109,6 +138,30 @@
           <div class="snap-mac-container mac-mockup">
             <div class="mac-camera"></div>
             <div class="snap-screen">
+              <!-- macOS Menu Bar -->
+              <div class="mac-menu-bar">
+                <div class="menu-left">
+                  <div class="apple-logo"></div>
+                  <span class="menu-item" style="font-weight: 800;">Snapback</span>
+                  <span class="menu-item">File</span>
+                </div>
+                <div class="menu-right">
+                  <div class="status-dots">
+                    <div class="status-dot"></div>
+                    <div class="status-dot"></div>
+                  </div>
+                  <span class="menu-item">14:18</span>
+                </div>
+              </div>
+
+              <!-- macOS Dock -->
+              <div class="mac-dock">
+                <div class="dock-icon finder"></div>
+                <div class="dock-icon snapback"><img src="src/assets/logo.svg" alt=""></div>
+                <div class="dock-icon browser"></div>
+                <div class="dock-icon slack"></div>
+              </div>
+
               <!-- Grid Guides -->
               <div class="snap-grid-guides">
                 <div class="grid-line line-half"></div>
@@ -141,43 +194,91 @@
         <h2>Save Your Setup</h2>
         <p>Capture your entire workspace, every window, every display, exactly as you left it.</p>
       </div>
-      <div class="container">
-        <div class="workspace-panel">
-          <div class="panel-header">
-            <span class="panel-title">Saved Workspaces</span>
-            <span class="panel-action">+ New</span>
+      <div class="container container-narrow">
+        <div class="save-workspace-sheet reveal" id="save-workflow-mock" data-view="edit">
+          <div class="sheet-header">
+            <div class="window-dots">
+              <div class="window-dot dot-red"></div>
+              <div class="window-dot dot-yellow"></div>
+              <div class="window-dot dot-green"></div>
+            </div>
+            <div class="sheet-title-mock" id="mock-title"></div>
           </div>
-          <div class="workspace-entry">
-            <div class="workspace-info">
-              <span class="workspace-name">Morning Focus</span>
-              <span class="workspace-meta">3 apps &middot; Main display</span>
+          
+          <div class="mock-view-container">
+            <!-- View 1: Save Workspace Sheet -->
+            <div class="mock-view edit-view">
+              <div class="sheet-body">
+                <div class="sheet-section">
+                  <div class="section-label-mock"></div>
+                  <div class="sheet-card input-card">
+                    <div class="card-content">
+                      <div class="mock-input-text" id="typewriter-name"></div>
+                      <div class="skel-line w-80"></div>
+                    </div>
+                    <div class="record-shortcut-mock">Record Shortcut</div>
+                  </div>
+                </div>
+
+                <div class="sheet-section">
+                  <div class="sheet-card">
+                    <div class="card-content">
+                      <div class="skel-line w-60"></div>
+                    </div>
+                    <div class="toggle-mock on"></div>
+                  </div>
+                </div>
+
+                <div class="sheet-section">
+                  <div class="section-label-mock w-20"></div>
+                  <div class="preview-area">
+                    <div class="preview-monitor-mock">
+                      <div class="preview-apps">
+                        <div class="app-icon-mock app-1"></div>
+                        <div class="app-icon-mock app-2"></div>
+                        <div class="app-icon-mock app-3"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="sheet-footer">
+                <div class="btn-mock-text">Cancel</div>
+                <div class="btn-mock primary" id="mock-save-btn">Save</div>
+              </div>
             </div>
-            <div class="workspace-shortcut">
-              <span class="key small">&#x2303;</span>
-              <span class="key small">&#x2325;</span>
-              <span class="key small">1</span>
-            </div>
-          </div>
-          <div class="workspace-entry active">
-            <div class="workspace-info">
-              <span class="workspace-name">Deep Work</span>
-              <span class="workspace-meta">2 apps &middot; Full screen</span>
-            </div>
-            <div class="workspace-shortcut">
-              <span class="key small">&#x2303;</span>
-              <span class="key small">&#x2325;</span>
-              <span class="key small">2</span>
-            </div>
-          </div>
-          <div class="workspace-entry">
-            <div class="workspace-info">
-              <span class="workspace-name">Meetings</span>
-              <span class="workspace-meta">4 apps &middot; 2 displays</span>
-            </div>
-            <div class="workspace-shortcut">
-              <span class="key small">&#x2303;</span>
-              <span class="key small">&#x2325;</span>
-              <span class="key small">3</span>
+
+            <!-- View 2: Saved Workspaces List -->
+            <div class="mock-view list-view">
+              <div class="list-tabs-mock">
+                <div class="tab-mock"></div>
+                <div class="tab-mock"></div>
+                <div class="tab-mock active"></div>
+              </div>
+              <div class="list-body">
+                <div class="list-section-label">Workspace Shortcuts</div>
+                <div class="list-item-mock active-success">
+                  <div class="list-item-name" id="saved-name-result">Morning Focus</div>
+                  <div class="list-item-shortcut">
+                    <span class="sc-key">^</span>
+                    <span class="sc-key">⌥</span>
+                    <span class="sc-key">⌘</span>
+                    <span class="sc-key">1</span>
+                  </div>
+                </div>
+                <div class="list-item-mock">
+                  <div class="list-item-name">Deep Work</div>
+                  <div class="list-item-shortcut">
+                    <span class="sc-key">^</span>
+                    <span class="sc-key">⌥</span>
+                    <span class="sc-key">⌘</span>
+                    <span class="sc-key">2</span>
+                  </div>
+                </div>
+              </div>
+              <div class="list-footer">
+                <div class="btn-mock-text">Reset All to Defaults</div>
+              </div>
             </div>
           </div>
         </div>
@@ -187,61 +288,68 @@
     <!-- 2c. Your Shortcuts. Your Rules. -->
     <div class="experience-block reveal">
       <div class="container text-center">
-        <h2>Your Shortcuts. Your Rules.</h2>
+        <h2>Your Hotkeys. Your Rules.</h2>
         <p>Set your own keybindings. Disable any feature you don't need. Zero conflicts with other apps.</p>
       </div>
-      <div class="container">
-        <div class="customize-visual">
-          <!-- Shortcut Customization Mock -->
-          <div class="customize-card">
-            <div class="customize-header">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg>
-              <span>Shortcut Preferences</span>
+      <div class="container container-narrow">
+        <div class="pixel-mock-sheet reveal" id="hotkeys-animation-mock">
+          <div class="sheet-title-bar">
+            <div class="window-dots">
+              <div class="window-dot dot-red"></div>
+              <div class="window-dot dot-yellow"></div>
+              <div class="window-dot dot-green"></div>
             </div>
-            <div class="shortcut-row">
-              <span class="shortcut-label">Snap Left</span>
-              <div class="shortcut-keys">
-                <span class="key small">&#x2303;</span>
-                <span class="key small">&#x2325;</span>
-                <span class="key small">&#x2190;</span>
+            <div class="header-search-pill"></div>
+          </div>
+          
+          <div class="px-tabs">
+            <div class="px-tab"></div>
+            <div class="px-tab active"></div>
+            <div class="px-tab"></div>
+          </div>
+
+          <div class="px-body">
+            <h3 class="px-group-title">Halves</h3>
+            
+            <div class="px-list">
+              <div class="px-item active-row" id="px-row-1">
+                <span class="px-item-name">Left Half</span>
+                <div class="px-shortcut">
+                  <span class="px-key">^</span>
+                  <span class="px-key">⌥</span>
+                  <span class="px-key">←</span>
+                
+                </div>
               </div>
-            </div>
-            <div class="shortcut-row">
-              <span class="shortcut-label">Snap Right</span>
-              <div class="shortcut-keys">
-                <span class="key small">&#x2303;</span>
-                <span class="key small">&#x2325;</span>
-                <span class="key small">&#x2192;</span>
+              
+              <div class="px-item" id="px-row-2">
+                <span class="px-item-name">Right Half</span>
+                <div class="px-shortcut" id="px-hotkey-recording">
+                  <span class="px-key">^</span>
+                  <span class="px-key">⌥</span>
+                  <span class="px-key">→</span>
+                 
+                </div>
+
+               
               </div>
-            </div>
-            <div class="shortcut-row">
-              <span class="shortcut-label">Restore Workspace</span>
-              <div class="shortcut-keys">
-                <span class="key small">&#x2303;</span>
-                <span class="key small">&#x2325;</span>
-                <span class="key small">1</span>
+
+               <div class="px-item" id="px-row-2">
+                <span class="px-item-name">Top Half</span>
+                <div class="px-shortcut" id="px-hotkey-recording">
+                  <span class="px-key">^</span>
+                  <span class="px-key">⌥</span>
+                  <span class="px-key">↑</span>
+                  
+                </div>
+
+               
               </div>
             </div>
           </div>
 
-          <!-- Feature Toggle Mock -->
-          <div class="customize-card">
-            <div class="customize-header">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-              <span>Menu Bar Controls</span>
-            </div>
-            <div class="toggle-row">
-              <span class="toggle-label">Window Snapping</span>
-              <div class="toggle-switch on"><div class="toggle-knob"></div></div>
-            </div>
-            <div class="toggle-row">
-              <span class="toggle-label">Workspace Restore</span>
-              <div class="toggle-switch on"><div class="toggle-knob"></div></div>
-            </div>
-            <div class="toggle-row">
-              <span class="toggle-label">Launch at Login</span>
-              <div class="toggle-switch"><div class="toggle-knob"></div></div>
-            </div>
+          <div class="px-footer">
+            <span class="px-reset-link">Reset All to Defaults</span>
           </div>
         </div>
       </div>
