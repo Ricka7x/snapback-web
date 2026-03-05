@@ -2,9 +2,9 @@
 
 :root {
   /* Colors - Premium macOS Native Feel */
-  --primary-accent: #0A66C2; /* Deep professional indigo/blue */
+  --primary-accent: #1556DB; /* Deep professional indigo/blue */
   --primary-accent-rgb: 10, 102, 194;
-  --primary-hover: #084E96;
+  --primary-hover: #0047AB;
   --success-green: #34C759;
   --success-green-rgb: 52, 199, 89;
   --alert-amber: #FF9500;
@@ -105,6 +105,11 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.02em;
   line-height: 1.1;
 }
+ /* h1 em {
+    font-style: italic;
+    background: linear-gradient(135deg, var(--primary-accent), #a78bfa);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  } */
 
 a {
   color: inherit;
@@ -146,7 +151,7 @@ img, svg {
 
 .btn-primary {
   background-color: var(--primary-accent);
-  color: var(--text-inverse);
+  color: var(--text-primary);
   box-shadow: 0 4px 14px rgba(var(--primary-accent-rgb), 0.3);
 }
 
