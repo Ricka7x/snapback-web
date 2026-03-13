@@ -1,4 +1,4 @@
-name: Deploy Vite App to GitHub Pages
+name: Deploy Next.js App to GitHub Pages
 
 on:
   push:
@@ -23,18 +23,19 @@ jobs:
           cd web
           npm ci
 
-      - name: Build Vite app
+      - name: Build Next.js app
         run: |
           cd web
           npm run build
+          npm run export
 
-      - name: Copy CNAME to build output
-        run: cp web/CNAME web/dist/CNAME
+      - name: Copy CNAME to export output
+        run: cp web/CNAME web/out/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./web/dist
+          publish_dir: ./web/out
           publish_branch: gh-pages
           force_orphan: true
