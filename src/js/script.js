@@ -1,4 +1,5 @@
 // script.js — Snapback Landing Page
+import { gsap } from "gsap";
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -54,6 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // 3. GSAP Sample Animation
+    gsap.to('.hero', { y: -20, opacity: 1, duration: 1, ease: 'power2.out' });
 
     // 3. Hero Animation Sequence
     const heroAnimation = document.getElementById('hero-animation');

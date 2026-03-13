@@ -1,4 +1,25 @@
+
 # Production Release Automation Guide
+
+## Web App Deployment (Vite)
+
+The main web application is now built with Vite (see `web/` folder).
+
+### Build the App
+
+```bash
+cd web
+npm install
+npm run build
+# Output: web/dist/
+```
+
+### Deploy
+
+Upload the contents of `web/dist/` to your static hosting provider (e.g., GitHub Pages, Netlify, Vercel, etc).
+
+---
+
 
 ## Overview
 
