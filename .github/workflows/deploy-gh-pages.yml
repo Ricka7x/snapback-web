@@ -28,8 +28,8 @@ jobs:
           cd web
           npm run build
 
-      - name: Copy releases to export output
-        run: cp -R releases web/out/releases
+      # - name: Copy releases to export output
+      #   run: cp -R releases web/out/releases
 
       - name: Copy CNAME to export output
         run: cp web/CNAME web/out/CNAME
