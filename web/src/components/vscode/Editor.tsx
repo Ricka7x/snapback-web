@@ -68,7 +68,7 @@ export const Editor: React.FC = () => {
             return (
               <div
                 key={uniqueKey}
-                className={`h-[5px] rounded-full ${line.bgColor}`}
+                className={`h-[4px] rounded-sm ${line.bgColor}`}
                 style={{ width: `${line.width}px` }}
               />
             )
@@ -83,13 +83,13 @@ export const Editor: React.FC = () => {
             const uniqueKey = `code-line-${lineIndex}-${line.parts.length}-${line.indent || 0}-${line.highlight || false}`
             
             return (
-              <div key={uniqueKey} className={`h-[5px] flex items-center gap-1.5 ${paddingLeft} ${bgColor}`}>
+              <div key={uniqueKey} className={`h-[4px] flex items-center gap-1.5 ${paddingLeft} ${bgColor}`}>
                 {line.parts.map((part, partIndex) => {
                   const partKey = `${uniqueKey}-part-${partIndex}-${part.width}-${part.color}`
                   return (
                     <div
                       key={partKey}
-                      className={`h-[5px] rounded-full ${part.color} shrink-0`}
+                      className={`h-[4px] rounded-sm ${part.color} shrink-0 animate-pulse`}
                       style={{ width: `${part.width}px` }}
                     />
                   )
