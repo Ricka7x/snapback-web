@@ -4,18 +4,28 @@ import { Window } from '../ui/Window'
 interface TerminalWindowProps {
   top?: string | number
   left?: string | number
+  width?: string | number
+  height?: string | number
+  opacity?: number
+  scale?: number
 }
 
 export const TerminalWindow: React.FC<TerminalWindowProps> = ({
   top = 112,
   left = 342,
+  width = 390,
+  height = 272,
+  opacity = 1,
+  scale = 1,
 }) => {
   return (
     <Window
-      width={390}
-      height={272}
+      width={width}
+      height={height}
       top={top}
       left={left}
+      opacity={opacity}
+      scale={scale}
       headerBg="linear-gradient(180deg,#3a3a3a,#2d2d2d)"
     >
       <div className="flex-1 bg-[#161616] px-3.5 py-3 flex flex-col gap-[7px] overflow-hidden">

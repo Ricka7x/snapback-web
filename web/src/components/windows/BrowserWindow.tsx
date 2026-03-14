@@ -5,18 +5,28 @@ import { Shimmer } from '../ui/Shimmer'
 interface BrowserWindowProps {
   top?: string | number
   left?: string | number
+  width?: string | number
+  height?: string | number
+  opacity?: number
+  scale?: number
 }
 
 export const BrowserWindow: React.FC<BrowserWindowProps> = ({
   top = 11,
   left = 6,
+  width = 544,
+  height = 358,
+  opacity = 1,
+  scale = 1,
 }) => {
   return (
     <Window
-      width={544}
-      height={358}
+      width={width}
+      height={height}
       top={top}
       left={left}
+      opacity={opacity}
+      scale={scale}
       headerBg="linear-gradient(180deg,#3c3c3c,#2e2e2e)"
     >
       {/* Tabs */}

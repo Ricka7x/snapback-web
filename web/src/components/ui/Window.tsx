@@ -1,4 +1,6 @@
+"use client"
 import React from 'react'
+import { motion } from 'framer-motion'
 import { Shimmer } from './Shimmer'
 
 interface WindowProps {
@@ -12,6 +14,8 @@ interface WindowProps {
   showTrafficLights?: boolean
   headerBg?: string
   shadow?: string
+  opacity?: number
+  scale?: number
 }
 
 export const Window: React.FC<WindowProps> = ({
@@ -25,20 +29,28 @@ export const Window: React.FC<WindowProps> = ({
   showTrafficLights = true,
   headerBg = 'linear-gradient(180deg,#3c3c3c,#2e2e2e)',
   shadow = '0 0 0 1px rgba(255,255,255,0.06),0 26px 72px rgba(0,0,0,0.7)',
+  opacity = 1,
+  scale = 1,
 }) => {
-  const widthStyle = typeof width === 'string' ? width : `${width}px`
-  const heightStyle = typeof height === 'string' ? height : `${height}px`
-  const topStyle = typeof top === 'string' ? top : `${top}px`
-  const leftStyle = typeof left === 'string' ? left : `${left}px`
-
   return (
-    <div
+    <motion.div
+      initial={false}
+      animate={{
+        width: typeof width === 'number' ? `${width}px` : width,
+        height: typeof height === 'number' ? `${height}px` : height,
+        top: typeof top === 'number' ? `${top}px` : top,
+        left: typeof left === 'number' ? `${left}px` : left,
+        opacity,
+        scale,
+      }}
+      transition={{
+        type: 'spring',
+        stiffness: 260,
+        damping: 30,
+        opacity: { duration: 0.2 }
+      }}
       className={`absolute rounded-xl overflow-hidden flex flex-col ${className}`}
       style={{
-        width: widthStyle,
-        height: heightStyle,
-        top: topStyle,
-        left: leftStyle,
         boxShadow: shadow,
       }}
     >
@@ -63,7 +75,9 @@ export const Window: React.FC<WindowProps> = ({
       </div>
       
       {/* Window Content */}
-      {children}
-    </div>
+      <div className="flex-1 overflow-hidden relative flex flex-col">
+        {children}
+      </div>
+    </motion.div>
   )
 }
