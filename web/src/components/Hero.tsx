@@ -1,32 +1,47 @@
-"use client"
+import Animation from "./Animation";
 
 export default function Hero() {
   return (
-   <header className="flex flex-col text-center max-w-4xl mx-auto py-20 px-4">
-    <div className="rounded-full border border-primary text-xs font-medium uppercase tracking-wide text-primary py-1 px-3 self-center animate-fade-in">
-      <div className="rounded-full bg-primary w-2 h-2 inline-block mr-2 animate-pulse"></div>Free for macOS
-    </div>
-    <h1 className="text-6xl md:text-7xl lg:text-8xl text-white font-light leading-tight"><em className="font-normal italic">Snap</em> your workspace <em className="font-normal italic">back</em> into place.</h1>
-    <p className="text-text-secondary text-lg md:text-xl max-w-2xl mx-auto">Snap windows instantly, save complete workspace layouts, and restore everything with a single shortcut.</p>
-    
-    <div className="flex flex-col sm:flex-row gap-4 items-center justify-center mt-4">
-      <a href="#download" className="py-4 px-8 bg-primary hover:bg-primary-hover text-white font-medium rounded-full transition-colors">Download for macOS</a>
-    </div>
+    <section className="bg-black pt-44 pb-32 overflow-hidden relative mesh-gradient">
+      {/* Background glow for hero */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/10 blur-[120px] rounded-full pointer-events-none animate-fade-in" />
+      
+      <div className="max-w-4xl mx-auto text-center px-6 relative z-10">
+        <span className="inline-block text-primary text-[11px] font-bold uppercase tracking-[0.2em] mb-8 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 animate-fade-up">
+          Free for macOS
+        </span>
+        <h1 className="font-display text-[clamp(44px,8vw,84px)] font-semibold leading-[0.95] tracking-[-0.03em] text-white mb-8 animate-fade-up [animation-delay:150ms] text-glow">
+          Your Mac, exactly<br />
+          how you left it.
+        </h1>
+        <p className="text-zinc-400 text-xl md:text-2xl leading-[1.65] max-w-2xl mx-auto mb-12 animate-fade-up [animation-delay:300ms] font-medium opacity-90">
+          Snapback saves your window layouts — which app, which display,
+          which position — and puts them back with a single keystroke.
+        </p>
+        <div className="flex items-center justify-center gap-6 flex-wrap animate-fade-up [animation-delay:450ms]">
+          <a
+            href="#download"
+            className="inline-flex items-center gap-2.5 bg-primary text-white font-semibold text-lg px-10 py-4 rounded-full transition-all duration-300 hover:bg-primary-hover hover:scale-105 hover:shadow-[0_0_30px_rgba(21,86,219,0.4)]"
+          >
+            Download for Mac — Free
+          </a>
+          <a href="#how" className="text-zinc-500 text-base font-medium transition-all duration-300 hover:text-zinc-300 flex items-center gap-2">
+            See how it works <span className="animate-bounce">↓</span>
+          </a>
+        </div>
+      </div>
 
-    <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8 mt-8 text-sm text-text-secondary">
-      <span>macOS 12.4+</span>
-      <span className="hidden sm:inline">•</span>
-      <span>Apple Silicon &amp; Intel</span>
-      <span className="hidden sm:inline">•</span>
-      <span>Menu bar app</span>
-      <span className="hidden sm:inline">•</span>
-      <span>No subscription</span>
-    </div>
-
-    <div className="mt-12 bg-surface rounded-2xl p-8 h-96 flex items-center justify-center border border-card-border">
-        <span className="text-2xl text-text-secondary">Screenshot of the app</span>
-    </div>
-   </header>
-
-  )
+      {/* Animation / hero visual slot */}
+      <div id="how" className="max-w-6xl mx-auto mt-24 px-6 animate-fade-up [animation-delay:600ms]">
+        <div className="relative group">
+          <div className="absolute -inset-1 bg-gradient-to-b from-primary/20 to-transparent rounded-[2.5rem] blur-xl opacity-50" />
+          <div className="w-full aspect-video rounded-[2rem] bg-zinc-900/50 backdrop-blur-xl border border-white/10 flex items-center justify-center overflow-hidden shadow-2xl">
+            <span className="text-white/10 text-sm font-mono relative z-10 w-full h-full">
+              <Animation/>
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }
