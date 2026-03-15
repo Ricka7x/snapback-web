@@ -59,6 +59,11 @@ body {
   letter-spacing: -0.01em;
 }
 
+em {
+  font-style: italic;
+  font-weight: inherit;
+}
+
 /* Custom Selection */
 ::selection {
   background: var(--color-primary);

@@ -41,7 +41,7 @@ export default function CTASection() {
             transition={{ delay: 0.1, duration: 0.8 }}
             className="font-display text-[clamp(40px,7vw,72px)] font-semibold leading-[1] tracking-[-0.03em] text-white mb-8 text-glow"
           >
-            ready to snap back?
+            ready to <em>snap back</em>?
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
