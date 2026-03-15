@@ -35,9 +35,9 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-outfit), var(--font-sf-pro-text), ui-sans-serif, system-ui;
-  --font-text: var(--font-sf-pro-text);
-  --font-display: var(--font-outfit), var(--font-sf-pro-display), sans-serif;
+  --font-sans: var(--font-sf-pro-text), sans-serif;
+  --font-text: var(--font-sf-pro-text), sans-serif;
+  --font-display: var(--font-outfit), sans-serif;
   --font-mono: var(--font-geist-mono);
 }
 
