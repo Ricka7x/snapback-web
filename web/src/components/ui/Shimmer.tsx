@@ -21,7 +21,10 @@ export const Shimmer: React.FC<ShimmerProps> = ({
     <div
       className={`${heightClass} ${rounded ? 'rounded-full' : ''} ${bgColor} ${className}`}
       style={{ 
-        width: typeof width === 'number' ? `${width}px` : width
+        width: typeof width === 'number' ? `${width}px` : width,
+        // Remove animation, transition, or pulse
+        animation: 'none',
+        transition: 'none'
       }}
     />
   )

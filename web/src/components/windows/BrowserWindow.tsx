@@ -56,8 +56,8 @@ export const BrowserWindow: React.FC<BrowserWindowProps> = ({
         <div className="w-5 h-5 rounded-full bg-[#3a3a3a] shrink-0" />
         <div className="w-5 h-5 rounded-full bg-[#3a3a3a] shrink-0" />
         <div className="flex-1 h-6 bg-[#1c1c1c] rounded-md flex items-center px-2.5 gap-1.5">
-          <div className="w-1.5 h-2 bg-[#28c840] rounded-sm shrink-0" />
-          <div className="text-[13px] font-medium text-white/55 tracking-tight">app.snapback.so</div>
+          
+          <div className="text-[13px] font-medium text-white/55 tracking-tight">snapbackapp.com</div>
         </div>
         <div className="w-5 h-5 rounded-full bg-[#3a3a3a] shrink-0" />
       </div>

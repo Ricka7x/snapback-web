@@ -7,30 +7,30 @@ interface CodeLine {
 }
 
 const codeLines: CodeLine[] = [
-  { parts: [{ width: 9, color: 'bg-[#c586c0]/72' }, { width: 12, color: 'bg-white/18' }, { width: 9, color: 'bg-[#c586c0]/72' }, { width: 14, color: 'bg-[#ce9178]/78' }] },
-  { parts: [{ width: 9, color: 'bg-[#c586c0]/72' }, { width: 10, color: 'bg-white/18' }, { width: 9, color: 'bg-[#c586c0]/72' }, { width: 20, color: 'bg-[#ce9178]/78' }] },
+  { parts: [{ width: 40, color: 'bg-[#c586c0]/72' }, { width: 56, color: 'bg-white/18' }, { width: 40, color: 'bg-[#c586c0]/72' }, { width: 62, color: 'bg-[#ce9178]/78' }] },
+  { parts: [{ width: 40, color: 'bg-[#c586c0]/72' }, { width: 48, color: 'bg-white/18' }, { width: 40, color: 'bg-[#c586c0]/72' }, { width: 70, color: 'bg-[#ce9178]/78' }] },
   { parts: [] },
-  { parts: [{ width: 32, color: 'bg-[#6a9955]/72' }] },
-  { parts: [{ width: 10, color: 'bg-[#c586c0]/72' }, { width: 8, color: 'bg-[#c586c0]/72' }, { width: 12, color: 'bg-[#dcdcaa]/82' }, { width: 3, color: 'bg-white/20' }] },
-  { parts: [{ width: 7, color: 'bg-[#c586c0]/72' }, { width: 10, color: 'bg-white/18' }, { width: 12, color: 'bg-[#dcdcaa]/82' }, { width: 7, color: 'bg-[#4ec9b0]/82' }, { width: 3, color: 'bg-[#b5cea8]/82' }], indent: 1 },
-  { parts: [{ width: 7, color: 'bg-[#c586c0]/72' }, { width: 14, color: 'bg-white/18' }, { width: 12, color: 'bg-[#dcdcaa]/82' }, { width: 8, color: 'bg-[#4ec9b0]/82' }, { width: 6, color: 'bg-[#b5cea8]/82' }], indent: 1 },
+  { parts: [{ width: 120, color: 'bg-[#6a9955]/72' }] },
+  { parts: [{ width: 48, color: 'bg-[#c586c0]/72' }, { width: 38, color: 'bg-[#c586c0]/72' }, { width: 56, color: 'bg-[#dcdcaa]/82' }, { width: 16, color: 'bg-white/20' }] },
+  { parts: [{ width: 32, color: 'bg-[#c586c0]/72' }, { width: 48, color: 'bg-white/18' }, { width: 56, color: 'bg-[#dcdcaa]/82' }, { width: 32, color: 'bg-[#4ec9b0]/82' }, { width: 16, color: 'bg-[#b5cea8]/82' }], indent: 1 },
+  { parts: [{ width: 32, color: 'bg-[#c586c0]/72' }, { width: 58, color: 'bg-white/18' }, { width: 56, color: 'bg-[#dcdcaa]/82' }, { width: 38, color: 'bg-[#4ec9b0]/82' }, { width: 28, color: 'bg-[#b5cea8]/82' }], indent: 1 },
   { parts: [] },
-  { parts: [{ width: 7, color: 'bg-[#c586c0]/72' }, { width: 16, color: 'bg-[#dcdcaa]/82' }, { width: 5, color: 'bg-white/18' }], indent: 1 },
-  { parts: [{ width: 12, color: 'bg-[#dcdcaa]/82' }, { width: 10, color: 'bg-white/18' }, { width: 7, color: 'bg-[#9cdcfe]/82' }, { width: 4, color: 'bg-[#b5cea8]/82' }], indent: 2 },
-  { parts: [{ width: 2, color: 'bg-white/20' }], indent: 1 },
+  { parts: [{ width: 32, color: 'bg-[#c586c0]/72' }, { width: 64, color: 'bg-[#dcdcaa]/82' }, { width: 24, color: 'bg-white/18' }], indent: 1 },
+  { parts: [{ width: 56, color: 'bg-[#dcdcaa]/82' }, { width: 48, color: 'bg-white/18' }, { width: 32, color: 'bg-[#9cdcfe]/82' }, { width: 20, color: 'bg-[#b5cea8]/82' }], indent: 2 },
+  { parts: [{ width: 12, color: 'bg-white/20' }], indent: 1 },
   { parts: [] },
-  { parts: [{ width: 7, color: 'bg-[#c586c0]/72' }, { width: 14, color: 'bg-[#dcdcaa]/82' }, { width: 8, color: 'bg-[#c586c0]/72' }, { width: 5, color: 'bg-white/18' }], indent: 1 },
-  { parts: [{ width: 7, color: 'bg-[#c586c0]/72' }, { width: 6, color: 'bg-white/18' }, { width: 8, color: 'bg-[#c586c0]/72' }, { width: 11, color: 'bg-[#dcdcaa]/82' }, { width: 8, color: 'bg-[#9cdcfe]/82' }], indent: 2 },
-  { parts: [{ width: 7, color: 'bg-[#c586c0]/72' }, { width: 6, color: 'bg-white/18' }, { width: 8, color: 'bg-[#c586c0]/72' }, { width: 6, color: 'bg-[#9cdcfe]/82' }, { width: 8, color: 'bg-[#dcdcaa]/82' }], indent: 2, highlight: true },
-  { parts: [{ width: 14, color: 'bg-[#dcdcaa]/82' }, { width: 6, color: 'bg-[#9cdcfe]/82' }, { width: 8, color: 'bg-[#ce9178]/78' }], indent: 2 },
-  { parts: [{ width: 2, color: 'bg-white/20' }], indent: 1 },
+  { parts: [{ width: 32, color: 'bg-[#c586c0]/72' }, { width: 58, color: 'bg-[#dcdcaa]/82' }, { width: 38, color: 'bg-[#c586c0]/72' }, { width: 24, color: 'bg-white/18' }], indent: 1 },
+  { parts: [{ width: 32, color: 'bg-[#c586c0]/72' }, { width: 22, color: 'bg-white/18' }, { width: 38, color: 'bg-[#c586c0]/72' }, { width: 48, color: 'bg-[#dcdcaa]/82' }, { width: 38, color: 'bg-[#9cdcfe]/82' }], indent: 2 },
+  { parts: [{ width: 32, color: 'bg-[#c586c0]/72' }, { width: 22, color: 'bg-white/18' }, { width: 38, color: 'bg-[#c586c0]/72' }, { width: 22, color: 'bg-[#9cdcfe]/82' }, { width: 38, color: 'bg-[#dcdcaa]/82' }], indent: 2, highlight: true },
+  { parts: [{ width: 58, color: 'bg-[#dcdcaa]/82' }, { width: 22, color: 'bg-[#9cdcfe]/82' }, { width: 38, color: 'bg-[#ce9178]/78' }], indent: 2 },
+  { parts: [{ width: 12, color: 'bg-white/20' }], indent: 1 },
   { parts: [] },
-  { parts: [{ width: 9, color: 'bg-[#c586c0]/72' }, { width: 5, color: 'bg-white/20' }], indent: 1 },
-  { parts: [{ width: 4, color: 'bg-white/18' }, { width: 6, color: 'bg-[#4ec9b0]/85' }, { width: 12, color: 'bg-[#4fc1ff]/82' }, { width: 20, color: 'bg-[#ce9178]/78' }], indent: 2 },
-  { parts: [{ width: 6, color: 'bg-[#4ec9b0]/85' }, { width: 10, color: 'bg-[#9cdcfe]/82' }, { width: 16, color: 'bg-[#dcdcaa]/82' }], indent: 3 },
-  { parts: [{ width: 10, color: 'bg-white/18' }, { width: 8, color: 'bg-[#9cdcfe]/82' }], indent: 4 },
-  { parts: [{ width: 10, color: 'bg-[#4ec9b0]/72' }], indent: 3 },
-  { parts: [{ width: 6, color: 'bg-white/18' }], indent: 2 },
+  { parts: [{ width: 40, color: 'bg-[#c586c0]/72' }, { width: 24, color: 'bg-white/20' }], indent: 1 },
+  { parts: [{ width: 24, color: 'bg-white/18' }, { width: 32, color: 'bg-[#4ec9b0]/85' }, { width: 56, color: 'bg-[#4fc1ff]/82' }, { width: 70, color: 'bg-[#ce9178]/78' }], indent: 2 },
+  { parts: [{ width: 32, color: 'bg-[#4ec9b0]/85' }, { width: 48, color: 'bg-[#9cdcfe]/82' }, { width: 58, color: 'bg-[#dcdcaa]/82' }], indent: 3 },
+  { parts: [{ width: 48, color: 'bg-white/18' }, { width: 32, color: 'bg-[#9cdcfe]/82' }], indent: 4 },
+  { parts: [{ width: 48, color: 'bg-[#4ec9b0]/72' }], indent: 3 },
+  { parts: [{ width: 32, color: 'bg-white/18' }], indent: 2 },
 ]
 
 export const Editor: React.FC = () => {
@@ -89,7 +89,7 @@ export const Editor: React.FC = () => {
                   return (
                     <div
                       key={partKey}
-                      className={`h-[4px] rounded-sm ${part.color} shrink-0 animate-pulse`}
+                      className={`h-[4px] rounded-sm ${part.color} shrink-0`}
                       style={{ width: `${part.width}px` }}
                     />
                   )

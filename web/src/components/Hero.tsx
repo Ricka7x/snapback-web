@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import Animation from "./Animation";
 import { Magnetic } from "./ui";
 
 export default function Hero() {
@@ -74,7 +73,7 @@ export default function Hero() {
                 </svg>
               </a>
             </Magnetic>
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 opacity-60">Always Free</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 opacity-60">Always Free · MacOS 13+</span>
           </div>
         </motion.div>
       </div>
