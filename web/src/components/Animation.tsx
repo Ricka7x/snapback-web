@@ -146,7 +146,7 @@ export default function Animation() {
           {/* DOCK */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-50 scale-100">
             <div
-              className="flex items-end gap-2 border border-white/[0.15] rounded-[24px] px-5 pt-4 pb-3 bg-white/10 backdrop-blur-2xl shadow-2xl"
+              className="flex items-end gap-2 border border-white/[0.15] rounded-[24px] px-5 pt-3 pb-3 bg-white/10 backdrop-blur-2xl shadow-2xl"
             >
               <DockIcon gradient="linear-gradient(148deg,#1fc8db,#2980b9)" />
               <DockIcon gradient="linear-gradient(148deg,#f7971e,#ffd200)" />

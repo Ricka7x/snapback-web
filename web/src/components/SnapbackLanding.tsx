@@ -9,6 +9,7 @@ import CloseToggleSection from "./CloseToggleSection";
 import ShortcutsSection from "./ShortcutsSection";
 import FlexibilitySection from "./FlexibilitySection";
 import CTASection from "./CTASection";
+import FAQSection from "./FAQSection";
 import Footer from "./Footer";
 
 export default function SnapbackLanding() {
@@ -30,6 +31,7 @@ export default function SnapbackLanding() {
       <ShortcutsSection />
       <FlexibilitySection />
       
+      <FAQSection />
       <CTASection />
       <Footer />
     </>
