@@ -3,7 +3,7 @@ import FeatureSection from "./FeatureSection";
 export default function PreviewSection() {
   return (
     <FeatureSection
-      bg="alt"
+      bg="main"
       className="py-24"
       reverseOnDesktop
       eyebrow="Preview it"
