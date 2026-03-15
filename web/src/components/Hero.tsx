@@ -25,7 +25,7 @@ export default function Hero() {
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" 
       />
       
-      <div className="max-w-4xl mx-auto text-center px-6 relative z-10">
+      <div className="max-w-5xl mx-auto text-center px-6 relative z-10">
         <motion.span 
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
