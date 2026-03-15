@@ -35,29 +35,24 @@ export function TwoCol({
   );
 }
 
-// Content blocks
+// Content blocks with cinematic reveal
 export function Copy({ eyebrow, heading, body, headingSize = "text-[clamp(32px,5vw,52px)]" }: { eyebrow: string, heading: React.ReactNode, body: string, headingSize?: string }) {
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-    >
+    <div className="relative">
       <motion.span 
-        initial={{ opacity: 0, x: -10 }}
-        whileInView={{ opacity: 0.8, x: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.2, duration: 0.6 }}
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 0.8, y: 0 }}
+        viewport={{ once: true, margin: "-50px" }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="text-primary text-[11px] font-bold uppercase tracking-[0.2em] block mb-6 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 w-fit"
       >
         {eyebrow}
       </motion.span>
       <motion.h2 
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.1, duration: 0.8 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ delay: 0.1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
         className={`${headingSize} font-display font-semibold leading-[1.05] mb-6 text-white tracking-[-0.02em] text-glow`}
       >
         {heading}
@@ -65,34 +60,40 @@ export function Copy({ eyebrow, heading, body, headingSize = "text-[clamp(32px,5
       <motion.p 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.2, duration: 0.8 }}
+        viewport={{ once: true, margin: "-150px" }}
+        transition={{ delay: 0.25, duration: 1, ease: [0.16, 1, 0.3, 1] }}
         className="text-zinc-400 text-lg leading-[1.8] max-w-prose font-medium"
       >
         {body}
       </motion.p>
-    </motion.div>
+    </div>
   );
 }
 
-// Media display with parallax and tilt
+// Media display with cinematic reveal and tilt
 export function Shot({ src, alt }: { src: string, alt: string }) {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
+    offset: ["start end", "center center"]
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], [40, -40]);
-  const rotateX = useTransform(scrollYProgress, [0, 1], [5, -5]);
+  const scrollY = useTransform(scrollYProgress, [0, 1], [100, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [0, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.95, 1]);
+  
+  // Parallax while scrolling through
+  const { scrollYProgress: activeProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+  const y = useTransform(activeProgress, [0, 1], [40, -40]);
+  const rotateX = useTransform(activeProgress, [0, 1], [5, -5]);
 
   return (
     <motion.div 
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+      style={{ y: scrollY, opacity, scale }}
       className="relative group"
     >
       <div className="absolute -inset-10 rounded-[3rem] bg-primary/10 blur-3xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
