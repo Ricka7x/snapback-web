@@ -110,7 +110,7 @@ export default function Animation() {
         <div 
           className="w-full h-full relative overflow-hidden select-none bg-zinc-900 shadow-2xl"
           style={{
-            backgroundImage: "url('/assets/bg.jpg')",
+            backgroundImage: "url('/assets/wallpaper.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

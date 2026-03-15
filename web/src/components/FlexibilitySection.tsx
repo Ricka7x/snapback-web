@@ -8,7 +8,7 @@ export default function FlexibilitySection() {
       eyebrow="Works your way"
       heading={<>Already have a<br />window manager?</>}
       body="Turn off snapping entirely and use Snapback just for workspaces. It plays well with whatever you already have — Magnet, Rectangle, or nothing at all."
-      imageSrc="/assets/hotkeys.png"
+      imageSrc="/assets/settings.png"
       imageAlt="General settings — disable window management"
     />
   );

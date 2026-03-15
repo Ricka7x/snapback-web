@@ -8,7 +8,7 @@ export default function SaveSection() {
       eyebrow="Save it"
       heading={<>Name it.<br />Shortcut it. Done.</>}
       body={`Give your layout a name — "Dev", "Design", "Deep work" — and assign a keyboard shortcut. Set it up once. Snapback remembers every window, every display, every position.`}
-      imageSrc="/assets/hotkeys.png"
+      imageSrc="/assets/save.png"
       imageAlt="Save Workspace dialog"
     />
   );
