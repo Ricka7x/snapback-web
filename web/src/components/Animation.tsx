@@ -28,15 +28,26 @@ export default function Animation({ progress }: AnimationProps) {
   const [scale, setScale] = useState(1)
   const containerRef = useRef<HTMLDivElement>(null)
 
-  // Map progress to workspace states
-  const state = useTransform(progress, [0, 0.2, 0.4, 0.6, 0.8], ['disordered', 'trio', 'studio', 'command_center', 'command_center']) as any;
+  // Map progress to workspace states (Numeric mapping for precision)
+  // 0: disordered (0.0 - 0.2)
+  // 1: trio (0.2 - 0.52)
+  // 2: studio (0.52 - 0.75)
+  // 3: command_center (0.75 - 1.0)
+  const stateIndex = useTransform(progress, [0, 0.2, 0.52, 0.75], [0, 1, 2, 3]);
   const [activeState, setActiveState] = useState<WorkspaceState>('disordered');
 
   useEffect(() => {
-    return state.on("change", (latest: WorkspaceState) => {
-      setActiveState(latest);
+    const states: WorkspaceState[] = ['disordered', 'trio', 'studio', 'command_center'];
+    
+    // Initial sync
+    const initialIdx = Math.floor(stateIndex.get());
+    setActiveState(states[Math.min(initialIdx, 3)]);
+
+    return stateIndex.on("change", (latest) => {
+      const idx = Math.floor(latest);
+      setActiveState(states[Math.min(idx, 3)]);
     });
-  }, [state]);
+  }, [stateIndex]);
 
   // Expand effect at the end of scroll
   const expansionScale = useTransform(progress, [0.8, 1], [1, 2.5]);
@@ -74,28 +85,32 @@ export default function Animation({ progress }: AnimationProps) {
           vscode: { top: TOP_OFFSET, left: MARGIN, width: 330, height: WORK_HEIGHT },
           browser: { top: TOP_OFFSET, left: 385, width: 330, height: WORK_HEIGHT },
           terminal: { top: TOP_OFFSET, left: 740, width: 330, height: WORK_HEIGHT },
-          shortcut: ['⌃', '⌥', '1']
+          shortcut: ['⌃', '⌥', '1'],
+          label: 'snapback to trio'
         }
       case 'studio':
         return {
           vscode: { top: TOP_OFFSET, left: MARGIN, width: 680, height: WORK_HEIGHT },
           browser: { top: TOP_OFFSET, left: 740, width: 330, height: 232 },
           terminal: { top: TOP_OFFSET + 232 + 16, left: 740, width: 330, height: 232 },
-          shortcut: ['⌃', '⌥', '2']
+          shortcut: ['⌃', '⌥', '2'],
+          label: 'snapback to studio'
         }
       case 'command_center':
         return {
           vscode: { top: TOP_OFFSET, left: MARGIN, width: 1040, height: 300 },
           browser: { top: TOP_OFFSET + 300 + 16, left: MARGIN, width: 504, height: 164 },
           terminal: { top: TOP_OFFSET + 300 + 16, left: 566, width: 504, height: 164 },
-          shortcut: ['⌃', '⌥', '3']
+          shortcut: ['⌃', '⌥', '3'],
+          label: 'snapback to command center'
         }
       default: // disordered
         return {
           vscode: { top: 120, left: 110, width: 420, height: 320 },
           browser: { top: 50, left: 330, width: 440, height: 340 },
           terminal: { top: 180, left: 440, width: 400, height: 260 },
-          shortcut: [] as string[]
+          shortcut: [] as string[],
+          label: ''
         }
     }
   }
@@ -149,8 +164,8 @@ export default function Animation({ progress }: AnimationProps) {
                       <KeyboardKey key={`${key}-${i}`}>{key}</KeyboardKey>
                     ))}
                   </div>
-                  <div className="px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-xl border border-white/10 text-white/50 text-[10px] font-bold tracking-[0.2em]">
-                    snapback to workspace
+                  <div className="px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-xl border border-white/10 text-white/50 text-[10px] font-bold tracking-[0.2em] uppercase">
+                    {layout.label}
                   </div>
                 </div>
               </motion.div>
