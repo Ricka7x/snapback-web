@@ -13,6 +13,7 @@ const faqs = [
     answer: "Yes. Snapback is built for multi-display setups. It remembers which monitor each window belongs to and restores them across your entire setup instantly."
   },
   {
+    
     question: "Can it really open apps for me?",
     answer: "Absolutely. If you save a workspace with VS Code and Chrome, and they aren't running when you restore that workspace, Snapback will launch them and then place their windows in the saved locations."
   },
@@ -23,6 +24,10 @@ const faqs = [
   {
     question: "Is it free to use?",
     answer: "Yes, Snapback is currently free for macOS. We are focused on building the best possible experience for power users."
+  },
+  {
+    question: "Can I get it from the Mac App Store?",
+    answer: "Snapback is not currently available on the Mac App Store. However, it is notarized by Apple, ensuring it meets their security standards. You can download it directly from our website with confidence."
   }
 ];
 
@@ -41,9 +46,11 @@ export default function FAQSection({ id }: { id?: string }) {
             support
           </span>
           <h2 className="text-[clamp(32px,5vw,52px)] font-display font-semibold text-white tracking-tight leading-[1.1] text-glow">
-            Still curious? <br />
-            <span className="opacity-40">Common questions.</span>
+           Got questions?
           </h2>
+          <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mt-4 font-medium opacity-90">
+            We’ve got answers. If you have any other questions, feel free to reach out to our support team.
+          </p>
         </div>
 
         <div className="grid gap-4">
