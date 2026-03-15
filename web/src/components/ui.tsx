@@ -15,21 +15,16 @@ export function TwoCol({ left, right, reverseOnDesktop = false, visible = true, 
 
   return (
     <div className="grid gap-10 md:gap-16 items-center grid-cols-1 md:grid-cols-2">
-      {/* 
-        Intelligent Mobile Stacking:
-        If reverseOnDesktop is true, 'right' contains the text and 'left' contains the image.
-        On mobile, we want the text (right) on top.
-      */}
       <div
         className={`transition-all duration-700 ${visible ? show : hide} 
-          ${reverseOnDesktop ? "order-2 md:order-2" : "order-1 md:order-1"}`}
+          ${reverseOnDesktop ? "md:order-2" : ""}`}
         style={{ transitionDelay: `${delay}ms` }}
       >
         {left}
       </div>
       <div
         className={`transition-all duration-700 ${visible ? show : hide} 
-          ${reverseOnDesktop ? "order-1 md:order-1" : "order-2 md:order-2"}`}
+          ${reverseOnDesktop ? "md:order-1" : ""}`}
         style={{ transitionDelay: `${delay + 150}ms` }}
       >
         {right}

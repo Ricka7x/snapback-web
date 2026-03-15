@@ -18,16 +18,16 @@ export default function Hero() {
           Capture your entire work state. Snapback restores every app, every window, 
           and every z-index stack exactly where you need them. It even opens your apps for you.
         </p>
-        <div className="flex items-center justify-center gap-6 flex-wrap animate-fade-up [animation-delay:450ms]">
+        <div className="flex flex-col items-center gap-4 animate-fade-up [animation-delay:450ms]">
           <a
             href="#download"
             className="inline-flex items-center gap-2.5 bg-primary text-white font-semibold text-lg px-10 py-4 rounded-full transition-all duration-300 hover:bg-primary-hover hover:scale-105 hover:shadow-[0_0_30px_rgba(21,86,219,0.4)]"
           >
             Download for Mac (Free)
           </a>
-          <a href="#how" className="text-zinc-500 text-base font-medium transition-all duration-300 hover:text-zinc-300 flex items-center gap-2">
-            See how it works <span className="animate-bounce">↓</span>
-          </a>
+          <p className="text-zinc-500 text-xs font-medium uppercase tracking-widest opacity-60">
+            No account required. Instant download.
+          </p>
         </div>
       </div>
 
