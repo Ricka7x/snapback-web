@@ -4,7 +4,7 @@ export default function SnapSection() {
   return (
     <FeatureSection
       id="features"
-      bg="main"
+      bg="alt"
       reverseOnDesktop
       eyebrow="Window Snapping"
       heading={<>Every position,<br />one keystroke away.</>}

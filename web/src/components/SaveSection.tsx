@@ -3,7 +3,7 @@ import FeatureSection from "./FeatureSection";
 export default function SaveSection() {
   return (
     <FeatureSection
-      bg="main"
+      bg="alt"
       className="py-24"
       eyebrow="Save it"
       heading={<>Name it.<br />Shortcut it. Done.</>}

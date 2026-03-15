@@ -5,7 +5,7 @@ import { Section } from "./ui";
 
 export default function WorkspacesIntro() {
   return (
-    <Section bg="alt" mesh>
+    <Section bg="main">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
