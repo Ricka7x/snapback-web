@@ -227,33 +227,34 @@ fi
 # PACKAGING PHASE
 # ============================================================================
 
-log_info "Creating release archive..."
+log_info "Creating DMG release..."
 
 RELEASE_NAME="Snapback-$VERSION"
-RELEASE_ZIP="$BUILD_DIR/$RELEASE_NAME.zip"
+RELEASE_DMG="$BUILD_DIR/$RELEASE_NAME.dmg"
+DMG_BG_IMAGE="$SCRIPT_DIR/assets/Snapback.png"
 
 if [ "$DRY_RUN" = "true" ]; then
-  log_warn "[DRY RUN] Would zip: $EXPORT_PATH/Snapback.app -> $RELEASE_ZIP"
+  log_warn "[DRY RUN] Would create DMG: $EXPORT_PATH/Snapback.app -> $RELEASE_DMG with background $DMG_BG_IMAGE"
 else
-  if ! ditto -c -k --sequesterRsrc "$EXPORT_PATH/Snapback.app" "$RELEASE_ZIP"; then
-    log_error "Failed to create zip archive"
+  if ! create-dmg --overwrite --volname "$RELEASE_NAME" --background "$DMG_BG_IMAGE" "$EXPORT_PATH/Snapback.app" "$RELEASE_DMG" >> "$LOG_FILE" 2>&1; then
+    log_error "Failed to create DMG archive"
     exit 1
   fi
   
-  if ! file_exists "$RELEASE_ZIP"; then
-    log_error "Zip file not created: $RELEASE_ZIP"
+  if ! file_exists "$RELEASE_DMG"; then
+    log_error "DMG file not created: $RELEASE_DMG"
     exit 1
   fi
   
-  RELEASE_SIZE=$(du -h "$RELEASE_ZIP" | cut -f1)
-  log_success "Release archive created: $RELEASE_ZIP ($RELEASE_SIZE)"
+  RELEASE_SIZE=$(du -h "$RELEASE_DMG" | cut -f1)
+  log_success "Release DMG created: $RELEASE_DMG ($RELEASE_SIZE)"
 fi
 
 # ============================================================================
 # RELEASE PHASE
 # ============================================================================
 
-log_info "Adding release to repository..."
+log_info "Adding DMG release to repository..."
 
 RELEASE_SCRIPT="$SCRIPT_DIR/release.sh"
 
@@ -263,7 +264,7 @@ if [ ! -f "$RELEASE_SCRIPT" ]; then
 fi
 
 # Build release.sh arguments
-RELEASE_ARGS=("$RELEASE_ZIP")
+RELEASE_ARGS=("$RELEASE_DMG")
 
 if [ -n "$RELEASE_NOTES_FILE" ]; then
   if ! file_exists "$RELEASE_NOTES_FILE"; then
@@ -299,7 +300,7 @@ if [ "$SKIP_GIT" = "false" ]; then
       log_warn "Not a git repository, skipping git operations"
     else
       # Add release files
-      git add "releases/$RELEASE_NAME.zip" 2>/dev/null || true
+      git add "releases/$RELEASE_NAME.dmg" 2>/dev/null || true
       git add "releases/Snapback-$VERSION."* 2>/dev/null || true
       git add "releases/appcast.xml" 2>/dev/null || true
       
@@ -307,9 +308,9 @@ if [ "$SKIP_GIT" = "false" ]; then
       if ! git diff --quiet --cached; then
         git commit -m "chore(release): Snapback v$VERSION
 
-- App archive: $RELEASE_NAME.zip
-- Appcast updated
-- Built: $(date +'%Y-%m-%d %H:%M:%S')"
+ - App archive: $RELEASE_NAME.dmg
+ - Appcast updated
+ - Built: $(date +'%Y-%m-%d %H:%M:%S')"
         
         log_success "Changes committed"
         
