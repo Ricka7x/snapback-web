@@ -71,7 +71,8 @@ export default function CTASection() {
                 </svg>
               </a>
             </Magnetic>
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">Always Free</span>
+            
+            <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">Always Free · MacOS 13+</span>
           </motion.div>
         </div>
       </motion.div>
