@@ -3,6 +3,7 @@ import FeatureSection from "./FeatureSection";
 export default function SnapSection() {
   return (
     <FeatureSection
+      id="features"
       bg="main"
       reverseOnDesktop
       eyebrow="Window Snapping"
