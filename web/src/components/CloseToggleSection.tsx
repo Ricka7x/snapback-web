@@ -32,7 +32,7 @@ export default function CloseToggleSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className="rounded-[2rem] md:rounded-[2.5rem] overflow-hidden border border-white/10 grid grid-cols-1 lg:grid-cols-2 shadow-2xl relative z-10 max-w-6xl mx-auto"
+        className="rounded-4xl md:rounded-[2.5rem] overflow-hidden border border-white/10 grid grid-cols-1 lg:grid-cols-2 shadow-2xl relative z-10 max-w-6xl mx-auto"
       >
         {/* Left: copy */}
         <div className="bg-zinc-900/50 backdrop-blur-xl p-8 md:p-16 border-b lg:border-b-0 lg:border-r border-white/5">
