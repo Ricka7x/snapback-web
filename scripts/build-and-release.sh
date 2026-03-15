@@ -236,7 +236,7 @@ DMG_BG_IMAGE="$SCRIPT_DIR/assets/Snapback.png"
 if [ "$DRY_RUN" = "true" ]; then
   log_warn "[DRY RUN] Would create DMG: $EXPORT_PATH/Snapback.app -> $RELEASE_DMG with background $DMG_BG_IMAGE"
 else
-  if ! create-dmg --overwrite --volname "$RELEASE_NAME" --background "$DMG_BG_IMAGE" "$EXPORT_PATH/Snapback.app" "$RELEASE_DMG" >> "$LOG_FILE" 2>&1; then
+  if ! create-dmg --volname "$RELEASE_NAME" --background "$DMG_BG_IMAGE" "$RELEASE_DMG" "$EXPORT_PATH/Snapback.app" >> "$LOG_FILE" 2>&1; then
     log_error "Failed to create DMG archive"
     exit 1
   fi
