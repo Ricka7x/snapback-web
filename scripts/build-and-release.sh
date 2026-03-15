@@ -7,7 +7,7 @@
 # 2. Extracts version from Info.plist
 # 3. Builds and archives the Xcode project
 # 4. Exports the app bundle
-# 5. Creates a release zip
+# 5. Creates a release DMG archive
 # 6. Generates the Sparkle appcast.xml
 # 7. Commits changes to git
 #
