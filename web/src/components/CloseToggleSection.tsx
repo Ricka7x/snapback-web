@@ -26,7 +26,7 @@ const cases = [
 export default function CloseToggleSection() {
   const [ref, visible] = useReveal();
   return (
-    <Section bg="main" className="py-20">
+    <Section bg="main" className="py-12 md:py-20">
       <div
         ref={ref}
         className={`transition-all duration-700 ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"} rounded-3xl overflow-hidden border border-white/10 grid grid-cols-[repeat(auto-fit,minmax(min(100%,400px),1fr))]`}

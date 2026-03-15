@@ -49,7 +49,7 @@ export const Window: React.FC<WindowProps> = ({
         damping: 30,
         opacity: { duration: 0.2 }
       }}
-      className={`absolute rounded-xl overflow-hidden flex flex-col ${className}`}
+      className={`absolute rounded-xl overflow-hidden flex flex-col backdrop-blur-xl bg-zinc-900/40 ${className}`}
       style={{
         boxShadow: shadow,
       }}

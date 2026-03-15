@@ -2,7 +2,7 @@ import Animation from "./Animation";
 
 export default function Hero() {
   return (
-    <section className="bg-black pt-44 pb-32 overflow-hidden relative mesh-gradient">
+    <section className="bg-black pt-24 pb-12 md:pt-44 md:pb-32 overflow-hidden relative mesh-gradient">
       {/* Background glow for hero */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/10 blur-[120px] rounded-full pointer-events-none animate-fade-in" />
       
@@ -11,12 +11,12 @@ export default function Hero() {
           Free for macOS
         </span>
         <h1 className="font-display text-[clamp(44px,8vw,84px)] font-semibold leading-[0.95] tracking-[-0.03em] text-white mb-8 animate-fade-up [animation-delay:150ms] text-glow">
-          Your Mac, exactly<br />
-          how you left it.
+          Your workspace,<br />
+          exactly how you left it.
         </h1>
         <p className="text-zinc-400 text-xl md:text-2xl leading-[1.65] max-w-2xl mx-auto mb-12 animate-fade-up [animation-delay:300ms] font-medium opacity-90">
-          Snapback remembers your window arrangements: which app, which display,
-          and which position. Then it restores them instantly.
+          Capture your entire work state. Snapback restores every app, every window, 
+          and every z-index stack exactly where you need them. It even opens your apps for you.
         </p>
         <div className="flex items-center justify-center gap-6 flex-wrap animate-fade-up [animation-delay:450ms]">
           <a

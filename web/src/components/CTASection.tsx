@@ -5,7 +5,7 @@ import { useReveal } from "./useReveal";
 export default function CTASection() {
   const [ref, visible] = useReveal();
   return (
-    <section id="download" className="bg-zinc-950 py-52 relative overflow-hidden">
+    <section id="download" className="bg-zinc-950 py-16 md:py-52 relative overflow-hidden">
       <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full scale-150 animate-pulse pointer-events-none" />
       <div
         ref={ref}
