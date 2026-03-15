@@ -26,11 +26,11 @@ const faqs = [
   }
 ];
 
-export default function FAQSection() {
+export default function FAQSection({ id }: { id?: string }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   return (
-    <Section bg="alt" className="border-t border-white/5 relative overflow-hidden">
+    <Section id={id} bg="alt" className="border-t border-white/5 relative overflow-hidden">
       {/* Background Glows for Premium Feel */}
       <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
@@ -38,7 +38,7 @@ export default function FAQSection() {
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-20">
           <span className="inline-block text-primary text-[11px] font-bold uppercase tracking-[0.2em] mb-4 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5">
-            Support
+            support
           </span>
           <h2 className="text-[clamp(32px,5vw,52px)] font-display font-semibold text-white tracking-tight leading-[1.1] text-glow">
             Still curious? <br />

@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence, useTransform, MotionValue } from 'framer-motion'
 import { DockIcon } from './ui/DockIcon'
 import { MenuBar } from './ui/MenuBar'
 import { BrowserWindow } from './windows/BrowserWindow'
@@ -9,30 +9,39 @@ import { TerminalWindow } from './windows/TerminalWindow'
 
 type WorkspaceState = 'disordered' | 'trio' | 'studio' | 'command_center'
 
+interface AnimationProps {
+  progress: MotionValue<number>;
+}
+
 function KeyboardKey({ children }: { children: React.ReactNode }) {
   return (
-    <div className="min-w-[44px] h-11 px-3 rounded-xl bg-gradient-to-b from-[#444] to-[#222] border border-white/10 shadow-[0_4px_0_0_rgba(0,0,0,0.6),inset_0_1px_0_rgba(255,255,255,0.1)] flex items-center justify-center text-white font-mono text-xl font-bold">
-      {children}
+    <div className="min-w-[44px] h-11 px-3 rounded-xl glass-card shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_1px_1px_rgba(255,255,255,0.1)] flex items-center justify-center text-white/90 font-mono text-xl font-bold relative overflow-hidden group">
+      <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50" />
+      <div className="relative z-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+        {children}
+      </div>
     </div>
   )
 }
 
-export default function Animation() {
-  const [state, setState] = useState<WorkspaceState>('disordered')
+export default function Animation({ progress }: AnimationProps) {
   const [scale, setScale] = useState(1)
   const containerRef = useRef<HTMLDivElement>(null)
 
+  // Map progress to workspace states
+  const state = useTransform(progress, [0, 0.2, 0.4, 0.6, 0.8], ['disordered', 'trio', 'studio', 'command_center', 'command_center']) as any;
+  const [activeState, setActiveState] = useState<WorkspaceState>('disordered');
+
   useEffect(() => {
-    const sequence: WorkspaceState[] = ['disordered', 'trio', 'studio', 'command_center']
-    let currentIndex = 0
+    return state.on("change", (latest: WorkspaceState) => {
+      setActiveState(latest);
+    });
+  }, [state]);
 
-    const interval = setInterval(() => {
-      currentIndex = (currentIndex + 1) % sequence.length
-      setState(sequence[currentIndex])
-    }, 4500)
-
-    return () => clearInterval(interval)
-  }, [])
+  // Expand effect at the end of scroll
+  const expansionScale = useTransform(progress, [0.8, 1], [1, 2.5]);
+  const expansionOpacity = useTransform(progress, [0.95, 1], [1, 0]);
+  const expansionBlur = useTransform(progress, [0.85, 1], [0, 40]);
 
   // ── Sizing engine ──────────────────────────────────────────────────────────
   useEffect(() => {
@@ -91,17 +100,22 @@ export default function Animation() {
     }
   }
 
-  const layout = getLayout(state)
+  const layout = getLayout(activeState)
 
   return (
-    <div ref={containerRef} className="w-full h-full relative overflow-hidden flex items-center justify-center">
+    <motion.div 
+      ref={containerRef} 
+      style={{ filter: `blur(${expansionBlur}px)` }}
+      className="w-full h-full relative overflow-hidden flex items-center justify-center"
+    >
       {/* Inner content wrapper scaled to fit */}
-      <div 
+      <motion.div 
         className="absolute origin-center shrink-0"
         style={{ 
-          transform: `scale(${scale})`, 
+          scale: useTransform(progress, [0, 1], [scale, scale * 1.5]), // Slight zoom in throughout
           width: '1100px', 
           height: '618px',
+          opacity: expansionOpacity
         }}
       >
         {/* DESKTOP */}
@@ -135,8 +149,8 @@ export default function Animation() {
                       <KeyboardKey key={`${key}-${i}`}>{key}</KeyboardKey>
                     ))}
                   </div>
-                  <div className="px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-xl border border-white/10 text-white/50 text-[10px] font-bold uppercase tracking-[0.2em]">
-                    Snapback to Workspace
+                  <div className="px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-xl border border-white/10 text-white/50 text-[10px] font-bold tracking-[0.2em]">
+                    snapback to workspace
                   </div>
                 </div>
               </motion.div>
@@ -156,7 +170,7 @@ export default function Animation() {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }

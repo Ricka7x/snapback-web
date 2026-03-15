@@ -8,9 +8,17 @@
 @theme {
   --color-primary: #1556DB;
   --color-primary-hover: #0047AB;
+  --color-accent: #FE6445;
+  --color-accent-hover: #E55A3E;
   
   --animate-fade-up: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   --animate-fade-in: fade-in 1s ease-out forwards;
+  --animate-shimmer: shimmer 2.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
 @keyframes fade-up {
@@ -45,6 +53,16 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
   position: relative;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+/* Custom Selection */
+::selection {
+  background: var(--color-primary);
+  color: white;
 }
 
 /* Grain overlay */
@@ -55,14 +73,19 @@ body::before {
   z-index: 9999;
   pointer-events: none;
   background: url("https://grainy-gradients.vercel.app/noise.svg");
-  opacity: 0.15;
-  mix-blend-mode: soft-light;
+  opacity: 0.08;
+  mix-blend-mode: overlay;
 }
 
 /* Custom utility classes */
 .bg-blue-glow {
   background: radial-gradient(ellipse at center, var(--color-primary) 0%, transparent 70%);
   opacity: 0.1;
+}
+
+.bg-orange-glow {
+  background: radial-gradient(ellipse at center, var(--color-accent) 0%, transparent 70%);
+  opacity: 0.15;
 }
 
 .glass-card {
@@ -81,6 +104,19 @@ body::before {
     radial-gradient(at 0% 100%, hsla(220, 100%, 20%, 0.05) 0px, transparent 50%);
 }
 
+.orange-mesh-gradient {
+  background-color: #FE6445;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(11, 99%, 64%, 0.3) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(15, 99%, 55%, 0.2) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(11, 99%, 45%, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(11, 99%, 35%, 0.1) 0px, transparent 50%);
+}
+
 .text-glow {
   text-shadow: 0 0 40px rgba(21, 86, 219, 0.3);
+}
+
+.text-glow-orange {
+  text-shadow: 0 0 40px rgba(254, 100, 69, 0.4);
 }

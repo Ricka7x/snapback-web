@@ -1,3 +1,6 @@
+"use client"
+
+import { motion, useTransform } from "framer-motion";
 import Nav from "./Nav";
 import Hero from "./Hero";
 import MenuBarSection from "./MenuBarSection";
@@ -6,6 +9,8 @@ import WorkspacesIntro from "./WorkspacesIntro";
 import SaveSection from "./SaveSection";
 import PreviewSection from "./PreviewSection";
 import CloseToggleSection from "./CloseToggleSection";
+import ScrollStory from "./ScrollStory";
+import Animation from "./Animation";
 import ShortcutsSection from "./ShortcutsSection";
 import FlexibilitySection from "./FlexibilitySection";
 import CTASection from "./CTASection";
@@ -19,6 +24,31 @@ export default function SnapbackLanding() {
       <Nav />
       <Hero />  
       
+      <ScrollStory>
+        {(progress) => (
+          <div className="w-full h-full flex flex-col items-center justify-center relative">
+            <Animation progress={progress} />
+            
+            <motion.div 
+               style={{ 
+                 opacity: useTransform(progress, [0.8, 0.95], [0, 1]),
+               }}
+               className="absolute inset-0 bg-black z-50 pointer-events-none flex items-center justify-center p-6"
+            >
+               <motion.h2 
+                 style={{ 
+                   scale: useTransform(progress, [0.8, 1], [0.9, 1.1]),
+                   opacity: useTransform(progress, [0.85, 0.95], [0, 1])
+                 }}
+                 className="text-4xl md:text-7xl font-display font-semibold text-white text-center tracking-tight"
+                >
+                  Exactly where<br />you left it.
+               </motion.h2>
+            </motion.div>
+          </div>
+        )}
+      </ScrollStory>
+
       {/* Level 2: Core Experience */}
       <SnapSection />
       <WorkspacesIntro />
@@ -31,7 +61,7 @@ export default function SnapbackLanding() {
       <ShortcutsSection />
       <FlexibilitySection />
       
-      <FAQSection />
+      <FAQSection id="faq" />
       <CTASection />
       <Footer />
     </>
