@@ -17,14 +17,19 @@ export default function SnapbackLanding() {
     <>
       <Nav />
       <Hero />  
-      <MenuBarSection />
+      
+      {/* Level 2: Core Experience */}
       <SnapSection />
       <WorkspacesIntro />
       <SaveSection />
       <PreviewSection />
+
+      {/* Level 4: Experience & Polish */}
+      <MenuBarSection />
       <CloseToggleSection />
       <ShortcutsSection />
       <FlexibilitySection />
+      
       <CTASection />
       <Footer />
     </>
