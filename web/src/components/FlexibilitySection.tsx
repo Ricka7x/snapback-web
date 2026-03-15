@@ -7,9 +7,9 @@ export default function FlexibilitySection() {
       reverseOnDesktop
       eyebrow="Works your way"
       heading={<>Already have a<br />window manager?</>}
-      body="Turn off snapping entirely and use Snapback just for workspaces. It plays well with whatever you already have — Magnet, Rectangle, or nothing at all."
+      body="Turn off snapping entirely and use Snapback just for workspaces. It plays well with whatever you already have like Magnet, Rectangle, or nothing at all."
       imageSrc="/assets/settings.png"
-      imageAlt="General settings — disable window management"
+      imageAlt="General settings: disable window management"
     />
   );
 }

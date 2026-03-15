@@ -38,12 +38,10 @@ export default function Animation() {
   useEffect(() => {
     const handleResize = () => {
       if (containerRef.current) {
-        const { offsetWidth: w, offsetHeight: h } = containerRef.current
-        // Reference size: 1100x618 (approx 16:9)
-        const scaleX = w / 1100
-        const scaleY = h / 618
-        // Use cover-like scaling to ensure it fills
-        setScale(Math.max(scaleX, scaleY))
+        const { offsetWidth: w } = containerRef.current
+        // Primary scaling factor based on width
+        const newScale = Math.min(w / 1100, 1)
+        setScale(newScale)
       }
     }
 
@@ -54,7 +52,7 @@ export default function Animation() {
     return () => observer.disconnect()
   }, [])
 
-  // ── Layout Constants (Fixed Pixels for Stability) ──────────────────────────
+  // Layout Constants (Fixed Pixels for Stability)
   const MARGIN = 30
   const TOP_OFFSET = 36
   const WORK_HEIGHT = 480
@@ -97,7 +95,7 @@ export default function Animation() {
 
   return (
     <div ref={containerRef} className="w-full h-full relative overflow-hidden flex items-center justify-center">
-      {/* ── Inner content wrapper scaled to fit ── */}
+      {/* Inner content wrapper scaled to fit */}
       <div 
         className="absolute origin-center shrink-0"
         style={{ 
@@ -122,7 +120,7 @@ export default function Animation() {
           <BrowserWindow {...layout.browser} />
           <TerminalWindow {...layout.terminal} />
 
-          {/* ── Shortcut Indicator (Keycaps) ────────────────────────────────────── */}
+          {/* Shortcut Indicator (Keycaps) */}
           <AnimatePresence>
             {layout.shortcut.length > 0 && (
               <motion.div
@@ -145,7 +143,7 @@ export default function Animation() {
             )}
           </AnimatePresence>
           
-          {/* ══ DOCK ══ */}
+          {/* DOCK */}
           <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-50 scale-100">
             <div
               className="flex items-end gap-2 border border-white/[0.15] rounded-[24px] px-5 pt-4 pb-3 bg-white/10 backdrop-blur-2xl shadow-2xl"

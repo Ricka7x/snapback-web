@@ -59,7 +59,7 @@ export const Editor: React.FC = () => {
         </div>
       </div>
       
-      {/* Code area — gutter + lines */}
+      {/* Code Area */}
       <div className="flex flex-1 py-2 overflow-hidden">
         {/* Line numbers gutter */}
         <div className="w-8 px-1.5 border-r border-white/[0.04] flex flex-col gap-[4px] items-end shrink-0 pt-px">

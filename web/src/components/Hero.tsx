@@ -15,15 +15,15 @@ export default function Hero() {
           how you left it.
         </h1>
         <p className="text-zinc-400 text-xl md:text-2xl leading-[1.65] max-w-2xl mx-auto mb-12 animate-fade-up [animation-delay:300ms] font-medium opacity-90">
-          Snapback saves your window layouts — which app, which display,
-          which position — and puts them back with a single keystroke.
+          Snapback remembers your window arrangements: which app, which display,
+          and which position. Then it restores them instantly.
         </p>
         <div className="flex items-center justify-center gap-6 flex-wrap animate-fade-up [animation-delay:450ms]">
           <a
             href="#download"
             className="inline-flex items-center gap-2.5 bg-primary text-white font-semibold text-lg px-10 py-4 rounded-full transition-all duration-300 hover:bg-primary-hover hover:scale-105 hover:shadow-[0_0_30px_rgba(21,86,219,0.4)]"
           >
-            Download for Mac — Free
+            Download for Mac (Free)
           </a>
           <a href="#how" className="text-zinc-500 text-base font-medium transition-all duration-300 hover:text-zinc-300 flex items-center gap-2">
             See how it works <span className="animate-bounce">↓</span>
@@ -36,9 +36,9 @@ export default function Hero() {
         <div className="relative group">
           <div className="absolute -inset-1 bg-gradient-to-b from-primary/20 to-transparent rounded-[2.5rem] blur-xl opacity-50" />
           <div className="w-full aspect-video rounded-[2rem] bg-zinc-900/50 backdrop-blur-xl border border-white/10 flex items-center justify-center overflow-hidden shadow-2xl">
-            <span className="text-white/10 text-sm font-mono relative z-10 w-full h-full">
-              <Animation/>
-            </span>
+          <div className="relative z-10 w-full h-full">
+            <Animation/>
+          </div>
           </div>
         </div>
       </div>

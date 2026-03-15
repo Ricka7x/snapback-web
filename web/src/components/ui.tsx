@@ -1,4 +1,4 @@
-// ── Section wrapper ───────────────────────────────────────────────────────────
+// Section wrapper
 export function Section({ bg = "main", children, className = "", mesh = false }: { bg?: "main" | "alt", children: React.ReactNode, className?: string, mesh?: boolean }) {
   const bgClass = bg === "alt" ? "bg-zinc-950" : "bg-black";
   return (
@@ -8,7 +8,7 @@ export function Section({ bg = "main", children, className = "", mesh = false }:
   );
 }
 
-// ── Two-column layout ─────────────────────────────────────────────────────────
+// Two-column layout
 export function TwoCol({ left, right, reverseOnDesktop = false, visible = true, delay = 0 }: { left: React.ReactNode, right: React.ReactNode, reverseOnDesktop?: boolean, visible?: boolean, delay?: number }) {
   const show = "opacity-100 translate-y-0";
   const hide = "opacity-0 translate-y-8";
@@ -31,7 +31,7 @@ export function TwoCol({ left, right, reverseOnDesktop = false, visible = true, 
   );
 }
 
-// ── Eyebrow + heading + body copy ─────────────────────────────────────────────
+// Content blocks
 export function Copy({ eyebrow, heading, body, headingSize = "text-[clamp(32px,5vw,52px)]" }: { eyebrow: string, heading: React.ReactNode, body: string, headingSize?: string }) {
   return (
     <div className="animate-fade-up">
@@ -46,7 +46,7 @@ export function Copy({ eyebrow, heading, body, headingSize = "text-[clamp(32px,5
   );
 }
 
-// ── Screenshot frame ──────────────────────────────────────────────────────────
+// Media display
 export function Shot({ src, alt }: { src: string, alt: string }) {
   return (
     <div className="relative group animate-fade-in">

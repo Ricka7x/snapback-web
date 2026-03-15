@@ -7,7 +7,7 @@ export default function SnapSection() {
       reverseOnDesktop
       eyebrow="Window Snapping"
       heading={<>Every position,<br />one keystroke away.</>}
-      body="Halves, thirds, quarters, corners. Every shortcut is remappable. Works exactly like you'd expect — until you need more."
+      body="Halves, thirds, quarters, corners. Every shortcut is remappable. It works exactly like you'd expect, right out of the box."
       imageSrc="/assets/positions.png"
       imageAlt="Snapback hotkeys settings"
     />

@@ -18,9 +18,8 @@ export default function WorkspacesIntro() {
           Every window where it belongs.
         </h2>
         <p className="text-zinc-400 text-xl leading-[1.65]">
-          Save a full layout — every app, every display, every position — and restore
-          it instantly. Name it, assign a shortcut, and switch between contexts the
-          way you switch between thoughts.
+          Save everything: every app, every display, and every position. Bring it back
+          instantly, move between workflows as fast as you switch between tasks.
         </p>
       </div>
     </Section>
