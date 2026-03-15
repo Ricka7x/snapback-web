@@ -61,17 +61,21 @@ export default function Hero() {
           transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col items-center gap-4"
         >
-          <Magnetic distance={0.3}>
-            <a
-              href="#download"
-              className="inline-flex items-center gap-2.5 bg-primary text-white font-semibold text-lg px-10 py-4 rounded-full transition-all duration-300 hover:bg-primary-hover hover:scale-105 hover:shadow-[0_0_30px_rgba(21,86,219,0.4)]"
-            >
-              Download for Mac (Free)
-            </a>
-          </Magnetic>
-          <p className="text-zinc-500 text-xs font-medium  tracking-widest opacity-60">
-            No account required. Instant download.
-          </p>
+          <div className="flex flex-col items-center gap-3">
+            <Magnetic>
+              <a 
+                href="#download" 
+                className="group relative px-8 py-4 bg-primary text-white font-bold rounded-2xl transition-all duration-300 hover:bg-primary-hover hover:scale-105 hover:shadow-[0_0_30px_rgba(21,86,219,0.4)] shadow-xl flex items-center gap-2 overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                Get Snapback
+                <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </Magnetic>
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 opacity-60">Always Free</span>
+          </div>
         </motion.div>
       </div>
 

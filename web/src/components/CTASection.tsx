@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion";
+import { Magnetic } from "./ui";
 
 export default function CTASection() {
   return (
@@ -30,7 +31,7 @@ export default function CTASection() {
             <img
               src='/assets/logo.svg'
               alt="Snapback"
-              className="w-12 h-12 rounded-lg"
+              className="w-16 h-16 rounded-lg"
             />
           </motion.div>
           <motion.h2 
@@ -57,15 +58,20 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="flex flex-col items-center gap-6"
+            className="flex flex-col items-center gap-4"
           >
-            <a
-              href="#"
-              className="inline-block bg-white text-black font-bold text-xl px-12 py-5 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.3)]"
-            >
-              download for mac (free)
-            </a>
-            <p className="text-white/40 text-[11px] font-bold tracking-widest font-mono">macos 13 ventura or later · no account needed</p>
+            <Magnetic>
+              <a
+                href="#download"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-bold rounded-2xl transition-all duration-300 hover:bg-primary hover:text-white hover:scale-105 hover:shadow-[0_20px_40px_rgba(255,255,255,0.1)] active:scale-95"
+              >
+                Get Snapback
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </Magnetic>
+            <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">Always Free</span>
           </motion.div>
         </div>
       </motion.div>
