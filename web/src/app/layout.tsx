@@ -20,6 +20,7 @@ const outfit = Outfit({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://snapbackapp.com"),
   title: "Snapback — Your Mac workspace, exactly how you left it.",
   description: "The ultimate workspace automation tool for macOS. Save and restore groups of apps, window positions, and z-index stacks across multiple displays with a single hotkey.",
   keywords: ["macOS", "window manager", "workspace restoration", "productivity", "mac apps", "window snapping"],
