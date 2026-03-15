@@ -7,7 +7,7 @@ export default function SaveSection() {
       className="py-24"
       eyebrow="Save it"
       heading={<>Name it.<br />Shortcut it. Done.</>}
-      body={`Give your layout a name — "Dev", "Design", "Deep work" — and assign a keyboard shortcut. Set it up once. Snapback remembers every window, every display, every position.`}
+      body={`Give your layout a name (like Dev, Design, or Deep work) and assign a shortcut. Set it up once, and Snapback remembers every window on every display.`}
       imageSrc="/assets/save.png"
       imageAlt="Save Workspace dialog"
     />

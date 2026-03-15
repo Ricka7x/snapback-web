@@ -4,16 +4,16 @@ import { Section } from "./ui";
 
 const cases = [
   {
-    name: "Development → Design",
-    shortcut: "⌃⌥D → ⌃⌥S",
+    name: "Dev to Design",
+    shortcut: "⌃⌥D to ⌃⌥S",
     close: true,
-    note: "Different apps — close everything unrelated. Clean start.",
+    note: "Closes non-workspace apps for a totally fresh start.",
   },
   {
-    name: "Work → Calls",
-    shortcut: "⌃⌥W → ⌃⌥M",
+    name: "Work to Calls",
+    shortcut: "⌃⌥W to ⌃⌥M",
     close: false,
-    note: "Same apps, different layout. Keep them open, just reposition.",
+    note: "Keeps your apps open but shifts them into meeting mode.",
   },
   {
     name: "Focus mode",
@@ -41,7 +41,7 @@ export default function CloseToggleSection() {
           </h2>
           <p className="text-zinc-400 text-[17px] leading-[1.7] mb-8">
             Switching from dev to design? Snapback can close the apps that don't belong.
-            Toggle it per workspace — leave it off when setups share apps, flip it on when they don't.
+            Toggle it per workspace: leave it off when setups share apps, flip it on when they don't.
           </p>
           {/* Toggle row */}
           <div className="bg-white/5 rounded-2xl p-5 border border-white/10 glass-card">
@@ -67,7 +67,7 @@ export default function CloseToggleSection() {
             <div key={i} className="bg-zinc-900 rounded-xl p-5 border border-white/10">
               <div className="flex items-center justify-between mb-2">
                  <span className="text text-sm font-medium">{item.name}</span>
-                <span className="text-primary text-[11px] font-mono bg-primary/10 px-2 py-0.5 rounded-lg">
+                <span className="text-primary text-[10px] font-mono font-bold bg-primary/10 border border-primary/20 px-2.5 py-1 rounded-md tracking-wider">
                   {item.shortcut}
                 </span>
               </div>

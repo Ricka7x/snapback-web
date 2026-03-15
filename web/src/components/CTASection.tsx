@@ -29,7 +29,7 @@ export default function CTASection() {
           href="#"
           className="inline-block bg-primary text-white font-semibold text-xl px-12 py-5 rounded-full transition-all duration-300 hover:bg-primary-hover hover:scale-105 hover:shadow-[0_0_40px_rgba(21,86,219,0.4)] shadow-2xl"
         >
-          Download for Mac — Free
+          Download for Mac (Free)
         </a>
         <p className="text-white/20 text-xs font-bold uppercase tracking-widest mt-8">macOS 13 Ventura or later · No account needed</p>
       </div>
