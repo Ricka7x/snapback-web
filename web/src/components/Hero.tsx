@@ -40,8 +40,8 @@ export default function Hero() {
           transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="font-display text-[clamp(44px,8vw,84px)] font-semibold leading-[0.95] tracking-[-0.03em] text-white mb-8 text-glow"
         >
-          Your workspace,<br />
-          exactly how you left it.
+          Your <em>workspace</em>,<br />
+          <em>exactly</em> how you left it.
         </motion.h1>
         
         <motion.p 
