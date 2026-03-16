@@ -239,10 +239,9 @@ DMG_BG_IMAGE="$SCRIPT_DIR/assets/Snapback.png"
 if [ "$DRY_RUN" = "true" ]; then
   log_warn "[DRY RUN] Would create DMG: $EXPORT_PATH/Snapback.app -> $RELEASE_DMG with background $DMG_BG_IMAGE"
 else
-  # Create Applications symlink in export path if missing
-  if [ ! -e "$EXPORT_PATH/Applications" ]; then
-    ln -s /Applications "$EXPORT_PATH/Applications"
-  fi
+  # Clean up any stale Applications symlink before create-dmg runs
+  rm -f "$EXPORT_PATH/Applications"
+
   if ! create-dmg \
     --volname "$RELEASE_NAME" \
     --background "$DMG_BG_IMAGE" \
