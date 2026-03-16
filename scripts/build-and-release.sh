@@ -229,6 +229,9 @@ fi
 
 log_info "Creating DMG release..."
 
+if [[ "$VERSION" =~ ^[0-9]+\.[0-9]+$ ]]; then
+  VERSION="$VERSION.0"
+fi
 RELEASE_NAME="Snapback-$VERSION"
 RELEASE_DMG="$BUILD_DIR/$RELEASE_NAME.dmg"
 DMG_BG_IMAGE="$SCRIPT_DIR/assets/Snapback.png"
@@ -334,9 +337,9 @@ echo "╔═══════════════════════�
 echo "║                    RELEASE SUMMARY                        ║"
 echo "╠════════════════════════════════════════════════════════════╣"
 echo "║ Version:        $VERSION"
-echo "║ Release Zip:    $RELEASE_ZIP"
+echo "║ Release DMG:    $RELEASE_DMG"
 echo "║ Website URL:    $WEBSITE_URL"
-echo "║ Download URL:   $DOWNLOAD_URL_PREFIX/$RELEASE_NAME.zip"
+echo "║ Download URL:   $DOWNLOAD_URL_PREFIX/$RELEASE_NAME.dmg"
 if [ -f "$PROJECT_DIR/releases/appcast.xml" ]; then
   echo "║ Appcast:        $DOWNLOAD_URL_PREFIX/appcast.xml"
 fi
