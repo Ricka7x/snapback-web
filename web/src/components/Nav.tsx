@@ -1,5 +1,6 @@
 
 
+import { DOWNLOAD_URL } from "@/lib/constants";
 import { useState, useEffect } from "react";
 import { Magnetic } from "./ui";
 
@@ -30,7 +31,7 @@ export default function Nav() {
         <div className="flex items-center">
           <Magnetic>
             <a
-              href="/releases/Snapback-0.1.2.dmg"
+              href={DOWNLOAD_URL}
               download
               className="text-[13px] md:text-sm font-semibold text-white bg-primary px-5 md:px-6 py-2 md:py-2.5 rounded-xl transition-all duration-300 hover:bg-primary-hover hover:scale-105 hover:shadow-[0_0_20px_rgba(21,86,219,0.3)] shadow-lg"
             >

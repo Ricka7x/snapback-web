@@ -1,9 +1,10 @@
 # Local environment overrides (for sensitive configuration)
 .env.local
 .env.*.local
+/scripts/
+build.log
 
 # Build artifacts
-/scripts/build.log
 /build/
 /tmp/
 

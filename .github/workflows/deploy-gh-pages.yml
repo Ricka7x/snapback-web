@@ -18,6 +18,13 @@ jobs:
         with:
           node-version: 20
 
+      - name: Detect latest version and update constants
+        run: |
+          LATEST_FILE=$(ls releases/Snapback-*.dmg | sort -V | tail -n 1)
+          LATEST_VERSION=$(basename "$LATEST_FILE" .dmg | sed 's/Snapback-//')
+          echo "Detected latest version: $LATEST_VERSION"
+          sed -i "s/LATEST_VERSION = \".*\"/LATEST_VERSION = \"$LATEST_VERSION\"/" web/src/lib/constants.ts
+
       - name: Install dependencies
         run: |
           cd web
