@@ -1,4 +1,10 @@
-import Landing from "@/components/SnapbackLanding";
+"use client";
+
+import dynamic from 'next/dynamic';
+
+const Landing = dynamic(() => import('@/components/SnapbackLanding'), {
+  ssr: false,
+});
 
 export default function Home() {
   return (
