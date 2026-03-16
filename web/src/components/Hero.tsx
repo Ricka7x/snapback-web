@@ -75,7 +75,7 @@ export default function Hero() {
                 </svg>
               </a>
             </Magnetic>
-            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 opacity-60">Always Free · MacOS 13+</span>
+            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500 opacity-60">Always Free · MacOS 12.4+</span>
           </div>
         </motion.div>
       </div>
