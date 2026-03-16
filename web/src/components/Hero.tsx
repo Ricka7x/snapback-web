@@ -63,7 +63,8 @@ export default function Hero() {
           <div className="flex flex-col items-center gap-3">
             <Magnetic>
               <a 
-                href="#download" 
+                href="/releases/Snapback-0.1.2.dmg" 
+                download
                 className="group relative px-8 py-4 bg-primary text-white font-bold rounded-2xl transition-all duration-300 hover:bg-primary-hover hover:scale-105 hover:shadow-[0_0_30px_rgba(21,86,219,0.4)] shadow-xl flex items-center gap-2 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />

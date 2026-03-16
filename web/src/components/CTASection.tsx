@@ -62,7 +62,8 @@ export default function CTASection() {
           >
             <Magnetic>
               <a
-                href="#download"
+                href="/releases/Snapback-0.1.2.dmg"
+                download
                 className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-bold rounded-2xl transition-all duration-300 hover:bg-primary hover:text-white hover:scale-105 hover:shadow-[0_20px_40px_rgba(255,255,255,0.1)] active:scale-95"
               >
                 Get Snapback
