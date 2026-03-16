@@ -14,7 +14,7 @@ export default function CTASection() {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         className="max-w-5xl mx-auto rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] border border-white/10"
         style={{
-          backgroundImage: "url('/assets/wallpaper.jpg')",
+          backgroundImage: "url('/assets/wallpaper.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center"
         }}
