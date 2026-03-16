@@ -56,6 +56,8 @@ export default function Animation({ progress }: AnimationProps) {
 
   // ── Sizing engine ──────────────────────────────────────────────────────────
   useEffect(() => {
+    let animationFrameId: number;
+    
     const handleResize = () => {
       if (containerRef.current) {
         const { offsetWidth: w } = containerRef.current
@@ -65,11 +67,23 @@ export default function Animation({ progress }: AnimationProps) {
       }
     }
 
-    const observer = new ResizeObserver(handleResize)
+    const debouncedResize = () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+      animationFrameId = requestAnimationFrame(handleResize);
+    }
+
+    const observer = new ResizeObserver(debouncedResize)
     if (containerRef.current) observer.observe(containerRef.current)
     handleResize()
 
-    return () => observer.disconnect()
+    return () => {
+      observer.disconnect()
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    }
   }, [])
 
   // Layout Constants (Fixed Pixels for Stability)
@@ -160,9 +174,9 @@ export default function Animation({ progress }: AnimationProps) {
               >
                 <div className="flex flex-col items-center gap-6">
                   <div className="flex items-center gap-3">
-                    {layout.shortcut.map((key, i) => (
-                      <KeyboardKey key={`${key}-${i}`}>{key}</KeyboardKey>
-                    ))}
+                     {layout.shortcut.map((key) => (
+                       <KeyboardKey key={key}>{key}</KeyboardKey>
+                     ))}
                   </div>
                   <div className="px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-xl border border-white/10 text-white/50 text-[10px] font-bold tracking-[0.2em] uppercase">
                     {layout.label}
