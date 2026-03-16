@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     siteName: "Snapback",
     images: [
       {
-        url: "/assets/og-image.png",
+        url: "/assets/og-image.webp",
         width: 1200,
         height: 630,
         alt: "Snapback Workspace Restoration",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Snapback · Your Mac workspace, exactly how you left it.",
     description: "Launch apps, restore positions, and preserve z-index stacks with one shortcut.",
-    images: ["/assets/og-image.png"],
+    images: ["/assets/og-image.webp"],
   },
 };
 
