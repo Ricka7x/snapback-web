@@ -1,8 +1,9 @@
-
+"use client"
 
 import { DOWNLOAD_URL } from "@/lib/constants";
 import { useState, useEffect } from "react";
 import { Magnetic } from "./ui";
+import Link from "next/link";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
@@ -19,13 +20,13 @@ export default function Nav() {
     <div className={`fixed top-0 left-0 right-0 z-100 flex justify-center px-4 md:px-6 transition-all duration-500 ${scrolled ? 'pt-4' : 'pt-8'}`}>
       <nav className={`glass-card flex items-center justify-between gap-8 px-4 md:px-8 py-3 rounded-2xl w-full max-w-5xl transition-all duration-500 ${scrolled ? 'bg-black/60 backdrop-blur-2xl border-white/5 py-2.5 shadow-2xl' : 'bg-black/20 border-white/10'}`}>
         
-        {/* Logo */}
-        <div className="flex items-center gap-4 group cursor-pointer shrink-0">
+        {/* Logo - links to home */}
+        <Link href="/" className="flex items-center gap-4 group cursor-pointer shrink-0" tabIndex={0} aria-label="Go to home">
           <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
             <img src="/assets/logo.svg" alt="Snapback" className="w-10 h-10 rounded-lg" />
           </div>
           <span className="text-white text-lg font-semibold tracking-tight">Snapback</span>
-        </div>
+        </Link>
         
         {/* Action Button */}
         <div className="flex items-center">

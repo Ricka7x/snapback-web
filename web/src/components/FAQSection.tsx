@@ -28,6 +28,14 @@ const faqs = [
   {
     question: "Can I get it from the Mac App Store?",
     answer: "Snapback is not currently available on the Mac App Store. However, it is notarized by Apple, ensuring it meets their security standards. You can download it directly from our website with confidence."
+  },
+  {
+    question: "I see a popup about conflicting apps when I open Snapback. What does that mean?",
+    answer: "This can happen if you have another window management app running (like Magnet, Rectangle, or Moom). These apps can interfere with Snapback's ability to control your windows. To fix this, you can either quit the conflicting app while using Snapback or disable window management feature within Snapback's settings. "
+  },
+  {
+    question: "I set a custom shortcut but it doesn't work. Why?",
+    answer: "This can happen if the shortcut you chose conflicts with another system or application shortcut. Make sure the shortcut is unique and not already in use. If the issue persists, try restarting Snapback or your computer."
   }
 ];
 
@@ -49,7 +57,7 @@ export default function FAQSection({ id }: { id?: string }) {
            Got questions?
           </h2>
           <p className="text-zinc-400 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mt-4 font-medium opacity-90">
-            We’ve got answers. If you have any other questions, feel free to reach out to our support team.
+            We’ve got answers. If you have any other questions, feel free to reach out to our support team. <a href="mailto:support@snapbackapp.com" className="text-primary hover:underline">support@snapbackapp.com</a>
           </p>
         </div>
 
