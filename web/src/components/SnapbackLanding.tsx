@@ -26,7 +26,7 @@ export default function SnapbackLanding() {
       
       <ScrollStory>
         {(progress) => (
-          <div className="w-full h-full flex flex-col items-center justify-center relative">
+          <div className="w-full h-75 md:h-full flex flex-col items-start md:items-center justify-center relative">
             <Animation progress={progress} />
             
             <motion.div 
