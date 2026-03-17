@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import { SfProDisplay } from "./fonts/display";
 import { SfProText } from "./fonts/text";
+
+import Footer from "../components/Footer";
+import Nav from "../components/Nav";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -67,7 +70,9 @@ export default function RootLayout({
         className={`${SfProDisplay.className} ${SfProText.className} ${geistSans.variable} ${geistMono.variable} ${outfit.variable} antialiased`}
         suppressHydrationWarning
       >
+        <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

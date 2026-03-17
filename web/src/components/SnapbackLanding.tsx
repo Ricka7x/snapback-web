@@ -21,7 +21,6 @@ export default function SnapbackLanding() {
   return (
     
     <>
-      <Nav />
       <Hero />  
       
       <ScrollStory>
@@ -63,7 +62,6 @@ export default function SnapbackLanding() {
       
       <FAQSection id="faq" />
       <CTASection />
-      <Footer />
     </>
   );
 }

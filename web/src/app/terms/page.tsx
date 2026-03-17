@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="max-w-3xl mx-auto py-24 px-6">
+    <div className="max-w-3xl mx-auto py-40 md:py-32 px-6">
       <h1 className="text-4xl font-bold mb-8">Terms & Conditions</h1>
       <p className="mb-6 text-lg text-zinc-700">
         These Terms & Conditions ("Terms") govern your use of the Snapback macOS application and website. By using Snapback, you agree to these Terms.
