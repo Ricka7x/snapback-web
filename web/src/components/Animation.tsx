@@ -135,7 +135,7 @@ export default function Animation({ progress }: AnimationProps) {
     <motion.div 
       ref={containerRef} 
       style={{ filter: `blur(${expansionBlur}px)` }}
-      className="w-full h-full relative overflow-hidden flex items-center justify-center"
+      className="w-full h-75 md:h-full relative overflow-hidden flex items-center justify-center"
     >
       {/* Inner content wrapper scaled to fit */}
       <motion.div 

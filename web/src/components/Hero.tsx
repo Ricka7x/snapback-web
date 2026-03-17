@@ -16,7 +16,7 @@ export default function Hero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   return (
-    <section ref={containerRef} className="bg-black pt-24 pb-0 md:pt-44 overflow-hidden relative mesh-gradient">
+    <section ref={containerRef} className="bg-black pt-30 md:pt-24 pb-0 md:pt-44 overflow-hidden relative mesh-gradient">
       {/* Background glow for hero */}
       <motion.div 
         initial={{ opacity: 0 }}
