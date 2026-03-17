@@ -32,7 +32,7 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="inline-block text-primary text-[11px] font-bold uppercase tracking-[0.2em] mb-8 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5"
         >
-          Free for macOS
+          BETA
         </motion.span>
         
         <motion.h1 
