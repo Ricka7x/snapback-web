@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <div className="max-w-3xl mx-auto py-24 px-6">
+    <div className="max-w-3xl mx-auto py-40 md:py-32 px-6">
       <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
       <p className="mb-6 text-lg text-zinc-700">
         Snapback is designed for privacy. We do not collect, store, or transmit any personal information from users of the Snapback macOS app.

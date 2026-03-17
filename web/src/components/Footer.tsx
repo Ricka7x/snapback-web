@@ -15,7 +15,7 @@ export default function Footer() {
         {/* Right: Navigation - only show Terms & Privacy on mobile */}
         <div className="flex flex-col md:flex-row items-center md:items-end gap-1 md:gap-4">
           <Link
-            href="/privacy-policy"
+            href="/privacy"
             className="text-xs font-medium text-white/60 hover:text-white transition-all duration-200 md:block"
             style={{ textDecoration: "none" }}
           >

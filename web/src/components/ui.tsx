@@ -6,8 +6,10 @@ import { useRef, useState, useEffect } from "react";
 // Section wrapper
 export function Section({ bg = "main", children, className = "", mesh = false, id }: { bg?: "main" | "alt", children: React.ReactNode, className?: string, mesh?: boolean, id?: string }) {
   const bgClass = bg === "alt" ? "bg-zinc-950" : "bg-black";
+  // Add scroll margin for anchor navigation if id is present
+  const scrollMarginClass = id ? "scroll-mt-24 md:scroll-mt-32" : "";
   return (
-    <section id={id} className={`${bgClass} ${mesh ? "mesh-gradient" : ""} ${className} relative overflow-hidden`}>
+    <section id={id} className={`${bgClass} ${mesh ? "mesh-gradient" : ""} ${scrollMarginClass} ${className} relative overflow-hidden`}>
       <div className="max-w-6xl mx-auto py-12 md:py-32 px-6 relative z-10">{children}</div>
     </section>
   );
