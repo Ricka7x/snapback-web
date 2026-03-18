@@ -17,7 +17,7 @@ old_updates/            # Old releases (auto-managed)
 
 ```bash
 # From project root:
-./scripts/release.sh ./path/to/Snapback-1.0.0.zip
+export NOTARY_PROFILE="snapback-notary" ./scripts/release.sh ./path/to/Snapback-1.0.0.zip
 ```
 
 This will:
