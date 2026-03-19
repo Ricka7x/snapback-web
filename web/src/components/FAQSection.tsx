@@ -36,6 +36,10 @@ const faqs = [
   {
     question: "I set a custom shortcut but it doesn't work. Why?",
     answer: "This can happen if the shortcut you chose conflicts with another system or application shortcut. Make sure the shortcut is unique and not already in use. If the issue persists, try restarting Snapback or your computer."
+  },
+  {
+    question: "Can I save/restore 2 or more instances of the same app?",
+    answer: "No. Snapback identifies apps by their bundle identifier, so it cannot differentiate between multiple instances of the same app."
   }
 ];
 
