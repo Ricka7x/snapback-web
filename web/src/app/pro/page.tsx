@@ -3,42 +3,72 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import { Magnetic } from "@/components/ui";
+import FeatureSection from "@/components/FeatureSection";
 import { DOWNLOAD_URL, PRO_PURCHASE_URL } from "@/lib/constants";
-import type { Metadata } from "next";
 
-// ─── Feature data ────────────────────────────────────────────────────────────
+// ─── Problems data ────────────────────────────────────────────────────────────
+
+const problems = [
+  {
+    problem: "You wear more than one hat.",
+    solution: "Work, design, admin, side project. Serious users have a lot of workspaces. Groups let you organize them by project and reuse the same shortcuts in each one.",
+  },
+  {
+    problem: "You shouldn't need to memorize everything.",
+    solution: "The Command Palette gives you Raycast-style access to every group and workspace. Type a few letters and jump anywhere. One shortcut to rule them all.",
+  },
+  {
+    problem: "Your menu bar should match your mood.",
+    solution: "When you're deep in a project, you don't need to see every workspace you've ever made. Groups keep the menu bar focused on what matters right now.",
+  },
+];
+
+// ─── Features data ────────────────────────────────────────────────────────────
 
 const features = [
   {
+    tag: "Groups",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
       </svg>
     ),
-    title: "Named workspace groups",
-    description: "Organize your workspaces into project-specific groups — one for design, one for dev, one for admin. Switch context in seconds.",
+    title: "Reuse shortcuts across projects",
+    description: "Group your workspaces by project or role. ⌃⌥1 means 'Development' in your Work group and 'Gym' in your Personal group. Same keys, zero conflicts. Only one group is active at a time.",
   },
   {
+    tag: "Groups",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
+        <path strokeLinecap="round" strokeLinejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 3M21 7.5H7.5" />
       </svg>
     ),
-    title: "Group keyboard shortcuts",
-    description: "Assign a hotkey to each group and jump to any context without touching the mouse. Your muscle memory will thank you.",
+    title: "Switch projects, remap instantly",
+    description: "Switching groups remaps all your shortcuts in one step. Move from Work to Personal and your entire shortcut layout updates automatically. No manual reassignment, no conflicts to resolve.",
   },
   {
+    tag: "Command Palette",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+      </svg>
+    ),
+    title: "One shortcut to reach everything",
+    description: "Can't remember which shortcut maps to what? Don't. Press one key, type a few letters, jump anywhere. The Command Palette gives you Raycast-style access to every group and workspace. No memorization required.",
+  },
+  {
+    tag: "Groups",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z" />
       </svg>
     ),
-    title: "Filter menu bar by group",
-    description: "The menu bar only shows workspaces for your active group, keeping it clean and focused no matter how many you have.",
+    title: "A focused menu bar",
+    description: "Instead of a long list of every workspace you've ever made, the menu bar only shows what's relevant to your active group. Less noise, faster access.",
   },
 ];
 
-// ─── Comparison table data ────────────────────────────────────────────────────
+// ─── Comparison table ─────────────────────────────────────────────────────────
 
 const comparison = [
   { feature: "Save & restore workspaces", free: true, pro: true },
@@ -46,7 +76,8 @@ const comparison = [
   { feature: "Custom keyboard shortcuts", free: true, pro: true },
   { feature: "Multi-display support", free: true, pro: true },
   { feature: "Workspace groups", free: false, pro: true },
-  { feature: "Group keyboard shortcuts", free: false, pro: true },
+  { feature: "Reusable shortcuts across groups", free: false, pro: true },
+  { feature: "Command palette", free: false, pro: true },
   { feature: "Filter menu bar by group", free: false, pro: true },
 ];
 
@@ -55,19 +86,23 @@ const comparison = [
 const faqs = [
   {
     question: "Is this a subscription?",
-    answer: "No. Snapback Pro is a one-time purchase for $9. Pay once, own it forever — including all future updates to the Groups feature.",
+    answer: "No. Snapback Pro is a one-time purchase for $9. Pay once and own it forever, including all future updates to Groups and the Command Palette.",
+  },
+  {
+    question: "How does shortcut reuse actually work?",
+    answer: "Each group has its own shortcut assignments. When you switch groups, Snapback activates that group's shortcuts. So ⌃⌥1 can mean something different in each group and they'll never conflict because only one group is active at a time.",
   },
   {
     question: "How many Macs can I use it on?",
-    answer: "Each license allows activation on up to 2 Macs. If you need to transfer to a new machine, you can deactivate from within the app.",
+    answer: "Each license covers up to 2 Macs. You can deactivate from within the app to transfer to a new machine.",
   },
   {
     question: "What if I want a refund?",
-    answer: "If Pro doesn't work for you, contact us within 30 days and we'll issue a full refund. No questions asked.",
+    answer: "Contact us within 30 days and we'll issue a full refund. No questions asked.",
   },
   {
     question: "Does Snapback free still work without Pro?",
-    answer: "Absolutely. Snapback is and will remain free for all core features: saving, restoring, snapping, and shortcuts. Pro is purely additive.",
+    answer: "Absolutely. Snapback is and will remain free for all core features. Pro is purely additive and nothing is taken away.",
   },
 ];
 
@@ -83,7 +118,7 @@ function Check() {
 
 function Cross() {
   return (
-    <svg className="w-5 h-5 text-zinc-600 shrink-0" viewBox="0 0 20 20" fill="currentColor">
+    <svg className="w-5 h-5 text-zinc-700 shrink-0" viewBox="0 0 20 20" fill="currentColor">
       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.28 7.22a.75.75 0 00-1.06 1.06L8.94 10l-1.72 1.72a.75.75 0 101.06 1.06L10 11.06l1.72 1.72a.75.75 0 101.06-1.06L11.06 10l1.72-1.72a.75.75 0 00-1.06-1.06L10 8.94 8.28 7.22z" clipRule="evenodd" />
     </svg>
   );
@@ -99,7 +134,6 @@ export default function ProPage() {
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
       <section className="bg-black pt-40 pb-24 px-6 overflow-hidden relative mesh-gradient">
-        {/* Orange glow behind hero */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -124,8 +158,8 @@ export default function ProPage() {
             transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="font-display text-[clamp(44px,8vw,80px)] font-semibold leading-[0.95] tracking-[-0.03em] text-white mb-8 text-glow-orange"
           >
-            Work in <em>groups</em>,<br />
-            not in chaos.
+            More contexts.<br />
+            More <em>control.</em>
           </motion.h1>
 
           <motion.p
@@ -134,8 +168,8 @@ export default function ProPage() {
             transition={{ delay: 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             className="text-zinc-400 text-xl md:text-2xl leading-[1.65] max-w-2xl mx-auto mb-12 font-medium"
           >
-            Organize workspaces into named groups, jump between them with a hotkey,
-            and keep your menu bar focused on what matters right now.
+            Groups let you reuse the same shortcuts across different contexts.
+            The Command Palette means you only need to remember one.
           </motion.p>
 
           <motion.div
@@ -163,46 +197,133 @@ export default function ProPage() {
         </div>
       </section>
 
-      {/* ── Features ─────────────────────────────────────────────────────── */}
+      {/* ── Problem section ──────────────────────────────────────────────── */}
       <section className="bg-zinc-950 border-t border-white/5 py-24 md:py-32 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <motion.span
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 0.8, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="inline-block text-accent text-[11px] font-bold uppercase tracking-[0.2em] mb-6 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5"
+            >
+              Built for power users
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              className="font-display text-[clamp(28px,4vw,46px)] font-semibold text-white tracking-[-0.02em] leading-[1.1] text-glow"
+            >
+              When free isn't enough.
+            </motion.h2>
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-3">
+            {problems.map((p, i) => (
+              <motion.div
+                key={p.problem}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+                className="p-7 rounded-2xl bg-zinc-900/50 border border-white/5"
+              >
+                <p className="text-white font-semibold text-lg mb-3 tracking-tight">{p.problem}</p>
+                <p className="text-zinc-400 text-sm leading-relaxed font-medium">{p.solution}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Photo feature sections ───────────────────────────────────────── */}
+      <FeatureSection
+        bg="main"
+        eyebrow="Groups"
+        heading={<>Reuse the same shortcuts<br />in every context.</>}
+        body="Group your workspaces by project or role: Work, Design, Personal. ⌃⌥1 means 'Development' when coding and 'Figma' when designing. Same keys, different project, zero clashes."
+        imageSrc="/assets/workspaces.webp"
+        imageAlt="Workspace groups in Snapback"
+      />
+
+      <FeatureSection
+        bg="alt"
+        reverseOnDesktop
+        eyebrow="Groups"
+        heading={<>Switch context.<br />Everything remaps.</>}
+        body="Switching groups remaps your entire shortcut layout in one step. Move from Work to Personal and every shortcut updates automatically. No manual reassignment, nothing to untangle."
+        imageSrc="/assets/settings.webp"
+        imageAlt="Group switching in Snapback"
+      />
+
+      <FeatureSection
+        bg="main"
+        eyebrow="Command Palette"
+        heading={<>One shortcut<br />to reach everything.</>}
+        body="Can't remember which key maps to what? Don't. Press one shortcut, type a few letters and jump anywhere. Raycast-style access to every group and workspace. No memorization required."
+        imageSrc="/assets/menu.webp"
+        imageAlt="Command palette in Snapback"
+      />
+
+      {/* ── Features ─────────────────────────────────────────────────────── */}
+      <section className="bg-black border-t border-white/5 py-24 md:py-32 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-20">
             <motion.span
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 0.8, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
               className="inline-block text-accent text-[11px] font-bold uppercase tracking-[0.2em] mb-6 px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5"
             >
-              What you get
+              The solution
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
+              viewport={{ once: true }}
               transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="font-display text-[clamp(32px,5vw,52px)] font-semibold text-white tracking-[-0.02em] leading-[1.1] text-glow"
             >
-              Everything you need to<br className="hidden md:block" /> master your workflow.
+              Groups + Command Palette.
             </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2, duration: 0.8 }}
+              className="text-zinc-400 text-lg mt-4 max-w-xl mx-auto font-medium"
+            >
+              Organize by context. Reuse shortcuts freely. Access everything with one key.
+            </motion.p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2">
             {features.map((f, i) => (
               <motion.div
                 key={f.title}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
-                transition={{ delay: i * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ delay: i * 0.08, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 className="relative group p-8 rounded-3xl bg-zinc-900/50 border border-white/5 hover:border-accent/20 transition-all duration-500 hover:bg-zinc-900/70"
               >
                 <div className="absolute -inset-px rounded-3xl bg-gradient-to-br from-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                <div className="w-12 h-12 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center mb-6 text-accent">
-                  {f.icon}
+                <div className="flex items-start gap-5">
+                  <div className="w-11 h-11 rounded-xl bg-accent/10 border border-accent/20 flex items-center justify-center text-accent shrink-0 mt-0.5">
+                    {f.icon}
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2 mb-2">
+                      <h3 className="text-white font-semibold text-lg tracking-tight">{f.title}</h3>
+                      <span className="text-[10px] font-bold uppercase tracking-wider text-accent/70 border border-accent/15 bg-accent/5 px-2 py-0.5 rounded-full">{f.tag}</span>
+                    </div>
+                    <p className="text-zinc-400 leading-relaxed font-medium text-sm">{f.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-white font-semibold text-xl tracking-tight mb-3">{f.title}</h3>
-                <p className="text-zinc-400 leading-relaxed font-medium">{f.description}</p>
               </motion.div>
             ))}
           </div>
@@ -210,14 +331,14 @@ export default function ProPage() {
       </section>
 
       {/* ── Pricing ──────────────────────────────────────────────────────── */}
-      <section className="bg-black border-t border-white/5 py-24 md:py-32 px-6">
+      <section className="bg-zinc-950 border-t border-white/5 py-24 md:py-32 px-6">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <motion.span
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 0.8, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.8 }}
               className="inline-block text-primary text-[11px] font-bold uppercase tracking-[0.2em] mb-6 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5"
             >
               Pricing
@@ -226,7 +347,7 @@ export default function ProPage() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ delay: 0.1, duration: 0.8 }}
               className="font-display text-[clamp(32px,5vw,52px)] font-semibold text-white tracking-[-0.02em] leading-[1.1] text-glow"
             >
               Simple, honest pricing.
@@ -239,7 +360,7 @@ export default function ProPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ duration: 0.8 }}
               className="p-8 rounded-3xl bg-zinc-900/50 border border-white/5 flex flex-col"
             >
               <div className="mb-8">
@@ -253,8 +374,7 @@ export default function ProPage() {
               <ul className="space-y-3 mb-8 flex-1">
                 {comparison.filter(c => c.free).map(c => (
                   <li key={c.feature} className="flex items-center gap-3 text-zinc-300 font-medium text-sm">
-                    <Check />
-                    {c.feature}
+                    <Check />{c.feature}
                   </li>
                 ))}
               </ul>
@@ -272,10 +392,9 @@ export default function ProPage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              transition={{ delay: 0.1, duration: 0.8 }}
               className="relative p-8 rounded-3xl border border-accent/30 bg-zinc-900/60 flex flex-col overflow-hidden"
             >
-              {/* Orange glow */}
               <div className="absolute -top-20 -right-20 w-60 h-60 rounded-full blur-[80px] pointer-events-none" style={{ background: "rgba(254,100,69,0.12)" }} />
               <div className="absolute -inset-px rounded-3xl bg-gradient-to-br from-accent/20 via-transparent to-transparent pointer-events-none" />
 
@@ -285,11 +404,11 @@ export default function ProPage() {
                   <span className="font-display text-5xl font-semibold text-white tracking-tight">$9</span>
                   <span className="text-zinc-500 mb-2 font-medium">one-time</span>
                 </div>
-                <p className="text-zinc-400 text-sm font-medium">Everything in Free, plus Groups to organize your entire workflow.</p>
+                <p className="text-zinc-400 text-sm font-medium">Everything in Free, plus Groups and Command Palette.</p>
               </div>
               <ul className="relative space-y-3 mb-8 flex-1">
                 {comparison.map(c => (
-                  <li key={c.feature} className="flex items-center gap-3 font-medium text-sm" >
+                  <li key={c.feature} className="flex items-center gap-3 font-medium text-sm">
                     {c.pro ? <Check /> : <Cross />}
                     <span className={c.pro ? "text-zinc-300" : "text-zinc-600"}>{c.feature}</span>
                     {!c.free && c.pro && (
@@ -315,7 +434,7 @@ export default function ProPage() {
       </section>
 
       {/* ── FAQ ──────────────────────────────────────────────────────────── */}
-      <section className="bg-zinc-950 border-t border-white/5 py-24 md:py-32 px-6 relative overflow-hidden">
+      <section className="bg-black border-t border-white/5 py-24 md:py-32 px-6 relative overflow-hidden">
         <div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
 
         <div className="max-w-3xl mx-auto relative z-10">
@@ -403,20 +522,16 @@ export default function ProPage() {
       </section>
 
       {/* ── Bottom CTA ───────────────────────────────────────────────────── */}
-      <section className="bg-black border-t border-white/5 py-24 md:py-32 px-6">
+      <section className="bg-zinc-950 border-t border-white/5 py-24 md:py-32 px-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.96 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl mx-auto rounded-[2.5rem] p-12 md:p-20 text-center relative overflow-hidden border border-white/5"
-          style={{
-            backgroundImage: "url('/assets/wallpaper.webp')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
+          style={{ backgroundImage: "url('/assets/wallpaper.webp')", backgroundSize: "cover", backgroundPosition: "center" }}
         >
-          <div className="absolute inset-0 bg-black/60 backdrop-blur-[2px] pointer-events-none" />
+          <div className="absolute inset-0 bg-black/65 backdrop-blur-[2px] pointer-events-none" />
           <div className="absolute inset-0 bg-gradient-to-b from-accent/5 to-transparent pointer-events-none" />
 
           <div className="relative z-10">
@@ -430,11 +545,11 @@ export default function ProPage() {
               <img src="/assets/logo.svg" alt="Snapback" className="w-12 h-12 rounded-xl" />
             </motion.div>
 
-            <h2 className="font-display text-[clamp(32px,6vw,56px)] font-semibold leading-[1] tracking-[-0.03em] text-white mb-6 text-glow-orange">
-              Ready to work smarter?
+            <h2 className="font-display text-[clamp(32px,6vw,56px)] font-semibold leading-[1.05] tracking-[-0.03em] text-white mb-6 text-glow-orange">
+              One shortcut.<br />Every workspace.
             </h2>
             <p className="text-white/70 text-lg md:text-xl leading-[1.65] mb-10 font-medium max-w-lg mx-auto">
-              One purchase. Two Macs. No subscription. Groups unlock instantly.
+              $9 once. Two Macs. No subscription. Groups and Command Palette unlock instantly.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

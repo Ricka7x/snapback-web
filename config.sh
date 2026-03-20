@@ -169,21 +169,14 @@ export XCODE_PROJECT_PATH
 export RELEASES_DIR
 export BUILD_DIR
 export LOG_FILE
+
 # ============================================================================
-# ENVIRONMENT VARIABLE OVERRIDES (optional for sensitive values)
+# LOCAL OVERRIDES (.env.local — gitignored, machine-specific)
 # ============================================================================
-#
-# For sensitive configuration (API keys, private URLs, etc.), use environment
-# variables instead of committing to version control:
-#
-# Example: Setting a private EdDSA key
-#   export SPARKLE_ED_KEY_FILE="$HOME/.sparkle/private.key"
-#   ./build-and-release.sh
-#
-# Example: Using a private CDN URL for releases
-#   export DOWNLOAD_URL_PREFIX="https://private.example.com/releases"
-#   ./build-and-release.sh
-#
-# These environment variables override the defaults above if set.
-# They are NOT stored in git, protecting sensitive data.
-#
+# Source .env.local if it exists. This file is never committed.
+# Copy .env.local.example to .env.local and fill in your values.
+ENV_LOCAL="$PROJECT_ROOT/.env.local"
+if [ -f "$ENV_LOCAL" ]; then
+  # shellcheck source=/dev/null
+  source "$ENV_LOCAL"
+fi
