@@ -3,6 +3,22 @@
     <channel>
         <title>Snapback</title>
         <item>
+            <title>0.3.4</title>
+            <pubDate>Thu, 19 Mar 2026 20:29:47 -0600</pubDate>
+            <link>https://snapbackapp.com</link>
+            <sparkle:version>22</sparkle:version>
+            <sparkle:shortVersionString>0.3.4</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
+            <enclosure url="https://snapbackapp.com/releases/Snapback-0.3.4.dmg" length="3226047" type="application/octet-stream" sparkle:edSignature="JMx93doffVtl+7VMtu1zeB3090FYyj0pF/fJK+PniZn6vST7u0hxOY+U/jDV2THbg6Kg1IdsMCTVEUve925bBw=="/>
+            <sparkle:deltas>
+                <enclosure url="https://snapbackapp.com/releases/Snapback22-21.delta" sparkle:deltaFrom="21" length="249554" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="z6xVGlUrxdrHXPW0BF1oEReXa5lep1u/WmECeXbZJJB9MX3nJ/QsTtMETRCIHJ8zz0Mf+1gp/Ro7e376WQvrAQ=="/>
+                <enclosure url="https://snapbackapp.com/releases/Snapback22-20.delta" sparkle:deltaFrom="20" length="348422" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="6GrtefuF2tm/nmNTqiohXNF19s8bLdNAf7aKtpMm9nQ3oZn+2yDCdVmJcPMECsLQqXS0B3auASbUASSZWAhpCg=="/>
+                <enclosure url="https://snapbackapp.com/releases/Snapback22-19.delta" sparkle:deltaFrom="19" length="372062" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="VSF2w5uCxXQqNe9X5NgVZt7ON7L/IWzy11fl+DBtecjCdezfJvq1rbsXg53XNeYvb26lI5MwTGZYUzpr1uGzAQ=="/>
+                <enclosure url="https://snapbackapp.com/releases/Snapback22-18.delta" sparkle:deltaFrom="18" length="401858" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="KuFrVWLFGPeidyp1Q3lGfPEsvYMAqO3PgeDZrkz7Y+3Bs0cQ9mixB9Jk/tSy918IxaC1Lf7n7w2R+b/C6O3AAA=="/>
+                <enclosure url="https://snapbackapp.com/releases/Snapback22-17.delta" sparkle:deltaFrom="17" length="608762" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="R6nzRfpmbsy+oyjZDVzjKqFzVw6P+TX6MuRavnUpKf6bCBfnlLGOGzNJyCaqnTxFPtu9iF/w8yrAgo3Z7NUVAg=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.3.3</title>
             <pubDate>Thu, 19 Mar 2026 20:18:54 -0600</pubDate>
             <link>https://snapbackapp.com</link>
@@ -10,13 +26,6 @@
             <sparkle:shortVersionString>0.3.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
             <enclosure url="https://snapbackapp.com/releases/Snapback-0.3.3.dmg" length="3232111" type="application/octet-stream" sparkle:edSignature="ITJoc8JxbLSE46UGG6UCUJggjsavBIFgv6VE9WWIE0LxfYvSumLd0FvVIsCBOCu7p2tvKJoeAfPgqGZV1ZTIAw=="/>
-            <sparkle:deltas>
-                <enclosure url="https://snapbackapp.com/releases/Snapback21-20.delta" sparkle:deltaFrom="20" length="372294" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Vb40pwtjCmgWQXmBkNJcDBlNAJvbwAT6cqOS+p8/m3B2hV7N+0t9uAkCisXnNrspiyRlZ6veqvfC4nnxxHyHCg=="/>
-                <enclosure url="https://snapbackapp.com/releases/Snapback21-19.delta" sparkle:deltaFrom="19" length="382130" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="EoJBsjU0M+bhRtrj7m0eHfPi3TlvaFb+eRdC3AyoYzAzu9LQGMP2BiFCnqKeqGPCSVVtKbl4ZX8yH51hkgBWAg=="/>
-                <enclosure url="https://snapbackapp.com/releases/Snapback21-18.delta" sparkle:deltaFrom="18" length="407450" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="s8+qaxyfz6liK4EbSeI292mF2Y9f7uRSyi8UKDaZxu97O8ZLIvtTXpmLXDQKUgxYlMLifQ/KlF8cA/c2liaXAw=="/>
-                <enclosure url="https://snapbackapp.com/releases/Snapback21-17.delta" sparkle:deltaFrom="17" length="616422" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="9HzH1RydGKNrYI35Rf/Di2k2xHIsVI9LcqxUpCPejpLV5SQvL5NSHSNgIZiWXV7HSzmEbdxS8r+40KUluNTMDg=="/>
-                <enclosure url="https://snapbackapp.com/releases/Snapback21-16.delta" sparkle:deltaFrom="16" length="617242" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="vkhTGaXx7kLlZ5SA6vZNIADNZdJpOmGrvMVqyQxgu63bLzz71Nm66sa1jN1U0IM7VH8rz/eF5Rp7vke0Hv+uAA=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>0.3.2</title>
@@ -26,15 +35,6 @@
             <sparkle:shortVersionString>0.3.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
             <enclosure url="https://snapbackapp.com/releases/Snapback-0.3.2.dmg" length="3223323" type="application/octet-stream" sparkle:edSignature="yXUryVC4LmNUsyxRVI5mad1vAr9kbjNaiFPMqTDtgacVAZnpYF5SJl0jJFoqtIEStaVOOQpFgVOGPRyBzzKhCg=="/>
-        </item>
-        <item>
-            <title>0.3.1</title>
-            <pubDate>Thu, 19 Mar 2026 17:29:39 -0600</pubDate>
-            <link>https://snapbackapp.com</link>
-            <sparkle:version>19</sparkle:version>
-            <sparkle:shortVersionString>0.3.1</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
-            <enclosure url="https://snapbackapp.com/releases/Snapback-0.3.1.dmg" length="3225595" type="application/octet-stream" sparkle:edSignature="86w79Ryd7JkaY3Akh+7YtB/U9+Kcf0IV+hqBjpMsP/n59JFfTJWeED9PohAnSG01bchJi9Yt5EI+RZv4WXqwDQ=="/>
         </item>
     </channel>
 </rss>
