@@ -1,8 +1,11 @@
 # Local environment overrides (for sensitive configuration)
 .env.local
 .env.*.local
-/scripts/
+
 build.log
+
+# Sparkle local path config (contains machine-specific paths)
+scripts/sparkle.env
 
 # Build artifacts
 /build/
