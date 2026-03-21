@@ -10,11 +10,11 @@
             <sparkle:shortVersionString>0.4.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://snapbackapp.com/releases/Snapback-0.4.0.html</sparkle:releaseNotesLink>
-            <enclosure url="https://snapbackapp.com/Snapback-0.4.0.dmg" length="4551070" type="application/octet-stream" sparkle:edSignature="/N5XsCZRPbN2NTRZMd+yCjbzGpBvpcyUnayc+3odRuLsC/jSJktbVnC9GkGfiAx3Ci09dunR8G7cMkcU8d0JDQ=="/>
+            <enclosure url="https://snapbackapp.com/releases/Snapback-0.4.0.dmg" length="4551070" type="application/octet-stream" sparkle:edSignature="/N5XsCZRPbN2NTRZMd+yCjbzGpBvpcyUnayc+3odRuLsC/jSJktbVnC9GkGfiAx3Ci09dunR8G7cMkcU8d0JDQ=="/>
             <sparkle:deltas>
-                <enclosure url="https://snapbackapp.com/Snapback25-23.delta" sparkle:deltaFrom="23" length="84678" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wO+tn87Uvqm6Kh05w8wii9X1iZDeJjXVC5SgKY8CbLi5156E8KDaSv4hyUWtg42At6oPI+f1h2tdt6zJVW0LCA=="/>
-                <enclosure url="https://snapbackapp.com/Snapback25-22.delta" sparkle:deltaFrom="22" length="180430" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ITlVmpUU9ITg9UBwLwXIFxge7fHdKrb6/TiYdLdCApZfjkNro81ID91HZm7ixhAimaqzwZM53QoWvIFvwp0xBQ=="/>
-                <enclosure url="https://snapbackapp.com/Snapback25-21.delta" sparkle:deltaFrom="21" length="253882" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="XHg/X3j0DiKBFl+4g21rzc2/Re71SkS2/DUnmlwHA3Whr6M6+LxXRn/JG0EWq0nA59/GPc534wuVW/szMWTRDg=="/>
+                <enclosure url="https://snapbackapp.com/releases/Snapback25-23.delta" sparkle:deltaFrom="23" length="84678" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="wO+tn87Uvqm6Kh05w8wii9X1iZDeJjXVC5SgKY8CbLi5156E8KDaSv4hyUWtg42At6oPI+f1h2tdt6zJVW0LCA=="/>
+                <enclosure url="https://snapbackapp.com/releases/Snapback25-22.delta" sparkle:deltaFrom="22" length="180430" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="ITlVmpUU9ITg9UBwLwXIFxge7fHdKrb6/TiYdLdCApZfjkNro81ID91HZm7ixhAimaqzwZM53QoWvIFvwp0xBQ=="/>
+                <enclosure url="https://snapbackapp.com/releases/Snapback25-21.delta" sparkle:deltaFrom="21" length="253882" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="XHg/X3j0DiKBFl+4g21rzc2/Re71SkS2/DUnmlwHA3Whr6M6+LxXRn/JG0EWq0nA59/GPc534wuVW/szMWTRDg=="/>
             </sparkle:deltas>
         </item>
         <item>
@@ -24,7 +24,7 @@
             <sparkle:version>23</sparkle:version>
             <sparkle:shortVersionString>0.3.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
-            <enclosure url="https://snapbackapp.com/Snapback-0.3.5.dmg" length="3226206" type="application/octet-stream" sparkle:edSignature="QnervQVJF4itnhxNyIxksxzUVF0IRSf1Rzear5rJPHrfnkTycDlpNaHjOBFPj5/J/4bV+OXKmq+Vpn9HJzApCg=="/>
+            <enclosure url="https://snapbackapp.com/releases/Snapback-0.3.5.dmg" length="3226206" type="application/octet-stream" sparkle:edSignature="QnervQVJF4itnhxNyIxksxzUVF0IRSf1Rzear5rJPHrfnkTycDlpNaHjOBFPj5/J/4bV+OXKmq+Vpn9HJzApCg=="/>
         </item>
         <item>
             <title>0.3.4</title>
@@ -33,7 +33,7 @@
             <sparkle:version>22</sparkle:version>
             <sparkle:shortVersionString>0.3.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
-            <enclosure url="https://snapbackapp.com/Snapback-0.3.4.dmg" length="3226047" type="application/octet-stream" sparkle:edSignature="JMx93doffVtl+7VMtu1zeB3090FYyj0pF/fJK+PniZn6vST7u0hxOY+U/jDV2THbg6Kg1IdsMCTVEUve925bBw=="/>
+            <enclosure url="https://snapbackapp.com/releases/Snapback-0.3.4.dmg" length="3226047" type="application/octet-stream" sparkle:edSignature="JMx93doffVtl+7VMtu1zeB3090FYyj0pF/fJK+PniZn6vST7u0hxOY+U/jDV2THbg6Kg1IdsMCTVEUve925bBw=="/>
         </item>
     </channel>
 </rss>
