@@ -3,6 +3,34 @@
 import { motion } from "framer-motion";
 import { Section } from "./ui";
 
+function Key({ char }: { char: string }) {
+  return (
+    <kbd className="inline-flex items-center justify-center min-w-5.5 h-5.5 px-1 text-[11px] font-mono text-primary/75 bg-zinc-900 border border-white/10 rounded-sm shadow-[0_2px_0_0_rgba(0,0,0,0.5),inset_0_1px_0_rgba(255,255,255,0.06)]">
+      {char}
+    </kbd>
+  );
+}
+
+function Shortcut({ value }: { value: string }) {
+  const groups = value.split(" to ");
+  return (
+    <div className="flex items-center gap-1">
+      {groups.map((group, gi) => (
+        <span key={gi} className="flex items-center gap-1">
+          {gi > 0 && (
+            <span className="text-zinc-600 text-[10px] font-mono">→</span>
+          )}
+          <span className="flex items-center gap-0.5">
+            {[...group].map((char, ci) => (
+              <Key key={ci} char={char} />
+            ))}
+          </span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
 const cases = [
   {
     name: "Dev to Design",
@@ -50,7 +78,7 @@ export default function CloseToggleSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.8 }}
-            className="font-display text-[clamp(26px,4vw,40px)] font-semibold leading-[1.15] tracking-[-0.015em] text-white mb-6 text-glow"
+            className="font-display text-[clamp(26px,4vw,40px)] font-semibold leading-[1.15] tracking-[-0.015em] text-white mb-6"
           >
             Switch contexts,<br className="hidden md:block" /> not just windows.
           </motion.h2>
@@ -82,12 +110,12 @@ export default function CloseToggleSection() {
                   Apps not in this workspace will be closed on restore.
                 </p>
               </div>
-              <div className="shrink-0 w-11 h-6 md:w-12 md:h-7 bg-primary rounded-full relative border border-white/10 shadow-[0_0_15px_rgba(21,86,219,0.3)]">
+              <div className="shrink-0 w-11 h-6 md:w-12 md:h-7 bg-primary rounded-full relative border border-primary/30">
                 <motion.div 
                   initial={{ x: 2 }}
                   animate={{ x: 22 }}
                   transition={{ duration: 0.3 }}
-                  className="w-4 h-4 md:w-5 md:h-5 bg-white rounded-full absolute top-[3px] left-0 shadow-lg" 
+                  className="w-4 h-4 md:w-5 md:h-5 bg-white rounded-full absolute top-0.75 left-0 shadow-lg" 
                 />
               </div>
             </div>
@@ -95,27 +123,27 @@ export default function CloseToggleSection() {
         </div>
 
         {/* Right: use cases */}
-        <div className="bg-zinc-950/50 p-8 md:p-16 flex flex-col justify-center gap-4 relative">
-          <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full pointer-events-none opacity-50" />
+        <div className="bg-zinc-950/50 p-8 md:p-12 flex flex-col justify-center gap-5 relative">
+          <div className="absolute inset-0 bg-primary/5 blur-3xl rounded-full pointer-events-none opacity-40" />
           {cases.map((item, i) => (
-            <motion.div 
-              key={i} 
+            <motion.div
+              key={i}
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 + (i * 0.1), duration: 0.6 }}
-              className="bg-zinc-900/60 backdrop-blur-md rounded-2xl p-5 md:p-6 border border-white/10 hover:border-white/20 transition-all duration-300 group relative z-10"
+              className="bg-zinc-900/60 backdrop-blur-md rounded-2xl p-5 md:p-6 border border-white/8 hover:border-white/16 transition-colors duration-300 relative z-10"
             >
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-2">
-                 <span className="text-white/90 text-[13px] md:text-sm font-semibold tracking-tight">{item.name}</span>
-                <span className="text-primary text-[9px] md:text-[10px] font-mono font-bold bg-primary/10 border border-primary/20 px-2 py-0.5 md:px-2.5 md:py-1 rounded-md tracking-wider self-start sm:self-auto">
-                  {item.shortcut}
-                </span>
+              <div className="mb-3">
+                <p className="text-white/90 text-[13px] md:text-sm font-semibold tracking-tight leading-snug mb-2">
+                  {item.name}
+                </p>
+                <Shortcut value={item.shortcut} />
               </div>
-               <p className="text-zinc-500 text-[11px] md:text-xs leading-[1.6] mb-4 font-medium">{item.note}</p>
+              <p className="text-zinc-500 text-xs leading-[1.6] mb-4">{item.note}</p>
               <div className="flex items-center gap-2">
-                <div className={`w-1.5 h-1.5 rounded-full shadow-[0_0_8px] ${item.close ? "bg-primary shadow-primary/50" : "bg-white/15 shadow-transparent"}`} />
-                 <span className="text-zinc-400 text-[10px] md:text-[11px] font-medium tracking-wide">
+                <div className={`w-1.5 h-1.5 rounded-full ${item.close ? "bg-primary" : "bg-white/20"}`} />
+                <span className="text-zinc-500 text-[10px] font-medium tracking-wide">
                   {item.close ? "Close non-workspace apps: ON" : "Close non-workspace apps: OFF"}
                 </span>
               </div>
