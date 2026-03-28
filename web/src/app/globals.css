@@ -39,13 +39,18 @@
   --font-text: var(--font-sf-pro-text), sans-serif;
   --font-display: var(--font-outfit), sans-serif;
   --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-instrument-serif), serif;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
+    --background: #080808;
     --foreground: #ededed;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -57,6 +62,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.5;
   letter-spacing: -0.01em;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Italic emphasis inside display headings switches to Instrument Serif — premium editorial contrast */
+.font-display em,
+h1 em,
+h2 em {
+  font-family: var(--font-instrument-serif), serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 em {
@@ -95,13 +120,15 @@ body::before {
 
 .glass-card {
   background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
+  /* True liquid glass: inner highlight simulates edge refraction */
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 
 .mesh-gradient {
-  background-color: #000000;
+  background-color: #080808;
   background-image: 
     radial-gradient(at 0% 0%, hsla(220, 80%, 45%, 0.15) 0px, transparent 50%),
     radial-gradient(at 100% 0%, hsla(220, 60%, 40%, 0.1) 0px, transparent 50%),
@@ -119,9 +146,9 @@ body::before {
 }
 
 .text-glow {
-  text-shadow: 0 0 40px rgba(21, 86, 219, 0.3);
+  text-shadow: 0 2px 24px rgba(21, 86, 219, 0.15);
 }
 
 .text-glow-orange {
-  text-shadow: 0 0 40px rgba(254, 100, 69, 0.4);
+  text-shadow: 0 2px 24px rgba(254, 100, 69, 0.2);
 }

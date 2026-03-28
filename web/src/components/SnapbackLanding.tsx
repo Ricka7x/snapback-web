@@ -32,7 +32,7 @@ export default function SnapbackLanding() {
                style={{ 
                  opacity: useTransform(progress, [0.8, 0.95], [0, 1]),
                }}
-               className="absolute inset-0 bg-black z-50 pointer-events-none flex items-center justify-center p-6"
+               className="absolute inset-0 bg-zinc-950 z-50 pointer-events-none flex items-center justify-center p-6"
             >
                <motion.h2 
                  style={{ 

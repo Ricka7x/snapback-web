@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Outfit } from "next/font/google";
+import { Geist, Geist_Mono, Outfit, Instrument_Serif } from "next/font/google";
 import { SfProDisplay } from "./fonts/display";
 import { SfProText } from "./fonts/text";
 
@@ -21,6 +21,13 @@ const geistMono = Geist_Mono({
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
+});
+
+const instrumentSerif = Instrument_Serif({
+  variable: "--font-instrument-serif",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -68,7 +75,7 @@ export default function RootLayout({
         <link rel="preload" href="/assets/wallpaper.webp" as="image" />
       </head>
       <body
-        className={`${SfProDisplay.className} ${SfProText.className} ${geistSans.variable} ${geistMono.variable} ${outfit.variable} antialiased`}
+        className={`${SfProDisplay.className} ${SfProText.className} ${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${instrumentSerif.variable} antialiased`}
         suppressHydrationWarning
       >
         <Nav />

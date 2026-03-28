@@ -15,7 +15,7 @@ export default function ScrollStory({ children }: ScrollStoryProps) {
   });
 
   return (
-    <div ref={targetRef} className="relative h-[400vh] bg-black">
+    <div ref={targetRef} className="relative h-[400vh] bg-zinc-950">
       <div className="sticky top-0 h-screen w-full overflow-hidden flex flex-col justify-center">
         {children(scrollYProgress)}
       </div>
