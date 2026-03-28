@@ -54,8 +54,9 @@ export default function FAQSection({ id }: { id?: string }) {
 
       <div className="max-w-4xl mx-auto relative z-10">
         <div className="text-center mb-20">
-          <span className="inline-block text-primary text-[11px] font-bold uppercase tracking-[0.2em] mb-4 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5">
-            support
+          <span className="inline-flex items-center gap-2 text-primary/70 text-[11px] font-semibold uppercase tracking-[0.16em] mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary/60 inline-block" />
+            Support
           </span>
           <h2 className="text-[clamp(32px,5vw,52px)] font-display font-semibold text-white tracking-tight leading-[1.1] text-glow">
            Got questions?

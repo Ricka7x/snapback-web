@@ -17,30 +17,34 @@ export default function Nav() {
   }, []);
 
   return (
-    <div className={`fixed top-0 left-0 right-0 z-100 flex justify-center px-4 md:px-6 transition-all duration-500 ${scrolled ? 'pt-4' : 'pt-8'}`}>
-      <nav className={`glass-card flex items-center justify-between gap-8 px-4 md:px-8 py-3 rounded-2xl w-full max-w-5xl transition-all duration-500 ${scrolled ? 'bg-black/60 backdrop-blur-2xl border-white/5 py-2.5 shadow-2xl' : 'bg-black/20 border-white/10'}`}>
-        
-        {/* Logo - links to home */}
-        <Link href="/" className="flex items-center gap-4 group cursor-pointer shrink-0" tabIndex={0} aria-label="Go to home">
-          <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-all duration-300">
-            <img src="/assets/logo.svg" alt="Snapback" className="w-10 h-10 rounded-lg" />
-          </div>
-          <span className="text-white text-lg font-semibold tracking-tight">Snapback</span>
+    <header className={`fixed top-0 left-0 right-0 z-100 transition-all duration-500 ${
+      scrolled
+        ? 'bg-zinc-950/80 backdrop-blur-xl border-b border-white/6'
+        : 'bg-transparent'
+    }`}>
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between h-16">
+
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2.5 group" aria-label="Go to home">
+          <img src="/assets/logo.svg" alt="" className="w-6 h-6 rounded-md" aria-hidden="true" />
+          <span className="text-white/85 text-[15px] font-semibold tracking-tight group-hover:text-white transition-colors duration-200">
+            Snapback
+          </span>
         </Link>
-        
-        {/* Action Button */}
-        <div className="flex items-center">
-          <Magnetic>
-            <a
-              href={DOWNLOAD_URL}
-              download
-              className="text-[13px] md:text-sm font-semibold text-white bg-primary px-5 md:px-6 py-2 md:py-2.5 rounded-xl transition-all duration-300 hover:bg-primary-hover hover:scale-105 hover:shadow-[0_0_20px_rgba(21,86,219,0.3)] shadow-lg"
-            >
-              Get Snapback
-            </a>
-          </Magnetic>
-        </div>
-      </nav>
-    </div>
+
+        {/* Download */}
+        <Magnetic>
+          <a
+            href={DOWNLOAD_URL}
+            download
+            aria-label="Download Snapback for macOS"
+            className="text-[13px] font-semibold text-white bg-primary px-5 py-2 rounded-xl transition-all duration-200 hover:bg-primary-hover hover:shadow-[0_6px_20px_rgba(21,86,219,0.22)] active:scale-[0.97] active:brightness-90"
+          >
+            Get Snapback
+          </a>
+        </Magnetic>
+
+      </div>
+    </header>
   );
 }

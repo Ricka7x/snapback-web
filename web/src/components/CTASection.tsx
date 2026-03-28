@@ -6,7 +6,7 @@ import { DOWNLOAD_URL } from "@/lib/constants";
 
 export default function CTASection() {
   return (
-    <section id="download" className="bg-black py-24 md:py-40 px-6">
+    <section id="download" className="bg-zinc-950 py-24 md:py-40 px-6">
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -40,7 +40,7 @@ export default function CTASection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1, duration: 0.8 }}
-            className="font-display text-[clamp(40px,7vw,72px)] font-semibold leading-[1] tracking-[-0.03em] text-white mb-8 text-glow"
+            className="font-display text-[clamp(40px,7vw,72px)] font-semibold leading-[1] tracking-[-0.03em] text-white mb-8"
           >
             ready to <em>snap back</em>?
           </motion.h2>
@@ -51,8 +51,8 @@ export default function CTASection() {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="text-white/80 text-xl md:text-2xl leading-[1.65] mb-12 font-medium max-w-xxl mx-auto"
           >
-            download snapback for free and experience the most<br className="hidden md:block" />
-            seamless window management on mac.
+            download snapback for free. zero clutter, zero setup.<br className="hidden md:block" />
+            your workspace, restored in one keystroke.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -65,7 +65,8 @@ export default function CTASection() {
               <a
                 href={DOWNLOAD_URL}
                 download
-                className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-bold rounded-2xl transition-all duration-300 hover:bg-primary hover:text-white hover:scale-105 hover:shadow-[0_20px_40px_rgba(255,255,255,0.1)] active:scale-95"
+                className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-bold rounded-2xl transition-all duration-300 hover:bg-primary hover:text-white hover:scale-105 hover:shadow-[0_20px_40px_rgba(255,255,255,0.1)] active:scale-[0.98]"
+                aria-label="Download Snapback for macOS"
               >
                 Get Snapback
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
