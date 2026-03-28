@@ -5,12 +5,12 @@ import { useRef, useState, useEffect } from "react";
 
 // Section wrapper
 export function Section({ bg = "main", children, className = "", mesh = false, id }: { bg?: "main" | "alt", children: React.ReactNode, className?: string, mesh?: boolean, id?: string }) {
-  const bgClass = bg === "alt" ? "bg-zinc-950" : "bg-black";
+  const bgClass = bg === "alt" ? "bg-zinc-900" : "bg-zinc-950";
   // Add scroll margin for anchor navigation if id is present
   const scrollMarginClass = id ? "scroll-mt-24 md:scroll-mt-32" : "";
   return (
     <section id={id} className={`${bgClass} ${mesh ? "mesh-gradient" : ""} ${scrollMarginClass} ${className} relative overflow-hidden`}>
-      <div className="max-w-6xl mx-auto py-12 md:py-32 px-6 relative z-10">{children}</div>
+      <div className="max-w-7xl mx-auto py-20 md:py-40 px-6 lg:px-12 relative z-10">{children}</div>
     </section>
   );
 }
@@ -41,12 +41,12 @@ export function TwoCol({
 export function Copy({ eyebrow, heading, body, headingSize = "text-[clamp(32px,5vw,52px)]" }: { eyebrow: string, heading: React.ReactNode, body: string, headingSize?: string }) {
   return (
     <div className="relative">
-      <motion.span 
+      <motion.span
         initial={{ opacity: 0, y: 10 }}
-        whileInView={{ opacity: 0.8, y: 0 }}
+        whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="text-primary text-[11px] font-bold uppercase tracking-[0.2em] block mb-6 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 w-fit"
+        className="text-primary/70 text-[11px] font-semibold uppercase tracking-[0.16em] block mb-5 pl-3 border-l-2 border-primary/40 w-fit"
       >
         {eyebrow}
       </motion.span>
@@ -55,7 +55,7 @@ export function Copy({ eyebrow, heading, body, headingSize = "text-[clamp(32px,5
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ delay: 0.1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-        className={`${headingSize} font-display font-semibold leading-[1.05] mb-6 text-white tracking-[-0.02em] text-glow`}
+        className={`${headingSize} font-display font-semibold leading-[1.05] mb-6 text-white tracking-[-0.02em]`}
       >
         {heading}
       </motion.h2>
@@ -99,14 +99,14 @@ export function Shot({ src, alt }: { src: string, alt: string }) {
       className="relative group"
     >
       <div className="absolute -inset-10 rounded-[3rem] bg-primary/10 blur-3xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
-      <motion.div 
+      <motion.div
         style={{ y, rotateX, perspective: 1000 }}
-        className="relative p-2 rounded-3xl bg-zinc-900/40 backdrop-blur-xl border border-white/10 shadow-[0_32px_64px_-16px_rgba(0,0,0,0.6)] overflow-hidden transition-all duration-500 group-hover:shadow-[0_48px_80px_-20px_rgba(0,0,0,0.8)]"
+        className="relative rounded-[20px] border border-white/8 shadow-[0_40px_80px_-16px_rgba(0,0,0,0.7)] overflow-hidden transition-shadow duration-500 group-hover:shadow-[0_56px_96px_-20px_rgba(0,0,0,0.85)]"
       >
         <img
           src={src}
           alt={alt}
-          className="w-full rounded-2xl block border border-white/5 transition-all duration-500"
+          className="w-full block"
         />
       </motion.div>
     </motion.div>
