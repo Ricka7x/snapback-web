@@ -21,7 +21,7 @@ APP_NAME="Snapback"
 
 # Project paths
 PROJECT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-XCODE_PROJECT_PATH="/Users/ricka7x/XcodeProjects/Snapback"
+XCODE_PROJECT_PATH="/Users/ricka7x/Projects/Snapback"
 XCODE_SCHEME="Snapback"
 XCODE_CONFIG="Release"
 

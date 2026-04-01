@@ -21,7 +21,7 @@ These are safe to include in `scripts/config.sh` or documentation:
   - `https://snapbackapp.com/releases`
   
 - Project paths and structure
-  - `/Users/ricka7x/XcodeProjects/Snapback`
+  - `/Users/ricka7x/Projects/Snapback`
   - `Snapback/Info.plist`
   
 - Build configuration
