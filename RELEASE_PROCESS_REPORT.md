@@ -6,7 +6,7 @@ Two repos are involved in every release:
 
 | Repo | Path | Purpose |
 |------|------|---------|
-| App repo | `~/XcodeProjects/Snapback` | Source code, Xcode project |
+| App repo | `~/Projects/Snapback` | Source code, Xcode project |
 | Web repo | `~/Projects/snapback-web` | Release pipeline, website, GH Pages host |
 
 The release scripts live in a third, shared repo:

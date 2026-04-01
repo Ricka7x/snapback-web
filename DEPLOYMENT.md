@@ -137,7 +137,7 @@ If you prefer more control, execute each step manually:
 
 ```bash
 # Just do the build (output at /tmp/snapback-build/)
-cd /Users/ricka7x/XcodeProjects/Snapback
+cd /Users/ricka7x/Projects/Snapback
 xcodebuild -scheme Snapback -configuration Release archive \
   -archivePath /tmp/Snapback.xcarchive
 
