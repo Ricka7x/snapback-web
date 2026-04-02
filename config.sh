@@ -42,8 +42,9 @@ DOWNLOAD_URL_PREFIX="$WEBSITE_URL/releases"
 # SPARKLE SETTINGS
 # ============================================================================
 
-# Sparkle binary is auto-detected by sparkle.env
-# See sparkle.env for detection strategy and custom configuration
+# Sparkle binary is auto-detected by scripts/generate-appcast.sh.
+# It checks SPARKLE_BIN/SPARKLE_TOOLS_PATH, PATH/Homebrew locations,
+# then falls back to the newest DerivedData Sparkle artifact path.
 #
 # For custom Sparkle locations, use environment variable:
 #   export SPARKLE_TOOLS_PATH="/path/to/sparkle/bin"
