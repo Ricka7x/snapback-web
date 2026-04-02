@@ -57,7 +57,7 @@ export default function Hero() {
               className="text-zinc-400 text-lg md:text-xl leading-[1.7] max-w-md mb-12 font-text"
             >
               Snapback restores every app, every window, and every z-index stack
-              exactly where you need them — and opens your apps if they're closed.
+              exactly where you need them, and opens your apps if they're closed.
             </motion.p>
 
             <motion.div
