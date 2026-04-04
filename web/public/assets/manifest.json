@@ -1,0 +1,29 @@
+{
+  "project": "snapback-web",
+  "config": {
+    "source": "assets-src",
+    "output": "public/assets",
+    "imageQuality": 95,
+    "videoQuality": 23,
+    "blurPlaceholders": true,
+    "blurPlaceholderWidth": 20,
+    "blurPlaceholderOutputDir": "public/assets/blur",
+    "favicon": {
+      "enabled": false,
+      "source": "logo.png",
+      "outputDir": "public"
+    }
+  },
+  "assets": {
+    "images": {},
+    "videos": {
+      "Hero.mov": {
+        "source": "assets-src/Hero.mov",
+        "output": "/assets/Hero.mp4",
+        "size": 4147494
+      }
+    },
+    "favicon": null
+  },
+  "timestamp": "2026-04-04T00:18:36.476Z"
+}

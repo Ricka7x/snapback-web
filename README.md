@@ -1,41 +1,74 @@
-# snapback-web
+# Assets Source Folder
 
-## Project Structure
+**Drop your images and videos here.** The build pipeline handles the rest.
 
-- **web/** — Main app (Vite + React). Use this for all development and deployment.
-- **legacy/** — Archived static HTML/CSS/JS site (no longer maintained).
+## Supported Formats
 
-## Development (Vite + React)
+**Images:**
+- `.png`, `.jpg`, `.jpeg`
 
-All new development should use the Vite project in `web/`.
+**Videos:**
+- `.mov`, `.mp4`, `.webm`, `.avi`, `.mkv`
 
-### Start Dev Server
+## What Happens
 
-```bash
-cd web
-npm install
-npm run dev
-```
+When you run `npm run assets:build`:
 
-### Build for Production
+1. **Images** → Optimized to `.webp` + `.avif` (95% quality by default)
+2. **Image preload metadata** → `blurHash` + tiny placeholder PNG/data URI
+3. **Videos** → Converted to `.mp4` (quality 23 by default)
+4. **Output** → All generated assets go to `public/assets/`
+5. **Manifest** → `public/assets/manifest.json` tracks all conversions
+6. **Optional favicon** → Generated in `public/` if enabled in config
 
-```bash
-cd web
-npm run build
-# Output: web/dist/
-```
-
-### Preview Production Build
+## Example
 
 ```bash
-cd web
-npm run preview
+# Drop files here
+assets-src/
+  ├── hero.mov
+  ├── banner.png
+  ├── logo.jpg
+  └── intro.webm
+
+# Run build
+npm run assets:build
+
+# Output in public/assets/
+public/assets/
+  ├── hero.mp4
+  ├── banner.webp
+  ├── banner.avif
+  ├── blur/
+  │   └── banner.blur.png
+  ├── logo.webp
+  ├── logo.avif
+  ├── intro.mp4
+  └── manifest.json  # Tracks conversions
 ```
 
-## Deployment
+## Configuration
 
-Deploy the contents of `web/dist/` to your static hosting (e.g., GitHub Pages, Netlify, Vercel, etc).
+Edit `build-assets.config.json` to customize:
+- Quality levels
+- Supported extensions
+- FFmpeg binary path
+- Output folder location
+- Blur placeholder generation
+- Optional favicon generation
 
-## Legacy Static Site
+## Full Build
 
-The previous static HTML/CSS/JS site is now archived in the `legacy/` folder. It is no longer maintained or deployed.
+```bash
+npm run build  # Assets → Next.js build
+```
+
+Or just assets:
+
+```bash
+npm run assets:build
+```
+
+---
+
+**Pro Tip:** Your source files stay here. Optimized versions go to `public/assets/` for serving.
