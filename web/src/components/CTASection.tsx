@@ -1,84 +1,52 @@
 "use client"
 
-import { motion } from "framer-motion";
-import { Magnetic } from "./ui";
-import { DOWNLOAD_URL } from "@/lib/constants";
+import { motion } from "framer-motion"
+import {  ArrowDownIcon } from "@phosphor-icons/react"
+import { DOWNLOAD_URL } from "@/lib/constants"
 
 export default function CTASection() {
   return (
-    <section id="download" className="bg-zinc-950 py-24 md:py-40 px-6">
+    <section className="relative py-32 md:py-48 px-6 overflow-hidden">
+      {/* Background wallpaper */}
+      <img
+        src="/assets/wallpaper.webp"
+        alt=""
+        aria-hidden
+        className="absolute inset-0 w-full h-full object-cover object-center"
+      />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-[#080808]/65" />
+
+      {/* Content */}
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="max-w-5xl mx-auto rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] border border-white/10"
-        style={{
-          backgroundImage: "url('/assets/wallpaper.webp')",
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
+        initial={{ opacity: 0, y: 32 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
+        className="relative z-10 max-w-2xl mx-auto text-center"
       >
-        <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px] pointer-events-none" />
-        
-        <div className="relative z-10">
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.6, type: "spring", stiffness: 100 }}
-            className="w-20 h-20 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center mx-auto mb-10 shadow-xl backdrop-blur-md"
-          >
-            <img
-              src='/assets/logo.svg'
-              alt="Snapback"
-              className="w-16 h-16 rounded-lg"
-            />
-          </motion.div>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.8 }}
-            className="font-display text-[clamp(40px,7vw,72px)] font-semibold leading-[1] tracking-[-0.03em] text-white mb-8"
-          >
-            ready to <em>snap back</em>?
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.8 }}
-            className="text-white/80 text-xl md:text-2xl leading-[1.65] mb-12 font-medium max-w-xxl mx-auto"
-          >
-            download snapback for free. zero clutter, zero setup.<br className="hidden md:block" />
-            your workspace, restored in one keystroke.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="flex flex-col items-center gap-4"
-          >
-            <Magnetic>
-              <a
-                href={DOWNLOAD_URL}
-                download
-                className="inline-flex items-center gap-3 px-10 py-5 bg-white text-black font-bold rounded-2xl transition-all duration-300 hover:bg-primary hover:text-white hover:scale-105 hover:shadow-[0_20px_40px_rgba(255,255,255,0.1)] active:scale-[0.98]"
-                aria-label="Download Snapback for macOS"
-              >
-                Get Snapback
-                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                </svg>
-              </a>
-            </Magnetic>
-            
-            <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/40">Always Free · MacOS 12.4+</span>
-          </motion.div>
-        </div>
+        <img
+          src="/assets/logo.svg"
+          alt="Snapback"
+          className="w-14 h-14 rounded-[18px] mx-auto mb-8 shadow-2xl border border-white/10"
+        />
+        <h2 className="font-display text-[clamp(40px,6.5vw,72px)] font-semibold tracking-[-0.04em] text-white leading-[1]">
+          Stop rebuilding your <em>workspace</em> every morning.
+        </h2>
+        <p className="text-white/60 text-xl leading-[1.7] max-w-md mx-auto mt-6 mb-10 font-text">
+          Download Snapback, save your first layout in under a minute, and never lose your place again.
+        </p>
+        <a
+          href={DOWNLOAD_URL}
+          className="bg-white text-[#080808] font-bold px-10 py-4 rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 text-base inline-flex items-center gap-2.5"
+        >
+          Download Free
+          <ArrowDownIcon size={18} weight="regular" />
+        </a>
+        <p className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-mono mt-5">
+          Free forever · macOS 14.2+ · No account required
+        </p>
       </motion.div>
     </section>
-  );
+  )
 }

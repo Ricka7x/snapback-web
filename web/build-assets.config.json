@@ -1,0 +1,38 @@
+{
+  "name": "snapback-web",
+  "description": "Snapback landing page - All assets in one place",
+  
+  "sourceDir": "assets-src",
+  "outputDir": "public/assets",
+  
+  "imageQuality": 95,
+  "videoQuality": 23,
+  "blurPlaceholders": true,
+  "blurPlaceholderWidth": 20,
+  "blurPlaceholderOutputDir": "public/assets/blur",
+
+  "favicon": {
+    "enabled": false,
+    "source": "logo.png",
+    "outputDir": "public"
+  },
+  
+  "ffmpegBin": "/opt/homebrew/bin/ffmpeg",
+  
+  "extensions": {
+    "images": [".png", ".jpg", ".jpeg"],
+    "videos": [".mov", ".mp4", ".webm", ".avi", ".mkv"]
+  },
+  
+  "generateManifest": true,
+  "verbose": false,
+  
+  "_guide": {
+    "add-assets": "Drop images, videos, etc into ./assets-src/",
+    "build": "npm run assets:build optimizes everything to public/assets/",
+    "output-formats": "Images → WebP + AVIF (+ blur placeholders), Videos → MP4",
+    "favicon": "Enable favicon.enabled and set favicon.source to generate favicon files in /public",
+    "manifest": "manifest.json tracks all conversions and source → output mapping"
+  }
+}
+
