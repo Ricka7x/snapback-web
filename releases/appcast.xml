@@ -3,6 +3,21 @@
     <channel>
         <title>Snapback</title>
         <item>
+            <title>0.11.2</title>
+            <pubDate>Sat, 04 Apr 2026 16:31:58 -0600</pubDate>
+            <link>https://snapbackapp.com</link>
+            <sparkle:version>36</sparkle:version>
+            <sparkle:shortVersionString>0.11.2</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
+            <sparkle:releaseNotesLink>https://snapbackapp.com/releases/Snapback-0.11.2.html</sparkle:releaseNotesLink>
+            <enclosure url="https://snapbackapp.com/releases/Snapback-0.11.2.dmg" length="5121451" type="application/octet-stream" sparkle:edSignature="jnNquJeN+yHxNuES35VnE0AhrF57Pb5+mHbSSTWlc/QVCqRgNUFoaDUTtdbMNkAZLtk+qdZ7T6SCbwfue80SAA=="/>
+            <sparkle:deltas>
+                <enclosure url="https://snapbackapp.com/releases/Snapback36-35.delta" sparkle:deltaFrom="35" length="323062" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Ch1yX+uTa8xXgX/RtBdDufuXIIqY46lhqAkjGc13qcVwGi7r8srKf2asGn8qYeHbMjBknzHZQVU7BLVcVZ+SCA=="/>
+                <enclosure url="https://snapbackapp.com/releases/Snapback36-34.delta" sparkle:deltaFrom="34" length="346886" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Iz/9X9SGNxUTnjPeiGPow45gGBV+Wz6+BbVYi5KjiOgdDmWZZVE9ofvD8o+KgjheUJ69NgK2QjFLK/o2Ie6jCg=="/>
+                <enclosure url="https://snapbackapp.com/releases/Snapback36-33.delta" sparkle:deltaFrom="33" length="531266" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="+PlsByQYwSJzm4mTPR3AKZdvnzbKqwV8nkwqCQQ0h55+UnmrtvWu5u/SpLPxwR2jCt8uaAJFUrIHahB20gD1AQ=="/>
+            </sparkle:deltas>
+        </item>
+        <item>
             <title>0.11.1</title>
             <pubDate>Fri, 03 Apr 2026 12:24:19 -0600</pubDate>
             <link>https://snapbackapp.com</link>
@@ -11,11 +26,6 @@
             <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://snapbackapp.com/releases/Snapback-0.11.1.html</sparkle:releaseNotesLink>
             <enclosure url="https://snapbackapp.com/releases/Snapback-0.11.1.dmg" length="5119141" type="application/octet-stream" sparkle:edSignature="y1obmU+vtS0cgqkj5qdYCDgIAB+MkJmS5Ws/e1J/HOQc8bGpBX3VdnZ1/5Q2I1ChkiDGVtAaiyhYTczhV14tAQ=="/>
-            <sparkle:deltas>
-                <enclosure url="https://snapbackapp.com/releases/Snapback35-34.delta" sparkle:deltaFrom="34" length="246322" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="PV+ToqtYtrOM9h8fE+6hBgw49+ugjVDbp+ibgJ3n8tbQidd2FWR3D8cwWTVxgVeFwVRTYQUZ78JbXBz8A5VHAg=="/>
-                <enclosure url="https://snapbackapp.com/releases/Snapback35-33.delta" sparkle:deltaFrom="33" length="510806" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="YUd+c6lh3lrkmBW7MvnW5j3iYQnOJfdVjf2GqDoTCdJ0gzEmG4MKLWlybXrTeNKbq8bQEj3GEx17vHO2/cEbBQ=="/>
-                <enclosure url="https://snapbackapp.com/releases/Snapback35-31.delta" sparkle:deltaFrom="31" length="911218" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="9BKjhyTg+cgLCJ1aFvfFxYUD4a0MQ7sCc9X1xKK6P1q8wT6pZlzu/MVBqh3L+1mnUWj6BKbD8nwwPeI1qIVOCA=="/>
-            </sparkle:deltas>
         </item>
         <item>
             <title>0.11.0</title>
@@ -26,16 +36,6 @@
             <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://snapbackapp.com/releases/Snapback-0.11.0.html</sparkle:releaseNotesLink>
             <enclosure url="https://snapbackapp.com/releases/Snapback-0.11.0.dmg" length="5116612" type="application/octet-stream" sparkle:edSignature="OpfLuCDFwrTPJGR6kvkMxShGrKrlGKULYBZxv6yk4jsb7KIQ98sOu7d55BTbz+umS8LkNhRRFuWVeM/+epk2DQ=="/>
-        </item>
-        <item>
-            <title>0.10.0</title>
-            <pubDate>Thu, 02 Apr 2026 11:23:37 -0600</pubDate>
-            <link>https://snapbackapp.com</link>
-            <sparkle:version>33</sparkle:version>
-            <sparkle:shortVersionString>0.10.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
-            <sparkle:releaseNotesLink>https://snapbackapp.com/releases/Snapback-0.10.0.html</sparkle:releaseNotesLink>
-            <enclosure url="https://snapbackapp.com/releases/Snapback-0.10.0.dmg" length="5056181" type="application/octet-stream" sparkle:edSignature="O6U2aeQ8nBl++kMyOaeKIss+oBZmZ9fcWHcjWI274DUGb9bVHD8tlaMHIyR0X9eyg9Jsfd5px3U/6xKmp8psAA=="/>
         </item>
     </channel>
 </rss>
