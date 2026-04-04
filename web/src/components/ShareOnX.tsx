@@ -1,33 +1,33 @@
-import React from "react";
+"use client"
 
-// Lets create some fun messages to encourage users to share their setup on X (formerly Twitter)
+import { XLogoIcon } from "@phosphor-icons/react"
+
 const messages = [
-  "OMG just discovered Snapback and it's a game-changer for my workflow! Check it out! ",
-  "Snapback is the best thing to happen to my productivity! Highly recommend it! ",
-  "Can't believe I lived without Snapback until now! It's a must-have! ",
-  "Snapback has completely transformed how I work. You need to try it! ",
-  "Just set up Snapback and I'm already obsessed! It's amazing! ",  
-];
+  "Just discovered @snapbackapp — one shortcut restores my entire workspace. The macOS utility I didn't know I needed.",
+  "Been using @snapbackapp for a week. Dev mode, design mode, meeting mode. My windows go where they should, every time.",
+  "Finally a window manager with memory. @snapbackapp restores my full layout in one keystroke. Nothing else does this.",
+  "My setup is exactly where I left it after every call. @snapbackapp does what no other window manager does.",
+  "Snapback is quietly the best thing I've installed on my Mac this year. @snapbackapp",
+]
 
 function getRandomMessage() {
-  return messages[Math.floor(Math.random() * messages.length)];
+  return messages[Math.floor(Math.random() * messages.length)]
 }
 
 export default function ShareOnX() {
-  const baseUrl = "https://snapbackapp.com";
-  const text = encodeURIComponent(`${getRandomMessage()} @snapbackapp_dev`);
-  const url = `https://x.com/intent/tweet?text=${text}&url=${baseUrl}`;
+  const handleClick = () => {
+    const text = encodeURIComponent(getRandomMessage())
+    const url = encodeURIComponent("https://snapbackapp.com")
+    window.open(`https://x.com/intent/tweet?text=${text}&url=${url}`, "_blank", "noopener,noreferrer")
+  }
 
   return (
-    <div className="text-center mt-12">
-      <a
-        href={url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-2 inline-block px-4 py-2 rounded-lg border border-white/10 text-sm text-gray-300 hover:bg-white/5 transition"
-        >
-        Share your setup on X
-      </a>
-    </div>
-  );
+    <button
+      onClick={handleClick}
+      className="group flex items-center gap-2.5 px-5 py-2.5 rounded-full border border-white/8 text-zinc-400 text-sm font-text hover:border-white/20 hover:text-white transition-all glass whitespace-nowrap"
+    >
+      <XLogoIcon size={15} weight="fill" className="text-zinc-500 group-hover:text-white transition-colors" />
+      Share on X
+    </button>
+  )
 }

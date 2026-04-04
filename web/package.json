@@ -4,17 +4,21 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "assets:build": "node scripts/build-assets.js",
+    "assets:update-paths": "node scripts/update-asset-paths.js",
+    "build": "npm run assets:build && next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "framer-motion": "^12.36.0",
     "next": "16.1.6",
     "react": "19.2.3",
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@ricka7x/asset-forge": "^0.3.3",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
