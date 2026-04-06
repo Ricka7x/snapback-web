@@ -3,6 +3,11 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import {  AppWindowIcon } from "@phosphor-icons/react"
+import Image from "next/image"
+import { getBlurDataURL } from "@/lib/assetPlaceholders"
+
+const MENU_IMAGE_SRC = "/assets/menu.webp"
+const MENU_IMAGE_BLUR = getBlurDataURL(MENU_IMAGE_SRC)
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -47,9 +52,13 @@ export default function MenuBarSection() {
 
         {/* Right — image */}
         <motion.div style={{ y }}>
-          <img
-            src="/assets/menu.webp"
+          <Image
+            src={MENU_IMAGE_SRC}
             alt="Snapback menu bar popover"
+            width={1600}
+            height={1000}
+            placeholder={MENU_IMAGE_BLUR ? "blur" : "empty"}
+            blurDataURL={MENU_IMAGE_BLUR}
             className="w-full rounded-2xl shadow-[0_40px_80px_rgba(0,0,0,0.8)] border border-white/5"
           />
         </motion.div>
