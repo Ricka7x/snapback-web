@@ -3,6 +3,11 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import { Monitor } from "@phosphor-icons/react"
+import Image from "next/image"
+import { getBlurDataURL } from "@/lib/assetPlaceholders"
+
+const DISPLAY_IMAGE_SRC = "/assets/preview.webp"
+const DISPLAY_IMAGE_BLUR = getBlurDataURL(DISPLAY_IMAGE_SRC)
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -47,9 +52,13 @@ export default function DisplaySection() {
 
         {/* Right — image */}
         <motion.div style={{ y }}>
-          <img
-            src="/assets/preview.webp"
+          <Image
+            src={DISPLAY_IMAGE_SRC}
             alt="Snapback display settings panel"
+            width={1600}
+            height={1000}
+            placeholder={DISPLAY_IMAGE_BLUR ? "blur" : "empty"}
+            blurDataURL={DISPLAY_IMAGE_BLUR}
             className="w-full rounded-2xl shadow-[0_40px_80px_rgba(0,0,0,0.8)] border border-white/5"
           />
         </motion.div>

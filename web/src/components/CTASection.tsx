@@ -3,15 +3,24 @@
 import { motion } from "framer-motion"
 import {  ArrowDownIcon } from "@phosphor-icons/react"
 import { DOWNLOAD_URL } from "@/lib/constants"
+import Image from "next/image"
+import { getBlurDataURL } from "@/lib/assetPlaceholders"
+
+const WALLPAPER_IMAGE_SRC = "/assets/wallpaper.webp"
+const WALLPAPER_IMAGE_BLUR = getBlurDataURL(WALLPAPER_IMAGE_SRC)
 
 export default function CTASection() {
   return (
     <section className="relative py-32 md:py-48 px-6 overflow-hidden">
       {/* Background wallpaper */}
-      <img
-        src="/assets/wallpaper.webp"
+      <Image
+        src={WALLPAPER_IMAGE_SRC}
         alt=""
         aria-hidden
+        fill
+        sizes="100vw"
+        placeholder={WALLPAPER_IMAGE_BLUR ? "blur" : "empty"}
+        blurDataURL={WALLPAPER_IMAGE_BLUR}
         className="absolute inset-0 w-full h-full object-cover object-center"
       />
       {/* Overlay */}

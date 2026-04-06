@@ -3,6 +3,11 @@
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import { ArrowsOut, CornersOut, GridFour, Hand, Monitor } from "@phosphor-icons/react"
+import Image from "next/image"
+import { getBlurDataURL } from "@/lib/assetPlaceholders"
+
+const SNAP_IMAGE_SRC = "/assets/positions.webp"
+const SNAP_IMAGE_BLUR = getBlurDataURL(SNAP_IMAGE_SRC)
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -44,9 +49,13 @@ export default function SnapSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24">
           {/* Left — image */}
           <motion.div style={{ y }}>
-            <img
-              src="/assets/positions.webp"
+            <Image
+              src={SNAP_IMAGE_SRC}
               alt="Window snap positions"
+              width={1600}
+              height={1000}
+              placeholder={SNAP_IMAGE_BLUR ? "blur" : "empty"}
+              blurDataURL={SNAP_IMAGE_BLUR}
               className="w-full rounded-2xl shadow-[0_40px_80px_rgba(0,0,0,0.8)] border border-white/5"
             />
           </motion.div>
