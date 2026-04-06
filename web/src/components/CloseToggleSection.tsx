@@ -75,6 +75,7 @@ export default function CloseToggleSection() {
                 <button
                   onClick={() => setEnabled(!enabled)}
                   aria-pressed={enabled}
+                  aria-label="Toggle close other apps"
                   className="relative w-11 h-6 rounded-full transition-colors duration-200 shrink-0"
                   style={{ background: enabled ? "var(--color-primary)" : "rgba(255,255,255,0.1)" }}
                 >
