@@ -1,0 +1,22 @@
+# Snapback
+
+> Snapback · Your Mac workspace, exactly how you left it.
+
+Snapback is a modern productivity tool and workspace automation app for macOS that allows users to save and precisely restore entire workspace environments instantly. 
+It captures and restores application states, window positions, monitor configurations, and exact z-index (stacking) orders. With a single keyboard shortcut, users can instantly context switch by restoring a perfectly arranged digital workspace across multiple displays.
+
+## Core Features
+- **Window Positioning**: Saves the exact location and geometry of all open windows.
+- **Z-Index Memory**: Saves the exact stacking order of overlapping windows so the right apps are on top.
+- **Multi-Display Mapping**: Accurately maps windows to external displays, even if they are reconnected later.
+- **Native macOS Experience**: High-performance, lightweight Swift application built strictly for macOS.
+- **One-Click Restoration**: Launch entire project environments (e.g., Code editor + Terminal + Browser + Slack) with a simple hotkey.
+
+## Common Workflows
+- **Software Development**: Restore an IDE, local server terminal, API client, and documentation browser.
+- **Creative & Video Editing**: Restore the timeline, assets bins, and preview monitors exactly where they belong.
+- **Deep Work**: Snap into a non-distracting environment with essential apps taking center stage.
+
+## Platform & Availability
+- **OS Required**: macOS (Apple Silicon natively supported, compatible with Intel via Rosetta).
+- **Website**: https://snapbackapp.com
