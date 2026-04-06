@@ -59,9 +59,9 @@ export default function ProblemSection() {
           className="mt-16 pt-10 border-t border-white/[0.06]"
         >
           <span className="w-10 h-[2px] bg-primary block mb-6" />
-          <p className="font-display text-[clamp(26px,3.5vw,44px)] font-semibold text-white tracking-[-0.025em]">
+          <h3 className="font-display text-[clamp(26px,3.5vw,44px)] font-semibold text-white tracking-[-0.025em]">
             Snapback fixes this once, permanently.
-          </p>
+          </h3>
         </motion.div>
       </motion.div>
     </section>

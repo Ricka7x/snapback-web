@@ -58,6 +58,9 @@ export const metadata: Metadata = {
     description: "Launch apps, restore positions, and preserve z-index stacks with one shortcut.",
     images: ["/assets/og-image.webp"],
   },
+  alternates: {
+    canonical: '/',
+  },
 };
 
 export default function RootLayout({
