@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { TerminalIcon, KeyIcon, LightningIcon, ProhibitIcon } from "@phosphor-icons/react"
+import { TerminalIcon, KeyIcon, LightningIcon, ProhibitIcon, XLogoIcon } from "@phosphor-icons/react"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -69,16 +69,17 @@ export default function ComingSoonSection() {
           {/* CTA row */}
           <motion.div
             variants={fadeUp}
-            className="flex items-center gap-5 pt-8 border-t border-white/6"
+            className="flex flex-col items-start gap-3 pt-8 border-t border-white/6 sm:flex-row sm:items-center sm:gap-5"
           >
             <a
               href="https://x.com/snapbackapp_dev"
               target="_blank" rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 border border-accent/20 text-white/70 text-sm font-medium hover:border-accent/50 hover:text-white transition-all glass"
+              className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full px-5 py-2.5 border border-accent/20 text-white/70 text-sm font-medium hover:border-accent/50 hover:text-white transition-all glass"
             >
+              <XLogoIcon size={15} weight="fill" />
               Follow for updates
             </a>
-            <p className="text-zinc-600 text-xs font-text">
+            <p className="text-zinc-600 text-xs font-text sm:max-w-none">
               Free users keep everything they have now.
             </p>
           </motion.div>
