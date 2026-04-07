@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import { useState } from "react"
-import { ArrowsLeftRight } from "@phosphor-icons/react"
+import { ArrowsLeftRightIcon } from "@phosphor-icons/react"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -49,7 +49,7 @@ export default function CloseToggleSection() {
               variants={fadeUp}
               className="border-l-2 border-primary/50 pl-3 text-primary/60 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
             >
-              <ArrowsLeftRight size={14} weight="light" />
+              <ArrowsLeftRightIcon size={14} weight="light" />
               Context switching
             </motion.p>
             <motion.h2

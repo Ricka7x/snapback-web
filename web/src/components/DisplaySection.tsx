@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import { Monitor } from "@phosphor-icons/react"
+import { MonitorIcon } from "@phosphor-icons/react"
 import Image from "next/image"
 import { getBlurDataURL } from "@/lib/assetPlaceholders"
 
@@ -33,7 +33,7 @@ export default function DisplaySection() {
             variants={fadeUp}
             className="border-l-[2px] border-primary/50 pl-3 text-primary/60 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
           >
-            <Monitor size={14} weight="light" />
+            <MonitorIcon size={14} weight="light" />
             Display changes
           </motion.p>
           <motion.h2

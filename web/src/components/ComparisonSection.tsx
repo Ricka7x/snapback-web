@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Scales, Check, X } from "@phosphor-icons/react"
+import { ScalesIcon, CheckIcon, XIcon } from "@phosphor-icons/react"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -33,7 +33,7 @@ export default function ComparisonSection() {
             variants={fadeUp}
             className="border-l-[2px] border-primary/50 pl-3 text-primary/60 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
           >
-            <Scales size={14} weight="light" />
+            <ScalesIcon size={14} weight="light" />
             vs other window managers
           </motion.p>
           <motion.h2
@@ -81,11 +81,11 @@ export default function ComparisonSection() {
               <div className="flex items-center justify-center">
                 {row.other ? (
                   <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mx-auto">
-                    <Check size={14} weight="regular" className="text-primary" />
+                    <CheckIcon size={14} weight="regular" className="text-primary" />
                   </div>
                 ) : (
                   <div className="w-6 h-6 flex items-center justify-center mx-auto">
-                    <X size={14} weight="regular" className="text-zinc-700" />
+                    <XIcon size={14} weight="regular" className="text-zinc-700" />
                   </div>
                 )}
               </div>
@@ -93,7 +93,7 @@ export default function ComparisonSection() {
               {/* Snapback cell */}
               <div className="flex items-center justify-center">
                 <div className="w-6 h-6 rounded-full bg-primary/15 flex items-center justify-center mx-auto">
-                  <Check size={14} weight="regular" className="text-primary" />
+                  <CheckIcon size={14} weight="regular" className="text-primary" />
                 </div>
               </div>
             </div>

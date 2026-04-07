@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Terminal, Key, Lightning, Prohibit } from "@phosphor-icons/react"
+import { TerminalIcon, KeyIcon, LightningIcon, ProhibitIcon } from "@phosphor-icons/react"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -9,10 +9,10 @@ const fadeUp = {
 }
 
 const pills = [
-  { icon: <Terminal size={16} weight="light" className="text-accent/60" />, label: "Command palette" },
-  { icon: <Key size={16} weight="light" className="text-accent/60" />, label: "Mode-scoped shortcuts" },
-  { icon: <Lightning size={16} weight="light" className="text-accent/60" />, label: "Instant context switch" },
-  { icon: <Prohibit size={16} weight="light" className="text-accent/60" />, label: "Zero key conflicts" },
+  { icon: <TerminalIcon size={16} weight="light" className="text-accent/60" />, label: "Command palette" },
+  { icon: <KeyIcon size={16} weight="light" className="text-accent/60" />, label: "Mode-scoped shortcuts" },
+  { icon: <LightningIcon size={16} weight="light" className="text-accent/60" />, label: "Instant context switch" },
+  { icon: <ProhibitIcon size={16} weight="light" className="text-accent/60" />, label: "Zero key conflicts" },
 ]
 
 export default function ComingSoonSection() {
@@ -56,14 +56,14 @@ export default function ComingSoonSection() {
             variants={fadeUp}
             className="font-display text-[clamp(32px,4.5vw,56px)] font-semibold tracking-[-0.03em] text-white leading-[1.06] mb-6"
           >
-            Modes. One shortcut for everything.
+            Spaces. One shortcut for everything.
           </motion.h2>
 
           <motion.p
             variants={fadeUp}
             className="text-zinc-400 text-lg leading-[1.8] font-text max-w-xl mb-10"
           >
-            Pro introduces Modes: Raycast-style command palette switching for your entire environment. One keystroke swaps your full context, workspaces and all. Reuse the same shortcuts across modes without conflicts.
+            Pro introduces Spaces: Raycast-style command palette switching for your entire environment. One keystroke swaps your full context, workspaces and all. Reuse the same shortcuts across spaces without conflicts.
           </motion.p>
 
           {/* CTA row */}
@@ -72,7 +72,7 @@ export default function ComingSoonSection() {
             className="flex items-center gap-5 pt-8 border-t border-white/6"
           >
             <a
-              href="mailto:support@snapbackapp.com?subject=Notify me about Modes"
+              href="mailto:support@snapbackapp.com?subject=Notify me about Spaces"
               target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 border border-accent/20 text-white/70 text-sm font-medium hover:border-accent/50 hover:text-white transition-all glass"
             >
