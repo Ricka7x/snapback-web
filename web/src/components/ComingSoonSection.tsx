@@ -72,11 +72,11 @@ export default function ComingSoonSection() {
             className="flex items-center gap-5 pt-8 border-t border-white/6"
           >
             <a
-              href="mailto:support@snapbackapp.com?subject=Notify me about Spaces"
+              href="https://x.com/snapbackapp_dev"
               target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full px-5 py-2.5 border border-accent/20 text-white/70 text-sm font-medium hover:border-accent/50 hover:text-white transition-all glass"
             >
-              Notify me when it launches
+              Follow for updates
             </a>
             <p className="text-zinc-600 text-xs font-text">
               Free users keep everything they have now.
