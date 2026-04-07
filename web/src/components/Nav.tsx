@@ -1,11 +1,12 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { DOWNLOAD_URL } from "@/lib/constants"
+import { DOWNLOAD_URL, LATEST_VERSION } from "@/lib/constants"
 import Link from "next/link"
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
+  const versionDisplay = LATEST_VERSION.split('.').slice(0, 2).join('.')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
@@ -26,7 +27,7 @@ export default function Nav() {
           <img src="/assets/logo.svg" className="w-6 h-6 rounded-md" alt="Snapback logo" />
           <span className="text-white/85 text-[15px] font-semibold tracking-tight ml-2">Snapback</span>
           <span className="font-mono text-[9px] text-primary border border-primary/40 rounded px-1.5 py-0.5 ml-2 bg-primary/10">
-            v0.11
+            v{versionDisplay}
           </span>
         </Link>
         
