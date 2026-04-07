@@ -2,12 +2,12 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Plus } from "@phosphor-icons/react"
+import {  PlusIcon } from "@phosphor-icons/react"
 
 const faqs = [
   {
     q: "Is Snapback really free?",
-    a: "Yes. The core app is free and will stay that way. Paid features start with Modes.",
+    a: "Yes. The core app is free and will stay that way. We do have a Pro version in the works with extra features, but the free version will always be fully functional and supported.",
   },
   {
     q: "Does it work with multiple monitors?",
@@ -57,7 +57,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
           transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           className="shrink-0"
         >
-          <Plus size={20} weight="regular" className="text-zinc-600 group-hover:text-zinc-400 transition-colors" />
+          <PlusIcon size={20} weight="regular" className="text-zinc-600 group-hover:text-zinc-400 transition-colors" />
         </motion.span>
       </button>
 

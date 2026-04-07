@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { StackSimple, Rows, FloppyDisk, ArrowCounterClockwise } from "@phosphor-icons/react"
+import { StackSimpleIcon, RowsIcon, FloppyDiskIcon, ArrowCounterClockwiseIcon } from "@phosphor-icons/react"
 import WorkspaceFlowAnimation from "./WorkspaceFlowAnimation"
 
 const fadeUp = {
@@ -12,19 +12,19 @@ const fadeUp = {
 const steps = [
   {
     number: "01",
-    icon: <Rows size={14} weight="light" className="text-primary/60" />,
+    icon: <RowsIcon size={14} weight="light" className="text-primary/60" />,
     title: "Arrange your apps",
     body: "Drag windows into position or use keyboard shortcuts.",
   },
   {
     number: "02",
-    icon: <FloppyDisk size={14} weight="light" className="text-primary/60" />,
+    icon: <FloppyDiskIcon size={14} weight="light" className="text-primary/60" />,
     title: "Save the layout",
     body: "Name it, assign a shortcut. Takes five seconds.",
   },
   {
     number: "03",
-    icon: <ArrowCounterClockwise size={14} weight="light" className="text-primary/60" />,
+    icon: <ArrowCounterClockwiseIcon size={14} weight="light" className="text-primary/60" />,
     title: "Restore it anytime",
     body: "Every app reopens. Every window returns to its exact position.",
   },
@@ -44,7 +44,7 @@ export default function WorkspacesIntro() {
           variants={fadeUp}
           className="text-primary text-[11px] font-bold uppercase tracking-[0.14em] flex items-center justify-center gap-1.5 mb-5"
         >
-          <StackSimple size={14} weight="regular" />
+          <StackSimpleIcon size={14} weight="regular" />
           Core feature
         </motion.p>
         <motion.h2

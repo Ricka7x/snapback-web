@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import { ArrowsOut, CornersOut, GridFour, Hand, Monitor } from "@phosphor-icons/react"
+import { ArrowsOutIcon, CornersOutIcon, GridFourIcon, HandIcon, MonitorIcon } from "@phosphor-icons/react"
 import Image from "next/image"
 import { getBlurDataURL } from "@/lib/assetPlaceholders"
 
@@ -16,22 +16,22 @@ const fadeUp = {
 
 const features = [
   {
-    icon: <CornersOut size={20} weight="light" className="text-primary/60 mb-3" />,
+    icon: <CornersOutIcon size={20} weight="light" className="text-primary/60 mb-3" />,
     title: "Halves and thirds",
     body: "Left, right, top, or bottom.",
   },
   {
-    icon: <GridFour size={20} weight="light" className="text-primary/60 mb-3" />,
+    icon: <GridFourIcon size={20} weight="light" className="text-primary/60 mb-3" />,
     title: "Quarter layouts",
     body: "Four apps, one screen.",
   },
   {
-    icon: <Hand size={20} weight="light" className="text-primary/60 mb-3" />,
+    icon: <HandIcon size={20} weight="light" className="text-primary/60 mb-3" />,
     title: "Modifier drag",
     body: "Hold Option and drag.",
   },
   {
-    icon: <Monitor size={20} weight="light" className="text-primary/60 mb-3" />,
+    icon: <MonitorIcon size={20} weight="light" className="text-primary/60 mb-3" />,
     title: "Multi-display",
     body: "Spans every monitor.",
   },
@@ -71,7 +71,7 @@ export default function SnapSection() {
               variants={fadeUp}
               className="border-l-[2px] border-primary/50 pl-3 text-primary/60 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
             >
-              <ArrowsOut size={14} weight="light" />
+              <ArrowsOutIcon size={14} weight="light" />
               Window snapping
             </motion.p>
             <motion.h2
