@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { StackSimpleIcon, RowsIcon, FloppyDiskIcon, ArrowCounterClockwiseIcon } from "@phosphor-icons/react"
+import { StackSimpleIcon } from "@phosphor-icons/react"
 import WorkspaceFlowAnimation from "./WorkspaceFlowAnimation"
 
 const fadeUp = {
@@ -12,19 +12,16 @@ const fadeUp = {
 const steps = [
   {
     number: "01",
-    icon: <RowsIcon size={14} weight="light" className="text-primary/60" />,
     title: "Arrange your apps",
     body: "Drag windows into position or use keyboard shortcuts.",
   },
   {
     number: "02",
-    icon: <FloppyDiskIcon size={14} weight="light" className="text-primary/60" />,
     title: "Save the layout",
     body: "Name it, assign a shortcut. Takes five seconds.",
   },
   {
     number: "03",
-    icon: <ArrowCounterClockwiseIcon size={14} weight="light" className="text-primary/60" />,
     title: "Restore it anytime",
     body: "Every app reopens. Every window returns to its exact position.",
   },
@@ -76,15 +73,12 @@ export default function WorkspacesIntro() {
               i < 2 ? "md:border-r border-white/[0.06]" : ""
             } ${i > 0 ? "md:pl-12" : ""}`}
           >
-            <span className="font-mono text-[96px] text-white/[0.035] leading-none block">
+            <span className="font-mono text-[96px] text-white/4 leading-none block">
               {step.number}
             </span>
-            <span className="font-mono text-primary text-[10px] tracking-[0.2em] uppercase flex items-center gap-1.5 -mt-3 mb-4">
-              {step.icon}
-              {step.number}
-            </span>
+            <div className="-mt-3 mb-4" />
             <h3 className="text-white font-semibold text-base mb-2 tracking-tight">{step.title}</h3>
-            <p className="text-zinc-600 text-sm leading-[1.7] font-text">{step.body}</p>
+            <p className="text-zinc-400 text-sm leading-[1.7] font-text">{step.body}</p>
           </motion.div>
         ))}
       </motion.div>
