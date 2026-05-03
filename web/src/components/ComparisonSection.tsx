@@ -46,7 +46,7 @@ export default function ComparisonSection() {
             variants={fadeUp}
             className="text-zinc-400 text-lg leading-[1.8] font-text"
           >
-            Most window managers only move windows around. They have no memory. Close your laptop, switch tasks, restart an app and your layout is gone. Snapback is the layer on top.
+            They resize windows. They don&apos;t remember what was open or where. Close your laptop, lose your layout. Snapback remembers.
           </motion.p>
         </motion.div>
 

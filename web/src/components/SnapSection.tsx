@@ -61,7 +61,7 @@ export default function SnapSection() {
               variants={fadeUp}
               className="text-zinc-400 text-lg leading-[1.8] font-text"
             >
-              Snap any window to any division: half, quarter, third, and more. Keyboard shortcuts for instant positioning without reaching for the mouse.
+              Halves, thirds, quarters. Keyboard shortcuts for every position. No mouse.
             </motion.p>
           </motion.div>
         </div>

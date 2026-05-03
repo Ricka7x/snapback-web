@@ -79,7 +79,7 @@ export default function LayoutsSection() {
               variants={fadeUp}
               className="text-zinc-400 text-lg leading-[1.8] font-text"
             >
-              Default layouts take the apps on your screen and rearrange them into a preset shape. Side by side, thirds, focused view, and more. One shortcut, instant order.
+              Hit a shortcut. Your open apps snap into a preset layout. Halves, thirds, or one app.
             </motion.p>
           </motion.div>
         </div>
