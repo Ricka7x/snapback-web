@@ -43,7 +43,7 @@ export default function CTASection() {
           Stop rebuilding your <em>workspace</em> every morning.
         </h2>
         <p className="text-white/60 text-xl leading-[1.7] max-w-md mx-auto mt-6 mb-10 font-text">
-          Download Snapback, save your first layout in under a minute, and never lose your place again.
+          Save your first layout in under a minute. Stop dragging windows around forever.
         </p>
         <a
           href={DOWNLOAD_URL}

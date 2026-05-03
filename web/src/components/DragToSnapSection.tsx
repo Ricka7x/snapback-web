@@ -46,7 +46,7 @@ export default function DragToSnapSection() {
             variants={fadeUp}
             className="text-zinc-400 text-lg leading-[1.8] font-text"
           >
-            Hold ⌘ while dragging any window and drop it on an edge or corner to snap it into place. No shortcuts to memorize, just drag where you want it.
+            Hold ⌘. Drag to any edge or corner. Window snaps into place. No shortcuts.
           </motion.p>
         </motion.div>
 
