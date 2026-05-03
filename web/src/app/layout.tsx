@@ -32,13 +32,13 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://snapbackapp.com"),
-  title: "Snapback · Your Mac workspace, exactly how you left it.",
-  description: "The ultimate workspace automation tool for macOS. Save and restore groups of apps, window positions, and z-index stacks across multiple displays with a single hotkey.",
-  keywords: ["macOS", "window manager", "workspace restoration", "productivity", "mac apps", "window snapping"],
+  title: "Snapback: Mac Workspace Manager | Save & Restore Window Layouts",
+  description: "Snapback saves your entire Mac window layout: apps, positions, displays. Restores everything in one keystroke. Free. macOS 14.2+. No account needed.",
+  keywords: ["macOS", "mac window manager", "workspace switcher mac", "window manager", "workspace restoration", "restore window layout macos", "productivity", "mac apps", "window snapping", "rectangle mac alternative"],
   authors: [{ name: "Snapback Team" }],
   openGraph: {
-    title: "Snapback · Your Mac workspace, exactly how you left it.",
-    description: "Save and restore entire workspaces on macOS. Power users' secret for instant digital flow.",
+    title: "Snapback: Mac Workspace Manager | Save & Restore Window Layouts",
+    description: "Save your entire Mac window layout: apps, positions, displays. Restore everything in one keystroke. Free. macOS 14.2+.",
     url: "https://snapbackapp.com",
     siteName: "Snapback",
     images: [
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
         url: "/assets/og-image.webp",
         width: 1200,
         height: 630,
-        alt: "Snapback Workspace Restoration",
+        alt: "Snapback Mac Workspace Manager",
       },
     ],
     locale: "en_US",
@@ -54,8 +54,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Snapback · Your Mac workspace, exactly how you left it.",
-    description: "Launch apps, restore positions, and preserve z-index stacks with one shortcut.",
+    title: "Snapback: Mac Workspace Manager | Save & Restore Window Layouts",
+    description: "Save and restore your entire Mac window layout in one keystroke. Free. macOS 14.2+.",
     images: ["/assets/og-image.webp"],
   },
   alternates: {

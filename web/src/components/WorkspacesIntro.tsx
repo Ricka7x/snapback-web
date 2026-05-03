@@ -11,18 +11,18 @@ const fadeUp = {
 const steps = [
   {
     number: "01",
-    title: "Set it up once",
-    body: "Arrange your apps exactly where you need them.",
+    title: "Arrange once",
+    body: "Open your apps. Position every window. Takes 2 minutes.",
   },
   {
     number: "02",
-    title: "Save with a shortcut",
-    body: "Name it, assign a shortcut. Five seconds.",
+    title: "Save in 5 seconds",
+    body: "Name your workspace, assign a shortcut. Done.",
   },
   {
     number: "03",
-    title: "Restore anytime",
-    body: "Every app reopens. Same position, same display, same stacking order.",
+    title: "Restore instantly",
+    body: "Every app reopens in the exact same position, on the exact same display, in the exact same order. Every time.",
   },
 ]
 
@@ -30,17 +30,17 @@ const secondaryFeatures = [
   {
     icon: <KeyboardIcon size={18} weight="light" className="text-primary/50" />,
     title: "Keyboard-first",
-    body: "Every action has a shortcut. Customize them all.",
+    body: "Every action has a shortcut. Every shortcut is customizable. Mouse optional.",
   },
   {
     icon: <MonitorIcon size={18} weight="light" className="text-primary/50" />,
     title: "Multi-display",
-    body: "Windows span every monitor. Each remembers its place.",
+    body: "Up to 6 displays. Each window remembers exactly which screen it belongs on.",
   },
   {
     icon: <ArrowsLeftRightIcon size={18} weight="light" className="text-primary/50" />,
     title: "Display resilient",
-    body: "Plug in, unplug, rotate. Your layout adapts.",
+    body: "Plug in a monitor mid-session. Unplug it at the office. Your layout adjusts. Nothing breaks.",
   },
 ]
 
@@ -65,13 +65,13 @@ export default function WorkspacesIntro() {
           variants={fadeUp}
           className="font-display text-[clamp(36px,5.5vw,64px)] font-semibold tracking-[-0.03em] text-white leading-[1.05] mb-5"
         >
-          Save a workspace. Restore everything, instantly.
+          One shortcut saves your whole setup. One shortcut brings it all back.
         </motion.h2>
         <motion.p
           variants={fadeUp}
           className="text-zinc-500 text-lg leading-[1.7] max-w-xl mx-auto font-text"
         >
-          One shortcut saves everything. One shortcut brings it back.
+          Every open app, every window position, every display. Saved in one keystroke. Restored in one keystroke. Even after closing your laptop, switching monitors, or restarting.
         </motion.p>
       </motion.div>
 

@@ -110,7 +110,7 @@ export default function TestimonialsSection() {
             variants={fadeUp}
             className="font-display text-[clamp(32px,4.5vw,56px)] font-semibold tracking-[-0.03em] text-white leading-[1.06] max-w-lg"
           >
-            What Mac users are saying.
+            Mac users who stopped rebuilding their workspace every morning.
           </motion.h2>
         </motion.div>
 
