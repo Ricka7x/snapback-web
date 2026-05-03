@@ -72,7 +72,7 @@ function TweetCard({ tweet, index }: { tweet: typeof tweets[0]; index: number })
           </div>
           <div>
             <p className="text-white/80 text-sm font-semibold leading-none mb-1">{tweet.name}</p>
-            <p className="text-zinc-600 text-[11px] font-mono">{tweet.handle}</p>
+            <p className="text-zinc-500 text-[11px] font-mono">{tweet.handle}</p>
           </div>
         </div>
         <XLogoIcon size={16} weight="fill" className="text-zinc-700 shrink-0 mt-0.5" />
@@ -102,7 +102,7 @@ export default function TestimonialsSection() {
         >
           <motion.p
             variants={fadeUp}
-            className="border-l-2 border-primary/50 pl-3 text-primary/60 text-[11px] uppercase tracking-[0.18em] font-semibold mb-6"
+            className="border-l-2 border-primary/50 pl-3 text-primary/80 text-[11px] uppercase tracking-[0.18em] font-semibold mb-6"
           >
             From real users
           </motion.p>
@@ -123,7 +123,7 @@ export default function TestimonialsSection() {
           className="flex items-center gap-4 mb-16"
         >
           <ShareOnX />
-          <p className="text-zinc-600 text-xs font-text">Using Snapback? Share your setup.</p>
+          <p className="text-zinc-500 text-xs font-text">Using Snapback? Share your setup.</p>
         </motion.div>
 
         {/* Masonry grid — 2 cols desktop, 1 col mobile */}

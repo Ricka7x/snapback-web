@@ -47,7 +47,7 @@ export default function CloseToggleSection() {
           >
             <motion.p
               variants={fadeUp}
-              className="border-l-2 border-primary/50 pl-3 text-primary/60 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
+              className="border-l-2 border-primary/50 pl-3 text-primary/80 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
             >
               <ArrowsLeftRightIcon size={14} weight="light" />
               Context switching
@@ -70,7 +70,7 @@ export default function CloseToggleSection() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-white text-sm font-semibold mb-0.5">Close other apps on restore</p>
-                  <p className="text-zinc-600 text-xs font-text">Switch context without the clutter</p>
+                  <p className="text-zinc-500 text-xs font-text">Switch context without the clutter</p>
                 </div>
                 <button
                   onClick={() => setEnabled(!enabled)}
@@ -113,7 +113,7 @@ export default function CloseToggleSection() {
                     {c.name}
                   </p>
                   {c.accent && (
-                    <span className="text-[9px] font-mono text-primary/60 uppercase tracking-[0.12em] border border-primary/20 rounded px-1.5 py-0.5 shrink-0">
+                    <span className="text-[9px] font-mono text-primary/80 uppercase tracking-[0.12em] border border-primary/20 rounded px-1.5 py-0.5 shrink-0">
                       example
                     </span>
                   )}
@@ -133,7 +133,7 @@ export default function CloseToggleSection() {
                     </div>
                   ))}
                 </div>
-                <p className="text-zinc-600 text-xs leading-[1.75] font-text">{c.note}</p>
+                <p className="text-zinc-500 text-xs leading-[1.75] font-text">{c.note}</p>
               </motion.div>
             ))}
           </motion.div>

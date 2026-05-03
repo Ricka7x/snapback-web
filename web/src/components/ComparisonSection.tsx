@@ -31,7 +31,7 @@ export default function ComparisonSection() {
         >
           <motion.p
             variants={fadeUp}
-            className="border-l-[2px] border-primary/50 pl-3 text-primary/60 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
+            className="border-l-[2px] border-primary/50 pl-3 text-primary/80 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
           >
             <ScalesIcon size={14} weight="light" />
             vs other window managers
@@ -61,7 +61,7 @@ export default function ComparisonSection() {
           {/* Header row */}
           <div className="grid grid-cols-[1fr_100px_100px] bg-[#0c0e14] border-b border-white/[0.08] px-6 py-4">
             <div />
-            <div className="text-zinc-600 text-[10px] uppercase tracking-[0.14em] text-center">Other apps</div>
+            <div className="text-zinc-500 text-[10px] uppercase tracking-[0.14em] text-center">Other apps</div>
             <div className="text-primary text-[10px] uppercase tracking-[0.14em] font-bold text-center">Snapback</div>
           </div>
 
@@ -105,7 +105,7 @@ export default function ComparisonSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7, delay: 0.3 }}
-          className="text-zinc-600 text-sm text-center mt-6 font-text"
+          className="text-zinc-500 text-sm text-center mt-6 font-text"
         >
           Already using a window manager? Keep it. Snapback works alongside any of them, no conflicts.
         </motion.p>

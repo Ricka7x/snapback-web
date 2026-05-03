@@ -57,7 +57,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
           transition={{ duration: 0.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
           className="shrink-0"
         >
-          <PlusIcon size={20} weight="regular" className="text-zinc-600 group-hover:text-zinc-400 transition-colors" />
+          <PlusIcon size={20} weight="regular" className="text-zinc-400 group-hover:text-zinc-400 transition-colors" />
         </motion.span>
       </button>
 
@@ -73,7 +73,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
           >
             <div className="pb-6">
               <span className="w-8 h-px bg-primary block mb-4" />
-              <p className="text-zinc-500 text-base leading-[1.8] font-text">{a}</p>
+              <p className="text-zinc-400 text-base leading-[1.8] font-text">{a}</p>
             </div>
           </motion.div>
         )}
@@ -90,7 +90,7 @@ export default function FAQSection() {
           <h2 className="font-display text-[clamp(36px,5vw,56px)] font-semibold text-white tracking-[-0.03em]">
             Common <em>questions</em>
           </h2>
-          <p className="text-zinc-600 text-base mt-4 font-text">
+          <p className="text-zinc-400 text-base mt-4 font-text">
             Something else? Reach us at{" "}
             <a
               href="mailto:support@snapbackapp.com"

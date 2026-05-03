@@ -28,17 +28,17 @@ const steps = [
 
 const secondaryFeatures = [
   {
-    icon: <KeyboardIcon size={18} weight="light" className="text-primary/50" />,
+    icon: <KeyboardIcon size={18} weight="light" className="text-primary/70" />,
     title: "Keyboard-first",
     body: "Every action has a shortcut. Every shortcut is customizable. Mouse optional.",
   },
   {
-    icon: <MonitorIcon size={18} weight="light" className="text-primary/50" />,
+    icon: <MonitorIcon size={18} weight="light" className="text-primary/70" />,
     title: "Multi-display",
     body: "Up to 6 displays. Each window remembers exactly which screen it belongs on.",
   },
   {
-    icon: <ArrowsLeftRightIcon size={18} weight="light" className="text-primary/50" />,
+    icon: <ArrowsLeftRightIcon size={18} weight="light" className="text-primary/70" />,
     title: "Display resilient",
     body: "Plug in a monitor mid-session. Unplug it at the office. Your layout adjusts. Nothing breaks.",
   },
@@ -69,7 +69,7 @@ export default function WorkspacesIntro() {
         </motion.h2>
         <motion.p
           variants={fadeUp}
-          className="text-zinc-500 text-lg leading-[1.7] max-w-xl mx-auto font-text"
+          className="text-zinc-400 text-lg leading-[1.7] max-w-xl mx-auto font-text"
         >
           Every open app, every window position, every display. Saved in one keystroke. Restored in one keystroke. Even after closing your laptop, switching monitors, or restarting.
         </motion.p>
@@ -137,7 +137,7 @@ export default function WorkspacesIntro() {
           >
             {f.icon}
             <h3 className="text-white text-sm font-semibold mt-3 mb-1">{f.title}</h3>
-            <p className="text-zinc-500 text-sm leading-[1.7] font-text">{f.body}</p>
+            <p className="text-zinc-400 text-sm leading-[1.7] font-text">{f.body}</p>
           </motion.div>
         ))}
       </motion.div>

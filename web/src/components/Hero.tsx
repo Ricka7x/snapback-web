@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion"
 import { useRef } from "react"
-import { ArrowRightIcon, CpuIcon } from "@phosphor-icons/react"
+import { ArrowRightIcon } from "@phosphor-icons/react"
 import { DOWNLOAD_URL } from "@/lib/constants"
 
 export default function Hero() {
@@ -42,15 +42,20 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center w-full py-32 lg:py-40">
         {/* Left column */}
         <div>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-            className="text-primary/80 text-[10px] uppercase tracking-[0.22em] font-mono mb-8 flex items-center gap-2"
+            className="mb-8"
           >
-            <CpuIcon size={14} weight="light" />
-            Free · Now in Beta
-          </motion.p>
+            <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 bg-primary/15 border border-primary/25 text-primary text-[10px] uppercase tracking-[0.2em] font-semibold">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-primary" />
+              </span>
+              Free · Now in Beta
+            </span>
+          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 28 }}
@@ -91,7 +96,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60" />
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary" />
               </span>
-              <span className="text-zinc-500 text-[11px] font-mono">Free forever · macOS 14.2+ · No account required</span>
+              <span className="text-zinc-500 text-[11px] font-mono">Free forever · macOS 14.2+ · No account</span>
             </div>
           </motion.div>
         </div>

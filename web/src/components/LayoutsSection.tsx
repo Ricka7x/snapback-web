@@ -16,17 +16,17 @@ const fadeUp = {
 
 const layouts = [
   {
-    icon: <GridFourIcon size={20} weight="light" className="text-primary/60 mb-3" />,
+    icon: <GridFourIcon size={20} weight="light" className="text-primary/80 mb-3" />,
     title: "Halves",
     body: "Two apps, equal split.",
   },
   {
-    icon: <LayoutIcon size={20} weight="light" className="text-primary/60 mb-3" />,
+    icon: <LayoutIcon size={20} weight="light" className="text-primary/80 mb-3" />,
     title: "Thirds",
     body: "Three columns, balanced.",
   },
   {
-    icon: <GridFourIcon size={20} weight="light" className="text-primary/60 mb-3" />,
+    icon: <GridFourIcon size={20} weight="light" className="text-primary/80 mb-3" />,
     title: "Full",
     body: "One app front and center.",
   },
@@ -64,7 +64,7 @@ export default function LayoutsSection() {
           >
             <motion.p
               variants={fadeUp}
-              className="border-l-[2px] border-primary/50 pl-3 text-primary/60 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
+              className="border-l-[2px] border-primary/50 pl-3 text-primary/80 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
             >
               <LayoutIcon size={14} weight="light" />
               Apply layouts instantly
