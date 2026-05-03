@@ -13,19 +13,19 @@ const cases = [
   {
     name: "Dev to Design",
     combos: [["⌃", "⌥", "D"], ["⌃", "⌥", "S"]],
-    note: "Closes non-workspace apps for a totally fresh start.",
+    note: "VS Code closes. Figma opens. Slack goes away. Fresh start.",
     accent: true,
   },
   {
     name: "Work to Calls",
     combos: [["⌃", "⌥", "W"], ["⌃", "⌥", "M"]],
-    note: "Keeps your apps open but shifts them into meeting mode.",
+    note: "Your work stays. Your layout shifts into meeting mode.",
     accent: false,
   },
   {
     name: "Focus mode",
     combos: [["⌃", "⌥", "F"]],
-    note: "One app, one screen. Everything else goes away.",
+    note: "One app. One screen. Everything else gone.",
     accent: false,
   },
 ]
@@ -56,13 +56,13 @@ export default function CloseToggleSection() {
               variants={fadeUp}
               className="font-display text-[clamp(28px,4vw,48px)] font-semibold leading-[1.12] tracking-[-0.03em] text-white mb-6"
             >
-              Go from development to design without the clutter.
+              Switch from dev to design mode in one keystroke. Everything else closes.
             </motion.h2>
             <motion.p
               variants={fadeUp}
               className="text-zinc-400 text-lg leading-[1.8] font-text mb-8"
             >
-              Restore a workspace and close everything that doesn&apos;t belong. One shortcut. Clean slate.
+              Restore a workspace and Snapback closes every app that doesn&apos;t belong. No clutter. No manual cleanup. Just the tools you need for the job you&apos;re doing.
             </motion.p>
 
             {/* Toggle */}

@@ -12,7 +12,7 @@ export default function Footer() {
             <img src="/assets/logo.svg" alt="Snapback" className="w-9 h-9 rounded-xl" />
             <div>
               <p className="text-white/80 text-sm font-semibold leading-none mb-1">Snapback</p>
-              <p className="text-zinc-600 text-xs font-text">Made for people who move fast on their Mac.</p>
+              <p className="text-zinc-600 text-xs font-text">Built for Mac power users who move fast.</p>
             </div>
           </div>
 

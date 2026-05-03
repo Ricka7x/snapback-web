@@ -28,22 +28,22 @@ export default function ProblemSection() {
           variants={fadeUp}
           className="font-display text-[clamp(34px,5vw,62px)] font-semibold leading-[1.06] tracking-[-0.03em] text-white mt-8 mb-10"
         >
-          Every time you switch contexts, you rebuild from scratch.
+          Every context switch costs you 5 minutes. That&apos;s 25 minutes a day.
         </motion.h2>
 
         <motion.p
           variants={fadeUp}
           className="text-zinc-400 text-xl leading-[1.8] font-text mb-8"
         >
-          You had the perfect setup. Code editor left, terminal right, browser in the corner.
+          You had the perfect layout. Code editor left, terminal right, browser in the corner.
         </motion.p>
 
         <motion.div
           variants={fadeUp}
           className="space-y-3 pl-5 border-l border-white/[0.06] mb-8"
         >
-          <p className="text-zinc-600 italic text-xl font-text">Then a meeting happened.</p>
-          <p className="text-zinc-600 italic text-xl font-text">Or you jumped into a design task.</p>
+          <p className="text-zinc-600 italic text-xl font-text">Then a Slack ping pulled you into a call.</p>
+          <p className="text-zinc-600 italic text-xl font-text">Or you jumped to Figma for a quick review.</p>
           <p className="text-zinc-600 italic text-xl font-text">Or you just closed your laptop.</p>
         </motion.div>
 
@@ -51,7 +51,7 @@ export default function ProblemSection() {
           variants={fadeUp}
           className="text-zinc-400 text-xl leading-[1.8] font-text"
         >
-          Now it&apos;s gone. You spend the first five minutes of every session dragging windows back into place. It adds up.
+          Now it&apos;s gone. You spend the first five minutes of every session dragging windows back into place, every single day.
         </motion.p>
 
         <motion.div
@@ -60,7 +60,7 @@ export default function ProblemSection() {
         >
           <span className="w-10 h-[2px] bg-primary block mb-6" />
           <h3 className="font-display text-[clamp(26px,3.5vw,44px)] font-semibold text-white tracking-[-0.025em]">
-            Snapback fixes this once, permanently.
+            Snapback fixes this once. Permanently.
           </h3>
         </motion.div>
       </motion.div>

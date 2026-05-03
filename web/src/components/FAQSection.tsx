@@ -7,7 +7,7 @@ import {  PlusIcon } from "@phosphor-icons/react"
 const faqs = [
   {
     q: "Is Snapback really free?",
-    a: "Yes. The core app is free and will stay that way. We do have a Pro version in the works with extra features, but the free version will always be fully functional and supported.",
+    a: "Yes, and it will stay that way. The core app is free forever. A Pro version is coming with power-user extras, but everything you need today is free and fully supported.",
   },
   {
     q: "Does it work with multiple monitors?",
@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "What happens if an app in my workspace is closed?",
-    a: "Snapback reopens it automatically.",
+    a: "Snapback reopens it. Automatically. You don't have to do anything.",
   },
   {
     q: "Will it work after a macOS update?",
@@ -88,10 +88,10 @@ export default function FAQSection() {
       <div className="max-w-3xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-display text-[clamp(36px,5vw,56px)] font-semibold text-white tracking-[-0.03em]">
-            Got <em>questions?</em>
+            Common <em>questions</em>
           </h2>
           <p className="text-zinc-600 text-base mt-4 font-text">
-            We&apos;ve got answers. Reach us at{" "}
+            Something else? Reach us at{" "}
             <a
               href="mailto:support@snapbackapp.com"
               className="text-primary hover:underline"

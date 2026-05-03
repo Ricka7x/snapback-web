@@ -35,7 +35,7 @@ export default function Nav() {
           href={DOWNLOAD_URL}
           className="bg-primary text-white text-[13px] font-semibold px-4 py-1.5 rounded-xl hover:bg-primary-hover transition-colors"
         >
-          Download Free
+          Download Free for Mac
         </a>
       </div>
     </nav>

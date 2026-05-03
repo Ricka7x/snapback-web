@@ -40,13 +40,13 @@ export default function ComparisonSection() {
             variants={fadeUp}
             className="font-display text-[clamp(34px,5vw,62px)] font-semibold leading-[1.06] tracking-[-0.03em] text-white mb-6"
           >
-            Already using Rectangle, Magnet, or Moom?
+            Most window managers move windows. Snapback remembers them.
           </motion.h2>
           <motion.p
             variants={fadeUp}
             className="text-zinc-400 text-lg leading-[1.8] font-text"
           >
-            They resize windows. They don&apos;t remember what was open or where. Close your laptop, lose your layout. Snapback remembers.
+            Save your full layout and restore it anytime, across every app, every position, every display.
           </motion.p>
         </motion.div>
 
@@ -107,7 +107,7 @@ export default function ComparisonSection() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="text-zinc-600 text-sm text-center mt-6 font-text"
         >
-          Snapback works alongside Rectangle, Magnet, or any other window manager. No conflicts.
+          Already using a window manager? Keep it. Snapback works alongside any of them, no conflicts.
         </motion.p>
       </div>
     </section>

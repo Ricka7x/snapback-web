@@ -40,13 +40,13 @@ export default function MenuBarSection() {
             variants={fadeUp}
             className="font-display text-[clamp(34px,5vw,62px)] font-semibold leading-[1.06] tracking-[-0.03em] text-white mb-8"
           >
-            It lives in your menu bar and stays out of your way.
+            Lives in your menu bar. Out of your way until you need it.
           </motion.h2>
           <motion.p
             variants={fadeUp}
             className="text-zinc-400 text-lg leading-[1.8] font-text"
           >
-            One click or keystroke away. Stays out of your way until you need it.
+            One click or one keystroke. That&apos;s all it takes.
           </motion.p>
         </motion.div>
 

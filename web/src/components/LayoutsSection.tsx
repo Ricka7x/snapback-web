@@ -73,13 +73,13 @@ export default function LayoutsSection() {
               variants={fadeUp}
               className="font-display text-[clamp(34px,5vw,62px)] font-semibold leading-[1.06] tracking-[-0.03em] text-white mb-8"
             >
-              One shortcut. Instant order.
+              One shortcut arranges every open app.
             </motion.h2>
             <motion.p
               variants={fadeUp}
               className="text-zinc-400 text-lg leading-[1.8] font-text"
             >
-              Hit a shortcut. Your open apps snap into a preset layout. Halves, thirds, or one app.
+              Hit a shortcut and your open apps snap into a preset layout. Halves, thirds, or full screen. No dragging. No resizing. Just order.
             </motion.p>
           </motion.div>
         </div>
