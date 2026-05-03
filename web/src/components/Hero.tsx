@@ -4,7 +4,6 @@ import { motion, useScroll, useTransform, useMotionValue, useSpring } from "fram
 import { useRef } from "react"
 import { ArrowRightIcon, CpuIcon } from "@phosphor-icons/react"
 import { DOWNLOAD_URL } from "@/lib/constants"
-import HeroAnimation from "./HeroAnimation"
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null)
@@ -109,7 +108,15 @@ export default function Hero() {
             style={{ background: "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(21,86,219,0.1) 0%, transparent 70%)" }}
           />
           <motion.div style={{ y }}>
-            <HeroAnimation />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full rounded-2xl border border-white/6 shadow-[0_60px_120px_rgba(0,0,0,0.9)]"
+            >
+              <source src="/videos/hero.mp4" type="video/mp4" />
+            </video>
           </motion.div>
         </motion.div>
       </div>

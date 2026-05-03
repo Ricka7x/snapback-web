@@ -1,8 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { StackSimpleIcon } from "@phosphor-icons/react"
-import WorkspaceFlowAnimation from "./WorkspaceFlowAnimation"
+import { StackSimpleIcon, KeyboardIcon, MonitorIcon, ArrowsLeftRightIcon } from "@phosphor-icons/react"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -24,6 +23,24 @@ const steps = [
     number: "03",
     title: "Restore it anytime",
     body: "Every app reopens. Every window returns to its exact position.",
+  },
+]
+
+const secondaryFeatures = [
+  {
+    icon: <KeyboardIcon size={18} weight="light" className="text-primary/50" />,
+    title: "Keyboard-first",
+    body: "Every action has a shortcut. Customize them all.",
+  },
+  {
+    icon: <MonitorIcon size={18} weight="light" className="text-primary/50" />,
+    title: "Multi-display",
+    body: "Windows span every monitor. Each remembers its place.",
+  },
+  {
+    icon: <ArrowsLeftRightIcon size={18} weight="light" className="text-primary/50" />,
+    title: "Display resilient",
+    body: "Plug in, unplug, rotate. Your layout adapts.",
   },
 ]
 
@@ -91,8 +108,38 @@ export default function WorkspacesIntro() {
         className="max-w-7xl mx-auto px-6 lg:px-12 mt-20"
       >
         <div className="max-w-5xl mx-auto">
-          <WorkspaceFlowAnimation />
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full rounded-2xl border border-white/6 shadow-[0_60px_120px_rgba(0,0,0,0.9)]"
+          >
+            <source src="/assets/snapback-steps.mp4" type="video/mp4" />
+          </video>
         </div>
+      </motion.div>
+
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-80px" }}
+        variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
+        className="max-w-7xl mx-auto px-6 lg:px-12 mt-16 grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-white/[0.06]"
+      >
+        {secondaryFeatures.map((f, i) => (
+          <motion.div
+            key={f.title}
+            variants={fadeUp}
+            className={`pt-8 pb-4 ${
+              i < 2 ? "md:border-r border-white/[0.06]" : ""
+            } ${i === 0 ? "md:pr-10" : i === 2 ? "md:pl-10" : "md:px-10"}`}
+          >
+            {f.icon}
+            <h3 className="text-white text-sm font-semibold mt-3 mb-1">{f.title}</h3>
+            <p className="text-zinc-500 text-sm leading-[1.7] font-text">{f.body}</p>
+          </motion.div>
+        ))}
       </motion.div>
     </section>
   )
