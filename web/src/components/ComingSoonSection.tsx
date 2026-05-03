@@ -1,20 +1,34 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { TerminalIcon, KeyIcon, LightningIcon, ProhibitIcon, XLogoIcon, LayoutIcon } from "@phosphor-icons/react"
+import { TerminalIcon, KeyIcon, LightningIcon, XLogoIcon, LayoutIcon } from "@phosphor-icons/react"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
 }
 
-const pills = [
-  
-  { icon: <KeyIcon size={16} weight="light" className="text-accent/60" />, label: "Context-scoped shortcuts" },
-  { icon: <LayoutIcon size={16} weight="light" className="text-accent/60" />, label: "Custom Layouts"},
-  { icon: <TerminalIcon size={16} weight="light" className="text-accent/60" />, label: "Command palette" },
-  { icon: <LightningIcon size={16} weight="light" className="text-accent/60" />, label: "Instant context switch" },
-  { icon: <ProhibitIcon size={16} weight="light" className="text-accent/60" />, label: "Zero key conflicts" },
+const cards = [
+  {
+    icon: <TerminalIcon size={18} weight="light" className="text-accent/60 shrink-0" />,
+    title: "Command palette",
+    body: "One shortcut opens it. Type what you want. No memorizing combos.",
+  },
+  {
+    icon: <KeyIcon size={18} weight="light" className="text-accent/60 shrink-0" />,
+    title: "Spaces",
+    body: "Group shortcuts by context. Reuse the same key combos.",
+  },
+  {
+    icon: <LightningIcon size={18} weight="light" className="text-accent/60 shrink-0" />,
+    title: "Global shortcuts",
+    body: "Pin any shortcut to work everywhere, regardless of space.",
+  },
+  {
+    icon: <LayoutIcon size={18} weight="light" className="text-accent/60 shrink-0" />,
+    title: "Custom layouts",
+    body: "Build your own preset layouts, not just the defaults.",
+  },
 ]
 
 export default function ComingSoonSection() {
@@ -35,7 +49,7 @@ export default function ComingSoonSection() {
         style={{ background: "radial-gradient(ellipse at top right, rgba(254,100,69,0.07) 0%, transparent 65%)" }}
       />
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-12 lg:gap-24 items-start relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-[1fr_1fr] gap-12 lg:gap-16 items-start relative z-10">
         {/* Left */}
         <motion.div
           initial="hidden"
@@ -58,14 +72,14 @@ export default function ComingSoonSection() {
             variants={fadeUp}
             className="font-display text-[clamp(32px,4.5vw,56px)] font-semibold tracking-[-0.03em] text-white leading-[1.06] mb-6"
           >
-            Spaces. One shortcut for everything.
+            Pro: Your shortcuts, your way.
           </motion.h2>
 
           <motion.p
             variants={fadeUp}
             className="text-zinc-400 text-lg leading-[1.8] font-text max-w-xl mb-10"
           >
-            Pro introduces Spaces: Raycast-style command palette switching for your entire environment. One keystroke swaps your full context, layouts, workspaces and all. Reuse the same shortcuts across spaces without conflicts.
+            One shortcut opens a command palette. Type what you want. No memorizing dozens of shortcuts ever again.
           </motion.p>
 
           {/* CTA row */}
@@ -87,22 +101,25 @@ export default function ComingSoonSection() {
           </motion.div>
         </motion.div>
 
-        {/* Right — pills */}
+        {/* Right — feature cards */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
           variants={{ visible: { transition: { staggerChildren: 0.08 } } }}
-          className="flex flex-col gap-2.5 lg:w-56 shrink-0"
+          className="flex flex-col gap-3"
         >
-          {pills.map((pill) => (
+          {cards.map((card) => (
             <motion.div
-              key={pill.label}
+              key={card.title}
               variants={fadeUp}
-              className="px-4 py-3 rounded-xl border border-accent/10 text-zinc-300 text-sm font-text flex items-center gap-3 glass"
+              className="p-4 rounded-2xl border border-accent/10 glass flex items-start gap-4"
             >
-              {pill.icon}
-              {pill.label}
+              <div className="mt-0.5">{card.icon}</div>
+              <div>
+                <h4 className="text-white text-sm font-semibold mb-1">{card.title}</h4>
+                <p className="text-zinc-500 text-xs leading-[1.7] font-text">{card.body}</p>
+              </div>
             </motion.div>
           ))}
         </motion.div>

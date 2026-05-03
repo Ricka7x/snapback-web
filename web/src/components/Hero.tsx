@@ -67,7 +67,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             className="text-zinc-400 text-lg leading-[1.7] max-w-[420px] mb-10 font-text"
           >
-            Snapback saves your entire window layout and restores it in one keystroke. Every app, every position, every display. Switch between work modes without losing your place.
+            Save your entire window layout and bring it back with one shortcut. Dev setup. Design setup. Meeting setup. Switch in seconds.
           </motion.p>
 
           <motion.div

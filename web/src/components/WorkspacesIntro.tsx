@@ -11,18 +11,18 @@ const fadeUp = {
 const steps = [
   {
     number: "01",
-    title: "Arrange your apps",
-    body: "Drag windows into position or use keyboard shortcuts.",
+    title: "Set it up once",
+    body: "Arrange your apps exactly where you need them.",
   },
   {
     number: "02",
-    title: "Save the layout",
-    body: "Name it, assign a shortcut. Takes five seconds.",
+    title: "Save with a shortcut",
+    body: "Name it, assign a shortcut. Five seconds.",
   },
   {
     number: "03",
-    title: "Restore it anytime",
-    body: "Every app reopens. Every window returns to its exact position.",
+    title: "Restore anytime",
+    body: "Every app reopens. Same position, same display, same stacking order.",
   },
 ]
 
@@ -71,7 +71,7 @@ export default function WorkspacesIntro() {
           variants={fadeUp}
           className="text-zinc-500 text-lg leading-[1.7] max-w-xl mx-auto font-text"
         >
-          Arrange your apps, save the layout, name it, assign a shortcut. One key brings everything back exactly as you left it.
+          One shortcut saves everything. One shortcut brings it back.
         </motion.p>
       </motion.div>
 

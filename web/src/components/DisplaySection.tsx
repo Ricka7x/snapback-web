@@ -46,7 +46,7 @@ export default function DisplaySection() {
             variants={fadeUp}
             className="text-zinc-400 text-lg leading-[1.8] font-text"
           >
-            Plug in a new monitor and Snapback recalculates your layout automatically. Swap displays, rotate to portrait, or connect a travel monitor. Your windows adjust. Disconnect one entirely and they wait until you plug back in.
+            Connect a display and your windows snap into place. Remove one and Snapback skips what was on it. Everything else restores as usual.
           </motion.p>
         </motion.div>
 

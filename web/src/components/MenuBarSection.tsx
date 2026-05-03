@@ -46,7 +46,7 @@ export default function MenuBarSection() {
             variants={fadeUp}
             className="text-zinc-400 text-lg leading-[1.8] font-text"
           >
-            Snapback runs quietly in the menu bar, always one click or keystroke away. Everything is instant and out of your way.
+            One click or keystroke away. Stays out of your way until you need it.
           </motion.p>
         </motion.div>
 

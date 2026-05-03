@@ -62,7 +62,7 @@ export default function CloseToggleSection() {
               variants={fadeUp}
               className="text-zinc-400 text-lg leading-[1.8] font-text mb-8"
             >
-              When you restore a workspace, Snapback can close anything that doesn&apos;t belong to it. One shortcut shifts your whole environment. Dev mode, design mode, focus mode. Each one stays clean.
+              Restore a workspace and close everything that doesn&apos;t belong. One shortcut. Clean slate.
             </motion.p>
 
             {/* Toggle */}
