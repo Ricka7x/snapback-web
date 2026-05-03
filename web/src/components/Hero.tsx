@@ -49,7 +49,7 @@ export default function Hero() {
             className="text-primary/80 text-[10px] uppercase tracking-[0.22em] font-mono mb-8 flex items-center gap-2"
           >
             <CpuIcon size={14} weight="light" />
-            Beta
+            Free · Now in Beta
           </motion.p>
 
           <motion.h1
@@ -58,7 +58,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             className="font-display text-[clamp(52px,6.5vw,88px)] font-semibold leading-[0.92] tracking-[-0.04em] text-white mb-6"
           >
-            Your workspace, exactly how you <em>left it.</em>
+            Your Mac workspace, <em>back</em> in a <em>snap</em>.
           </motion.h1>
 
           <motion.p
@@ -67,7 +67,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             className="text-zinc-400 text-lg leading-[1.7] max-w-[420px] mb-10 font-text"
           >
-            Save your entire window layout and bring it back with one shortcut. Dev setup. Design setup. Meeting setup. Switch in seconds.
+            Save your entire layout with one shortcut. Restore it just as fast: every app, every position, every display. Dev mode, design mode, meeting mode. Seconds apart.
           </motion.p>
 
           <motion.div
@@ -91,7 +91,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60" />
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary" />
               </span>
-              <span className="text-zinc-500 text-[11px] font-mono">Free forever · macOS 14.2+</span>
+              <span className="text-zinc-500 text-[11px] font-mono">Free forever · macOS 14.2+ · No account required</span>
             </div>
           </motion.div>
         </div>

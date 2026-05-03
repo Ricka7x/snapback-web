@@ -40,13 +40,13 @@ export default function DisplaySection() {
             variants={fadeUp}
             className="font-display text-[clamp(34px,5vw,62px)] font-semibold leading-[1.06] tracking-[-0.03em] text-white mb-8"
           >
-            Your layout adapts. Your work doesn&apos;t stop.
+            Connect a monitor. Your windows go where they belong.
           </motion.h2>
           <motion.p
             variants={fadeUp}
             className="text-zinc-400 text-lg leading-[1.8] font-text"
           >
-            Connect a display and your windows snap into place. Remove one and Snapback skips what was on it. Everything else restores as usual.
+            Plug in a display and Snapback puts each window on the right screen automatically. Remove one and it skips those windows. Nothing piles up on your laptop screen. Everything else restores exactly as usual.
           </motion.p>
         </motion.div>
 

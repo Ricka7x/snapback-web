@@ -43,17 +43,17 @@ export default function CTASection() {
           Stop rebuilding your <em>workspace</em> every morning.
         </h2>
         <p className="text-white/60 text-xl leading-[1.7] max-w-md mx-auto mt-6 mb-10 font-text">
-          Save your first layout in under a minute. Stop dragging windows around forever.
+          Set up your first workspace in under 60 seconds. Then stop dragging windows around forever.
         </p>
         <a
           href={DOWNLOAD_URL}
           className="bg-white text-[#080808] font-bold px-10 py-4 rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 text-base inline-flex items-center gap-2.5"
         >
-          Download Free
+          Download Free for Mac
           <ArrowDownIcon size={18} weight="regular" />
         </a>
         <p className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-mono mt-5">
-          Free forever · macOS 14.2+ · No account required
+          Free forever · macOS 14.2+ · No account · No credit card
         </p>
       </motion.div>
     </section>

@@ -55,13 +55,13 @@ export default function SnapSection() {
               variants={fadeUp}
               className="font-display text-[clamp(34px,5vw,62px)] font-semibold leading-[1.06] tracking-[-0.03em] text-white mb-8"
             >
-              One shortcut. Every window where it belongs.
+              Snap any window into position. No mouse.
             </motion.h2>
             <motion.p
               variants={fadeUp}
               className="text-zinc-400 text-lg leading-[1.8] font-text"
             >
-              Halves, thirds, quarters. Keyboard shortcuts for every position. No mouse.
+              Halves, thirds, quarters. Every split has a shortcut. Resize and position without touching the trackpad.
             </motion.p>
           </motion.div>
         </div>
