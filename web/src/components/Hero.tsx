@@ -91,7 +91,7 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-60" />
                 <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-primary" />
               </span>
-              <span className="text-zinc-500 text-[11px] font-mono">2,400 active users · Free forever · macOS 14.2+</span>
+              <span className="text-zinc-500 text-[11px] font-mono">Free forever · macOS 14.2+</span>
             </div>
           </motion.div>
         </div>
