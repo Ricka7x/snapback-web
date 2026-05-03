@@ -115,7 +115,7 @@ export default function Hero() {
               playsInline
               className="w-full rounded-2xl border border-white/6 shadow-[0_60px_120px_rgba(0,0,0,0.9)]"
             >
-              <source src="/assets/hero.mp4" type="video/mp4" />
+              <source src="/assets/restore.mp4" type="video/mp4" />
             </video>
           </motion.div>
         </motion.div>
