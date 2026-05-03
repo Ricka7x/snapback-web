@@ -8,7 +8,7 @@ import SnapSection from "./SnapSection"
 import DragToSnapSection from "./DragToSnapSection"
 import LayoutsSection from "./LayoutsSection"
 import MenuBarSection from "./MenuBarSection"
-import TestimonialsSection from "./TestimonialsSection"
+import SocialProofCTA from "./SocialProofCTA"
 import ComingSoonSection from "./ComingSoonSection"
 import ComparisonSection from "./ComparisonSection"
 import FAQSection from "./FAQSection"
@@ -25,7 +25,7 @@ export default function SnapbackLanding() {
       <DragToSnapSection />
       <LayoutsSection />
       <MenuBarSection />
-      <TestimonialsSection />
+      <SocialProofCTA />
       <ComingSoonSection />
       <ComparisonSection />
       <FAQSection />
