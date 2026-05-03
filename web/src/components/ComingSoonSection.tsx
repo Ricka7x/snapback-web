@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { TerminalIcon, KeyIcon, LightningIcon, ProhibitIcon, XLogoIcon } from "@phosphor-icons/react"
+import { TerminalIcon, KeyIcon, LightningIcon, ProhibitIcon, XLogoIcon, LayoutIcon } from "@phosphor-icons/react"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -9,8 +9,10 @@ const fadeUp = {
 }
 
 const pills = [
+  
+  { icon: <KeyIcon size={16} weight="light" className="text-accent/60" />, label: "Context-scoped shortcuts" },
+  { icon: <LayoutIcon size={16} weight="light" className="text-accent/60" />, label: "Custom Layouts"},
   { icon: <TerminalIcon size={16} weight="light" className="text-accent/60" />, label: "Command palette" },
-  { icon: <KeyIcon size={16} weight="light" className="text-accent/60" />, label: "Mode-scoped shortcuts" },
   { icon: <LightningIcon size={16} weight="light" className="text-accent/60" />, label: "Instant context switch" },
   { icon: <ProhibitIcon size={16} weight="light" className="text-accent/60" />, label: "Zero key conflicts" },
 ]
@@ -63,7 +65,7 @@ export default function ComingSoonSection() {
             variants={fadeUp}
             className="text-zinc-400 text-lg leading-[1.8] font-text max-w-xl mb-10"
           >
-            Pro introduces Spaces: Raycast-style command palette switching for your entire environment. One keystroke swaps your full context, workspaces and all. Reuse the same shortcuts across spaces without conflicts.
+            Pro introduces Spaces: Raycast-style command palette switching for your entire environment. One keystroke swaps your full context, layouts, workspaces and all. Reuse the same shortcuts across spaces without conflicts.
           </motion.p>
 
           {/* CTA row */}
