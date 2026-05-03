@@ -19,7 +19,7 @@ export default function ProblemSection() {
       >
         <motion.p
           variants={fadeUp}
-          className="border-l-[2px] border-primary/50 pl-3 text-primary/60 text-[11px] uppercase tracking-[0.18em] font-semibold"
+          className="border-l-[2px] border-primary/50 pl-3 text-primary/80 text-[11px] uppercase tracking-[0.18em] font-semibold"
         >
           The problem
         </motion.p>
@@ -42,9 +42,9 @@ export default function ProblemSection() {
           variants={fadeUp}
           className="space-y-3 pl-5 border-l border-white/[0.06] mb-8"
         >
-          <p className="text-zinc-600 italic text-xl font-text">Then a Slack ping pulled you into a call.</p>
-          <p className="text-zinc-600 italic text-xl font-text">Or you jumped to Figma for a quick review.</p>
-          <p className="text-zinc-600 italic text-xl font-text">Or you just closed your laptop.</p>
+          <p className="text-zinc-500 italic text-xl font-text">Then a Slack ping pulled you into a call.</p>
+          <p className="text-zinc-500 italic text-xl font-text">Or you jumped to Figma for a quick review.</p>
+          <p className="text-zinc-500 italic text-xl font-text">Or you just closed your laptop.</p>
         </motion.div>
 
         <motion.p

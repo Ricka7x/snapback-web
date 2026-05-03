@@ -95,7 +95,7 @@ export default function ComingSoonSection() {
               <XLogoIcon size={15} weight="fill" />
               Follow for updates
             </a>
-            <p className="text-zinc-600 text-xs font-text sm:max-w-none">
+            <p className="text-zinc-500 text-xs font-text sm:max-w-none">
               Free users keep everything they have now.
             </p>
           </motion.div>

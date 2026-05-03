@@ -31,7 +31,7 @@ export default function DisplaySection() {
         >
           <motion.p
             variants={fadeUp}
-            className="border-l-[2px] border-primary/50 pl-3 text-primary/60 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
+            className="border-l-[2px] border-primary/50 pl-3 text-primary/80 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
           >
             <MonitorIcon size={14} weight="light" />
             Display changes

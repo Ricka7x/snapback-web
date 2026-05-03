@@ -40,7 +40,7 @@ export default function SocialProofCTA() {
           variants={fadeUp}
           className="text-primary text-[11px] font-bold uppercase tracking-[0.14em] mb-5"
         >
-          Real social proof
+          Social proof
         </motion.p>
 
         <motion.h2
@@ -72,7 +72,7 @@ export default function SocialProofCTA() {
               href="https://x.com/snapbackapp_dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-600 text-sm font-text hover:text-zinc-400 transition-colors"
+              className="text-zinc-500 text-sm font-text hover:text-zinc-400 transition-colors"
             >
               @snapbackapp_dev
             </a>

@@ -52,8 +52,8 @@ export default function CTASection() {
           Download Free for Mac
           <ArrowDownIcon size={18} weight="regular" />
         </a>
-        <p className="text-white/30 text-[10px] uppercase tracking-[0.2em] font-mono mt-5">
-          Free forever · macOS 14.2+ · No account · No credit card
+        <p className="text-white/30 text-[11px] font-mono mt-5">
+          Free forever · macOS 14.2+ · No account
         </p>
       </motion.div>
     </section>
