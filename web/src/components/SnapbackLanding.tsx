@@ -5,11 +5,12 @@ import ProblemSection from "./ProblemSection"
 import WorkspacesIntro from "./WorkspacesIntro"
 import DisplaySection from "./DisplaySection"
 import SnapSection from "./SnapSection"
-import CloseToggleSection from "./CloseToggleSection"
+import DragToSnapSection from "./DragToSnapSection"
+import LayoutsSection from "./LayoutsSection"
 import MenuBarSection from "./MenuBarSection"
+import TestimonialsSection from "./TestimonialsSection"
 import ComingSoonSection from "./ComingSoonSection"
 import ComparisonSection from "./ComparisonSection"
-// import TestimonialsSection from "./TestimonialsSection"
 import FAQSection from "./FAQSection"
 import CTASection from "./CTASection"
 
@@ -21,11 +22,12 @@ export default function SnapbackLanding() {
       <WorkspacesIntro />
       <DisplaySection />
       <SnapSection />
-      <CloseToggleSection />
+      <DragToSnapSection />
+      <LayoutsSection />
       <MenuBarSection />
+      <TestimonialsSection />
       <ComingSoonSection />
       <ComparisonSection />
-      {/* <TestimonialsSection /> */}
       <FAQSection />
       <CTASection />
     </>
