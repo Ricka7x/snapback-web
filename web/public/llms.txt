@@ -1,22 +1,37 @@
 # Snapback
 
-> Snapback · Your Mac workspace, exactly how you left it.
+> Your Mac workspace, back in a snap.
 
-Snapback is a modern productivity tool and workspace automation app for macOS that allows users to save and precisely restore entire workspace environments instantly. 
-It captures and restores application states, window positions, monitor configurations, and exact z-index (stacking) orders. With a single keyboard shortcut, users can instantly context switch by restoring a perfectly arranged digital workspace across multiple displays.
+Snapback is a macOS utility that saves and restores your entire workspace with a single shortcut. Every open app, every window position, every display — captured and restored instantly. Switch between dev mode, design mode, and meeting mode in seconds.
 
 ## Core Features
-- **Window Positioning**: Saves the exact location and geometry of all open windows.
-- **Z-Index Memory**: Saves the exact stacking order of overlapping windows so the right apps are on top.
-- **Multi-Display Mapping**: Accurately maps windows to external displays, even if they are reconnected later.
-- **Native macOS Experience**: High-performance, lightweight Swift application built strictly for macOS.
-- **One-Click Restoration**: Launch entire project environments (e.g., Code editor + Terminal + Browser + Slack) with a simple hotkey.
+
+- **Workspaces**: Save your full layout (all open apps, window positions, display assignments) with one shortcut. Restore it with one shortcut. Even after closing apps, restarting, or disconnecting monitors.
+- **Window Snapping**: Snap any window into position via keyboard shortcuts. Halves, thirds, quarters. No mouse required.
+- **Drag to Snap**: Hold ⌘, drag to any edge or corner. Window snaps into place.
+- **Instant Layouts**: One shortcut arranges every open app into halves, thirds, or full screen. No dragging. No resizing.
+- **Multi-Display Aware**: Each window remembers which display it belongs on. Plug in a monitor and windows go where they belong. Disconnect one and Snapback skips those windows without piling everything onto your laptop screen.
+- **Menu Bar App**: Lives in your menu bar. Out of your way until you need it. One click or one keystroke.
+- **Keyboard-First**: Every action has a shortcut. Every shortcut is customizable.
+
+## Pricing
+
+- **Free**: Core app is free forever. No account required.
+- **Pro (Coming Soon)**: Command palette, spaces, global shortcuts, and custom layouts. Free users keep everything they have now.
+
+## Comparison
+
+Most window managers move windows around. Snapback remembers them. Save your full layout and restore it anytime, across every app, every position, every display. Already using Rectangle or Magnet? Snapback works alongside them without conflicts.
 
 ## Common Workflows
-- **Software Development**: Restore an IDE, local server terminal, API client, and documentation browser.
-- **Creative & Video Editing**: Restore the timeline, assets bins, and preview monitors exactly where they belong.
-- **Deep Work**: Snap into a non-distracting environment with essential apps taking center stage.
+
+- **Software Development**: Restore your IDE, terminal, API client, and browser in one keystroke.
+- **Design & Creative**: Switch between design and code without rearranging windows.
+- **Deep Work**: Snap into a distraction-free environment with essential apps front and center.
 
 ## Platform & Availability
-- **OS Required**: macOS (Apple Silicon natively supported, compatible with Intel via Rosetta).
+
+- **macOS 14.2+** (Apple Silicon native)
 - **Website**: https://snapbackapp.com
+- **Download**: Free at https://snapbackapp.com
+- **Support**: support@snapbackapp.com
