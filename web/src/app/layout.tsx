@@ -85,7 +85,7 @@ export default function RootLayout({
               name: "Snapback",
               operatingSystem: "macOS",
               applicationCategory: "ProductivityApplication",
-              description: "The ultimate workspace automation tool for macOS. Save and restore groups of apps, window positions, and z-index stacks across multiple displays.",
+              description: "Snapback saves and restores your entire Mac workspace: apps, window positions, and display assignments. One shortcut saves it. One shortcut restores it. Free. macOS 14.2+.",
               url: "https://snapbackapp.com",
               offers: {
                 "@type": "Offer",
