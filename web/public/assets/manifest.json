@@ -161,10 +161,10 @@
       "snapback-steps.mov": {
         "source": "assets-src/snapback-steps.mov",
         "output": "/assets/snapback-steps.mp4",
-        "size": 14085956
+        "size": 12724249
       }
     },
     "favicon": null
   },
-  "timestamp": "2026-05-03T17:46:03.575Z"
+  "timestamp": "2026-05-06T01:40:24.611Z"
 }
