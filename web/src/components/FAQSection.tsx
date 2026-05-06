@@ -10,6 +10,10 @@ const faqs = [
     a: "Yes, and it will stay that way. The core app is free forever. A Pro version is coming with power-user extras, but everything you need today is free and fully supported.",
   },
   {
+    q: "Does it support macOS Spaces?",
+    a: "Snapback doesn't integrate with macOS Spaces directly. Apple doesn't offer a stable public API for them. Instead, it restores window positions and arrangements, giving you the same result without the fragility. This keeps restores predictable and reliable across multi-monitor setups.",
+  },
+  {
     q: "Does it work with multiple monitors?",
     a: "Yes. Workspaces capture window positions across all connected displays.",
   },
@@ -21,6 +25,7 @@ const faqs = [
     q: "What happens if I disconnect a display entirely?",
     a: "Snapback won't restore windows onto a screen that isn't there. Everything waits until you reconnect.",
   },
+  
   {
     q: "What happens if an app in my workspace is closed?",
     a: "Snapback reopens it. Automatically. You don't have to do anything.",
