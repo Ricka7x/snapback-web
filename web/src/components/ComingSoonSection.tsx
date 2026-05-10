@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { TerminalIcon, KeyIcon, LightningIcon, XLogoIcon, LayoutIcon } from "@phosphor-icons/react"
+import { TerminalIcon, KeyIcon, LightningIcon, XLogoIcon, LayoutIcon, LinkIcon } from "@phosphor-icons/react"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -11,23 +11,28 @@ const fadeUp = {
 const cards = [
   {
     icon: <TerminalIcon size={18} weight="light" className="text-accent/60 shrink-0" />,
-    title: "Command palette",
-    body: "One shortcut opens it. Type what you want. No memorizing combos.",
+    title: "Quick command",
+    body: "Press one key, type what you need. No memorizing shortcuts.",
   },
   {
     icon: <KeyIcon size={18} weight="light" className="text-accent/60 shrink-0" />,
     title: "Spaces",
-    body: "Group shortcuts by context. Reuse the same key combos.",
+    body: "Group shortcuts by what you're doing. Use the same keys for different tasks.",
   },
   {
     icon: <LightningIcon size={18} weight="light" className="text-accent/60 shrink-0" />,
     title: "Global shortcuts",
-    body: "Pin any shortcut to work everywhere, regardless of space.",
+    body: "Shortcuts without a space work everywhere. Simple as that.",
   },
   {
     icon: <LayoutIcon size={18} weight="light" className="text-accent/60 shrink-0" />,
     title: "Custom layouts",
-    body: "Build your own preset layouts, not just the defaults.",
+    body: "Save window arrangements your way, not just the defaults.",
+  },
+  {
+    icon: <LinkIcon size={18} weight="light" className="text-accent/60 shrink-0" />,
+    title: "Smart launchers",
+    body: "Restore windows AND open projects, websites, or run commands automatically.",
   },
 ]
 
