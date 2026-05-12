@@ -1,5 +1,3 @@
-"use client";
-
 import SnapbackLanding from '@/components/SnapbackLanding';
 
 export default function Home() {

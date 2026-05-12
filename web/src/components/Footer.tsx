@@ -23,6 +23,9 @@ export default function Footer() {
             <Link href="/blog" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
               Blog
             </Link>
+            <Link href="/help" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
+              Help
+            </Link>
             <Link href="/privacy" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
               Privacy
             </Link>
