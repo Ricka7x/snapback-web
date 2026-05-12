@@ -76,6 +76,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="preload" href="/assets/wallpaper.webp" as="image" />
+        <link rel="alternate" type="application/rss+xml" title="Snapback Blog RSS Feed" href="/feed.xml" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Snapback Blog</title>
+    <description>Tips, updates, and stories about Snapback for Mac.</description>
+    <link>https://snapbackapp.com/blog</link>
+    <language>en-us</language>
+    <atom:link href="https://snapbackapp.com/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introducing Snapback: A Better Way to Manage Windows on Mac</title>
+      <description>Snapback is a free macOS window manager that saves and restores your entire workspace layout with one keystroke. Window snapping, multi-display support, and unlimited workspaces. No account needed.</description>
+      <link>https://snapbackapp.com/blog/introducing-snapback</link>
+      <guid isPermaLink="true">https://snapbackapp.com/blog/introducing-snapback</guid>
+      <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>
+    </item>
+  </channel>
+</rss>
