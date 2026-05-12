@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const FOUNDED_YEAR = 2024
 
 export default function Footer() {
@@ -18,12 +20,15 @@ export default function Footer() {
 
           {/* Links */}
           <div className="flex items-center gap-6">
-            <a href="/privacy" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
+            <Link href="/blog" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
+              Blog
+            </Link>
+            <Link href="/privacy" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
               Privacy
-            </a>
-            <a href="/terms" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
+            </Link>
+            <Link href="/terms" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
               Terms
-            </a>
+            </Link>
             {/* open in new page */}
             <a href="mailto:support@snapbackapp.com" target="_blank" rel="noopener noreferrer" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
               Contact
