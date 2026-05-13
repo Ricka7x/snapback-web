@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { usePathname } from "next/navigation"
 import { DOWNLOAD_URL, LATEST_VERSION } from "@/lib/constants"
 import Link from "next/link"
 
@@ -24,9 +25,11 @@ function scrollToSection(href: string) {
 }
 
 export default function Nav() {
+  const pathname = usePathname()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const versionDisplay = LATEST_VERSION.split('.').slice(0, 2).join('.')
+  const isHome = pathname === "/"
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
@@ -71,7 +74,7 @@ export default function Nav() {
                 {link.label}
               </Link>
             ))}
-            {sectionLinks.map((link) => (
+            {isHome && sectionLinks.map((link) => (
               <button
                 key={link.href}
                 onClick={() => scrollToSection(link.href)}
@@ -124,7 +127,7 @@ export default function Nav() {
             {link.label}
           </Link>
         ))}
-        {sectionLinks.map((link) => (
+        {isHome && sectionLinks.map((link) => (
           <button
             key={link.href}
             onClick={() => {
