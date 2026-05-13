@@ -19,16 +19,24 @@ export default function SnapbackLanding() {
       <Hero />
       {/* <EmailCaptureSection /> */}
       <ProblemSection />
-      <WorkspacesIntro />
-      <DisplaySection />
-      <SnapSection />
-      <DragToSnapSection />
-      <LayoutsSection />
-      <MenuBarSection />
+      <div id="how-it-works">
+        <WorkspacesIntro />
+      </div>
+      <div id="features">
+        <DisplaySection />
+        <SnapSection />
+        <DragToSnapSection />
+        <LayoutsSection />
+        <MenuBarSection />
+      </div>
       <SocialProofCTA />
       <ComingSoonSection />
-      <ComparisonSection />
-      <FAQSection />
+      <div id="compare">
+        <ComparisonSection />
+      </div>
+      <div id="faq">
+        <FAQSection />
+      </div>
       <CTASection />
     </>
   )

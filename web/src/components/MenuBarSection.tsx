@@ -22,36 +22,8 @@ export default function MenuBarSection() {
   return (
     <section ref={ref} className="bg-[#0f0f11] py-28 md:py-40">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        {/* Left — copy */}
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-        >
-          <motion.p
-            variants={fadeUp}
-            className="border-l-[2px] border-primary/50 pl-3 text-primary/80 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
-          >
-            <AppWindowIcon size={14} weight="light" />
-            Menu bar
-          </motion.p>
-          <motion.h2
-            variants={fadeUp}
-            className="font-display text-[clamp(34px,5vw,62px)] font-semibold leading-[1.06] tracking-[-0.03em] text-white mb-8"
-          >
-            Lives in your menu bar. Out of your way until you need it.
-          </motion.h2>
-          <motion.p
-            variants={fadeUp}
-            className="text-zinc-400 text-lg leading-[1.8] font-text"
-          >
-            One click or one keystroke. That&apos;s all it takes.
-          </motion.p>
-        </motion.div>
-
-        {/* Right — image */}
-        <motion.div style={{ y }}>
+        {/* Image — first on mobile, right on desktop */}
+        <motion.div className="order-1 lg:order-2" style={{ y }}>
           <Image
             src={MENU_IMAGE_SRC}
             alt="Snapback menu bar popover"
@@ -61,6 +33,35 @@ export default function MenuBarSection() {
             blurDataURL={MENU_IMAGE_BLUR}
             className="w-full rounded-2xl shadow-[0_40px_80px_rgba(0,0,0,0.8)] border border-white/5"
           />
+        </motion.div>
+
+        {/* Copy — second on mobile, left on desktop */}
+        <motion.div
+          className="order-2 lg:order-1"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+        >
+          <motion.p
+            variants={fadeUp}
+            className="border-l-[2px] border-primary/50 pl-3 text-primary/60 text-[11px] uppercase tracking-[0.18em] font-semibold flex items-center gap-2 mb-8"
+          >
+            <AppWindowIcon size={14} weight="light" />
+            Menu bar
+          </motion.p>
+          <motion.h2
+            variants={fadeUp}
+            className="font-display text-[clamp(34px,5vw,62px)] font-semibold leading-[1.06] tracking-[-0.03em] text-white mb-8"
+          >
+            It lives in your menu bar and stays out of your way.
+          </motion.h2>
+          <motion.p
+            variants={fadeUp}
+            className="text-zinc-400 text-lg leading-[1.8] font-text"
+          >
+            Snapback runs quietly in the menu bar, always one click or keystroke away. Everything is instant and out of your way.
+          </motion.p>
         </motion.div>
       </div>
     </section>

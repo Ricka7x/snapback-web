@@ -5,12 +5,23 @@ import { DOWNLOAD_URL, LATEST_VERSION } from "@/lib/constants"
 import Link from "next/link"
 
 const navLinks = [
-  { href: "/", label: "Home" },
   { href: "/blog", label: "Blog" },
-  { href: "/help", label: "Help" },
-  { href: "/privacy", label: "Privacy" },
-  { href: "/terms", label: "Terms" },
 ]
+
+const sectionLinks = [
+  { href: "#features", label: "Features" },
+  { href: "#how-it-works", label: "How it works" },
+  { href: "#compare", label: "Compare" },
+  { href: "#faq", label: "FAQ" },
+]
+
+function scrollToSection(href: string) {
+  const id = href.replace("#", "")
+  const el = document.getElementById(id)
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" })
+  }
+}
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -51,7 +62,7 @@ export default function Nav() {
           </Link>
 
           <div className="hidden md:flex items-center gap-6">
-            {navLinks.filter((l) => l.href !== "/").map((link) => (
+            {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -59,6 +70,15 @@ export default function Nav() {
               >
                 {link.label}
               </Link>
+            ))}
+            {sectionLinks.map((link) => (
+              <button
+                key={link.href}
+                onClick={() => scrollToSection(link.href)}
+                className="text-white/50 text-[13px] hover:text-white/85 transition-colors bg-transparent border-none cursor-pointer p-0"
+              >
+                {link.label}
+              </button>
             ))}
             <a
               href={DOWNLOAD_URL}
@@ -103,6 +123,18 @@ export default function Nav() {
           >
             {link.label}
           </Link>
+        ))}
+        {sectionLinks.map((link) => (
+          <button
+            key={link.href}
+            onClick={() => {
+              scrollToSection(link.href)
+              setMobileOpen(false)
+            }}
+            className="text-white/85 text-2xl font-display tracking-tight hover:text-primary transition-colors bg-transparent border-none cursor-pointer"
+          >
+            {link.label}
+          </button>
         ))}
         <a
           href={DOWNLOAD_URL}

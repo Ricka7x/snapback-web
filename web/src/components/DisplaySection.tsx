@@ -22,8 +22,22 @@ export default function DisplaySection() {
   return (
     <section ref={ref} className="bg-[#0c0e14] py-28 md:py-40">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 xl:gap-24 items-center">
-        {/* Left — copy */}
+        {/* Image — first on mobile, right on desktop */}
+        <motion.div className="order-1 lg:order-2" style={{ y }}>
+          <Image
+            src={DISPLAY_IMAGE_SRC}
+            alt="Snapback display settings panel"
+            width={1600}
+            height={1000}
+            placeholder={DISPLAY_IMAGE_BLUR ? "blur" : "empty"}
+            blurDataURL={DISPLAY_IMAGE_BLUR}
+            className="w-full rounded-2xl shadow-[0_40px_80px_rgba(0,0,0,0.8)] border border-white/5"
+          />
+        </motion.div>
+
+        {/* Copy — second on mobile, left on desktop */}
         <motion.div
+          className="order-2 lg:order-1"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
@@ -48,19 +62,6 @@ export default function DisplaySection() {
           >
             Plug in a display and Snapback puts each window on the right screen automatically. Remove one and it skips those windows. Nothing piles up on your laptop screen. Everything else restores exactly as usual.
           </motion.p>
-        </motion.div>
-
-        {/* Right — image */}
-        <motion.div style={{ y }}>
-          <Image
-            src={DISPLAY_IMAGE_SRC}
-            alt="Snapback display settings panel"
-            width={1600}
-            height={1000}
-            placeholder={DISPLAY_IMAGE_BLUR ? "blur" : "empty"}
-            blurDataURL={DISPLAY_IMAGE_BLUR}
-            className="w-full rounded-2xl shadow-[0_40px_80px_rgba(0,0,0,0.8)] border border-white/5"
-          />
         </motion.div>
       </div>
     </section>
