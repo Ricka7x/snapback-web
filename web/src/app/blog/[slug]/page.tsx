@@ -7,9 +7,11 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import BlogVideo from "@/components/BlogVideo";
 import ScrollProgress from "@/components/ScrollProgress";
+import ImagePlaceholder from "@/components/BlogImagePlaceholder";
 
 const mdxComponents = {
   Video: BlogVideo,
+  ImagePlaceholder,
 };
 
 type Props = {

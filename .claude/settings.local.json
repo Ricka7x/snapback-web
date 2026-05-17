@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" /Users/ricka7x/XcodeProjects/Snapback/Snapback/Info.plist)",
+      "Bash(/usr/libexec/PlistBuddy -c \"Print :CFBundleVersion\" /Users/ricka7x/XcodeProjects/Snapback/Snapback/Info.plist)",
+      "Bash(ls /Users/ricka7x/Projects/snapback-web/releases/*.dmg)",
+      "WebFetch(domain:sparkle-project.org)",
+      "Bash(/Users/ricka7x/Library/Developer/Xcode/DerivedData/Snapback-cgktvwlfyvupbvbgwoktbwlrhxnq/SourcePackages/artifacts/sparkle/Sparkle/bin/generate_appcast --help)",
+      "Bash(/usr/libexec/PlistBuddy -c 'Print :SUPublicEDKey' /Users/ricka7x/XcodeProjects/Snapback/Snapback/Info.plist)",
+      "Read(//Users/ricka7x/XcodeProjects/Snapback/Snapback/**)",
+      "Bash(security find-generic-password:*)",
+      "Bash(/Users/ricka7x/Library/Developer/Xcode/DerivedData/Snapback-cgktvwlfyvupbvbgwoktbwlrhxnq/SourcePackages/artifacts/sparkle/Sparkle/bin/generate_appcast --download-url-prefix \"https://snapbackapp.com/releases/\" --link \"https://snapbackapp.com\" --account ed25519 /Users/ricka7x/Projects/snapback-web/releases/)",
+      "Bash(/Users/ricka7x/Library/Developer/Xcode/DerivedData/Snapback-cgktvwlfyvupbvbgwoktbwlrhxnq/SourcePackages/artifacts/sparkle/Sparkle/bin/generate_appcast --download-url-prefix \"https://snapbackapp.com/releases/\" --link \"https://snapbackapp.com\" --ed-key-file - /Users/ricka7x/Projects/snapback-web/releases/)",
+      "Bash(/Users/ricka7x/Library/Developer/Xcode/DerivedData/Snapback-cgktvwlfyvupbvbgwoktbwlrhxnq/SourcePackages/artifacts/sparkle/Sparkle/bin/sign_update --help)",
+      "Bash(SPARKLE=/Users/ricka7x/Library/Developer/Xcode/DerivedData/Snapback-cgktvwlfyvupbvbgwoktbwlrhxnq/SourcePackages/artifacts/sparkle/Sparkle/bin)",
+      "Bash(__NEW_LINE_446104af18f57740__ \"$SPARKLE/sign_update\" --account ed25519 /Users/ricka7x/Projects/snapback-web/releases/Snapback-0.1.4.dmg)"
+    ]
+  }
+}
