@@ -199,24 +199,8 @@
         "size": 501177
       }
     },
-    "videos": {
-      "hero.mp4": {
-        "source": "assets-src/hero.mp4",
-        "output": "/assets/hero.mp4",
-        "size": 400754
-      },
-      "restore.mp4": {
-        "source": "assets-src/restore.mp4",
-        "output": "/assets/restore.mp4",
-        "size": 33461277
-      },
-      "snapback-steps.mov": {
-        "source": "assets-src/snapback-steps.mov",
-        "output": "/assets/snapback-steps.mp4",
-        "size": 12724249
-      }
-    },
+    "videos": {},
     "favicon": null
   },
-  "timestamp": "2026-05-17T17:32:38.666Z"
+  "timestamp": "2026-05-18T23:43:26.666Z"
 }

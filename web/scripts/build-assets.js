@@ -247,27 +247,47 @@ function processVideos(allFiles) {
 
   for (const file of videoFiles) {
     const inputPath = path.join(SOURCE_DIR, file);
-    const outputFile = path.parse(file).name + '.mp4';
+    const baseName = path.parse(file).name;
+    const outputFile = baseName + '.mp4';
+    const webmOutputFile = baseName + '.webm';
+    const posterFile = baseName + '-poster.webp';
     const outputPath = path.join(OUTPUT_DIR, outputFile);
+    const webmOutputPath = path.join(OUTPUT_DIR, webmOutputFile);
+    const posterPath = path.join(OUTPUT_DIR, posterFile);
 
     if (!fs.existsSync(inputPath)) continue;
 
     try {
       log.info(`  → ${file}`);
-      const cmd = `FFMPEG_BIN="${config.ffmpegBin}" npx asset-forge convert-video "${inputPath}" "${outputPath}" ${config.videoQuality}`;
-      
-      execSync(cmd, { stdio: 'pipe', cwd: ROOT_DIR });
 
-      log.info(`    ✓ ${outputFile}\n`);
+      // MP4 (H.264)
+      const mp4Cmd = `FFMPEG_BIN="${config.ffmpegBin}" npx asset-forge convert-video "${inputPath}" "${outputPath}" ${config.videoQuality}`;
+      execSync(mp4Cmd, { stdio: 'pipe', cwd: ROOT_DIR });
+      log.info(`    ✓ ${outputFile}`);
+
+      // WebM (VP9) — smaller at same perceptual quality for supporting browsers
+      const webmCmd = `FFMPEG_BIN="${config.ffmpegBin}" npx asset-forge convert-video "${inputPath}" "${webmOutputPath}" ${config.videoQuality}`;
+      execSync(webmCmd, { stdio: 'pipe', cwd: ROOT_DIR });
+      log.info(`    ✓ ${webmOutputFile}`);
+
+      // Poster frame — first frame as WebP for instant visual before video loads
+      const posterCmd = `${config.ffmpegBin} -y -i "${inputPath}" -ss 0 -vframes 1 -vcodec libwebp -lossless 0 -quality 85 "${posterPath}"`;
+      execSync(posterCmd, { stdio: 'pipe', cwd: ROOT_DIR });
+      log.info(`    ✓ ${posterFile}\n`);
+
       converted++;
 
       assetManifest.assets.videos[file] = {
         source: `${config.sourceDir}/${file}`,
-        output: `/${outDirName}/${outputFile}`,
+        outputs: {
+          mp4: `/${outDirName}/${outputFile}`,
+          webm: `/${outDirName}/${webmOutputFile}`,
+          poster: `/${outDirName}/${posterFile}`,
+        },
         size: fs.statSync(inputPath).size,
       };
     } catch (error) {
-      log.error(`Failed: ${error.message}`);
+      log.error(`Failed to process ${file}: ${error.message}`);
     }
   }
 

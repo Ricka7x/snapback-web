@@ -1,12 +1,17 @@
 "use client"
 
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion"
-import { useRef } from "react"
+import { useRef, useState, useEffect } from "react"
 import { ArrowRightIcon } from "@phosphor-icons/react"
 import { DOWNLOAD_URL } from "@/lib/constants"
 
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null)
+  const [videoReady, setVideoReady] = useState(false)
+
+  useEffect(() => {
+    setVideoReady(true)
+  }, [])
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] })
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "18%"])
 
@@ -58,7 +63,7 @@ export default function Hero() {
           </motion.div>
 
           <motion.h1
-            initial={{ opacity: 0, y: 28 }}
+            initial={{ opacity: 0,y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
             className="font-display text-[clamp(52px,6.5vw,88px)] font-semibold leading-[0.92] tracking-[-0.04em] text-white mb-6"
@@ -118,9 +123,15 @@ export default function Hero() {
               loop
               muted
               playsInline
+              poster="/assets/restore-poster.webp"
               className="w-full rounded-2xl border border-white/6 shadow-[0_60px_120px_rgba(0,0,0,0.9)]"
             >
-              <source src="/assets/restore.mp4" type="video/mp4" />
+              {videoReady && (
+                <>
+                  <source src="/assets/restore.webm" type="video/webm" />
+                  <source src="/assets/restore.mp4" type="video/mp4" />
+                </>
+              )}
             </video>
           </motion.div>
         </motion.div>

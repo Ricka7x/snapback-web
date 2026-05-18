@@ -23,7 +23,6 @@ export const SfProDisplay = localFont({
       style: "normal",
     },
   ],
-  // Optional: Define a CSS variable for more flexibility
   variable: "--font-sf-pro-display",
-
+  display: "swap",
 })

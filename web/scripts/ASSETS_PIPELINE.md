@@ -177,11 +177,14 @@ Recommended: Use WebP in production (`/assets/filename.webp`)
 
 ## Video Conversion Details
 
-**Tool**: `asset-forge convert-video`  
+**Tool**: `asset-forge convert-video` + ffmpeg  
 **Quality**: CRF 23 (0-51 scale, lower = better)  
-**Format**: MP4 H.264
+**Formats**: MP4 H.264 + WebM VP9 + WebP poster frame
 
-Videos are converted to MP4 for maximum compatibility across browsers and platforms.
+Each video produces three outputs:
+- `{name}.mp4` — H.264, maximum browser compatibility
+- `{name}.webm` — VP9, 30-50% smaller at same quality for Chrome/Firefox/Edge
+- `{name}-poster.webp` — First frame as WebP, shown instantly before video loads
 
 **FFmpeg**: Uses Homebrew `/opt/homebrew/bin/ffmpeg` on macOS
 

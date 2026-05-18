@@ -18,6 +18,6 @@ export const SfProText = localFont({
       style: "normal",
     }
   ],
-  // Optional: Define a CSS variable for more flexibility
   variable: "--font-sf-pro-text",
+  display: "swap",
 })
