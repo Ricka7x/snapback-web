@@ -30,6 +30,19 @@ jobs:
           cd web
           npm ci
 
+      - name: Cache converted assets
+        id: asset-cache
+        uses: actions/cache@v4
+        with:
+          path: web/public/assets
+          key: assets-${{ hashFiles('web/assets-src/**') }}
+
+      - name: Build assets
+        if: steps.asset-cache.outputs.cache-hit != 'true'
+        run: |
+          cd web
+          npm run assets:build
+
       - name: Build Next.js app
         run: |
           cd web
