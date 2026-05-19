@@ -7,6 +7,13 @@
     <language>en-us</language>
     <atom:link href="https://snapbackapp.com/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Why Snapback Has a Free and a Pro Version</title>
+      <description>Snapback&apos;s core window management features are and always will be free. Here is what Pro adds, why the split exists, and how to decide which version is right for you.</description>
+      <link>https://snapbackapp.com/blog/free-vs-pro</link>
+      <guid isPermaLink="true">https://snapbackapp.com/blog/free-vs-pro</guid>
+      <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>Introducing Snapback: A Better Way to Manage Windows on Mac</title>
       <description>Snapback is a free macOS window manager that saves and restores your entire workspace layout with one keystroke. Window snapping, multi-display support, and unlimited workspaces. No account needed.</description>
       <link>https://snapbackapp.com/blog/introducing-snapback</link>
