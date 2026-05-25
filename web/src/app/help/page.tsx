@@ -134,6 +134,14 @@ const sections = [
         q: "Will it work after a macOS update?",
         a: "Snapback targets macOS 14.2+ and is actively maintained. Updates are tested against new macOS releases.",
       },
+      {
+        q: "Why are JetBrains IDEs (PyCharm, IntelliJ, WebStorm, etc.) excluded?",
+        a: "JetBrains applications crash with a Metal rendering error when their windows are moved via the macOS Accessibility API. To prevent data loss and crashes, Snapback automatically excludes all JetBrains IDEs from window capture and positioning. This is a limitation of how these apps interact with macOS Accessibility, not a Snapback bug. The exclusion covers PyCharm, IntelliJ IDEA, WebStorm, GoLand, Rider, CLion, and all other JetBrains products (bundle ID prefix com.jetbrains).",
+      },
+      {
+        q: "Does Snapback support multiple windows of the same app?",
+        a: "Partial multi-instance support is currently available. Snapback can detect and restore multiple windows from the same application, though some edge cases may not behave perfectly. We are actively improving this and expanding app coverage. If you run into issues with a specific app, please send feedback from within Snapback.",
+      },
     ],
   },
 ];
