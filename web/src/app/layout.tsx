@@ -112,6 +112,18 @@ export default function RootLayout({
             })(window, document, "clarity", "script", "vxr0eco3jw");
           `}
         </Script>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-64SYNLKRVQ"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-64SYNLKRVQ');
+          `}
+        </Script>
         <Footer />
       </body>
     </html>

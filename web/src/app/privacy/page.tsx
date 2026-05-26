@@ -29,6 +29,7 @@ export default function PrivacyPolicyPage() {
           <li>The app collects <strong>anonymous usage signals</strong> (such as app launch events) via TelemetryDeck to help us understand how many people are using Snapback. No personal data, IP addresses, or user identifiers are ever collected or transmitted.</li>
           <li>The app may generate local log files for troubleshooting purposes. These logs remain on your device and are never transmitted unless you choose to share them with support.</li>
           <li>Our website uses Microsoft Clarity to collect anonymized data (such as page views and interactions) to improve user experience. No personally identifiable information is collected.</li>
+          <li>Our website uses Google Analytics to collect anonymized data (such as page views and session information) to understand site traffic. No personally identifiable information is collected.</li>
         </ul>
         <h2>How We Use Information</h2>
         <ul>
@@ -44,7 +45,9 @@ export default function PrivacyPolicyPage() {
           The Snapback app uses <a href="https://telemetrydeck.com">TelemetryDeck</a> for privacy-friendly analytics. TelemetryDeck is designed to be GDPR and CCPA compliant and does not collect personal data or IP addresses. You can review their privacy policy at{" "}
           <a href="https://telemetrydeck.com/privacy">telemetrydeck.com/privacy</a>.
           Our website uses <a href="https://clarity.microsoft.com">Microsoft Clarity</a> to collect anonymized usage data such as page views and interactions. Clarity does not collect personally identifiable information. You can review Microsoft's privacy policy at{" "}
-          <a href="https://privacy.microsoft.com/privacystatement">privacy.microsoft.com</a>.
+          <a href="https://privacy.microsoft.com/privacystatement">privacy.microsoft.com</a>.{" "}
+          Our website also uses <a href="https://marketingplatform.google.com/about/analytics/">Google Analytics</a> to collect anonymized traffic data such as page views and session information. Google Analytics does not collect personally identifiable information. You can review Google's privacy policy at{" "}
+          <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
         </p>
         <h2>Changes to This Policy</h2>
         <p>
