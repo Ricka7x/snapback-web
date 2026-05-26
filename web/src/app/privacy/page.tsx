@@ -28,8 +28,8 @@ export default function PrivacyPolicyPage() {
           <li>Snapback does <strong>not</strong> collect any personal data, names, emails, or identifiable information.</li>
           <li>The app collects <strong>anonymous usage signals</strong> (such as app launch events) via TelemetryDeck to help us understand how many people are using Snapback. No personal data, IP addresses, or user identifiers are ever collected or transmitted.</li>
           <li>The app may generate local log files for troubleshooting purposes. These logs remain on your device and are never transmitted unless you choose to share them with support.</li>
-          <li>Our website uses Microsoft Clarity to collect anonymized data (such as page views and interactions) to improve user experience. No personally identifiable information is collected.</li>
-          <li>Our website uses Google Analytics to collect anonymized data (such as page views and session information) to understand site traffic. No personally identifiable information is collected.</li>
+          <li>Our website uses Microsoft Clarity to capture how you use and interact with our website through behavioral metrics, heatmaps, and session replay to help us improve the site. Website usage data is captured using first and third-party cookies and other tracking technologies. No personally identifiable information is collected.</li>
+          <li>Our website uses Google Analytics to collect data about site traffic and usage (such as page views, session duration, and traffic sources) via cookies. This data is processed by Google. No personally identifiable information is collected.</li>
         </ul>
         <h2>How We Use Information</h2>
         <ul>
@@ -44,9 +44,10 @@ export default function PrivacyPolicyPage() {
         <p>
           The Snapback app uses <a href="https://telemetrydeck.com">TelemetryDeck</a> for privacy-friendly analytics. TelemetryDeck is designed to be GDPR and CCPA compliant and does not collect personal data or IP addresses. You can review their privacy policy at{" "}
           <a href="https://telemetrydeck.com/privacy">telemetrydeck.com/privacy</a>.
-          Our website uses <a href="https://clarity.microsoft.com">Microsoft Clarity</a> to collect anonymized usage data such as page views and interactions. Clarity does not collect personally identifiable information. You can review Microsoft's privacy policy at{" "}
-          <a href="https://privacy.microsoft.com/privacystatement">privacy.microsoft.com</a>.{" "}
-          Our website also uses <a href="https://marketingplatform.google.com/about/analytics/">Google Analytics</a> to collect anonymized traffic data such as page views and session information. Google Analytics does not collect personally identifiable information. You can review Google's privacy policy at{" "}
+          Our website uses <a href="https://clarity.microsoft.com">Microsoft Clarity</a> to capture behavioral metrics, heatmaps, and session recordings using cookies and other tracking technologies. Clarity does not collect personally identifiable information. For more information about how Microsoft collects and uses your data, visit the{" "}
+          <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>.{" "}
+          Our website also uses <a href="https://marketingplatform.google.com/about/analytics/">Google Analytics</a> to collect traffic and usage data via cookies. This data is processed by Google and does not include personally identifiable information. You can opt out using the{" "}
+          <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics Opt-out Browser Add-on</a>. You can review Google's privacy policy at{" "}
           <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
         </p>
         <h2>Changes to This Policy</h2>
