@@ -59,9 +59,8 @@ export default function Nav() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
             <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent" />
           </span>
-          <span>
-            Snapback Pro is launching soon · lock in <strong className="font-semibold">25% off</strong> before we go live
-          </span>
+          <span className="sm:hidden">Snapback Pro · lock in <strong className="font-semibold">25% off</strong></span>
+          <span className="hidden sm:inline">Snapback Pro is launching soon · lock in <strong className="font-semibold">25% off</strong> before we go live</span>
           <ArrowRightIcon size={11} weight="bold" className="transition-transform group-hover:translate-x-0.5" />
         </Link>
 

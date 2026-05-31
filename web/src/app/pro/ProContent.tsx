@@ -131,7 +131,7 @@ function EmailForm() {
 
   return (
     <div className="w-full max-w-md">
-      <form onSubmit={handleSubmit} className="flex gap-3">
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
         <input
           type="email"
           name="email"
@@ -142,7 +142,7 @@ function EmailForm() {
         <button
           type="submit"
           disabled={status === "submitting"}
-          className="shrink-0 bg-accent text-white font-semibold px-5 py-3 rounded-xl text-sm flex items-center gap-2 hover:bg-accent-hover hover:shadow-[0_8px_30px_rgba(254,100,69,0.3)] transition-all disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap"
+          className="sm:shrink-0 bg-accent text-white font-semibold px-5 py-3 rounded-xl text-sm flex items-center justify-center gap-2 hover:bg-accent-hover hover:shadow-[0_8px_30px_rgba(254,100,69,0.3)] transition-all disabled:opacity-60 disabled:cursor-not-allowed whitespace-nowrap"
         >
           {status === "submitting" ? (
             <SpinnerIcon size={15} className="animate-spin" />
