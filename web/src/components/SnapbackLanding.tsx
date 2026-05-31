@@ -1,5 +1,4 @@
 import Hero from "./Hero"
-// import EmailCaptureSection from "./EmailCaptureSection"
 import ProblemSection from "./ProblemSection"
 import WorkspacesIntro from "./WorkspacesIntro"
 import DisplaySection from "./DisplaySection"
@@ -17,7 +16,6 @@ export default function SnapbackLanding() {
   return (
     <>
       <Hero />
-      {/* <EmailCaptureSection /> */}
       <ProblemSection />
       <div id="how-it-works">
         <WorkspacesIntro />

@@ -25,7 +25,8 @@ export default function PrivacyPolicyPage() {
         </p>
         <h2>Information We Collect</h2>
         <ul>
-          <li>Snapback does <strong>not</strong> collect any personal data, names, emails, or identifiable information.</li>
+          <li>Snapback does <strong>not</strong> collect any personal data, names, emails, or identifiable information from users of the macOS app.</li>
+          <li>If you voluntarily submit your email address through our website (such as to join the Snapback Pro waitlist), that email is stored by <a href="https://loops.so">Loops</a> and used solely to notify you about the launch and send any applicable discount. You can unsubscribe at any time via the link in any email we send.</li>
           <li>The app collects <strong>anonymous usage signals</strong> (such as app launch events) via TelemetryDeck to help us understand how many people are using Snapback. No personal data, IP addresses, or user identifiers are ever collected or transmitted.</li>
           <li>The app may generate local log files for troubleshooting purposes. These logs remain on your device and are never transmitted unless you choose to share them with support.</li>
           <li>Our website uses Microsoft Clarity to capture how you use and interact with our website through behavioral metrics, heatmaps, and session replay to help us improve the site. Website usage data is captured using first and third-party cookies and other tracking technologies. No personally identifiable information is collected.</li>
@@ -35,6 +36,7 @@ export default function PrivacyPolicyPage() {
         <ul>
           <li>Local logs are used only for troubleshooting and support, and are never accessed or transmitted without your explicit consent.</li>
           <li>Anonymized website analytics are used solely to improve the website. No data is sold, shared, or used for advertising.</li>
+          <li>Email addresses submitted through our waitlist form are used only to send launch notifications and discount codes. They are never sold or shared with third parties.</li>
         </ul>
         <h2>Data Security</h2>
         <p>
@@ -44,6 +46,8 @@ export default function PrivacyPolicyPage() {
         <p>
           The Snapback app uses <a href="https://telemetrydeck.com">TelemetryDeck</a> for privacy-friendly analytics. TelemetryDeck is designed to be GDPR and CCPA compliant and does not collect personal data or IP addresses. You can review their privacy policy at{" "}
           <a href="https://telemetrydeck.com/privacy">telemetrydeck.com/privacy</a>.
+          Our website uses <a href="https://loops.so">Loops</a> to manage email subscriptions for our product waitlist. When you submit your email address, it is stored securely by Loops and used to send you launch updates and discount information. You can unsubscribe at any time. You can review Loops' privacy policy at{" "}
+          <a href="https://loops.so/privacy">loops.so/privacy</a>.{" "}
           Our website uses <a href="https://clarity.microsoft.com">Microsoft Clarity</a> to capture behavioral metrics, heatmaps, and session recordings using cookies and other tracking technologies. Clarity does not collect personally identifiable information. For more information about how Microsoft collects and uses your data, visit the{" "}
           <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>.{" "}
           Our website also uses <a href="https://marketingplatform.google.com/about/analytics/">Google Analytics</a> to collect traffic and usage data via cookies. This data is processed by Google and does not include personally identifiable information. You can opt out using the{" "}

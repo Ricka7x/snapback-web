@@ -1,7 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { TerminalIcon, KeyIcon, LightningIcon, XLogoIcon, LayoutIcon, LinkIcon } from "@phosphor-icons/react"
+import { TerminalIcon, KeyIcon, LightningIcon, XLogoIcon, LayoutIcon, LinkIcon, ArrowRightIcon } from "@phosphor-icons/react"
+import Link from "next/link"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -92,6 +93,13 @@ export default function ComingSoonSection() {
             variants={fadeUp}
             className="flex flex-col items-start gap-3 pt-8 border-t border-white/6 sm:flex-row sm:items-center sm:gap-5"
           >
+            <Link
+              href="/pro"
+              className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full px-5 py-2.5 bg-accent text-white text-sm font-semibold hover:bg-accent-hover hover:shadow-[0_8px_30px_rgba(254,100,69,0.3)] transition-all"
+            >
+              See everything in Pro
+              <ArrowRightIcon size={14} weight="bold" />
+            </Link>
             <a
               href="https://x.com/snapbackapp_dev"
               target="_blank" rel="noopener noreferrer"
@@ -100,9 +108,6 @@ export default function ComingSoonSection() {
               <XLogoIcon size={15} weight="fill" />
               Follow for updates
             </a>
-            <p className="text-zinc-500 text-xs font-text sm:max-w-none">
-              Free users keep everything they have now.
-            </p>
           </motion.div>
         </motion.div>
 
