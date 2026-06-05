@@ -113,6 +113,8 @@ export default function WorkspacesIntro() {
             loop
             muted
             playsInline
+            preload="none"
+            poster="/assets/snapback-steps-poster.webp"
             className="w-full rounded-2xl border border-white/6 shadow-[0_60px_120px_rgba(0,0,0,0.9)]"
           >
             <source src="/assets/snapback-steps.mp4" type="video/mp4" />

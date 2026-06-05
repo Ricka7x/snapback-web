@@ -47,12 +47,7 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-20 items-center w-full py-32 lg:py-40">
         {/* Left column */}
         <div>
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-            className="mb-8"
-          >
+          <div className="mb-8">
             <span className="inline-flex items-center gap-2 rounded-full px-3 py-1 bg-primary/15 border border-primary/25 text-primary text-[10px] uppercase tracking-[0.2em] font-semibold">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75" />
@@ -60,31 +55,17 @@ export default function Hero() {
               </span>
               Free · Now in Beta
             </span>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0,y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-            className="font-display text-[clamp(52px,6.5vw,88px)] font-semibold leading-[0.92] tracking-[-0.04em] text-white mb-6"
-          >
+          <h1 className="font-display text-[clamp(52px,6.5vw,88px)] font-semibold leading-[0.92] tracking-[-0.04em] text-white mb-6">
             Your Mac workspace, <em>back</em> in a <em>snap</em>.
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-            className="text-zinc-400 text-lg leading-[1.7] max-w-[420px] mb-10 font-text"
-          >
+          <p className="text-zinc-400 text-lg leading-[1.7] max-w-105 mb-10 font-text">
             Save your entire layout with one shortcut. Restore it just as fast: every app, every position, every display. Dev mode, design mode, meeting mode. Seconds apart.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-          >
+          <div>
             <motion.a
               href={DOWNLOAD_URL}
               style={{ x: springX, y: springY }}
@@ -103,16 +84,11 @@ export default function Hero() {
               </span>
               <span className="text-zinc-500 text-[11px] font-mono">Free forever · macOS 14.2+ · No account</span>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Right column */}
-        <motion.div
-          initial={{ opacity: 0, x: 32 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
-          className="relative"
-        >
+        <div className="relative">
           <div
             className="absolute inset-0 rounded-3xl pointer-events-none"
             style={{ background: "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(21,86,219,0.1) 0%, transparent 70%)" }}
@@ -123,6 +99,7 @@ export default function Hero() {
               loop
               muted
               playsInline
+              preload="none"
               poster="/assets/restore-poster.webp"
               className="w-full rounded-2xl border border-white/6 shadow-[0_60px_120px_rgba(0,0,0,0.9)]"
             >
@@ -134,7 +111,7 @@ export default function Hero() {
               )}
             </video>
           </motion.div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
