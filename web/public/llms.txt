@@ -32,6 +32,11 @@ Most window managers move windows around. Snapback remembers them. Save your ful
 ## Platform & Availability
 
 - **macOS 14.2+** (Apple Silicon native)
-- **Website**: https://snapbackapp.com
-- **Download**: Free at https://snapbackapp.com
-- **Support**: support@snapbackapp.com
+- **Website**: [snapbackapp.com](https://snapbackapp.com)
+- **Download**: [Download free](https://snapbackapp.com)
+- **Pro (coming soon)**: [Snapback Pro](https://snapbackapp.com/pro)
+- **Blog**: [Snapback Blog](https://snapbackapp.com/blog)
+- **Help**: [Help & Support](https://snapbackapp.com/help)
+- **Privacy Policy**: [Privacy Policy](https://snapbackapp.com/privacy)
+- **Terms of Service**: [Terms of Service](https://snapbackapp.com/terms)
+- **Support**: [support@snapbackapp.com](mailto:support@snapbackapp.com)

@@ -90,7 +90,7 @@ export default function WorkspacesIntro() {
               i < 2 ? "md:border-r border-white/[0.06]" : ""
             } ${i > 0 ? "md:pl-12" : ""}`}
           >
-            <span className="font-mono text-[96px] text-white/4 leading-none block">
+            <span className="font-mono text-[96px] text-white/15 leading-none block">
               {step.number}
             </span>
             <div className="-mt-3 mb-4" />

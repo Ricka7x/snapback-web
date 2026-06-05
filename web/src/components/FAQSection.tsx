@@ -99,7 +99,7 @@ export default function FAQSection() {
             Something else? Reach us at{" "}
             <a
               href="mailto:support@snapbackapp.com"
-              className="text-primary hover:underline"
+              className="text-white underline decoration-white/40 hover:decoration-white transition-colors"
             >
               support@snapbackapp.com
             </a>

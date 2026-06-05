@@ -14,26 +14,26 @@ export default function Footer() {
             <img src="/assets/logo.svg" alt="Snapback" className="w-9 h-9 rounded-xl" />
             <div>
               <p className="text-white/80 text-sm font-semibold leading-none mb-1">Snapback</p>
-              <p className="text-zinc-500 text-xs font-text">Built for Mac power users who move fast.</p>
+              <p className="text-zinc-400 text-xs font-text">Built for Mac power users who move fast.</p>
             </div>
           </div>
 
           {/* Links */}
           <div className="flex items-center gap-6">
-            <Link href="/blog" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
+            <Link href="/blog" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
               Blog
             </Link>
-            <Link href="/help" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
+            <Link href="/help" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
               Help
             </Link>
-            <Link href="/privacy" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
+            <Link href="/privacy" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
               Privacy
             </Link>
-            <Link href="/terms" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
+            <Link href="/terms" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
               Terms
             </Link>
             {/* open in new page */}
-            <a href="mailto:support@snapbackapp.com" target="_blank" rel="noopener noreferrer" className="text-zinc-500 text-sm hover:text-white/70 transition-colors">
+            <a href="mailto:support@snapbackapp.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
               Contact
             </a>
           </div>
@@ -41,8 +41,8 @@ export default function Footer() {
 
         {/* Bottom row */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 pt-8 border-t border-white/4">
-          <p className="text-zinc-700 text-xs font-text">© {year === FOUNDED_YEAR ? year : `${FOUNDED_YEAR}–${year}`} Snapback. All rights reserved.</p>
-          <p className="text-zinc-700 text-xs font-mono">macOS 14.2+</p>
+          <p className="text-zinc-500 text-xs font-text">© {year === FOUNDED_YEAR ? year : `${FOUNDED_YEAR}–${year}`} Snapback. All rights reserved.</p>
+          <p className="text-zinc-500 text-xs font-mono">macOS 14.2+</p>
         </div>
       </div>
     </footer>

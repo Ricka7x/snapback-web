@@ -127,7 +127,7 @@ export default function ComingSoonSection() {
             >
               <div className="mt-0.5">{card.icon}</div>
               <div>
-                <h4 className="text-white text-sm font-semibold mb-1">{card.title}</h4>
+                <h3 className="text-white text-sm font-semibold mb-1">{card.title}</h3>
                 <p className="text-zinc-500 text-xs leading-[1.7] font-text">{card.body}</p>
               </div>
             </motion.div>
