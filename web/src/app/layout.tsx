@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Outfit, Instrument_Serif } from "next/font/google";
-import { SfProDisplay } from "./fonts/display";
+import { Geist_Mono, Outfit, Instrument_Serif } from "next/font/google";
 import { SfProText } from "./fonts/text";
 
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
 import "./globals.css";
 import Script from "next/script";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -69,13 +63,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" style={{ position: "relative" }}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
-        <link rel="preload" href="/assets/wallpaper.webp" as="image" />
         <link rel="alternate" type="application/rss+xml" title="Snapback Blog RSS Feed" href="/feed.xml" />
         <script
           type="application/ld+json"
@@ -98,7 +91,8 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${SfProDisplay.className} ${SfProText.className} ${geistSans.variable} ${geistMono.variable} ${outfit.variable} ${instrumentSerif.variable} antialiased`}
+        style={{ position: "relative" }}
+        className={`${SfProText.className} ${geistMono.variable} ${outfit.variable} ${instrumentSerif.variable} antialiased`}
         suppressHydrationWarning
       >
         <Nav />
