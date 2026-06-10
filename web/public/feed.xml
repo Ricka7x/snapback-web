@@ -7,6 +7,48 @@
     <language>en-us</language>
     <atom:link href="https://snapbackapp.com/feed.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>How to Manage Multiple Monitors on Mac: A Practical Guide</title>
+      <description>Everything you need to know about using multiple monitors with your Mac. Covers display setup, window management across screens, common problems, and how to keep your layout consistent when monitors change.</description>
+      <link>https://snapbackapp.com/blog/manage-multiple-monitors-on-mac</link>
+      <guid isPermaLink="true">https://snapbackapp.com/blog/manage-multiple-monitors-on-mac</guid>
+      <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Mac Window Snapping Shortcuts: A Complete Guide</title>
+      <description>Every keyboard shortcut and drag gesture for snapping windows on Mac. Covers built-in macOS options, third-party tools, and how to customize shortcuts for your workflow.</description>
+      <link>https://snapbackapp.com/blog/mac-window-snapping-shortcuts-guide</link>
+      <guid isPermaLink="true">https://snapbackapp.com/blog/mac-window-snapping-shortcuts-guide</guid>
+      <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>How to Restore Your Mac Window Layout After Disconnecting a Monitor</title>
+      <description>Disconnecting a monitor scrambles your Mac window layout. Here is why it happens, how macOS handles it, and how to get your windows back to the right displays automatically.</description>
+      <link>https://snapbackapp.com/blog/restore-mac-window-layout-disconnecting-monitor</link>
+      <guid isPermaLink="true">https://snapbackapp.com/blog/restore-mac-window-layout-disconnecting-monitor</guid>
+      <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>How to Organize Mac Windows for Software Development</title>
+      <description>A practical guide to organizing your Mac window layout for software development. Covers IDE placement, terminal positioning, multi-monitor setups, and how to save your dev workspace for instant restoration.</description>
+      <link>https://snapbackapp.com/blog/organize-mac-windows-for-development</link>
+      <guid isPermaLink="true">https://snapbackapp.com/blog/organize-mac-windows-for-development</guid>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Snapback vs Rectangle: What Is the Difference?</title>
+      <description>Rectangle snaps windows. Snapback remembers them. Here is a detailed comparison of Snapback and Rectangle for Mac window management, including features, workflows, and when to use each.</description>
+      <link>https://snapbackapp.com/blog/snapback-vs-rectangle</link>
+      <guid isPermaLink="true">https://snapbackapp.com/blog/snapback-vs-rectangle</guid>
+      <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
+      <title>Best Mac Window Managers in 2026: A Practical Comparison</title>
+      <description>A hands-on comparison of the best Mac window managers in 2026. Covers Rectangle, Magnet, BetterTouchTool, Amethyst, yabai, and Snapback. Which one fits your workflow?</description>
+      <link>https://snapbackapp.com/blog/best-mac-window-managers</link>
+      <guid isPermaLink="true">https://snapbackapp.com/blog/best-mac-window-managers</guid>
+      <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
+    </item>
+    <item>
       <title>Why Snapback Has a Free and a Pro Version</title>
       <description>Snapback&apos;s core window management features are and always will be free. Here is what Pro adds, why the split exists, and how to decide which version is right for you.</description>
       <link>https://snapbackapp.com/blog/free-vs-pro</link>

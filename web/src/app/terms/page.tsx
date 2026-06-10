@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions · Snapback",
-  description: "Read the terms and conditions for using Snapback."
+  description: "Read the terms and conditions for using Snapback.",
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default function TermsPage() {

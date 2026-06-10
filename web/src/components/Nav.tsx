@@ -53,7 +53,7 @@ export default function Nav() {
         {/* Pro announcement banner */}
         <Link
           href="/pro"
-          className="flex items-center justify-center gap-2 bg-accent/10 border-b border-accent/20 px-4 py-2 text-[12px] font-medium text-accent hover:bg-accent/15 transition-colors group"
+          className="flex items-center justify-center gap-2 bg-[#080808]/80 backdrop-blur-xl border-b border-accent/20 px-4 py-2 text-[12px] font-medium text-accent hover:bg-[#080808]/90 transition-colors group"
         >
           <span className="relative flex h-1.5 w-1.5 shrink-0">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />

@@ -62,7 +62,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-zinc-400 text-lg leading-[1.7] max-w-105 mb-10 font-text">
-            Save your entire layout with one shortcut. Restore it just as fast: every app, every position, every display. Dev mode, design mode, meeting mode. Seconds apart.
+            The Mac window manager that saves and restores your entire workspace layout. Every app, every position, every display. One keystroke to save. One keystroke to restore.
           </p>
 
           <div>

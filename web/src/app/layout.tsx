@@ -65,28 +65,38 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning data-scroll-behavior="smooth" style={{ position: "relative" }}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
         <link rel="alternate" type="application/rss+xml" title="Snapback Blog RSS Feed" href="/feed.xml" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "SoftwareApplication",
-              name: "Snapback",
-              operatingSystem: "macOS",
-              applicationCategory: "ProductivityApplication",
-              description: "Snapback saves and restores your entire Mac workspace: apps, window positions, and display assignments. One shortcut saves it. One shortcut restores it. Free. macOS 14.2+.",
-              url: "https://snapbackapp.com",
-              offers: {
-                "@type": "Offer",
-                price: "0",
-                priceCurrency: "USD"
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "SoftwareApplication",
+                name: "Snapback",
+                operatingSystem: "macOS",
+                applicationCategory: "ProductivityApplication",
+                description: "Snapback saves and restores your entire Mac workspace: apps, window positions, and display assignments. One shortcut saves it. One shortcut restores it. Free. macOS 14.2+.",
+                url: "https://snapbackapp.com",
+                softwareVersion: "0.35.1",
+                downloadUrl: "https://snapbackapp.com",
+                offers: {
+                  "@type": "Offer",
+                  price: "0",
+                  priceCurrency: "USD"
+                }
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "Snapback",
+                url: "https://snapbackapp.com",
+                logo: "https://snapbackapp.com/assets/logo.svg",
+                sameAs: [
+                  "https://x.com/snapbackapp_dev"
+                ]
               }
-            })
+            ])
           }}
         />
       </head>

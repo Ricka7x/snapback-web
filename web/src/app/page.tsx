@@ -1,9 +1,92 @@
 import SnapbackLanding from '@/components/SnapbackLanding';
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Snapback really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, and it will stay that way. The core app is free forever. A Pro version is coming with power-user extras, but everything you need today is free and fully supported."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it support macOS Spaces?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Snapback doesn't integrate with macOS Spaces directly. Apple doesn't offer a stable public API for them. Instead, it restores window positions and arrangements, giving you the same result without the fragility. This keeps restores predictable and reliable across multi-monitor setups."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with multiple monitors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Workspaces capture window positions across all connected displays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What if I swap or rotate a display?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Snapback detects the change and recalculates automatically."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if I disconnect a display entirely?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Snapback won't restore windows onto a screen that isn't there. Everything waits until you reconnect."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens if an app in my workspace is closed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Snapback reopens it. Automatically. You don't have to do anything."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will it work after a macOS update?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Snapback targets macOS 14.2+ and is actively maintained."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it run in the background?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Menu bar, minimal resources."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use it alongside Rectangle or Magnet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. They work together without conflicts."
+      }
+    }
+  ]
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-50 font-sans">
       <link rel="preload" href="/assets/restore-poster.webp" as="image" fetchPriority="high" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <main>
         <SnapbackLanding />
       </main>

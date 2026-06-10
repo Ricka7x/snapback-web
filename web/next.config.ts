@@ -11,7 +11,7 @@ const withMDX = createMDX({
 
 const nextConfig: NextConfig = {
   output: "export",
-  trailingSlash: true,
+  trailingSlash: false,
   images: {
     unoptimized: true,
   },

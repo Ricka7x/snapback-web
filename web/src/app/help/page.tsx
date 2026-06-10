@@ -3,6 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Help Center · Snapback",
   description: "Get help with Snapback, including installation, workspaces, keyboard shortcuts, troubleshooting, and more.",
+  alternates: {
+    canonical: "/help",
+  },
 };
 
 const sections = [
@@ -146,49 +149,70 @@ const sections = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": sections.flatMap((section) =>
+    section.items.map((item) => ({
+      "@type": "Question",
+      "name": item.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.a,
+      },
+    }))
+  ),
+};
+
 export default function HelpPage() {
   return (
-    <div className="max-w-3xl mx-auto py-40 md:py-32 px-6">
-      <div className="mb-16">
-        <h1 className="font-display text-[clamp(36px,5vw,56px)] font-semibold text-white tracking-[-0.03em] mb-4">
-          Help Center
-        </h1>
-        <p className="text-zinc-400 text-lg leading-[1.7] font-text">
-          Everything you need to know about Snapback. Can't find what you're looking for?{" "}
-          <a href="mailto:support@snapbackapp.com" className="text-primary hover:underline">
-            Contact support
-          </a>
-        </p>
-      </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <div className="max-w-3xl mx-auto py-40 md:py-32 px-6">
+        <div className="mb-16">
+          <h1 className="font-display text-[clamp(36px,5vw,56px)] font-semibold text-white tracking-[-0.03em] mb-4">
+            Help Center
+          </h1>
+          <p className="text-zinc-400 text-lg leading-[1.7] font-text">
+            Everything you need to know about Snapback. Can't find what you're looking for?{" "}
+            <a href="mailto:support@snapbackapp.com" className="text-primary hover:underline">
+              Contact support
+            </a>
+          </p>
+        </div>
 
-      <div className="space-y-16">
-        {sections.map((section) => (
-          <section key={section.id} id={section.id}>
-            <h2 className="font-display text-2xl font-semibold text-white tracking-[-0.02em] mb-6">
-              {section.title}
-            </h2>
-            <div className="divide-y divide-white/[0.06]">
-              {section.items.map((item) => (
-                <div key={item.q} className="py-5">
-                  <h3 className="text-white/70 text-base md:text-lg font-medium mb-3 leading-snug">
-                    {item.q}
-                  </h3>
-                  <p className="text-zinc-400 text-base leading-[1.8] font-text">{item.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        ))}
-      </div>
+        <div className="space-y-16">
+          {sections.map((section) => (
+            <section key={section.id} id={section.id}>
+              <h2 className="font-display text-2xl font-semibold text-white tracking-[-0.02em] mb-6">
+                {section.title}
+              </h2>
+              <div className="divide-y divide-white/[0.06]">
+                {section.items.map((item) => (
+                  <div key={item.q} className="py-5">
+                    <h3 className="text-white/70 text-base md:text-lg font-medium mb-3 leading-snug">
+                      {item.q}
+                    </h3>
+                    <p className="text-zinc-400 text-base leading-[1.8] font-text">{item.a}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ))}
+        </div>
 
-      <div className="mt-20 pt-12 border-t border-white/[0.06] text-center">
-        <p className="text-zinc-400 text-base font-text">
-          Still need help?{" "}
-          <a href="mailto:support@snapbackapp.com" className="text-primary hover:underline">
-            support@snapbackapp.com
-          </a>
-        </p>
+        <div className="mt-20 pt-12 border-t border-white/[0.06] text-center">
+          <p className="text-zinc-400 text-base font-text">
+            Still need help?{" "}
+            <a href="mailto:support@snapbackapp.com" className="text-primary hover:underline">
+              support@snapbackapp.com
+            </a>
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

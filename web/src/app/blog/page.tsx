@@ -3,8 +3,8 @@ import Link from "next/link";
 import { getAllPosts, getReadingTime } from "@/lib/posts";
 
 export const metadata: Metadata = {
-  title: "Blog — Snapback",
-  description: "Tips, updates, and stories about Snapback for Mac.",
+  title: "Mac Window Management Tips & Updates — Snapback Blog",
+  description: "Tips, updates, and guides on Mac window management, workspace organization, and productivity with Snapback.",
   alternates: {
     types: {
       "application/rss+xml": "https://snapbackapp.com/feed.xml",
@@ -20,11 +20,11 @@ export default function BlogIndex() {
       <div className="max-w-3xl mx-auto px-6 lg:px-12">
         <div className="prose prose-invert prose-lg max-w-none
           prose-headings:font-display prose-headings:tracking-tight
-          prose-a:text-primary prose-a:no-underline hover:prose-a:underline
+          prose-a:no-underline
           prose-strong:text-white
         ">
           <h1>Blog</h1>
-          <p className="text-white/50">Tips, updates, and stories about Snapback for Mac.</p>
+          <p className="text-white/50">Mac window management tips, updates, and guides from the Snapback team.</p>
 
           {posts.length === 0 ? (
             <p className="text-white/40">No posts yet. Check back soon.</p>
@@ -34,7 +34,7 @@ export default function BlogIndex() {
                 const readingTime = getReadingTime(post.slug);
                 return (
                   <article key={post.slug} className="group">
-                    <Link href={`/blog/${post.slug}`} className="block">
+                    <Link href={`/blog/${post.slug}`} className="block no-underline">
                       <div className="flex items-center gap-3 mb-3">
                         <time className="text-white/30 text-sm font-mono">
                           {new Date(post.date).toLocaleDateString("en-US", {
@@ -48,10 +48,10 @@ export default function BlogIndex() {
                           {readingTime} min read
                         </span>
                       </div>
-                      <h2 className="font-display text-4xl lg:text-5xl tracking-tight group-hover:text-primary transition-colors">
+                      <h2 className="font-display text-4xl lg:text-5xl tracking-tight text-white group-hover:text-primary transition-colors">
                         {post.title}
                       </h2>
-                      <p className="text-white/50 text-lg">{post.description}</p>
+                      <p className="text-white/50 text-lg mt-2">{post.description}</p>
                     </Link>
                   </article>
                 );
