@@ -9,6 +9,33 @@ export const metadata: Metadata = {
   },
 }
 
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  "name": "Snapback Pro: Command Palette, Spaces, and Custom Layouts",
+  "description": "A preview of Snapback Pro features: command palette, Spaces, custom layouts, and smart launchers for macOS window management.",
+  "thumbnailUrl": "https://snapbackapp.com/assets/pro-poster.webp",
+  "uploadDate": "2026-05-17",
+  "contentUrl": "https://snapbackapp.com/assets/pro.mp4",
+  "embedUrl": "https://snapbackapp.com/assets/pro.mp4",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Snapback",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://snapbackapp.com/assets/logo.svg",
+    },
+  },
+}
+
 export default function ProPage() {
-  return <ProContent />
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }}
+      />
+      <ProContent />
+    </>
+  )
 }

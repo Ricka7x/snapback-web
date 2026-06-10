@@ -123,6 +123,34 @@ export default async function BlogPost({ params }: Props) {
     .filter((p) => p.published && p.slug !== slug)
     .slice(0, 3);
 
+  const videoRefs = [...source.matchAll(/src="([^"]+)"/g)]
+    .map((m) => m[1])
+    .filter((src) => src.endsWith(".mp4") || src.endsWith(".webm"));
+
+  const uniqueVideoSrcs = [...new Set(videoRefs)];
+
+  const videoSchemas = uniqueVideoSrcs.map((src) => {
+    const posterSrc = src.replace(/\.(mp4|webm)$/, "-poster.webp");
+    return {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": post.title,
+      "description": post.description,
+      "thumbnailUrl": `https://snapbackapp.com${posterSrc}`,
+      "uploadDate": post.date,
+      "contentUrl": `https://snapbackapp.com${src}`,
+      "embedUrl": `https://snapbackapp.com${src}`,
+      "publisher": {
+        "@type": "Organization",
+        "name": "Snapback",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://snapbackapp.com/assets/logo.svg",
+        },
+      },
+    };
+  });
+
   return (
     <>
       <ScrollProgress />
@@ -134,6 +162,12 @@ export default async function BlogPost({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
       />
+      {videoSchemas.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchemas) }}
+        />
+      )}
 
       <article className="min-h-screen pt-32 pb-24">
         <div className="max-w-3xl mx-auto px-6 lg:px-12">

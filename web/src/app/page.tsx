@@ -79,6 +79,45 @@ const faqSchema = {
   ]
 };
 
+const videoSchemas = [
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Snapback: Restore Your Mac Workspace in One Keystroke",
+    "description": "Watch Snapback restore an entire Mac workspace layout — every app, every window position, every display — with a single keyboard shortcut.",
+    "thumbnailUrl": "https://snapbackapp.com/assets/restore-poster.webp",
+    "uploadDate": "2026-05-12",
+    "contentUrl": "https://snapbackapp.com/assets/restore.mp4",
+    "embedUrl": "https://snapbackapp.com/assets/restore.mp4",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Snapback",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://snapbackapp.com/assets/logo.svg"
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "How Snapback Workspaces Work: Save, Restore, Switch",
+    "description": "A quick walkthrough of the three-step Snapback workflow: arrange your windows once, save as a workspace, and restore instantly anytime.",
+    "thumbnailUrl": "https://snapbackapp.com/assets/snapback-steps-poster.webp",
+    "uploadDate": "2026-05-12",
+    "contentUrl": "https://snapbackapp.com/assets/snapback-steps.mp4",
+    "embedUrl": "https://snapbackapp.com/assets/snapback-steps.mp4",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Snapback",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://snapbackapp.com/assets/logo.svg"
+      }
+    }
+  }
+];
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-50 font-sans">
@@ -86,6 +125,10 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchemas) }}
       />
       <main>
         <SnapbackLanding />
