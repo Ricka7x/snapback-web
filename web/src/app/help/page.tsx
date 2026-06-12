@@ -147,6 +147,36 @@ const sections = [
       },
     ],
   },
+  {
+    id: "licensing",
+    title: "License & Purchases",
+    items: [
+      {
+        q: "How do I activate my license?",
+        a: "Open Settings from the menu bar, go to the License tab, paste the key from your confirmation email, and press Activate. Your key looks like XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.",
+      },
+      {
+        q: "I lost my license key. How do I recover it?",
+        a: "Your key is in the order confirmation email from Lemon Squeezy, our payment provider. You can also find every order and key by signing in at app.lemonsqueezy.com/my-orders with the email you purchased with. If a license is already active in Snapback, the License tab has a Copy button next to your key.",
+      },
+      {
+        q: "How do I move my license to a new Mac?",
+        a: "In the License tab on your old Mac, click Deactivate. This frees up your seat, then activate with the same key on the new Mac. If you no longer have access to the old Mac, deactivate the old device from your Lemon Squeezy order page instead.",
+      },
+      {
+        q: "I get an activation limit reached error. What do I do?",
+        a: "Your key is active on the maximum number of Macs. Deactivate it on a Mac you no longer use, either from that Mac's License tab or from your order page at app.lemonsqueezy.com/my-orders, then try activating again.",
+      },
+      {
+        q: "Does my license expire?",
+        a: "No. Snapback Pro is a one-time purchase and your license never expires.",
+      },
+      {
+        q: "Where do I find my invoice or receipt?",
+        a: "Invoices and receipts are available on your Lemon Squeezy order page at app.lemonsqueezy.com/my-orders. The License tab in Snapback links there directly under Order & Receipts.",
+      },
+    ],
+  },
 ];
 
 const faqSchema = {
