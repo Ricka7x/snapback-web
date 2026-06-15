@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Mac Window Management Tips & Updates — Snapback Blog",
   description: "Tips, updates, and guides on Mac window management, workspace organization, and productivity with Snapback.",
   alternates: {
+    canonical: '/blog',
     types: {
       "application/rss+xml": "https://snapbackapp.com/feed.xml",
     },

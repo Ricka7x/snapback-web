@@ -78,7 +78,7 @@ export default function RootLayout({
                 applicationCategory: "ProductivityApplication",
                 description: "Snapback saves and restores your entire Mac workspace: apps, window positions, and display assignments. One shortcut saves it. One shortcut restores it. Free. macOS 14.2+.",
                 url: "https://snapbackapp.com",
-                softwareVersion: "0.35.1",
+                softwareVersion: "0.36.3",
                 downloadUrl: "https://snapbackapp.com",
                 offers: {
                   "@type": "Offer",
