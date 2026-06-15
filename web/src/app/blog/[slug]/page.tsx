@@ -75,7 +75,7 @@ export default async function BlogPost({ params }: Props) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
-    datePublished: post.date,
+    datePublished: `${post.date}T00:00:00Z`,
     author: {
       "@type": "Organization",
       name: post.author || "Snapback Team",
@@ -137,7 +137,7 @@ export default async function BlogPost({ params }: Props) {
       "name": post.title,
       "description": post.description,
       "thumbnailUrl": `https://snapbackapp.com${posterSrc}`,
-      "uploadDate": post.date,
+      "uploadDate": `${post.date}T00:00:00Z`,
       "contentUrl": `https://snapbackapp.com${src}`,
       "embedUrl": `https://snapbackapp.com${src}`,
       "publisher": {
