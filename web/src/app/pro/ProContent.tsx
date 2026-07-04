@@ -3,11 +3,13 @@
 import { useState, useEffect, ChangeEvent } from "react"
 import { motion } from "framer-motion"
 import {
+  ArrowRightIcon,
   CheckCircleIcon,
+  ShieldWarningIcon,
   SpinnerIcon,
   TagIcon,
 } from "@phosphor-icons/react"
-import { DISCOUNT_SOLD_OUT } from "@/lib/constants"
+import { DISCOUNT_SOLD_OUT, PRO_AVAILABLE, PRO_PURCHASE_URL } from "@/lib/constants"
 
 const LOOPS_FORM_ENDPOINT = "https://app.loops.so/api/newsletter-form/cmp35lqn404k40iym3d4cl21w"
 const DISCOUNT_DEADLINE = new Date("2026-06-08T00:00:00Z")
@@ -33,6 +35,13 @@ const features = [
     imageAlt: "Snapback Pro Spaces",
   },
   {
+    badge: "Cycling HUDs",
+    title: "Flip through setups\nwith one key.",
+    body: "Cycle through your workspaces or spaces with a single shortcut. A visual overlay shows where you are as you move through them.",
+    image: "/assets/cycling-huds.webp",
+    imageAlt: "Snapback Pro cycling HUDs",
+  },
+  {
     badge: "Custom Layouts",
     title: "Your window\narrangements, saved.",
     body: "Define exactly how windows should be positioned and sized. Recall any layout instantly without the setup.",
@@ -46,7 +55,21 @@ const features = [
     image: "/assets/deeplinks.webp",
     imageAlt: "Snapback Pro deep links",
   },
+  {
+    badge: "Bulk Actions",
+    title: "Manage more\nin fewer steps.",
+    body: "Select multiple workspaces, spaces, or layouts at once and apply actions across all of them. Less clicking, more doing.",
+    image: "/assets/bulk-actions.webp",
+    imageAlt: "Snapback Pro bulk actions",
+  },
 ]
+
+const proPrice = DISCOUNT_SOLD_OUT ? "$9.99" : "$7.49"
+const fullPrice = "$9.99"
+
+// ---------------------------------------------------------------------------
+// Email form — used as primary CTA before launch, secondary after
+// ---------------------------------------------------------------------------
 
 function CountdownTimer() {
   const [remaining, setRemaining] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
@@ -92,7 +115,7 @@ function CountdownTimer() {
   )
 }
 
-function EmailForm() {
+function EmailForm({ compact = false }: { compact?: boolean }) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle")
 
   const handleSubmit = async (e: ChangeEvent<HTMLFormElement>) => {
@@ -103,7 +126,7 @@ function EmailForm() {
       const res = await fetch(LOOPS_FORM_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: `email=${encodeURIComponent(email)}&userGroup=${DISCOUNT_SOLD_OUT ? "waitlist" : "earlybird"}`,
+        body: `email=${encodeURIComponent(email)}&userGroup=${PRO_AVAILABLE ? "newsletter" : DISCOUNT_SOLD_OUT ? "waitlist" : "earlybird"}`,
       })
       setStatus(res.ok ? "success" : "error")
     } catch {
@@ -116,21 +139,17 @@ function EmailForm() {
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
-        className="rounded-2xl border border-accent/20 bg-accent/5 p-8 text-center max-w-md"
+        className="rounded-2xl border border-accent/20 bg-accent/5 p-6 text-center max-w-md"
       >
-        <CheckCircleIcon size={40} weight="thin" className="text-accent mx-auto mb-3" />
-        <p className="text-white font-semibold mb-1">You're on the list!</p>
-        <p className="text-zinc-400 text-sm">
-          {DISCOUNT_SOLD_OUT
-            ? "We'll email you the moment Snapback Pro launches."
-            : "Your 25% off code will be sent to your email at launch. No action needed."}
-        </p>
+        <CheckCircleIcon size={32} weight="thin" className="text-accent mx-auto mb-2" />
+        <p className="text-white font-semibold mb-1 text-sm">You&apos;re on the list!</p>
+        <p className="text-zinc-400 text-sm">We&apos;ll keep you posted on updates and future discounts.</p>
       </motion.div>
     )
   }
 
   return (
-    <div className="w-full max-w-md">
+    <div className={compact ? "w-full max-w-sm" : "w-full max-w-md"}>
       <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
         <input
           type="email"
@@ -158,6 +177,159 @@ function EmailForm() {
   )
 }
 
+// ---------------------------------------------------------------------------
+// Hero CTA — waitlist (pre-launch) vs purchase + email (post-launch)
+// ---------------------------------------------------------------------------
+
+function HeroCTA() {
+  if (PRO_AVAILABLE) {
+    return (
+      <div className="flex flex-col items-center gap-6">
+        {/* Pricing */}
+        <div className="flex flex-col items-center gap-1.5">
+          <div className="flex items-baseline gap-3">
+            <span className="font-display text-5xl font-bold text-white">{proPrice}</span>
+            {!DISCOUNT_SOLD_OUT && (
+              <span className="text-zinc-600 line-through text-2xl">{fullPrice}</span>
+            )}
+          </div>
+          <span className="text-zinc-400 text-sm">One-time purchase. No subscription, yours forever.</span>
+        </div>
+
+        {/* Anti-piracy */}
+        <div className="flex items-center gap-1.5 text-zinc-500 text-xs">
+          <ShieldWarningIcon size={12} weight="fill" className="text-red-400/60 shrink-0" />
+          <span>At $9.99, pirating it isn&apos;t worth the malware risk.</span>
+        </div>
+
+        {/* Buy button */}
+        <a
+          href={PRO_PURCHASE_URL}
+          className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-8 py-4 rounded-xl text-base hover:bg-accent-hover hover:shadow-[0_8px_30px_rgba(254,100,69,0.3)] transition-all"
+        >
+          Get Snapback Pro
+          <ArrowRightIcon size={16} weight="bold" />
+        </a>
+
+        {/* Secondary: stay in the loop */}
+        <div className="pt-4 border-t border-white/5 w-full max-w-sm flex flex-col items-center gap-3">
+          <p className="text-zinc-500 text-xs uppercase tracking-[0.15em] font-semibold">Stay in the loop for future discounts</p>
+          <EmailForm compact />
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="flex flex-col items-center gap-4">
+      {!DISCOUNT_SOLD_OUT && (
+        <div className="flex flex-col items-center gap-2 mb-4">
+          <span className="text-zinc-500 text-[10px] uppercase tracking-[0.2em] font-semibold">Offer expires in</span>
+          <CountdownTimer />
+        </div>
+      )}
+      <EmailForm />
+      <div className="flex items-center gap-2">
+        <TagIcon size={13} weight="bold" className="text-accent shrink-0" />
+        {DISCOUNT_SOLD_OUT
+          ? <span className="text-zinc-400 text-sm font-semibold">Stay in the loop for future discounts</span>
+          : <span className="text-accent text-sm font-semibold">25% off for the first 100 · $7.49 one-time</span>
+        }
+      </div>
+    </div>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Bottom CTA section — waitlist vs live purchase
+// ---------------------------------------------------------------------------
+
+function BottomCTA() {
+  if (PRO_AVAILABLE) {
+    return (
+      <section className="py-32 border-t border-white/5">
+        <div className="max-w-2xl mx-auto px-6 lg:px-12 text-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-80px" }}
+            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+          >
+            <motion.h2
+              variants={fadeUp}
+              className="font-display text-[clamp(32px,5vw,56px)] font-semibold tracking-[-0.03em] text-white mb-4"
+            >
+              Get Snapback Pro
+            </motion.h2>
+            <motion.p
+              variants={fadeUp}
+              className="text-zinc-400 text-lg mb-8 font-text"
+            >
+              {proPrice} one-time. No subscription. Free users keep everything they have now.
+            </motion.p>
+            <motion.div variants={fadeUp} className="flex flex-col items-center gap-3">
+              <a
+                href={PRO_PURCHASE_URL}
+                className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-8 py-4 rounded-xl text-base hover:bg-accent-hover hover:shadow-[0_8px_30px_rgba(254,100,69,0.3)] transition-all"
+              >
+                Buy for {proPrice}
+                <ArrowRightIcon size={16} weight="bold" />
+              </a>
+              <div className="flex items-center gap-1.5 text-red-400/70">
+                <ShieldWarningIcon size={13} weight="fill" className="shrink-0" />
+                <p className="text-xs font-text">
+                  Priced like a coffee so there&apos;s never a reason to pirate it.
+                </p>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+    )
+  }
+
+  return (
+    <section className="py-32 border-t border-white/5">
+      <div className="max-w-2xl mx-auto px-6 lg:px-12">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+        >
+          <motion.h2
+            variants={fadeUp}
+            className="font-display text-[clamp(32px,5vw,56px)] font-semibold tracking-[-0.03em] text-white mb-4"
+          >
+            Be first in line
+          </motion.h2>
+          <motion.p
+            variants={fadeUp}
+            className="text-zinc-400 text-lg mb-8 font-text"
+          >
+            {DISCOUNT_SOLD_OUT
+              ? "The discount spots are gone, but sign up to be first in line for future discounts."
+              : "Lock in 25% off for the first 100 subscribers. That's $7.49 instead of $9.99, one-time."}
+          </motion.p>
+          <motion.div variants={fadeUp}>
+            <EmailForm />
+          </motion.div>
+          <motion.p
+            variants={fadeUp}
+            className="text-zinc-600 text-xs mt-6 font-text"
+          >
+            Free users keep everything they have now. Pro is an optional one-time upgrade.
+          </motion.p>
+        </motion.div>
+      </div>
+    </section>
+  )
+}
+
+// ---------------------------------------------------------------------------
+// Page
+// ---------------------------------------------------------------------------
+
 export default function ProContent() {
   return (
     <main className="bg-[#080808] min-h-screen">
@@ -180,7 +352,7 @@ export default function ProContent() {
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
                 </span>
-                Coming Soon
+                {PRO_AVAILABLE ? "Now Available" : "Coming Soon"}
               </span>
             </motion.div>
 
@@ -199,28 +371,14 @@ export default function ProContent() {
               A command palette, Spaces, custom layouts, and deep links. Everything power users have been asking for.
             </motion.p>
 
-            {!DISCOUNT_SOLD_OUT && (
-              <motion.div variants={fadeUp} className="flex flex-col items-center gap-2 mb-8">
-                <span className="text-zinc-500 text-[10px] uppercase tracking-[0.2em] font-semibold">Offer expires in</span>
-                <CountdownTimer />
-              </motion.div>
-            )}
-
-            <motion.div variants={fadeUp} className="flex flex-col items-center gap-4">
-              <EmailForm />
-              <div className="flex items-center gap-2">
-                <TagIcon size={13} weight="bold" className="text-accent shrink-0" />
-                {DISCOUNT_SOLD_OUT
-                  ? <span className="text-zinc-400 text-sm font-semibold">Stay in the loop for future discounts</span>
-                  : <span className="text-accent text-sm font-semibold">25% off for the first 100 · $7.49 one-time</span>
-                }
-              </div>
+            <motion.div variants={fadeUp}>
+              <HeroCTA />
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Video placeholder */}
+      {/* Video */}
       <section className="py-28 border-t border-white/5">
         <div className="max-w-5xl mx-auto px-6 lg:px-12">
           <motion.div
@@ -233,7 +391,9 @@ export default function ProContent() {
             <h2 className="font-display text-[clamp(28px,4vw,48px)] font-semibold tracking-[-0.03em] text-white mb-3">
               See it in action
             </h2>
-            <p className="text-zinc-500 font-text">Full walkthrough coming soon.</p>
+            {!PRO_AVAILABLE && (
+              <p className="text-zinc-500 font-text">Full walkthrough coming soon.</p>
+            )}
           </motion.div>
 
           <motion.div
@@ -268,7 +428,7 @@ export default function ProContent() {
             className="mb-24"
           >
             <h2 className="font-display text-[clamp(28px,4vw,48px)] font-semibold tracking-[-0.03em] text-white mb-3">
-              What's coming in Pro
+              {PRO_AVAILABLE ? "What you get with Pro" : "What's coming in Pro"}
             </h2>
             <p className="text-zinc-500 font-text text-lg">Free users keep everything they have now.</p>
           </motion.div>
@@ -311,41 +471,7 @@ export default function ProContent() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="py-32 border-t border-white/5">
-        <div className="max-w-2xl mx-auto px-6 lg:px-12">
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-80px" }}
-            variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
-          >
-            <motion.h2
-              variants={fadeUp}
-              className="font-display text-[clamp(32px,5vw,56px)] font-semibold tracking-[-0.03em] text-white mb-4"
-            >
-              Be first in line
-            </motion.h2>
-            <motion.p
-              variants={fadeUp}
-              className="text-zinc-400 text-lg mb-8 font-text"
-            >
-              {DISCOUNT_SOLD_OUT
-                ? "The discount spots are gone, but sign up to be first in line for future discounts."
-                : "Lock in 25% off for the first 100 subscribers. That's $7.49 instead of $9.99, one-time."}
-            </motion.p>
-            <motion.div variants={fadeUp}>
-              <EmailForm />
-            </motion.div>
-            <motion.p
-              variants={fadeUp}
-              className="text-zinc-600 text-xs mt-6 font-text"
-            >
-              Free users keep everything they have now. Pro is an optional one-time upgrade.
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
+      <BottomCTA />
 
     </main>
   )

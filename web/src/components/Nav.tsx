@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
-import { DOWNLOAD_URL, LATEST_VERSION, DISCOUNT_SOLD_OUT } from "@/lib/constants"
+import { DOWNLOAD_URL, LATEST_VERSION, DISCOUNT_SOLD_OUT, PRO_AVAILABLE } from "@/lib/constants"
 import Link from "next/link"
 import { ArrowRightIcon } from "@phosphor-icons/react"
 
@@ -59,7 +59,12 @@ export default function Nav() {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
             <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent" />
           </span>
-          {DISCOUNT_SOLD_OUT ? (
+          {PRO_AVAILABLE ? (
+            <>
+              <span className="sm:hidden">Snapback Pro is here · get it now</span>
+              <span className="hidden sm:inline">Snapback Pro is now available · get it now</span>
+            </>
+          ) : DISCOUNT_SOLD_OUT ? (
             <>
               <span className="sm:hidden">Snapback Pro · join the waitlist</span>
               <span className="hidden sm:inline">Snapback Pro is launching soon · join the waitlist</span>

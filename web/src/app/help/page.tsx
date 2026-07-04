@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Help Center · Snapback",
@@ -59,11 +60,11 @@ const sections = [
       },
       {
         q: "Where do I find snapping actions?",
-        a: "The menu bar contains quick snapping actions such as left half, right half, and more. You can also assign custom snapping shortcuts in Settings under Hotkeys.",
+        a: "The menu bar contains quick snapping actions such as left half, right half, and more. You can also assign custom snapping shortcuts in Settings under the Snaps tab.",
       },
       {
         q: "Where do I customize Snapback?",
-        a: "Open Settings from the menu bar. It is organized into sections: Hotkeys for all keyboard shortcuts, Layouts for layout hotkeys, Workspaces to view and manage saved workspaces, Spaces for space-related shortcuts, License for activation, and General for app behavior settings.",
+        a: "Open Settings from the menu bar. It is organized into tabs: General for app behavior and global shortcuts, Snaps for window snapping shortcuts, Workspaces to view and manage saved workspaces, and Layouts to create and manage window layouts. Pro users also have Spaces for managing shortcut groups and License for activating their key.",
       },
     ],
   },
@@ -127,7 +128,7 @@ const sections = [
     items: [
       {
         q: "Does Snapback work with Rectangle or Magnet?",
-        a: "Yes. Snapback works alongside window management tools like Rectangle and Magnet without conflicts.",
+        a: "Yes. Snapback works alongside window management tools like Rectangle and Magnet without conflicts. If you already have a preferred window manager, you can disable Snapback's snapping functionality from Settings so there's no overlap and you can keep using your existing tool.",
       },
       {
         q: "Does it work with macOS Spaces?",
@@ -151,6 +152,11 @@ const sections = [
     id: "licensing",
     title: "License & Purchases",
     items: [
+      {
+        q: "Where can I learn how to use Pro features?",
+        a: "The Pro Guide covers everything: Command Palette, Cycling HUDs, Deeplinks, and Custom Layouts. You can also open it from the License tab inside the app.",
+        link: { href: "/pro/guide", label: "Open Pro Guide" },
+      },
       {
         q: "How do I activate my license?",
         a: "Open Settings from the menu bar, go to the License tab, paste the key from your confirmation email, and press Activate. Your key looks like XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX.",
@@ -227,6 +233,14 @@ export default function HelpPage() {
                       {item.q}
                     </h3>
                     <p className="text-zinc-400 text-base leading-[1.8] font-text">{item.a}</p>
+                    {"link" in item && item.link && (
+                      <Link
+                        href={item.link.href}
+                        className="inline-flex items-center gap-1 text-primary text-sm font-medium hover:underline mt-2"
+                      >
+                        {item.link.label} →
+                      </Link>
+                    )}
                   </div>
                 ))}
               </div>

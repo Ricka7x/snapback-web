@@ -1,9 +1,12 @@
 import type { Metadata } from "next"
 import ProContent from "./ProContent"
+import { PRO_AVAILABLE } from "@/lib/constants"
 
 export const metadata: Metadata = {
-  title: "Snapback Pro · Coming Soon",
-  description: "Command palette, Spaces, custom layouts, and deep links. Snapback Pro is launching soon — lock in 25% off for early subscribers.",
+  title: PRO_AVAILABLE ? "Snapback Pro" : "Snapback Pro · Coming Soon",
+  description: PRO_AVAILABLE
+    ? "Command palette, Spaces, custom layouts, and deep links. One-time purchase, yours forever."
+    : "Command palette, Spaces, custom layouts, and deep links. Snapback Pro is launching soon — lock in 25% off for early subscribers.",
   alternates: {
     canonical: "/pro",
   },
