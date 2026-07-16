@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy · Snapback",
-  description: "Read the privacy policy for Snapback. Learn how your data is handled and protected.",
+  title: "Snapback Privacy Policy: What We Collect and Why",
+  description: "Read the Snapback privacy policy. The macOS app collects no personal data, and this page explains exactly what anonymous signals the app and website use.",
   alternates: {
     canonical: "/privacy",
+  },
+  openGraph: {
+    url: "/privacy",
+    title: "Snapback Privacy Policy: What We Collect and Why",
+    description: "Read the Snapback privacy policy. The macOS app collects no personal data, and this page explains exactly what anonymous signals the app and website use.",
   },
 };
 

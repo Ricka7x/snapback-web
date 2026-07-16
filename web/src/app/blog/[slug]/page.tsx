@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const url = `https://snapbackapp.com/blog/${slug}`;
 
   return {
-    title: `${post.title} — Snapback Blog`,
+    title: `${post.title} | Snapback`,
     description: post.description,
     alternates: { canonical: url },
     openGraph: {
@@ -75,7 +75,9 @@ export default async function BlogPost({ params }: Props) {
     "@type": "BlogPosting",
     headline: post.title,
     description: post.description,
+    image: ["https://snapbackapp.com/assets/og-image.webp"],
     datePublished: `${post.date}T00:00:00Z`,
+    dateModified: `${post.date}T00:00:00Z`,
     author: {
       "@type": "Organization",
       name: post.author || "Snapback Team",
@@ -119,9 +121,12 @@ export default async function BlogPost({ params }: Props) {
     ],
   };
 
-  const relatedPosts = getAllPosts()
-    .filter((p) => p.published && p.slug !== slug)
-    .slice(0, 3);
+  const publishedPosts = getAllPosts().filter((p) => p.published);
+  const currentIndex = publishedPosts.findIndex((p) => p.slug === slug);
+  const otherPosts = publishedPosts.filter((p) => p.slug !== slug);
+  const relatedPosts = otherPosts.length <= 3
+    ? otherPosts
+    : Array.from({ length: 3 }, (_, i) => otherPosts[(currentIndex + i) % otherPosts.length]);
 
   const videoRefs = [...source.matchAll(/src="([^"]+)"/g)]
     .map((m) => m[1])

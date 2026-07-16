@@ -6,7 +6,7 @@ import { HandIcon, CursorIcon } from "@phosphor-icons/react"
 import Image from "next/image"
 import { getBlurDataURL } from "@/lib/assetPlaceholders"
 
-const DRAG_IMAGE_SRC = "/assets/drag-to-snap.webp"
+const DRAG_IMAGE_SRC = "/assets/drag-snap.webp"
 const DRAG_IMAGE_BLUR = getBlurDataURL(DRAG_IMAGE_SRC)
 
 const fadeUp = {

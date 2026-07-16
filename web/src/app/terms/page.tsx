@@ -1,10 +1,15 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Terms & Conditions · Snapback",
-  description: "Read the terms and conditions for using Snapback.",
+  title: "Snapback Terms & Conditions: License and Use",
+  description: "Read the terms and conditions for using the Snapback macOS app and website, covering the license, user responsibilities, liability, and how to contact us.",
   alternates: {
     canonical: "/terms",
+  },
+  openGraph: {
+    url: "/terms",
+    title: "Snapback Terms & Conditions: License and Use",
+    description: "Read the terms and conditions for using the Snapback macOS app and website, covering the license, user responsibilities, liability, and how to contact us.",
   },
 };
 

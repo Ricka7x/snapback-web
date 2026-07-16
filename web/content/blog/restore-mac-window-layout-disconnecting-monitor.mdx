@@ -1,5 +1,5 @@
 ---
-title: "How to Restore Your Mac Window Layout After Disconnecting a Monitor"
+title: "Restore Mac Windows After Unplugging a Monitor"
 description: "Disconnecting a monitor scrambles your Mac window layout. Here is why it happens, how macOS handles it, and how to get your windows back to the right displays automatically."
 date: "2026-06-04"
 author: "Snapback Team"
@@ -13,7 +13,7 @@ Every Mac user with an external display has experienced this. You unplug your mo
 
 When you plug the monitor back in, the windows do not go back. They stay on your laptop screen, and your external display is empty.
 
-This happens because macOS handles display disconnection by moving all windows to the remaining display. It does this to prevent windows from being stranded on a screen that no longer exists. The problem is that macOS does not move them back when the display returns.
+This happens because [macOS handles display disconnection](https://support.apple.com/guide/mac-help/use-multiple-displays-mchl7c7ebe08/mac) by moving all windows to the remaining display. It does this to prevent windows from being stranded on a screen that no longer exists. The problem is that macOS does not move them back when the display returns.
 
 ## How macOS Handles Display Changes
 
@@ -40,7 +40,7 @@ Without any tools, your options are limited:
 
 **Drag windows back one by one.** This works but takes time, especially if you have many windows or use multiple external displays.
 
-**Use Mission Control.** Right-click on app icons in the Dock and assign them to specific displays. This only works for apps that are already open and requires re-assignment when apps restart.
+**Use [Mission Control](https://support.apple.com/guide/mac-help/open-windows-spaces-mission-control-mh35798/mac).** Right-click on app icons in the Dock and assign them to specific displays. This only works for apps that are already open and requires re-assignment when apps restart.
 
 **Use macOS Spaces.** Assign apps to specific Spaces, which can be tied to displays. This is fragile and breaks when macOS updates change Space behavior.
 
@@ -60,7 +60,7 @@ Snapback does not fight macOS. When you unplug a display, macOS moves the window
 
 Hit your workspace restore shortcut. Snapback checks which displays are connected. Windows assigned to a connected display go back to their saved positions. Windows assigned to a disconnected display are skipped. Nothing piles up. Nothing goes to the wrong screen.
 
-![Snapback display settings panel](/assets/preview.webp)
+![Snapback display settings panel](/assets/save.webp)
 
 ### When You Swap Displays
 
@@ -77,7 +77,7 @@ Here is how to create a workspace that handles monitor changes gracefully:
 1. **Connect all your usual displays.** Set up your desk the way you normally work.
 2. **Arrange every window.** Put each app on the display where you want it. Use [window snapping](/#features) to get precise positions.
 
-![Drag a window to snap it into place](/assets/positions.webp)
+![Drag a window to snap it into place](/assets/snaps.webp)
 
 3. **Save the workspace.** Open Snapback from the menu bar, create a new workspace, and name it something like "Desk Setup."
 4. **Assign a shortcut.** Pick a keyboard shortcut for instant restoration.

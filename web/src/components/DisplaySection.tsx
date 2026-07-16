@@ -6,7 +6,7 @@ import { MonitorIcon } from "@phosphor-icons/react"
 import Image from "next/image"
 import { getBlurDataURL } from "@/lib/assetPlaceholders"
 
-const DISPLAY_IMAGE_SRC = "/assets/preview.webp"
+const DISPLAY_IMAGE_SRC = "/assets/save.webp"
 const DISPLAY_IMAGE_BLUR = getBlurDataURL(DISPLAY_IMAGE_SRC)
 
 const fadeUp = {

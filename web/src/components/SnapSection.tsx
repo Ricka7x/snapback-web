@@ -6,7 +6,7 @@ import { ArrowsOutIcon } from "@phosphor-icons/react"
 import Image from "next/image"
 import { getBlurDataURL } from "@/lib/assetPlaceholders"
 
-const SNAP_IMAGE_SRC = "/assets/positions.webp"
+const SNAP_IMAGE_SRC = "/assets/snaps.webp"
 const SNAP_IMAGE_BLUR = getBlurDataURL(SNAP_IMAGE_SRC)
 
 const fadeUp = {

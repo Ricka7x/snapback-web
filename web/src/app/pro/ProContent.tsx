@@ -155,6 +155,7 @@ function EmailForm({ compact = false }: { compact?: boolean }) {
           type="email"
           name="email"
           required
+          aria-label="Email address"
           placeholder="your@email.com"
           className="flex-1 px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-colors"
         />
@@ -332,7 +333,7 @@ function BottomCTA() {
 
 export default function ProContent() {
   return (
-    <main className="bg-[#080808] min-h-screen">
+    <div className="bg-[#080808] min-h-screen">
 
       {/* Hero */}
       <section className="relative pt-40 pb-28 overflow-hidden">
@@ -473,6 +474,6 @@ export default function ProContent() {
 
       <BottomCTA />
 
-    </main>
+    </div>
   )
 }

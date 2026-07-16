@@ -27,12 +27,12 @@ const instrumentSerif = Instrument_Serif({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://snapbackapp.com"),
-  title: "Snapback: Mac Workspace Manager | Save & Restore Window Layouts",
+  title: "Snapback | Mac Workspace Manager: Save & Restore Layouts",
   description: "Snapback saves your entire Mac window layout: apps, positions, displays. Restores everything in one keystroke. Free. macOS 14.2+. No account needed.",
   keywords: ["macOS", "mac window manager", "workspace switcher mac", "window manager", "workspace restoration", "restore window layout macos", "productivity", "mac apps", "window snapping", "rectangle mac alternative"],
   authors: [{ name: "Snapback Team" }],
   openGraph: {
-    title: "Snapback: Mac Workspace Manager | Save & Restore Window Layouts",
+    title: "Snapback | Mac Workspace Manager: Save & Restore Layouts",
     description: "Save your entire Mac window layout: apps, positions, displays. Restore everything in one keystroke. Free. macOS 14.2+.",
     url: "https://snapbackapp.com",
     siteName: "Snapback",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Snapback: Mac Workspace Manager | Save & Restore Window Layouts",
+    title: "Snapback | Mac Workspace Manager: Save & Restore Layouts",
     description: "Save and restore your entire Mac window layout in one keystroke. Free. macOS 14.2+.",
     images: ["/assets/og-image.webp"],
   },
@@ -106,9 +106,15 @@ export default function RootLayout({
         className={`${SfProText.className} ${geistMono.variable} ${outfit.variable} ${instrumentSerif.variable} antialiased`}
         suppressHydrationWarning
       >
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-100 focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded-lg"
+        >
+          Skip to content
+        </a>
         <Nav />
         <ClarityAnalytics />
-        {children}
+        <main id="main">{children}</main>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-64SYNLKRVQ"
           strategy="afterInteractive"

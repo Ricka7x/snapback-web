@@ -37,6 +37,9 @@ export default function CTASection() {
         <img
           src="/assets/logo.svg"
           alt="Snapback"
+          width={56}
+          height={56}
+          loading="lazy"
           className="w-14 h-14 rounded-[18px] mx-auto mb-8 shadow-2xl border border-white/10"
         />
         <h2 className="font-display text-[clamp(40px,6.5vw,72px)] font-semibold tracking-[-0.04em] text-white leading-[1]">

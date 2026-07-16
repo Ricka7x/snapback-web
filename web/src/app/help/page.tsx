@@ -2,10 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Help Center · Snapback",
-  description: "Get help with Snapback, including installation, workspaces, keyboard shortcuts, troubleshooting, and more.",
+  title: "Snapback Help Center: Setup, Shortcuts & Troubleshooting",
+  description: "Get help with Snapback, including installation, workspaces, keyboard shortcuts, multi-display setups, troubleshooting, and answers to common questions.",
   alternates: {
     canonical: "/help",
+  },
+  openGraph: {
+    url: "/help",
+    title: "Snapback Help Center: Setup, Shortcuts & Troubleshooting",
+    description: "Get help with Snapback, including installation, workspaces, keyboard shortcuts, multi-display setups, troubleshooting, and answers to common questions.",
   },
 };
 

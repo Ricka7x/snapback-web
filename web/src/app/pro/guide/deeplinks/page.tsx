@@ -1,10 +1,18 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 
+const deeplinksTitle = "Snapback Pro Deeplinks Reference: Supported Apps"
+const deeplinksDescription = "The full reference of supported apps and input formats for Snapback Pro deeplinks and smart launchers, covering terminals, editors, browsers, and more."
+
 export const metadata: Metadata = {
-  title: "Deeplinks Reference · Snapback Pro",
-  description: "Supported apps and input formats for Snapback Pro deeplinks and launchers.",
+  title: deeplinksTitle,
+  description: deeplinksDescription,
   alternates: { canonical: "/pro/guide/deeplinks" },
+  openGraph: {
+    url: "/pro/guide/deeplinks",
+    title: deeplinksTitle,
+    description: deeplinksDescription,
+  },
 }
 
 const appGroups = [

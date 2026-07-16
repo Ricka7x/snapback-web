@@ -88,7 +88,7 @@ export default function Nav() {
         >
           <div className="max-w-7xl mx-auto px-6 lg:px-12 h-16 flex items-center justify-between">
             <Link href="/" className="flex items-center" onClick={() => setMobileOpen(false)}>
-              <img src="/assets/logo.svg" className="w-6 h-6 rounded-md" alt="Snapback logo" />
+              <img src="/assets/logo.svg" width={24} height={24} className="w-6 h-6 rounded-md" alt="Snapback logo" />
               <span className="text-white/85 text-[15px] font-semibold tracking-tight ml-2">Snapback</span>
               <span className="font-mono text-[9px] text-primary border border-primary/40 rounded px-1.5 py-0.5 ml-2 bg-primary/10 hidden sm:inline">
                 v{versionDisplay}

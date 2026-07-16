@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 
 export default function Video({ src, autoPlay = false }: { src: string; autoPlay?: boolean }) {
   const ref = useRef<HTMLVideoElement>(null);
+  const poster = src.replace(/\.(mp4|webm)$/, "-poster.webp");
 
   useEffect(() => {
     if (!ref.current) return;
@@ -14,6 +15,7 @@ export default function Video({ src, autoPlay = false }: { src: string; autoPlay
     <video
       ref={ref}
       src={src}
+      poster={poster}
       controls
       autoPlay={autoPlay}
       muted={autoPlay}

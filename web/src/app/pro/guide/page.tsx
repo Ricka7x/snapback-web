@@ -2,10 +2,15 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Pro Guide · Snapback",
-  description: "Learn how to get the most out of Snapback Pro: command palette, cycling HUDs, deeplinks, and custom layouts.",
+  title: "Snapback Pro Guide: Palette, HUDs, Deeplinks & Layouts",
+  description: "Learn how to get the most out of Snapback Pro with step-by-step setup for the command palette, cycling HUDs, deeplinks, smart launchers, and custom layouts.",
   alternates: {
     canonical: "/pro/guide",
+  },
+  openGraph: {
+    url: "/pro/guide",
+    title: "Snapback Pro Guide: Palette, HUDs, Deeplinks & Layouts",
+    description: "Learn how to get the most out of Snapback Pro with step-by-step setup for the command palette, cycling HUDs, deeplinks, smart launchers, and custom layouts.",
   },
 }
 

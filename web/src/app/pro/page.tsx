@@ -2,13 +2,23 @@ import type { Metadata } from "next"
 import ProContent from "./ProContent"
 import { PRO_AVAILABLE } from "@/lib/constants"
 
+const proTitle = PRO_AVAILABLE
+  ? "Snapback Pro: Command Palette, Spaces & Custom Layouts"
+  : "Snapback Pro Is Coming Soon: Power Features for Your Mac"
+const proDescription = PRO_AVAILABLE
+  ? "Snapback Pro adds a command palette, Spaces, custom layouts, and smart launchers to the free Mac window manager. One-time purchase, yours forever."
+  : "Command palette, Spaces, custom layouts, and smart launchers. Snapback Pro is launching soon. Join the waitlist to lock in 25% off as an early subscriber."
+
 export const metadata: Metadata = {
-  title: PRO_AVAILABLE ? "Snapback Pro" : "Snapback Pro · Coming Soon",
-  description: PRO_AVAILABLE
-    ? "Command palette, Spaces, custom layouts, and deep links. One-time purchase, yours forever."
-    : "Command palette, Spaces, custom layouts, and deep links. Snapback Pro is launching soon — lock in 25% off for early subscribers.",
+  title: proTitle,
+  description: proDescription,
   alternates: {
     canonical: "/pro",
+  },
+  openGraph: {
+    url: "/pro",
+    title: proTitle,
+    description: proDescription,
   },
 }
 

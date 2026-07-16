@@ -130,9 +130,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchemas) }}
       />
-      <main>
-        <SnapbackLanding />
-      </main>
+      <SnapbackLanding />
     </div>
   );
 }

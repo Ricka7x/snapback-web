@@ -3,13 +3,18 @@ import Link from "next/link";
 import { getAllPosts, getReadingTime } from "@/lib/posts";
 
 export const metadata: Metadata = {
-  title: "Mac Window Management Tips & Updates — Snapback Blog",
-  description: "Tips, updates, and guides on Mac window management, workspace organization, and productivity with Snapback.",
+  title: "Mac Window Management Tips & Updates | Snapback Blog",
+  description: "Tips, updates, and practical guides on Mac window management, workspace organization, multi-monitor setups, and productivity from the Snapback team.",
   alternates: {
     canonical: '/blog',
     types: {
       "application/rss+xml": "https://snapbackapp.com/feed.xml",
     },
+  },
+  openGraph: {
+    url: "/blog",
+    title: "Mac Window Management Tips & Updates | Snapback Blog",
+    description: "Tips, updates, and practical guides on Mac window management, workspace organization, multi-monitor setups, and productivity from the Snapback team.",
   },
 };
 
@@ -17,7 +22,7 @@ export default function BlogIndex() {
   const posts = getAllPosts().filter((p) => p.published);
 
   return (
-    <main className="min-h-screen pt-32 pb-24">
+    <div className="min-h-screen pt-32 pb-24">
       <div className="max-w-3xl mx-auto px-6 lg:px-12">
         <div className="prose prose-invert prose-lg max-w-none
           prose-headings:font-display prose-headings:tracking-tight
@@ -61,6 +66,6 @@ export default function BlogIndex() {
           )}
         </div>
       </div>
-    </main>
+    </div>
   );
 }
