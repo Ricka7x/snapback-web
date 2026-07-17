@@ -34,3 +34,4 @@ scripts/sparkle.env
 node_modules/
 promo-video/out/
 promo-video/dist/
+.claude/settings.local.json
