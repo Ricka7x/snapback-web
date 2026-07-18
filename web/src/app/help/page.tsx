@@ -180,7 +180,7 @@ const sections = [
       },
       {
         q: "macOS asked me to allow Snapback to access the Keychain. What is that?",
-        a: "Snapback stores your Pro license key in the macOS Keychain, the same encrypted storage your passwords live in, so this prompt only concerns Pro users with an activated license. It's macOS asking for your permission before handing the key back to an app. Most Pro users never see it. If it does appear, click Always Allow and macOS remembers your choice permanently. If you clicked Deny by accident, don't worry. Your license stays active and Pro keeps working. Snapback simply asks again the next time it verifies your license.",
+        a: "Snapback stores your Pro license key in the macOS Keychain, the same encrypted storage your passwords live in, so this prompt only concerns Pro users with an activated license. It's macOS asking for your permission before handing the key back to an app. You may see it once, typically after updating Snapback. Click Always Allow and macOS remembers your choice permanently, so you won't be asked again. If you clicked Deny by accident, don't worry. Your license stays active and Pro keeps working. Snapback simply asks again the next time it verifies your license.",
       },
       {
         q: "Does my license expire?",
