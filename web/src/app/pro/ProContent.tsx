@@ -43,8 +43,8 @@ const features = [
   },
   {
     badge: "Themes",
-    title: "Overlays that match\nyour setup.",
-    body: "Pick from a curated set of themes. Catppuccin in all three flavors, Dracula, Nord, GitHub, and plenty more, so Snapback looks like it belongs on your desktop.",
+    title: "Pick a theme.\nMake it yours.",
+    body: "Change Snapback's colors with a curated set of themes. Catppuccin in all three flavors, Dracula, Nord, GitHub, and plenty more.",
     image: "/assets/themes.webp",
     imageAlt: "Snapback Pro theme gallery with Catppuccin, Dracula, and Nord",
   },

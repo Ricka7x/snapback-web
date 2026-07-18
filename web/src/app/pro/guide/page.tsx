@@ -44,13 +44,13 @@ const steps = [
   {
     id: "themes",
     title: "Themes",
-    subtitle: "Change how Snapback's overlays and HUDs look with a predefined set of themes.",
+    subtitle: "Change Snapback's colors with a predefined set of themes.",
     image: "/assets/themes.webp",
     imageAlt: "Snapback theme gallery with Catppuccin, Dracula, and Nord",
     items: [
       "Open Snapback Settings from the menu bar, then go to the Themes tab.",
       "Browse the gallery or type in the filter field to find a theme. Catppuccin in all three flavors, Dracula, Nord, GitHub, and plenty more are included.",
-      "Click a theme to apply it. Snapback's HUDs and overlays pick up the new colors instantly.",
+      "Click a theme to apply it. Snapback picks up the new colors instantly.",
     ],
     note: null,
   },
