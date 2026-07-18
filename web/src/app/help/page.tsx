@@ -179,6 +179,10 @@ const sections = [
         a: "Your key is active on the maximum number of Macs. Deactivate it on a Mac you no longer use, either from that Mac's License tab or from your order page at app.lemonsqueezy.com/my-orders, then try activating again.",
       },
       {
+        q: "macOS asked me to allow Snapback to access the Keychain. What is that?",
+        a: "Snapback stores your Pro license key in the macOS Keychain, the same encrypted storage your passwords live in, so this prompt only concerns Pro users with an activated license. It's macOS asking for your permission before handing the key back to an app. Most Pro users never see it. If it does appear, click Always Allow and macOS remembers your choice permanently. If you clicked Deny by accident, don't worry. Your license stays active and Pro keeps working. Snapback simply asks again the next time it verifies your license.",
+      },
+      {
         q: "Does my license expire?",
         a: "No. Snapback Pro is a one-time purchase and your license never expires.",
       },
