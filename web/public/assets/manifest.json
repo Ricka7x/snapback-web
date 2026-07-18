@@ -237,6 +237,19 @@
         },
         "size": 548540
       },
+      "themes.png": {
+        "source": "assets-src/themes.png",
+        "outputs": {
+          "webp": "/assets/themes.webp",
+          "avif": "/assets/themes.avif"
+        },
+        "blurHash": "LRBLY^WekHj_|{R.Wrjc]PJ7S1a}",
+        "placeholder": {
+          "dataUri": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADHUlEQVR4nEXQXU8cZRTA8fkcWhKgCuzO7s488zwzszu7M7PzussCUVrQFgx9ASwaGl8iQYukVilNS5XwInFNF5Z45Z1XpjVq7Cf7m10vvPgl5+qfc462U+rztd7jod5lTz/ioLzPj+JLLpwNfq0v81vzXX5PO7zMW7xq57yazvhjJuPPuYS/5iP+Xmzyz02f1x80eL3SQPtK7/NA77FT7LJbOOahvs+j8jbfmfd4LG/wxJnlaS3nmZdwUI953oh57kf8EDY5jAOOcp+T6TqnMx6ncx7aVumCLb3HVqHLF4VjPi/sc7+4zUZpndXyIreNNrfMiFsi5PaAFXJHhqyqgDXH58Oaz716gw2/zkbgoW2WL9gsvWBT7/Jx8YT1whNWitssFNfoFK+R6hlRKaBZ8ocGc1wOSCohqRmSWyEtGdBSPrlqoN0R59wVPdbMF6yaZ6wYByxWHjBdXsfX57H1FFH0MfWBAKGHWKUmshyhjAhbxDgixhYR0gzRrtkXvOecs+Ses+z+zE3nkHl7l9zawDOuY5UzKuXgP5UQw4gwzRghUoSVYakcS7UQMqMiErTM69Np9JkPLlkIz1kITnin/i2Zu0ldvo8y2wgzQgwjCZaVImWGslvYThunOo1T7aDcNkJlaF7Qp9m8pB3/wmzSZy4+YzrcI/Y+oWYvoayZ4TaD0P+xHNtpYQ9itc7QMGhnaFbYx436BMklcXJOGp8Sh3v49U9xnWWkmhueNjhpSGVYdo50clS1hV1rD0k3R6gErRSeY4Y9VLOHG3apBYdUG9/g1O4j7SWEnMOwcozBj2RKWaVU7BTDSRFuhnTTIcuOMWWINul3Kfg/oTfOKNWPqXhPMao7mO5HGOoGFWuWkpWiWwkFmTCpEqbshKKTUHFjhBthOU0sFWCKOtpY/ZQx74jx2iHjzjPech4xqbYoqHV0axFddCiYCRMi5qoVM6pixuyYt90I3W1iugHSaSClhymqaFe8Q67UvmekesCI/ZhRe5er6jMm5F0K5nWmjDYTRsS4aDJiRbyhYt50YkbdJlNugOE2kI6Hkg7CVPwL3Hziw+LbySAAAAAASUVORK5CYII=",
+          "file": "/assets/blur/themes.blur.png"
+        },
+        "size": 298838
+      },
       "wallpaper.jpg": {
         "source": "assets-src/wallpaper.jpg",
         "outputs": {
@@ -304,5 +317,5 @@
     },
     "favicon": null
   },
-  "timestamp": "2026-07-16T23:52:39.491Z"
+  "timestamp": "2026-07-18T17:25:36.642Z"
 }

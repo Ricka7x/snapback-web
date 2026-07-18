@@ -2,15 +2,15 @@ import type { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Snapback Pro Guide: Palette, HUDs, Deeplinks & Layouts",
-  description: "Learn how to get the most out of Snapback Pro with step-by-step setup for the command palette, cycling HUDs, deeplinks, smart launchers, and custom layouts.",
+  title: "Snapback Pro Guide: Palette, HUDs, Themes & Layouts",
+  description: "Learn how to get the most out of Snapback Pro with step-by-step setup for the command palette, cycling HUDs, themes, deeplinks, smart launchers, and custom layouts.",
   alternates: {
     canonical: "/pro/guide",
   },
   openGraph: {
     url: "/pro/guide",
-    title: "Snapback Pro Guide: Palette, HUDs, Deeplinks & Layouts",
-    description: "Learn how to get the most out of Snapback Pro with step-by-step setup for the command palette, cycling HUDs, deeplinks, smart launchers, and custom layouts.",
+    title: "Snapback Pro Guide: Palette, HUDs, Themes & Layouts",
+    description: "Learn how to get the most out of Snapback Pro with step-by-step setup for the command palette, cycling HUDs, themes, deeplinks, smart launchers, and custom layouts.",
   },
 }
 
@@ -38,6 +38,19 @@ const steps = [
       "Open Snapback Settings from the menu bar, then go to the General tab.",
       "Find the Cycle Workspaces and Cycle Spaces shortcuts and assign a key to each.",
       "Press either shortcut to cycle through your saved workspaces or spaces. A visual HUD appears showing where you are in the list. Keep pressing to move through them.",
+    ],
+    note: null,
+  },
+  {
+    id: "themes",
+    title: "Themes",
+    subtitle: "Change how Snapback's overlays and HUDs look with a predefined set of themes.",
+    image: "/assets/themes.webp",
+    imageAlt: "Snapback theme gallery with Catppuccin, Dracula, and Nord",
+    items: [
+      "Open Snapback Settings from the menu bar, then go to the Themes tab.",
+      "Browse the gallery or type in the filter field to find a theme. Catppuccin in all three flavors, Dracula, Nord, GitHub, and plenty more are included.",
+      "Click a theme to apply it. Snapback's HUDs and overlays pick up the new colors instantly.",
     ],
     note: null,
   },

@@ -42,6 +42,13 @@ const features = [
     imageAlt: "Snapback Pro cycling HUDs",
   },
   {
+    badge: "Themes",
+    title: "Overlays that match\nyour setup.",
+    body: "Pick from a curated set of themes. Catppuccin in all three flavors, Dracula, Nord, GitHub, and plenty more, so Snapback looks like it belongs on your desktop.",
+    image: "/assets/themes.webp",
+    imageAlt: "Snapback Pro theme gallery with Catppuccin, Dracula, and Nord",
+  },
+  {
     badge: "Custom Layouts",
     title: "Your window\narrangements, saved.",
     body: "Define exactly how windows should be positioned and sized. Recall any layout instantly without the setup.",
