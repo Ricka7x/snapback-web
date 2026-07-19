@@ -83,7 +83,7 @@ const sections = [
       },
       {
         q: "What happens if I disconnect a display?",
-        a: "Snapback detects the change and won't restore windows to a screen that isn't there. Your windows wait safely until you reconnect the display.",
+        a: "Windows saved on a missing display are skipped, so nothing piles up on your remaining screen. If your whole workspace was saved on one display, it restores on whatever screen is available. Reconnect the display and restore again to get the full layout back.",
       },
       {
         q: "What if I swap or rotate a display?",

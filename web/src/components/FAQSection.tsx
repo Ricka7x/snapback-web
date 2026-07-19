@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "What happens if I disconnect a display entirely?",
-    a: "Snapback won't restore windows onto a screen that isn't there. Everything waits until you reconnect.",
+    a: "Windows saved on a missing display are skipped, so nothing piles up on your remaining screen. If your whole workspace was saved on one display, it restores on whatever screen is available.",
   },
   
   {
