@@ -56,6 +56,13 @@ const features = [
     imageAlt: "Snapback Pro custom layouts",
   },
   {
+    badge: "Adaptive Resize",
+    title: "Resize one window.\nThe rest follow.",
+    body: "Drag one window bigger or smaller and the others grow or shrink with it, so your layout always fills the display. One click resets everything to its original position.",
+    image: "/assets/adaptive-resize.webp",
+    imageAlt: "Snapback Pro adaptive resize keeping windows filling the display",
+  },
+  {
     badge: "Deep Links",
     title: "Restore everything\nat once.",
     body: "One shortcut opens apps, loads projects, visits URLs, and runs commands. All together, automatically.",

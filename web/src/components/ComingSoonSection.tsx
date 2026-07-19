@@ -1,8 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { TerminalIcon, KeyIcon, LightningIcon, XLogoIcon, LayoutIcon, LinkIcon, ArrowRightIcon } from "@phosphor-icons/react"
+import { TerminalIcon, KeyIcon, LightningIcon, XLogoIcon, LayoutIcon, LinkIcon, ArrowRightIcon, PaletteIcon, ArrowsOutSimpleIcon } from "@phosphor-icons/react"
 import Link from "next/link"
+import { PRO_AVAILABLE, PRO_PRICE } from "@/lib/constants"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -34,6 +35,16 @@ const cards = [
     icon: <LinkIcon size={18} weight="light" className="text-accent/60 shrink-0" />,
     title: "Smart launchers",
     body: "Restore windows AND open projects, websites, or run commands automatically.",
+  },
+  {
+    icon: <ArrowsOutSimpleIcon size={18} weight="light" className="text-accent/60 shrink-0" />,
+    title: "Adaptive resize",
+    body: "Resize one window and the others grow or shrink to keep the display filled. One click puts everything back.",
+  },
+  {
+    icon: <PaletteIcon size={18} weight="light" className="text-accent/60 shrink-0" />,
+    title: "Themes",
+    body: "Catppuccin, Dracula, Nord, GitHub, and more. Make Snapback match your setup.",
   },
 ]
 
@@ -70,7 +81,7 @@ export default function ComingSoonSection() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
               </span>
-              Coming Soon · Pro
+              {PRO_AVAILABLE ? "Now Available · Pro" : "Coming Soon · Pro"}
             </span>
           </motion.div>
 
@@ -97,17 +108,23 @@ export default function ComingSoonSection() {
               href="/pro"
               className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full px-5 py-2.5 bg-accent text-white text-sm font-semibold hover:bg-accent-hover hover:shadow-[0_8px_30px_rgba(254,100,69,0.3)] transition-all"
             >
-              See everything in Pro
+              {PRO_AVAILABLE ? `Get Pro for ${PRO_PRICE}` : "See everything in Pro"}
               <ArrowRightIcon size={14} weight="bold" />
             </Link>
-            <a
-              href="https://x.com/snapbackapp_dev"
-              target="_blank" rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full px-5 py-2.5 border border-accent/20 text-white/70 text-sm font-medium hover:border-accent/50 hover:text-white transition-all glass"
-            >
-              <XLogoIcon size={15} weight="fill" />
-              Follow for updates
-            </a>
+            {PRO_AVAILABLE ? (
+              <span className="text-zinc-500 text-sm font-text">
+                One-time purchase. No subscription, yours forever.
+              </span>
+            ) : (
+              <a
+                href="https://x.com/snapbackapp_dev"
+                target="_blank" rel="noopener noreferrer"
+                className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full px-5 py-2.5 border border-accent/20 text-white/70 text-sm font-medium hover:border-accent/50 hover:text-white transition-all glass"
+              >
+                <XLogoIcon size={15} weight="fill" />
+                Follow for updates
+              </a>
+            )}
           </motion.div>
         </motion.div>
 

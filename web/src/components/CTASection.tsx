@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion"
 import {  ArrowDownIcon } from "@phosphor-icons/react"
-import { DOWNLOAD_URL } from "@/lib/constants"
+import Link from "next/link"
+import { DOWNLOAD_URL, PRO_PRICE } from "@/lib/constants"
 import Image from "next/image"
 import { getBlurDataURL } from "@/lib/assetPlaceholders"
 
@@ -57,6 +58,12 @@ export default function CTASection() {
         </a>
         <p className="text-white/30 text-[11px] font-mono mt-5">
           Free forever · macOS 14.2+ · No account
+        </p>
+        <p className="text-white/40 text-sm mt-6 font-text">
+          Want the command palette, Spaces, and custom layouts?{" "}
+          <Link href="/pro" className="text-white/70 underline decoration-white/30 hover:text-white hover:decoration-white transition-colors">
+            Get Pro for {PRO_PRICE}
+          </Link>
         </p>
       </motion.div>
     </section>

@@ -7,6 +7,7 @@ import Link from "next/link"
 import { ArrowRightIcon } from "@phosphor-icons/react"
 
 const navLinks = [
+  { href: "/pro", label: "Pro" },
   { href: "/blog", label: "Blog" },
 ]
 
@@ -31,6 +32,7 @@ export default function Nav() {
   const [mobileOpen, setMobileOpen] = useState(false)
   const versionDisplay = LATEST_VERSION.split('.').slice(0, 2).join('.')
   const isHome = pathname === "/"
+  const links = isHome ? navLinks : [{ href: "/", label: "Home" }, ...navLinks]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10)
@@ -96,7 +98,7 @@ export default function Nav() {
             </Link>
 
             <div className="hidden md:flex items-center gap-6">
-              {navLinks.map((link) => (
+              {links.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -150,7 +152,7 @@ export default function Nav() {
             : "opacity-0 pointer-events-none"
         }`}
       >
-        {navLinks.map((link) => (
+        {links.map((link) => (
           <Link
             key={link.href}
             href={link.href}

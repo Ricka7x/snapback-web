@@ -7,7 +7,7 @@ import {  PlusIcon } from "@phosphor-icons/react"
 const faqs = [
   {
     q: "Is Snapback really free?",
-    a: "Yes, and it will stay that way. The core app is free forever. A Pro version is coming with power-user extras, but everything you need today is free and fully supported.",
+    a: "Yes, and it will stay that way. The core app is free forever, and everything free users have today stays free. Snapback Pro adds power-user extras like the command palette, Spaces, and custom layouts for a one-time $9.99 purchase. No subscription.",
   },
   {
     q: "Does it support macOS Spaces?",
