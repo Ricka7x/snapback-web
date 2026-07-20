@@ -4,10 +4,10 @@ export const metadata: Metadata = {
   title: "Snapback Privacy Policy: What We Collect and Why",
   description: "Read the Snapback privacy policy. The macOS app collects no personal data, and this page explains exactly what anonymous signals the app and website use.",
   alternates: {
-    canonical: "/privacy",
+    canonical: "/privacy/",
   },
   openGraph: {
-    url: "/privacy",
+    url: "/privacy/",
     title: "Snapback Privacy Policy: What We Collect and Why",
     description: "Read the Snapback privacy policy. The macOS app collects no personal data, and this page explains exactly what anonymous signals the app and website use.",
   },

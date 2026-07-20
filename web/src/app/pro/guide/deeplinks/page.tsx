@@ -7,9 +7,9 @@ const deeplinksDescription = "The full reference of supported apps and input for
 export const metadata: Metadata = {
   title: deeplinksTitle,
   description: deeplinksDescription,
-  alternates: { canonical: "/pro/guide/deeplinks" },
+  alternates: { canonical: "/pro/guide/deeplinks/" },
   openGraph: {
-    url: "/pro/guide/deeplinks",
+    url: "/pro/guide/deeplinks/",
     title: deeplinksTitle,
     description: deeplinksDescription,
   },

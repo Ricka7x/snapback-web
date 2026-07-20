@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   title: "Snapback Pro Guide: Palette, HUDs, Themes & Layouts",
   description: "Learn how to get the most out of Snapback Pro with step-by-step setup for the command palette, cycling HUDs, themes, deeplinks, smart launchers, and custom layouts.",
   alternates: {
-    canonical: "/pro/guide",
+    canonical: "/pro/guide/",
   },
   openGraph: {
-    url: "/pro/guide",
+    url: "/pro/guide/",
     title: "Snapback Pro Guide: Palette, HUDs, Themes & Layouts",
     description: "Learn how to get the most out of Snapback Pro with step-by-step setup for the command palette, cycling HUDs, themes, deeplinks, smart launchers, and custom layouts.",
   },

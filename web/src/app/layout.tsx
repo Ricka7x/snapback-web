@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist_Mono, Outfit, Instrument_Serif } from "next/font/google";
 import { SfProText } from "./fonts/text";
+import { LATEST_VERSION } from "@/lib/constants";
 
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Snapback | Mac Workspace Manager: Save & Restore Layouts",
     description: "Save your entire Mac window layout: apps, positions, displays. Restore everything in one keystroke. Free. macOS 14.2+.",
-    url: "https://snapbackapp.com",
+    url: "https://snapbackapp.com/",
     siteName: "Snapback",
     images: [
       {
@@ -78,9 +79,9 @@ export default function RootLayout({
                 operatingSystem: "macOS",
                 applicationCategory: "ProductivityApplication",
                 description: "Snapback saves and restores your entire Mac workspace: apps, window positions, and display assignments. One shortcut saves it. One shortcut restores it. Free. macOS 14.2+.",
-                url: "https://snapbackapp.com",
-                softwareVersion: "0.36.3",
-                downloadUrl: "https://snapbackapp.com",
+                url: "https://snapbackapp.com/",
+                softwareVersion: LATEST_VERSION,
+                downloadUrl: "https://snapbackapp.com/",
                 offers: {
                   "@type": "Offer",
                   price: "0",
@@ -91,7 +92,7 @@ export default function RootLayout({
                 "@context": "https://schema.org",
                 "@type": "Organization",
                 name: "Snapback",
-                url: "https://snapbackapp.com",
+                url: "https://snapbackapp.com/",
                 logo: "https://snapbackapp.com/assets/logo.svg",
                 sameAs: [
                   "https://x.com/snapbackapp_dev"

@@ -6,13 +6,13 @@ export const metadata: Metadata = {
   title: "Mac Window Management Tips & Updates | Snapback Blog",
   description: "Tips, updates, and practical guides on Mac window management, workspace organization, multi-monitor setups, and productivity from the Snapback team.",
   alternates: {
-    canonical: '/blog',
+    canonical: '/blog/',
     types: {
       "application/rss+xml": "https://snapbackapp.com/feed.xml",
     },
   },
   openGraph: {
-    url: "/blog",
+    url: "/blog/",
     title: "Mac Window Management Tips & Updates | Snapback Blog",
     description: "Tips, updates, and practical guides on Mac window management, workspace organization, multi-monitor setups, and productivity from the Snapback team.",
   },

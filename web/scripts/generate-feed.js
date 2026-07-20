@@ -44,7 +44,7 @@ const xml = `<?xml version="1.0" encoding="UTF-8"?>
   <channel>
     <title>Snapback Blog</title>
     <description>Tips, updates, and stories about Snapback for Mac.</description>
-    <link>${siteUrl}/blog</link>
+    <link>${siteUrl}/blog/</link>
     <language>en-us</language>
     <atom:link href="${siteUrl}/feed.xml" rel="self" type="application/rss+xml" />
 ${posts
@@ -52,8 +52,8 @@ ${posts
     (post) => `    <item>
       <title>${escapeXml(post.title)}</title>
       <description>${escapeXml(post.description)}</description>
-      <link>${siteUrl}/blog/${post.slug}</link>
-      <guid isPermaLink="true">${siteUrl}/blog/${post.slug}</guid>
+      <link>${siteUrl}/blog/${post.slug}/</link>
+      <guid isPermaLink="true">${siteUrl}/blog/${post.slug}/</guid>
       <pubDate>${new Date(post.date).toUTCString()}</pubDate>
     </item>`
   )

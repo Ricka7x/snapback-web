@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
 
-  const url = `https://snapbackapp.com/blog/${slug}`;
+  const url = `https://snapbackapp.com/blog/${slug}/`;
 
   return {
     title: `${post.title} | Snapback`,
@@ -68,7 +68,7 @@ export default async function BlogPost({ params }: Props) {
 
   const source = getMDXBySlug(slug);
   const readingTime = getReadingTime(slug);
-  const url = `https://snapbackapp.com/blog/${slug}`;
+  const url = `https://snapbackapp.com/blog/${slug}/`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -104,13 +104,13 @@ export default async function BlogPost({ params }: Props) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://snapbackapp.com",
+        item: "https://snapbackapp.com/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Blog",
-        item: "https://snapbackapp.com/blog",
+        item: "https://snapbackapp.com/blog/",
       },
       {
         "@type": "ListItem",

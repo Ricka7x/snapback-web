@@ -5,10 +5,10 @@ export const metadata: Metadata = {
   title: "Snapback Help Center: Setup, Shortcuts & Troubleshooting",
   description: "Get help with Snapback, including installation, workspaces, keyboard shortcuts, multi-display setups, troubleshooting, and answers to common questions.",
   alternates: {
-    canonical: "/help",
+    canonical: "/help/",
   },
   openGraph: {
-    url: "/help",
+    url: "/help/",
     title: "Snapback Help Center: Setup, Shortcuts & Troubleshooting",
     description: "Get help with Snapback, including installation, workspaces, keyboard shortcuts, multi-display setups, troubleshooting, and answers to common questions.",
   },

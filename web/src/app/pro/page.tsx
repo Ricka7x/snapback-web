@@ -13,10 +13,10 @@ export const metadata: Metadata = {
   title: proTitle,
   description: proDescription,
   alternates: {
-    canonical: "/pro",
+    canonical: "/pro/",
   },
   openGraph: {
-    url: "/pro",
+    url: "/pro/",
     title: proTitle,
     description: proDescription,
   },
@@ -28,7 +28,7 @@ const videoSchema = {
   "name": "Snapback Pro: Command Palette, Spaces, and Custom Layouts",
   "description": "A preview of Snapback Pro features: command palette, Spaces, custom layouts, and smart launchers for macOS window management.",
   "thumbnailUrl": "https://snapbackapp.com/assets/pro-poster.webp",
-  "uploadDate": "2026-05-17",
+  "uploadDate": "2026-05-17T00:00:00Z",
   "contentUrl": "https://snapbackapp.com/assets/pro.mp4",
   "embedUrl": "https://snapbackapp.com/assets/pro.mp4",
   "publisher": {
