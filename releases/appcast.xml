@@ -6,15 +6,14 @@
             <title>0.42.0</title>
             <pubDate>Thu, 23 Jul 2026 16:07:09 -0600</pubDate>
             <link>https://snapbackapp.com</link>
-            <sparkle:version>99</sparkle:version>
+            <sparkle:version>100</sparkle:version>
             <sparkle:shortVersionString>0.42.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>12.4</sparkle:minimumSystemVersion>
             <sparkle:releaseNotesLink>https://snapbackapp.com/releases/Snapback-0.42.0.html</sparkle:releaseNotesLink>
-            <enclosure url="https://snapbackapp.com/releases/Snapback-0.42.0.dmg" length="8262067" type="application/octet-stream" sparkle:edSignature="k2QyJy1DLxpvijeGPpw0rvN7smR1d+iV7Me2ZanOysU/wElUMsUBqhYWyPRFSt/cLCWQ7zF6q7606Kf+SNwgAQ=="/>
+            <enclosure url="https://snapbackapp.com/releases/Snapback-0.42.0.dmg" length="8264616" type="application/octet-stream" sparkle:edSignature="ty1bN8ddcw2eOpBo8OZjiUOkH6P1YUKEhZtaIsM9clk8n1/8kpD0iBl2er89P506NbqTVOzQbdVQy7/NcWhFBg=="/>
             <sparkle:deltas>
-                <enclosure url="https://snapbackapp.com/releases/Snapback99-98.delta" sparkle:deltaFrom="98" length="822022" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="Tk60FO5SfQt3BDYWKQYxSz7BdXyvbicst+40uuK1V6UdUtFJe/OVb+X4hQNOdWiQC5OiV+1AKp5Sd6D4sl6gBQ=="/>
-                <enclosure url="https://snapbackapp.com/releases/Snapback99-97.delta" sparkle:deltaFrom="97" length="822686" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="0qhuClG564d0Ao+ONdOn44MblI05Hl8xqg3Vcmw/u6ZQ8w6wDiknIBr+Y4fNGoOyGBT7a+QI4Kc5kbtoidmZBg=="/>
-                <enclosure url="https://snapbackapp.com/releases/Snapback99-96.delta" sparkle:deltaFrom="96" length="848286" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="VzETTxwWzLoDj/A1AmMcViSZb0XCdhJcp26pF5hiOQwGhcfISa0gwQcI5kJSoFRIXIzOKO8sfUvvPtTlw9ghDw=="/>
+                <enclosure url="https://snapbackapp.com/releases/Snapback100-98.delta" sparkle:deltaFrom="98" length="823238" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="BfKAA7mlobGLzDFunPQW/m1hm3j93quhEN/IfxoCt/w1aK8g8cK3IfB408eQv+p4n0ZsSXxkFqZHgqPGiAP2DA=="/>
+                <enclosure url="https://snapbackapp.com/releases/Snapback100-97.delta" sparkle:deltaFrom="97" length="825510" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="g0mgEvqA8P5Uk9QUDelp6a6QqcJ9wBzT4choE9n/TSsoS5NpuqTAX8o+jSVcBjvvcBgqCJfp2u957Jz4uBT2BA=="/>
             </sparkle:deltas>
         </item>
         <item>
