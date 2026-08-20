@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion"
 import { useRef, useState, useEffect } from "react"
 import { ArrowRightIcon } from "@phosphor-icons/react"
+import { trackEvent } from "@/lib/analytics"
 import { DOWNLOAD_URL } from "@/lib/constants"
 
 export default function Hero() {
@@ -68,6 +69,7 @@ export default function Hero() {
           <div>
             <motion.a
               href={DOWNLOAD_URL}
+              onClick={() => trackEvent("download_click", { location: "hero" })}
               style={{ x: springX, y: springY }}
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}

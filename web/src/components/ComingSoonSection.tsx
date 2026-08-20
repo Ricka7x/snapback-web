@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { TerminalIcon, KeyIcon, LightningIcon, XLogoIcon, LayoutIcon, LinkIcon, ArrowRightIcon, PaletteIcon, ArrowsOutSimpleIcon } from "@phosphor-icons/react"
 import Link from "next/link"
 import { PRO_AVAILABLE, PRO_PRICE } from "@/lib/constants"
+import { trackEvent } from "@/lib/analytics"
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -106,6 +107,7 @@ export default function ComingSoonSection() {
           >
             <Link
               href="/pro/"
+              onClick={() => trackEvent("pro_cta_click", { location: "coming_soon" })}
               className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full px-5 py-2.5 bg-accent text-white text-sm font-semibold hover:bg-accent-hover hover:shadow-[0_8px_30px_rgba(254,100,69,0.3)] transition-all"
             >
               {PRO_AVAILABLE ? `Get Pro for ${PRO_PRICE}` : "See everything in Pro"}

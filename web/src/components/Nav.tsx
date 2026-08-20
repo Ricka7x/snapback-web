@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation"
 import { DOWNLOAD_URL, LATEST_VERSION, DISCOUNT_SOLD_OUT, PRO_AVAILABLE } from "@/lib/constants"
 import Link from "next/link"
 import { ArrowRightIcon } from "@phosphor-icons/react"
+import { trackEvent } from "@/lib/analytics"
 
 const navLinks = [
   { href: "/pro", label: "Pro" },
@@ -55,6 +56,7 @@ export default function Nav() {
         {/* Pro announcement banner */}
         <Link
           href="/pro/"
+          onClick={() => trackEvent("pro_cta_click", { location: "nav_banner" })}
           className="flex items-center justify-center gap-2 bg-[#080808]/80 backdrop-blur-xl border-b border-accent/20 px-4 py-2 text-[12px] font-medium text-accent hover:bg-[#080808]/90 transition-colors group"
         >
           <span className="relative flex h-1.5 w-1.5 shrink-0">
@@ -118,6 +120,7 @@ export default function Nav() {
               ))}
               <a
                 href={DOWNLOAD_URL}
+                onClick={() => trackEvent("download_click", { location: "nav_desktop" })}
                 className="bg-primary text-white text-[13px] font-semibold px-4 py-1.5 rounded-xl hover:bg-primary-hover transition-colors"
               >
                 Download Free for Mac
@@ -176,7 +179,10 @@ export default function Nav() {
         ))}
         <a
           href={DOWNLOAD_URL}
-          onClick={() => setMobileOpen(false)}
+          onClick={() => {
+            trackEvent("download_click", { location: "nav_mobile" })
+            setMobileOpen(false)
+          }}
           className="mt-4 bg-primary text-white text-[15px] font-semibold px-8 py-3 rounded-xl hover:bg-primary-hover transition-colors"
         >
           Download Free for Mac

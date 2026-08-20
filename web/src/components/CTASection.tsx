@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import {  ArrowDownIcon } from "@phosphor-icons/react"
 import Link from "next/link"
 import { DOWNLOAD_URL, PRO_PRICE } from "@/lib/constants"
+import { trackEvent } from "@/lib/analytics"
 import Image from "next/image"
 import { getBlurDataURL } from "@/lib/assetPlaceholders"
 
@@ -51,6 +52,7 @@ export default function CTASection() {
         </p>
         <a
           href={DOWNLOAD_URL}
+          onClick={() => trackEvent("download_click", { location: "cta_section" })}
           className="bg-white text-[#080808] font-bold px-10 py-4 rounded-2xl hover:bg-primary hover:text-white transition-all duration-300 text-base inline-flex items-center gap-2.5"
         >
           Download Free for Mac
@@ -61,7 +63,7 @@ export default function CTASection() {
         </p>
         <p className="text-white/40 text-sm mt-6 font-text">
           Want the command palette, Spaces, and custom layouts?{" "}
-          <Link href="/pro/" className="text-white/70 underline decoration-white/30 hover:text-white hover:decoration-white transition-colors">
+          <Link href="/pro/" onClick={() => trackEvent("pro_cta_click", { location: "cta_section" })} className="text-white/70 underline decoration-white/30 hover:text-white hover:decoration-white transition-colors">
             Get Pro for {PRO_PRICE}
           </Link>
         </p>

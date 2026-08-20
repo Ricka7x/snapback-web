@@ -10,6 +10,7 @@ import {
   TagIcon,
 } from "@phosphor-icons/react"
 import { DISCOUNT_SOLD_OUT, PRO_AVAILABLE, PRO_PURCHASE_URL } from "@/lib/constants"
+import { trackEvent } from "@/lib/analytics"
 
 const LOOPS_FORM_ENDPOINT = "https://app.loops.so/api/newsletter-form/cmp35lqn404k40iym3d4cl21w"
 const DISCOUNT_DEADLINE = new Date("2026-06-08T00:00:00Z")
@@ -142,7 +143,12 @@ function EmailForm({ compact = false }: { compact?: boolean }) {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: `email=${encodeURIComponent(email)}&userGroup=${PRO_AVAILABLE ? "newsletter" : DISCOUNT_SOLD_OUT ? "waitlist" : "earlybird"}`,
       })
-      setStatus(res.ok ? "success" : "error")
+      if (res.ok) {
+        setStatus("success")
+        trackEvent("newsletter_signup", { location: "pro_page" })
+      } else {
+        setStatus("error")
+      }
     } catch {
       setStatus("error")
     }
@@ -220,6 +226,7 @@ function HeroCTA() {
         {/* Buy button */}
         <a
           href={PRO_PURCHASE_URL}
+          onClick={() => trackEvent("pro_purchase_click", { location: "pro_page_top" })}
           className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-8 py-4 rounded-xl text-base hover:bg-accent-hover hover:shadow-[0_8px_30px_rgba(254,100,69,0.3)] transition-all"
         >
           Get Snapback Pro
@@ -285,6 +292,7 @@ function BottomCTA() {
             <motion.div variants={fadeUp} className="flex flex-col items-center gap-3">
               <a
                 href={PRO_PURCHASE_URL}
+                onClick={() => trackEvent("pro_purchase_click", { location: "pro_page_bottom" })}
                 className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-8 py-4 rounded-xl text-base hover:bg-accent-hover hover:shadow-[0_8px_30px_rgba(254,100,69,0.3)] transition-all"
               >
                 Buy for {proPrice}
