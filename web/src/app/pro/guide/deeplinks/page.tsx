@@ -200,7 +200,7 @@ export default function DeeplinksGuidePage() {
     <div className="max-w-3xl mx-auto py-40 md:py-32 px-6">
       <div className="mb-16">
         <Link
-          href="/pro/guide"
+          href="/pro/guide/"
           className="inline-flex items-center gap-1.5 text-zinc-500 text-sm hover:text-zinc-300 transition-colors mb-8"
         >
           ← Pro Guide

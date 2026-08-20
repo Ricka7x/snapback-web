@@ -115,7 +115,7 @@ export default function ProGuidePage() {
     <div className="max-w-3xl mx-auto py-40 md:py-32 px-6">
       <div className="mb-16">
         <Link
-          href="/pro"
+          href="/pro/"
           className="inline-flex items-center gap-1.5 text-zinc-500 text-sm hover:text-zinc-300 transition-colors mb-8"
         >
           ← Snapback Pro
@@ -180,7 +180,7 @@ export default function ProGuidePage() {
             Contact support
           </a>{" "}
           or visit the{" "}
-          <Link href="/help" className="text-primary hover:underline">
+          <Link href="/help/" className="text-primary hover:underline">
             Help Center
           </Link>
           .

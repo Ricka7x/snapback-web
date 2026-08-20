@@ -20,16 +20,16 @@ export default function Footer() {
 
           {/* Links */}
           <div className="flex items-center gap-6">
-            <Link href="/blog" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
+            <Link href="/blog/" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
               Blog
             </Link>
-            <Link href="/help" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
+            <Link href="/help/" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
               Help
             </Link>
-            <Link href="/privacy" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
+            <Link href="/privacy/" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
               Privacy
             </Link>
-            <Link href="/terms" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
+            <Link href="/terms/" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
               Terms
             </Link>
             {/* open in new page */}

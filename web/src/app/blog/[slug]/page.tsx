@@ -179,7 +179,7 @@ export default async function BlogPost({ params }: Props) {
           <nav className="flex items-center gap-2 text-sm text-white/40 mb-8" aria-label="Breadcrumb">
             <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             <span>/</span>
-            <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
+            <Link href="/blog/" className="hover:text-primary transition-colors">Blog</Link>
             <span>/</span>
             <span className="text-white/60 truncate">{post.title}</span>
           </nav>
@@ -226,7 +226,7 @@ export default async function BlogPost({ params }: Props) {
                 {relatedPosts.map((related) => (
                   <Link
                     key={related.slug}
-                    href={`/blog/${related.slug}`}
+                    href={`/blog/${related.slug}/`}
                     className="block group"
                   >
                     <h3 className="font-display text-lg tracking-tight group-hover:text-primary transition-colors">

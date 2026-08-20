@@ -105,7 +105,7 @@ export default function ComingSoonSection() {
             className="flex flex-col items-start gap-3 pt-8 border-t border-white/6 sm:flex-row sm:items-center sm:gap-5"
           >
             <Link
-              href="/pro"
+              href="/pro/"
               className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-full px-5 py-2.5 bg-accent text-white text-sm font-semibold hover:bg-accent-hover hover:shadow-[0_8px_30px_rgba(254,100,69,0.3)] transition-all"
             >
               {PRO_AVAILABLE ? `Get Pro for ${PRO_PRICE}` : "See everything in Pro"}

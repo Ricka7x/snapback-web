@@ -40,7 +40,7 @@ export default function BlogIndex() {
                 const readingTime = getReadingTime(post.slug);
                 return (
                   <article key={post.slug} className="group">
-                    <Link href={`/blog/${post.slug}`} className="block no-underline">
+                    <Link href={`/blog/${post.slug}/`} className="block no-underline">
                       <div className="flex items-center gap-3 mb-3">
                         <time className="text-white/30 text-sm font-mono">
                           {new Date(post.date).toLocaleDateString("en-US", {

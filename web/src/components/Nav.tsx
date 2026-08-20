@@ -54,7 +54,7 @@ export default function Nav() {
       <div className="fixed top-0 left-0 right-0 z-100">
         {/* Pro announcement banner */}
         <Link
-          href="/pro"
+          href="/pro/"
           className="flex items-center justify-center gap-2 bg-[#080808]/80 backdrop-blur-xl border-b border-accent/20 px-4 py-2 text-[12px] font-medium text-accent hover:bg-[#080808]/90 transition-colors group"
         >
           <span className="relative flex h-1.5 w-1.5 shrink-0">

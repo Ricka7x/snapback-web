@@ -61,7 +61,7 @@ export default function CTASection() {
         </p>
         <p className="text-white/40 text-sm mt-6 font-text">
           Want the command palette, Spaces, and custom layouts?{" "}
-          <Link href="/pro" className="text-white/70 underline decoration-white/30 hover:text-white hover:decoration-white transition-colors">
+          <Link href="/pro/" className="text-white/70 underline decoration-white/30 hover:text-white hover:decoration-white transition-colors">
             Get Pro for {PRO_PRICE}
           </Link>
         </p>
