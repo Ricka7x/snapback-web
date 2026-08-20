@@ -14,6 +14,11 @@ const mdxComponents = {
   ImagePlaceholder,
 };
 
+const COMPARISON_POSTS = [
+  { slug: "best-mac-window-managers", pitch: "See how Snapback compares to Rectangle, Magnet, and the rest" },
+  { slug: "snapback-vs-rectangle", pitch: "Already using Rectangle? Here's exactly what's different" },
+] as const;
+
 type Props = {
   params: Promise<{ slug: string }>;
 };
@@ -128,6 +133,11 @@ export default async function BlogPost({ params }: Props) {
     ? otherPosts
     : Array.from({ length: 3 }, (_, i) => otherPosts[(currentIndex + i) % otherPosts.length]);
 
+  const comparisonLinks = COMPARISON_POSTS
+    .filter((c) => c.slug !== slug)
+    .map((c) => ({ ...c, post: publishedPosts.find((p) => p.slug === c.slug) }))
+    .filter((c): c is typeof c & { post: NonNullable<typeof c.post> } => Boolean(c.post));
+
   const videoRefs = [...source.matchAll(/src="([^"]+)"/g)]
     .map((m) => m[1])
     .filter((src) => src.endsWith(".mp4") || src.endsWith(".webm"));
@@ -218,6 +228,26 @@ export default async function BlogPost({ params }: Props) {
 
             <MDXRemote source={source} components={mdxComponents} options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }} />
           </div>
+
+          {comparisonLinks.length > 0 && (
+            <div className="mt-16 rounded-2xl border border-primary/20 bg-primary/5 p-6">
+              <h2 className="font-display text-lg tracking-tight mb-4">Still deciding on a window manager?</h2>
+              <div className="space-y-3">
+                {comparisonLinks.map(({ post, pitch }) => (
+                  <Link
+                    key={post.slug}
+                    href={`/blog/${post.slug}/`}
+                    className="block group"
+                  >
+                    <span className="text-primary text-sm font-medium group-hover:underline">
+                      {post.title}
+                    </span>
+                    <p className="text-white/50 text-sm mt-0.5">{pitch}</p>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          )}
 
           {relatedPosts.length > 0 && (
             <div className="divider mt-16 pt-12">
