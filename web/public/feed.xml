@@ -8,63 +8,63 @@
     <atom:link href="https://snapbackapp.com/feed.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>10 Must-Have Mac Apps in 2026</title>
-      <description>The 10 must-have Mac apps I install on every new Mac in 2026. Launchers, window management, screen recording, menu bar cleanup, and the small utilities that make macOS feel complete.</description>
+      <description>The 10 must-have Mac apps I install on every new Mac: launchers, window management, screen recording, menu bar cleanup, and other small essentials.</description>
       <link>https://snapbackapp.com/blog/must-have-mac-apps/</link>
       <guid isPermaLink="true">https://snapbackapp.com/blog/must-have-mac-apps/</guid>
       <pubDate>Thu, 16 Jul 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>How to Manage Multiple Monitors on Mac</title>
-      <description>Everything you need to know about using multiple monitors with your Mac. Covers display setup, window management across screens, common problems, and how to keep your layout consistent when monitors change.</description>
+      <description>Everything you need to know about using multiple monitors with your Mac: display setup, window management across screens, and common problems solved.</description>
       <link>https://snapbackapp.com/blog/manage-multiple-monitors-on-mac/</link>
       <guid isPermaLink="true">https://snapbackapp.com/blog/manage-multiple-monitors-on-mac/</guid>
       <pubDate>Wed, 10 Jun 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
-      <title>Mac Window Snapping Shortcuts: A Complete Guide</title>
-      <description>Every keyboard shortcut and drag gesture for snapping windows on Mac. Covers built-in macOS options, third-party tools, and how to customize shortcuts for your workflow.</description>
+      <title>Mac Window Snapping Shortcuts (Complete Guide)</title>
+      <description>Every keyboard shortcut for snapping windows on Mac. Built-in macOS tiling, third-party tools, and how to set up custom shortcuts for your workflow.</description>
       <link>https://snapbackapp.com/blog/mac-window-snapping-shortcuts-guide/</link>
       <guid isPermaLink="true">https://snapbackapp.com/blog/mac-window-snapping-shortcuts-guide/</guid>
       <pubDate>Sun, 07 Jun 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Restore Mac Windows After Unplugging a Monitor</title>
-      <description>Disconnecting a monitor scrambles your Mac window layout. Here is why it happens, how macOS handles it, and how to get your windows back to the right displays automatically.</description>
+      <description>Disconnecting a monitor scrambles your Mac window layout. Here is why it happens and how to get your windows back to the right displays automatically.</description>
       <link>https://snapbackapp.com/blog/restore-mac-window-layout-disconnecting-monitor/</link>
       <guid isPermaLink="true">https://snapbackapp.com/blog/restore-mac-window-layout-disconnecting-monitor/</guid>
       <pubDate>Thu, 04 Jun 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Organize Mac Windows for Software Development</title>
-      <description>A practical guide to organizing your Mac window layout for software development. Covers IDE placement, terminal positioning, multi-monitor setups, and how to save your dev workspace for instant restoration.</description>
+      <description>A practical guide to organizing your Mac windows for software development: IDE placement, terminal positioning, multi-monitor setups, and more.</description>
       <link>https://snapbackapp.com/blog/organize-mac-windows-for-development/</link>
       <guid isPermaLink="true">https://snapbackapp.com/blog/organize-mac-windows-for-development/</guid>
       <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Snapback vs Rectangle: What Is the Difference?</title>
-      <description>Rectangle snaps windows. Snapback remembers them. Here is a detailed comparison of Snapback and Rectangle for Mac window management, including features, workflows, and when to use each.</description>
+      <description>Rectangle snaps windows. Snapback remembers them. A detailed comparison covering features, workflows, and when to use each for Mac window management.</description>
       <link>https://snapbackapp.com/blog/snapback-vs-rectangle/</link>
       <guid isPermaLink="true">https://snapbackapp.com/blog/snapback-vs-rectangle/</guid>
       <pubDate>Wed, 27 May 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Best Mac Window Managers in 2026, Compared</title>
-      <description>A hands-on comparison of the best Mac window managers in 2026. Covers Rectangle, Magnet, BetterTouchTool, Amethyst, yabai, and Snapback. Which one fits your workflow?</description>
+      <description>A hands-on comparison of the top Mac window managers: Rectangle, Magnet, BetterTouchTool, Amethyst, yabai, and Snapback. Which one fits your workflow?</description>
       <link>https://snapbackapp.com/blog/best-mac-window-managers/</link>
       <guid isPermaLink="true">https://snapbackapp.com/blog/best-mac-window-managers/</guid>
       <pubDate>Fri, 22 May 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Why Snapback Has a Free and a Pro Version</title>
-      <description>Snapback&apos;s core window management features are and always will be free. Here is what Pro adds, why the split exists, and how to decide which version is right for you.</description>
+      <description>Snapback&apos;s core window management is free, always. Here is what Pro adds, why the split exists, and how to pick the right version for you.</description>
       <link>https://snapbackapp.com/blog/free-vs-pro/</link>
       <guid isPermaLink="true">https://snapbackapp.com/blog/free-vs-pro/</guid>
       <pubDate>Sun, 17 May 2026 00:00:00 GMT</pubDate>
     </item>
     <item>
       <title>Introducing Snapback: Manage Windows on Mac</title>
-      <description>Snapback is a free macOS window manager that saves and restores your entire workspace layout with one keystroke. Window snapping, multi-display support, and unlimited workspaces. No account needed.</description>
+      <description>Snapback is a free macOS window manager that saves and restores your entire workspace layout with one keystroke. Multi-display support. No account needed.</description>
       <link>https://snapbackapp.com/blog/introducing-snapback/</link>
       <guid isPermaLink="true">https://snapbackapp.com/blog/introducing-snapback/</guid>
       <pubDate>Tue, 12 May 2026 00:00:00 GMT</pubDate>

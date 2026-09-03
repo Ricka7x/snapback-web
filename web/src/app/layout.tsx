@@ -30,7 +30,6 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://snapbackapp.com"),
   title: "Snapback | Mac Workspace Manager: Save & Restore Layouts",
   description: "Snapback saves your entire Mac window layout: apps, positions, displays. Restores everything in one keystroke. Free. macOS 14.2+. No account needed.",
-  keywords: ["macOS", "mac window manager", "workspace switcher mac", "window manager", "workspace restoration", "restore window layout macos", "productivity", "mac apps", "window snapping", "rectangle mac alternative"],
   authors: [{ name: "Snapback Team" }],
   openGraph: {
     title: "Snapback | Mac Workspace Manager: Save & Restore Layouts",
