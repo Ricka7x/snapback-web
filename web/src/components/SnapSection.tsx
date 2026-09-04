@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import { ArrowsOutIcon } from "@phosphor-icons/react"
 import Image from "next/image"
+import Link from "next/link"
 import { getBlurDataURL } from "@/lib/assetPlaceholders"
 
 const SNAP_IMAGE_SRC = "/assets/snaps.webp"
@@ -63,6 +64,14 @@ export default function SnapSection() {
             >
               Halves, thirds, quarters. Every split has a shortcut. Resize and position without touching the trackpad.
             </motion.p>
+            <motion.div variants={fadeUp} className="mt-6">
+              <Link
+                href="/blog/mac-window-snapping-shortcuts-guide/"
+                className="text-white/70 text-sm underline decoration-white/30 hover:decoration-white hover:text-white transition-colors"
+              >
+                See every shortcut
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
 

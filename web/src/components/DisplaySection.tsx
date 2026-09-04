@@ -4,6 +4,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import { MonitorIcon } from "@phosphor-icons/react"
 import Image from "next/image"
+import Link from "next/link"
 import { getBlurDataURL } from "@/lib/assetPlaceholders"
 
 const DISPLAY_IMAGE_SRC = "/assets/save.webp"
@@ -62,6 +63,14 @@ export default function DisplaySection() {
           >
             Connect or disconnect a monitor and Snapback adapts on its own. Every window lands on the right screen, and nothing piles up on your laptop display.
           </motion.p>
+          <motion.div variants={fadeUp} className="mt-6">
+            <Link
+              href="/blog/manage-multiple-monitors-on-mac/"
+              className="text-white/70 text-sm underline decoration-white/30 hover:decoration-white hover:text-white transition-colors"
+            >
+              Read the multi-monitor guide
+            </Link>
+          </motion.div>
         </motion.div>
       </div>
     </section>
