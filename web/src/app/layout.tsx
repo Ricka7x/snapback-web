@@ -70,34 +70,35 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              {
-                "@context": "https://schema.org",
-                "@type": "SoftwareApplication",
-                name: "Snapback",
-                operatingSystem: "macOS",
-                applicationCategory: "ProductivityApplication",
-                description: "Snapback saves and restores your entire Mac workspace: apps, window positions, and display assignments. One shortcut saves it. One shortcut restores it. Free. macOS 14.2+.",
-                url: "https://snapbackapp.com/",
-                softwareVersion: LATEST_VERSION,
-                downloadUrl: "https://snapbackapp.com/",
-                offers: {
-                  "@type": "Offer",
-                  price: "0",
-                  priceCurrency: "USD"
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "SoftwareApplication",
+                  name: "Snapback",
+                  operatingSystem: "macOS",
+                  applicationCategory: "ProductivityApplication",
+                  description: "Snapback saves and restores your entire Mac workspace: apps, window positions, and display assignments. One shortcut saves it. One shortcut restores it. Free. macOS 14.2+.",
+                  url: "https://snapbackapp.com/",
+                  softwareVersion: LATEST_VERSION,
+                  downloadUrl: "https://snapbackapp.com/",
+                  offers: {
+                    "@type": "Offer",
+                    price: "0",
+                    priceCurrency: "USD"
+                  }
+                },
+                {
+                  "@type": "Organization",
+                  name: "Snapback",
+                  url: "https://snapbackapp.com/",
+                  logo: "https://snapbackapp.com/assets/logo.svg",
+                  sameAs: [
+                    "https://x.com/snapbackapp_dev"
+                  ]
                 }
-              },
-              {
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                name: "Snapback",
-                url: "https://snapbackapp.com/",
-                logo: "https://snapbackapp.com/assets/logo.svg",
-                sameAs: [
-                  "https://x.com/snapbackapp_dev"
-                ]
-              }
-            ])
+              ]
+            })
           }}
         />
       </head>

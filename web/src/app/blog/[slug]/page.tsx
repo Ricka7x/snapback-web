@@ -147,7 +147,6 @@ export default async function BlogPost({ params }: Props) {
   const videoSchemas = uniqueVideoSrcs.map((src) => {
     const posterSrc = src.replace(/\.(mp4|webm)$/, "-poster.webp");
     return {
-      "@context": "https://schema.org",
       "@type": "VideoObject",
       "name": post.title,
       "description": post.description,
@@ -180,7 +179,12 @@ export default async function BlogPost({ params }: Props) {
       {videoSchemas.length > 0 && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchemas) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": videoSchemas,
+            }),
+          }}
         />
       )}
 
