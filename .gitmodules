@@ -1,3 +1,6 @@
 [submodule "scripts"]
 	path = scripts
 	url = https://github.com/Ricka7x/macos-release-tools.git
+[submodule "ops"]
+	path = ops
+	url = https://github.com/Ricka7x/studio-ops.git
