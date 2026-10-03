@@ -53,6 +53,16 @@ DOWNLOAD_URL_PREFIX="$WEBSITE_URL/releases"
 # Sparkle configuration file (optional EdDSA key)
 SPARKLE_ED_KEY_FILE="${SPARKLE_ED_KEY_FILE:-}"
 
+# Snapback's public EdDSA key (from Sparkle's generate_keys tool), injected
+# into Info.plist's SUPublicEDKey during notarization. Previously hardcoded
+# into the shared build-and-release.sh script; moved here so each app owns
+# its own key explicitly.
+SPARKLE_ED_PUBLIC_KEY="${SPARKLE_ED_PUBLIC_KEY:-1btXa+HGNXBso5RoX1qjX2lltfdpXbryUma3dw6+/O4=}"
+
+# Keychain account name for Snapback's Sparkle private key. This is Sparkle's
+# own default account name, kept explicit so it's not an implicit fallback.
+SPARKLE_ACCOUNT="${SPARKLE_ACCOUNT:-ed25519}"
+
 # ============================================================================
 # BUILD SETTINGS
 # ============================================================================
