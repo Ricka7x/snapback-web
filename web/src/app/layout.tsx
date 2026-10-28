@@ -5,9 +5,8 @@ import { LATEST_VERSION } from "@/lib/constants";
 
 import Footer from "../components/Footer";
 import Nav from "../components/Nav";
-import ClarityAnalytics from "../components/ClarityAnalytics";
+import { AnalyticsConsent } from "../components/AnalyticsConsent";
 import "./globals.css";
-import Script from "next/script";
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -114,20 +113,8 @@ export default function RootLayout({
           Skip to content
         </a>
         <Nav />
-        <ClarityAnalytics />
+        <AnalyticsConsent />
         <main id="main">{children}</main>
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-64SYNLKRVQ"
-          strategy="afterInteractive"
-        />
-        <Script id="ga-script" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-64SYNLKRVQ');
-          `}
-        </Script>
         <Footer />
       </body>
     </html>

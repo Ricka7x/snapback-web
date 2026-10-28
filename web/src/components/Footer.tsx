@@ -1,3 +1,4 @@
+import { CookieSettingsButton } from "./AnalyticsConsent"
 import Link from "next/link";
 
 const FOUNDED_YEAR = 2024
@@ -32,6 +33,13 @@ export default function Footer() {
             <Link href="/terms/" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
               Terms
             </Link>
+            <Link href="/refunds/" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
+              Refunds
+            </Link>
+            <Link href="/cookies/" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
+              Cookies
+            </Link>
+            <CookieSettingsButton className="text-zinc-400 text-sm hover:text-white/80 transition-colors" />
             {/* open in new page */}
             <a href="mailto:support@snapbackapp.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
               Contact
