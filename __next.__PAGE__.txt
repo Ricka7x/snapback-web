@@ -1,0 +1,39 @@
+2:"$Sreact.fragment"
+b:"/_next/static/chunks/43h6zu_te_z9z.js"
+c:"ViewportBoundary"
+d:I[97367,["$b"],"$c"]
+e:"MetadataBoundary"
+f:I[97367,["$b"],"$e"]
+10:"$Sreact.suspense"
+11:I[27201,["$b"],"IconMark"]
+:HL["/assets/restore-poster.webp","image",{"fetchPriority":"high"}]
+3:T806,{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Snapback really free?","acceptedAnswer":{"@type":"Answer","text":"Yes, and it will stay that way. The core app is free forever. A Pro version is coming with power-user extras, but everything you need today is free and fully supported."}},{"@type":"Question","name":"Does it support macOS Spaces?","acceptedAnswer":{"@type":"Answer","text":"Snapback doesn't integrate with macOS Spaces directly. Apple doesn't offer a stable public API for them. Instead, it restores window positions and arrangements, giving you the same result without the fragility. This keeps restores predictable and reliable across multi-monitor setups."}},{"@type":"Question","name":"Does it work with multiple monitors?","acceptedAnswer":{"@type":"Answer","text":"Yes. Workspaces capture window positions across all connected displays."}},{"@type":"Question","name":"What if I swap or rotate a display?","acceptedAnswer":{"@type":"Answer","text":"Snapback detects the change and recalculates automatically."}},{"@type":"Question","name":"What happens if I disconnect a display entirely?","acceptedAnswer":{"@type":"Answer","text":"Windows saved on a missing display are skipped, so nothing piles up on your remaining screen. If your whole workspace was saved on one display, it restores on whatever screen is available."}},{"@type":"Question","name":"What happens if an app in my workspace is closed?","acceptedAnswer":{"@type":"Answer","text":"Snapback reopens it. Automatically. You don't have to do anything."}},{"@type":"Question","name":"Will it work after a macOS update?","acceptedAnswer":{"@type":"Answer","text":"Snapback targets macOS 14.2+ and is actively maintained."}},{"@type":"Question","name":"Does it run in the background?","acceptedAnswer":{"@type":"Answer","text":"Yes. Menu bar, minimal resources."}},{"@type":"Question","name":"Can I use it alongside Rectangle or Magnet?","acceptedAnswer":{"@type":"Answer","text":"Yes. They work together without conflicts."}}]}4:T4e4,{"@context":"https://schema.org","@graph":[{"@type":"VideoObject","name":"Snapback: Restore Your Mac Workspace in One Keystroke","description":"Watch Snapback restore an entire Mac workspace layout — every app, every window position, every display — with a single keyboard shortcut.","thumbnailUrl":"https://snapbackapp.com/assets/restore-poster.webp","uploadDate":"2026-05-12T00:00:00Z","contentUrl":"https://snapbackapp.com/assets/restore.mp4","embedUrl":"https://snapbackapp.com/assets/restore.mp4","publisher":{"@type":"Organization","name":"Snapback","logo":{"@type":"ImageObject","url":"https://snapbackapp.com/assets/logo.svg"}}},{"@type":"VideoObject","name":"How Snapback Workspaces Work: Save, Restore, Switch","description":"A quick walkthrough of the three-step Snapback workflow: arrange your windows once, save as a workspace, and restore instantly anytime.","thumbnailUrl":"https://snapbackapp.com/assets/snapback-steps-poster.webp","uploadDate":"2026-05-12T00:00:00Z","contentUrl":"https://snapbackapp.com/assets/snapback-steps.mp4","embedUrl":"https://snapbackapp.com/assets/snapback-steps.mp4","publisher":{"@type":"Organization","name":"Snapback","logo":{"@type":"ImageObject","url":"https://snapbackapp.com/assets/logo.svg"}}}]}a:X
+1:[["children",{"s":"__PAGE__","h":128,"d":{"r":["$","$2","c",{"children":[["$","div",null,{"className":"min-h-screen bg-zinc-50 font-sans","children":[["$","link",null,{"rel":"preload","href":"/assets/restore-poster.webp","as":"image","fetchPriority":"high"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$3"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$4"}}],"$L5"]}],["$L6","$L7"],"$L8"]}],"p":"$@9","v":null,"s":"$a"}}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$Ld",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$Lf",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$10",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Snapback | Mac Workspace Manager: Save & Restore Layouts"}],["$","meta","1",{"name":"description","content":"Snapback saves your entire Mac window layout: apps, positions, displays. Restores everything in one keystroke. Free. macOS 14.2+. No account needed."}],["$","meta","2",{"name":"author","content":"Snapback Team"}],["$","link","3",{"rel":"canonical","href":"https://snapbackapp.com/"}],["$","meta","4",{"property":"og:title","content":"Snapback | Mac Workspace Manager: Save & Restore Layouts"}],["$","meta","5",{"property":"og:description","content":"Save your entire Mac window layout: apps, positions, displays. Restore everything in one keystroke. Free. macOS 14.2+."}],["$","meta","6",{"property":"og:url","content":"https://snapbackapp.com/"}],["$","meta","7",{"property":"og:site_name","content":"Snapback"}],["$","meta","8",{"property":"og:locale","content":"en_US"}],["$","meta","9",{"property":"og:image","content":"https://snapbackapp.com/assets/og-image.webp"}],["$","meta","10",{"property":"og:image:width","content":"1200"}],["$","meta","11",{"property":"og:image:height","content":"630"}],["$","meta","12",{"property":"og:image:alt","content":"Snapback Mac Workspace Manager"}],["$","meta","13",{"property":"og:type","content":"website"}],["$","meta","14",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","15",{"name":"twitter:title","content":"Snapback | Mac Workspace Manager: Save & Restore Layouts"}],["$","meta","16",{"name":"twitter:description","content":"Save and restore your entire Mac window layout in one keystroke. Free. macOS 14.2+."}],["$","meta","17",{"name":"twitter:image","content":"https://snapbackapp.com/assets/og-image.webp"}],["$","link","18",{"rel":"icon","href":"/favicon.ico?favicon.3ufgjzru9jvts.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L11","19",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@12","v":null,"s":"$a"}},"a":"$@13","u":"$@14","b":"d2er_mH3X1l-7MdXqZxIA"}
+15:"/_next/static/chunks/107wgog8f6ufy.js"
+16:"/_next/static/chunks/08w02ptk466dk.js"
+17:I[32177,["$b","$15","$16"],"default"]
+18:I[32413,["$b","$15","$16"],"default"]
+19:I[80598,["$b","$15","$16"],"default"]
+1a:I[91437,["$b","$15","$16"],"default"]
+1b:I[68139,["$b","$15","$16"],"default"]
+1c:I[87744,["$b","$15","$16"],"default"]
+1d:I[35217,["$b","$15","$16"],"default"]
+1e:I[65061,["$b","$15","$16"],"default"]
+1f:I[70559,["$b","$15","$16"],"default"]
+20:I[82852,["$b","$15","$16"],"default"]
+21:I[58170,["$b","$15","$16"],"default"]
+22:I[43944,["$b","$15","$16"],"default"]
+23:I[31213,["$b","$15","$16"],"default"]
+24:I[97367,["$b"],"OutletBoundary"]
+5:[["$","$L17",null,{}],["$","$L18",null,{}],["$","div",null,{"id":"how-it-works","children":["$","$L19",null,{}]}],["$","div",null,{"id":"features","children":[["$","$L1a",null,{}],["$","$L1b",null,{}],["$","$L1c",null,{}],["$","$L1d",null,{}],["$","$L1e",null,{}]]}],["$","$L1f",null,{}],["$","$L20",null,{}],["$","div",null,{"id":"compare","children":["$","$L21",null,{}]}],["$","div",null,{"id":"faq","children":["$","$L22",null,{}]}],["$","$L23",null,{}]]
+6:["$","script","script-0",{"src":"/_next/static/chunks/107wgog8f6ufy.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/08w02ptk466dk.js","async":true}]
+8:["$","$L24",null,{"children":["$","$10",null,{"name":"Next.MetadataOutlet","children":"$@25"}]}]
+14:true
+25:null
+a:300
+a:C
+13:0
+12:"$undefined"
+9:"$undefined"

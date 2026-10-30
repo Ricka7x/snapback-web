@@ -1,0 +1,42 @@
+# Snapback
+
+> Your Mac workspace, back in a snap.
+
+Snapback is a macOS utility that saves and restores your entire workspace with a single shortcut. Every open app, every window position, every display — captured and restored instantly. Switch between dev mode, design mode, and meeting mode in seconds.
+
+## Core Features
+
+- **Workspaces**: Save your full layout (all open apps, window positions, display assignments) with one shortcut. Restore it with one shortcut. Even after closing apps, restarting, or disconnecting monitors.
+- **Window Snapping**: Snap any window into position via keyboard shortcuts. Halves, thirds, quarters. No mouse required.
+- **Drag to Snap**: Hold ⌘, drag to any edge or corner. Window snaps into place.
+- **Instant Layouts**: One shortcut arranges every open app into halves, thirds, or full screen. No dragging. No resizing.
+- **Multi-Display Aware**: Each window remembers which display it belongs on. Plug in a monitor and windows go where they belong. Disconnect one and Snapback skips those windows without piling everything onto your laptop screen.
+- **Menu Bar App**: Lives in your menu bar. Out of your way until you need it. One click or one keystroke.
+- **Keyboard-First**: Every action has a shortcut. Every shortcut is customizable.
+
+## Pricing
+
+- **Free**: Core app is free forever. No account required.
+- **Pro (Coming Soon)**: Command palette, spaces, global shortcuts, and custom layouts. Free users keep everything they have now.
+
+## Comparison
+
+Most window managers move windows around. Snapback remembers them. Save your full layout and restore it anytime, across every app, every position, every display. Already using Rectangle or Magnet? Snapback works alongside them without conflicts.
+
+## Common Workflows
+
+- **Software Development**: Restore your IDE, terminal, API client, and browser in one keystroke.
+- **Design & Creative**: Switch between design and code without rearranging windows.
+- **Deep Work**: Snap into a distraction-free environment with essential apps front and center.
+
+## Platform & Availability
+
+- **macOS 14.2+** (Apple Silicon native)
+- **Website**: [snapbackapp.com](https://snapbackapp.com)
+- **Download**: [Download free](https://snapbackapp.com)
+- **Pro (coming soon)**: [Snapback Pro](https://snapbackapp.com/pro)
+- **Blog**: [Snapback Blog](https://snapbackapp.com/blog)
+- **Help**: [Help & Support](https://snapbackapp.com/help)
+- **Privacy Policy**: [Privacy Policy](https://snapbackapp.com/privacy)
+- **Terms of Service**: [Terms of Service](https://snapbackapp.com/terms)
+- **Support**: [support@snapbackapp.com](mailto:support@snapbackapp.com)

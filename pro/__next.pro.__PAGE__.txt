@@ -1,0 +1,28 @@
+2:"$Sreact.fragment"
+3:"/_next/static/chunks/43h6zu_te_z9z.js"
+4:I[39756,["$3"],"default"]
+5:I[37457,["$3"],"default"]
+a:"/_next/static/chunks/1x3i-q5za9wyv.js"
+b:"/_next/static/chunks/08w02ptk466dk.js"
+c:I[96818,["$3","$a","$b"],"default"]
+d:I[97367,["$3"],"OutletBoundary"]
+e:"$Sreact.suspense"
+11:"ViewportBoundary"
+12:I[97367,["$3"],"$11"]
+13:"MetadataBoundary"
+14:I[97367,["$3"],"$13"]
+15:I[27201,["$3"],"IconMark"]
+7:X
+7:C
+8:X
+9:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@type\":\"VideoObject\",\"name\":\"Snapback Pro: Command Palette, Spaces, and Custom Layouts\",\"description\":\"A preview of Snapback Pro features: command palette, Spaces, custom layouts, and smart launchers for macOS window management.\",\"thumbnailUrl\":\"https://snapbackapp.com/assets/pro-poster.webp\",\"uploadDate\":\"2026-05-17T00:00:00Z\",\"contentUrl\":\"https://snapbackapp.com/assets/pro.mp4\",\"embedUrl\":\"https://snapbackapp.com/assets/pro.mp4\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"Snapback\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://snapbackapp.com/assets/logo.svg\"}}}"}}],["$","$Lc",null,{}]],[["$","script","script-0",{"src":"/_next/static/chunks/1x3i-q5za9wyv.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/08w02ptk466dk.js","async":true}]],["$","$Ld",null,{"children":["$","$e",null,{"name":"Next.MetadataOutlet","children":"$@f"}]}]]}],"p":"$@10","v":null,"s":"$8"}}]]
+1:[["children",{"s":"pro","h":64,"d":{"r":["$","$2","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","template":["$","$L5",null,{}]}]]}],"p":"$@6","v":"$7","s":"$8"},"c":"$Q9"}]]
+0:{"t":{"t":{"s":"","h":16,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L12",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L14",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$e",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Snapback Pro: Command Palette, Spaces & Custom Layouts"}],["$","meta","1",{"name":"description","content":"Snapback Pro adds a command palette, Spaces, custom layouts, and smart launchers to the free Mac window manager. One-time purchase, yours forever."}],["$","meta","2",{"name":"author","content":"Snapback Team"}],["$","link","3",{"rel":"canonical","href":"https://snapbackapp.com/pro/"}],["$","meta","4",{"property":"og:title","content":"Snapback Pro: Command Palette, Spaces & Custom Layouts"}],["$","meta","5",{"property":"og:description","content":"Snapback Pro adds a command palette, Spaces, custom layouts, and smart launchers to the free Mac window manager. One-time purchase, yours forever."}],["$","meta","6",{"property":"og:url","content":"https://snapbackapp.com/pro/"}],["$","meta","7",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","8",{"name":"twitter:title","content":"Snapback | Mac Workspace Manager: Save & Restore Layouts"}],["$","meta","9",{"name":"twitter:description","content":"Save and restore your entire Mac window layout in one keystroke. Free. macOS 14.2+."}],["$","meta","10",{"name":"twitter:image","content":"https://snapbackapp.com/assets/og-image.webp"}],["$","link","11",{"rel":"icon","href":"/favicon.ico?favicon.3ufgjzru9jvts.ico","sizes":"48x48","type":"image/x-icon"}],["$","$L15","12",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@16","v":null,"s":"$8"}},"a":"$@17","u":"$@18","b":"d2er_mH3X1l-7MdXqZxIA"}
+f:null
+18:true
+8:300
+8:C
+17:0
+6:"$undefined"
+16:"$undefined"
+10:"$undefined"
