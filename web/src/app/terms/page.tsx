@@ -29,9 +29,9 @@ export default function TermsPage() {
         prose-li:text-white/80
       ">
         <h1>Terms &amp; Conditions</h1>
-        <p>Last updated October 28, 2026</p>
+        <p>Last updated November 23, 2026</p>
         <p>
-          These Terms &amp; Conditions ("Terms") govern your use of the Snapback macOS application and website. By using Snapback, you agree to these Terms. Snapback is made by 66 labs, an independent studio, and you can reach us at support@snapbackapp.com.
+          These Terms &amp; Conditions ("Terms") govern your use of the Snapback macOS application and website. By using Snapback, you agree to these Terms. Snapback is made by 66 labs, an independent studio, and you can reach us at hello@66labs.dev.
         </p>
         <h2>License</h2>
         <ul>
@@ -45,7 +45,7 @@ export default function TermsPage() {
         <h2>Purchases &amp; Snapback Pro</h2>
         <ul>
           <li>Snapback is free to download, with optional paid features (Snapback Pro). Prices and what is included are shown on the Pro page at the time you buy. Any launch discount or &ldquo;first N buyers&rdquo; offer ends as described on that page.</li>
-          <li>Payments are processed by <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a>, which acts as reseller and merchant of record. Their terms apply to checkout, and they send your license key, receipt and invoice. Taxes such as VAT or sales tax are added at checkout where they apply.</li>
+          <li>Payments are processed by <a href="https://www.kelviq.com">Kelviq</a>, which acts as reseller and merchant of record. Orders placed before the move to Kelviq were processed by <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a>. The provider&apos;s terms apply to checkout, and they send your license key, receipt and invoice. Taxes such as VAT or sales tax are added at checkout where they apply.</li>
           <li>Where the Pro page describes a license as one-time, you pay once and it does not expire. A key may be limited to a number of Macs; the Help page explains how to move it between devices. Prices may change for future purchases, never for a license you already own.</li>
           <li>A license is personal to you. If a key is shared, resold or used on more devices than it allows, we may deactivate it.</li>
           <li>Refunds are covered by our <Link href="/refunds/">Refund Policy</Link>.</li>
@@ -57,7 +57,7 @@ export default function TermsPage() {
         </ul>
         <h2>Other Services</h2>
         <p>
-          Some features rely on services we do not run, such as macOS itself, Lemon Squeezy for licensing, or the update feed. Your use of those is covered by their own terms, and we cannot guarantee they will always be available.
+          Some features rely on services we do not run, such as macOS itself, Kelviq (and Lemon Squeezy, until your license has moved) for licensing, or the update feed. Your use of those is covered by their own terms, and we cannot guarantee they will always be available.
         </p>
         <h2>No Warranty &amp; Limitation of Liability</h2>
         <p>
@@ -81,7 +81,7 @@ export default function TermsPage() {
         </p>
         <h2>Contact</h2>
         <p>
-          If you have questions about these Terms, contact us at support@snapbackapp.com.
+          If you have questions about these Terms, contact us at hello@66labs.dev.
         </p>
       </div>
     </div>

@@ -98,10 +98,10 @@ export default function FAQSection() {
           <p className="text-zinc-400 text-base mt-4 font-text">
             Something else? Reach us at{" "}
             <a
-              href="mailto:support@snapbackapp.com"
+              href="mailto:support@66labs.dev"
               className="text-white underline decoration-white/40 hover:decoration-white transition-colors"
             >
-              support@snapbackapp.com
+              support@66labs.dev
             </a>
           </p>
         </div>

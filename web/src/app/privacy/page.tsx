@@ -29,14 +29,14 @@ export default function PrivacyPolicyPage() {
         prose-li:text-white/80
       ">
         <h1>Privacy Policy</h1>
-        <p>Last updated October 28, 2026</p>
+        <p>Last updated November 23, 2026</p>
         <p>
           Snapback is made by 66 labs (&ldquo;we&rdquo;, &ldquo;us&rdquo;), an independent studio, and we are the data controller for what this policy describes. Snapback is designed for privacy: the macOS app collects no personal information beyond what is needed to check a Pro license, and this page lists exactly what the app and this website do collect.
         </p>
         <h2>Information We Collect</h2>
         <ul>
           <li>The Snapback macOS app does <strong>not</strong> collect your name, email or other identifiable information, and your workspaces, layouts and settings stay on your Mac.</li>
-          <li>If you buy Snapback Pro, your license key is stored in the macOS Keychain. When you activate it, the app sends the key and your Mac&apos;s name (as set in System Settings) to Lemon Squeezy so you can tell your activated devices apart. Later checks send the key and that activation&apos;s ID.</li>
+          <li>If you buy Snapback Pro, your license key is stored in the macOS Keychain. When you activate it, the app sends the key and your Mac&apos;s name (as set in System Settings) to Kelviq (or to Lemon Squeezy, for a license that has not moved yet) so you can tell your activated devices apart. Later checks send the key and that activation&apos;s ID.</li>
           <li>The app checks our update feed (Sparkle) to see whether a new version is available. Like any web request, this reveals your IP address and app version to our hosting provider.</li>
           <li>If you voluntarily submit your email address through our website (such as to join the Snapback Pro waitlist), that email is stored by <a href="https://loops.so">Loops</a> and used solely to notify you about the launch and send any applicable discount. You can unsubscribe at any time via the link in any email we send.</li>
           <li>The app collects <strong>anonymous usage signals</strong> (such as app launch events) via TelemetryDeck to help us understand how many people are using Snapback. No personal data, IP addresses, or user identifiers are ever collected or transmitted. You can turn this off at any time in Snapback under Settings &gt; General.</li>
@@ -70,7 +70,7 @@ export default function PrivacyPolicyPage() {
         </p>
         <h2>Purchases</h2>
         <p>
-          Snapback Pro is sold through <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a>, our payment provider and merchant of record. They collect what is needed to process your order, such as your name, email, billing country and payment details, under <a href="https://www.lemonsqueezy.com/privacy">their privacy policy</a>. We receive your order details and license key so we can support you; we never see your full card details.
+          Snapback Pro is sold through <a href="https://www.kelviq.com">Kelviq</a>, our payment provider and merchant of record. Earlier orders were sold through <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a>, which is closing down, so the order and license records of those purchases were copied from Lemon Squeezy to Kelviq to keep the licenses working. The provider collects what is needed to process your order, such as your name, email, billing country and payment details, under their privacy policies (<a href="https://www.kelviq.com/privacy">Kelviq</a>, <a href="https://www.lemonsqueezy.com/privacy">Lemon Squeezy</a>). We receive your order details and license key so we can support you; we never see your full card details.
         </p>
         <h2>Why We Process Data</h2>
         <ul>
@@ -88,11 +88,11 @@ export default function PrivacyPolicyPage() {
         </ul>
         <h2>Where Data Goes</h2>
         <p>
-          The services above (Lemon Squeezy, Google, Microsoft, TelemetryDeck, Loops) operate worldwide. Your data may therefore be processed in countries other than yours, including the United States. Where the law requires it, those providers rely on safeguards such as standard contractual clauses.
+          The services above (Kelviq, Lemon Squeezy, Google, Microsoft, TelemetryDeck, Loops) operate worldwide. Your data may therefore be processed in countries other than yours, including the United States. Where the law requires it, those providers rely on safeguards such as standard contractual clauses.
         </p>
         <h2>Your Rights</h2>
         <p>
-          You can ask us for a copy of the data we hold about you, to correct or delete it, to restrict or object to how we use it, or to move it to another service. You can withdraw consent at any time. Email <a href="mailto:support@snapbackapp.com">support@snapbackapp.com</a> and we will reply within 30 days, subject to what we are legally required to keep. If you live in the EU, UK or a US state with a privacy law (such as California), these rights are protected by law and you can complain to your local data protection authority. We do not sell or share personal information for advertising. Wherever you live, you can exercise these rights by emailing us.
+          You can ask us for a copy of the data we hold about you, to correct or delete it, to restrict or object to how we use it, or to move it to another service. You can withdraw consent at any time. Email <a href="mailto:hello@66labs.dev">hello@66labs.dev</a> and we will reply within 30 days, subject to what we are legally required to keep. If you live in the EU, UK or a US state with a privacy law (such as California), these rights are protected by law and you can complain to your local data protection authority. We do not sell or share personal information for advertising. Wherever you live, you can exercise these rights by emailing us.
         </p>
         <h2>Children</h2>
         <p>
@@ -104,7 +104,7 @@ export default function PrivacyPolicyPage() {
         </p>
         <h2>Contact</h2>
         <p>
-          If you have any questions about this Privacy Policy, please contact us at support@snapbackapp.com.
+          If you have any questions about this Privacy Policy, please contact us at hello@66labs.dev.
         </p>
       </div>
     </div>

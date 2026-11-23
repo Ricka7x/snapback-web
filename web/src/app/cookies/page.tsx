@@ -52,7 +52,7 @@ export default function CookiesPage() {
         </p>
         <h2>Contact</h2>
         <p>
-          Questions? Email <a href="mailto:support@snapbackapp.com">support@snapbackapp.com</a>.
+          Questions? Email <a href="mailto:hello@66labs.dev">hello@66labs.dev</a>.
         </p>
       </div>
     </div>

@@ -285,7 +285,7 @@ export default function DeeplinksGuidePage() {
       <div className="mt-20 pt-12 border-t border-white/[0.06]">
         <p className="text-zinc-400 text-base font-text">
           App not listed or something not working?{" "}
-          <a href="mailto:support@snapbackapp.com" className="text-primary hover:underline">
+          <a href="mailto:support@66labs.dev" className="text-primary hover:underline">
             Let us know
           </a>{" "}
           and we'll look into adding support.

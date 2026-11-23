@@ -4,14 +4,14 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Snapback Refund Policy: 14-Day Money-Back Guarantee",
-  description: "How refunds work for Snapback Pro: 14 days, no questions asked, handled through Lemon Squeezy.",
+  description: "How refunds work for Snapback Pro: 14 days, no questions asked, handled through the payment provider on your receipt.",
   alternates: {
     canonical: "/refunds/",
   },
   openGraph: {
     url: "/refunds/",
     title: "Snapback Refund Policy: 14-Day Money-Back Guarantee",
-    description: "How refunds work for Snapback Pro: 14 days, no questions asked, handled through Lemon Squeezy.",
+    description: "How refunds work for Snapback Pro: 14 days, no questions asked, handled through the payment provider on your receipt.",
   },
 };
 
@@ -30,14 +30,14 @@ export default function RefundsPage() {
         prose-li:text-white/80
       ">
         <h1>Refund Policy</h1>
-        <p>Last updated October 28, 2026</p>
+        <p>Last updated November 23, 2026</p>
         <h2>14-day money-back guarantee</h2>
         <p>
           If Snapback Pro isn&apos;t right for you, email us within 14 days of your purchase and we&apos;ll refund it in full. You don&apos;t need to explain why, although we&apos;d love to know what we could do better. Snapback is free to download, so we also encourage you to try the free version before buying.
         </p>
         <h2>How to ask</h2>
         <p>
-          Email <a href="mailto:support@snapbackapp.com">support@snapbackapp.com</a> from the address you bought with, and include your order number or license key. Your receipt from Lemon Squeezy has the order number. <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a> is the merchant of record for our orders, so the refund is issued by them to your original payment method. Banks usually take 5 to 10 business days to show it. When a refund is issued, the license key is deactivated.
+          Email <a href="mailto:support@66labs.dev">support@66labs.dev</a> from the address you bought with, and include your order number or license key. Your receipt from Kelviq or Lemon Squeezy has the order number. <a href="https://www.kelviq.com">Kelviq</a>, or <a href="https://www.lemonsqueezy.com">Lemon Squeezy</a> for orders placed there before the move, is the merchant of record for our orders, so the refund is issued by them to your original payment method. Banks usually take 5 to 10 business days to show it. When a refund is issued, the license key is deactivated.
         </p>
         <h2>After 14 days</h2>
         <p>
@@ -53,7 +53,7 @@ export default function RefundsPage() {
         </p>
         <h2>Contact</h2>
         <p>
-          Questions? Email <a href="mailto:support@snapbackapp.com">support@snapbackapp.com</a>. See also our <Link href="/terms/">Terms</Link> and <Link href="/privacy/">Privacy Policy</Link>.
+          Questions? Email <a href="mailto:support@66labs.dev">support@66labs.dev</a>. See also our <Link href="/terms/">Terms</Link> and <Link href="/privacy/">Privacy Policy</Link>.
         </p>
       </div>
     </div>

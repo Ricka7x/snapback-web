@@ -41,7 +41,7 @@ export default function Footer() {
             </Link>
             <CookieSettingsButton className="text-zinc-400 text-sm hover:text-white/80 transition-colors" />
             {/* open in new page */}
-            <a href="mailto:support@snapbackapp.com" target="_blank" rel="noopener noreferrer" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
+            <a href="mailto:support@66labs.dev" target="_blank" rel="noopener noreferrer" className="text-zinc-400 text-sm hover:text-white/80 transition-colors">
               Contact
             </a>
           </div>

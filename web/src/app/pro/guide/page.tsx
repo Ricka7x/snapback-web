@@ -176,7 +176,7 @@ export default function ProGuidePage() {
       <div className="mt-24 pt-12 border-t border-white/[0.06]">
         <p className="text-zinc-400 text-base font-text">
           Something not covered here?{" "}
-          <a href="mailto:support@snapbackapp.com" className="text-primary hover:underline">
+          <a href="mailto:support@66labs.dev" className="text-primary hover:underline">
             Contact support
           </a>{" "}
           or visit the{" "}

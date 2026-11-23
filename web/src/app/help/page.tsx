@@ -168,15 +168,15 @@ const sections = [
       },
       {
         q: "I lost my license key. How do I recover it?",
-        a: "Your key is in the order confirmation email from Lemon Squeezy, our payment provider. You can also find every order and key by signing in at app.lemonsqueezy.com/my-orders with the email you purchased with. If a license is already active in Snapback, the License tab has a Copy button next to your key.",
+        a: "Your key is in the order confirmation email from Kelviq, our payment provider (from Lemon Squeezy if you bought before the move). If you bought on Lemon Squeezy you can also find your orders by signing in at app.lemonsqueezy.com/my-orders with the email you purchased with, until it closes on March 31, 2027. If a license is already active in Snapback, the License tab has a Copy button next to your key.",
       },
       {
         q: "How do I move my license to a new Mac?",
-        a: "In the License tab on your old Mac, click Deactivate. This frees up your seat, then activate with the same key on the new Mac. If you no longer have access to the old Mac, deactivate the old device from your Lemon Squeezy order page instead.",
+        a: "In the License tab on your old Mac, click Deactivate. This frees up your seat, then activate with the same key on the new Mac. If you no longer have access to the old Mac, write to support@66labs.dev and we will free the old device for you.",
       },
       {
         q: "I get an activation limit reached error. What do I do?",
-        a: "Your key is active on the maximum number of Macs. Deactivate it on a Mac you no longer use, either from that Mac's License tab or from your order page at app.lemonsqueezy.com/my-orders, then try activating again.",
+        a: "Your key is active on the maximum number of Macs. Deactivate it on a Mac you no longer use, from that Mac's License tab, then try activating again. If you can no longer reach that Mac, write to support@66labs.dev and we will free it for you.",
       },
       {
         q: "macOS asked me to allow Snapback to access the Keychain. What is that?",
@@ -187,8 +187,12 @@ const sections = [
         a: "No. Snapback Pro is a one-time purchase and your license never expires.",
       },
       {
+        q: "Lemon Squeezy is closing. Do I need to do anything?",
+        a: "Update Snapback to the latest version and that is all. Your license keeps working, your key stays the same, and you do not need to buy anything again. The first time the new version opens, it moves your license to Kelviq, our new payment provider, by itself. If you do not update, Pro keeps working for a while but stops verifying after Lemon Squeezy closes on March 31, 2027.",
+      },
+      {
         q: "Where do I find my invoice or receipt?",
-        a: "Invoices and receipts are available on your Lemon Squeezy order page at app.lemonsqueezy.com/my-orders. The License tab in Snapback links there directly under Order & Receipts.",
+        a: "Kelviq emails your receipt when you buy. Orders placed on Lemon Squeezy are at app.lemonsqueezy.com/my-orders until it closes on March 31, 2027, and the License tab in Snapback links there for licenses that have not moved yet.",
       },
     ],
   },
@@ -223,7 +227,7 @@ export default function HelpPage() {
           </h1>
           <p className="text-zinc-400 text-lg leading-[1.7] font-text">
             Everything you need to know about Snapback. Can't find what you're looking for?{" "}
-            <a href="mailto:support@snapbackapp.com" className="text-primary hover:underline">
+            <a href="mailto:support@66labs.dev" className="text-primary hover:underline">
               Contact support
             </a>
           </p>
@@ -260,8 +264,8 @@ export default function HelpPage() {
         <div className="mt-20 pt-12 border-t border-white/[0.06] text-center">
           <p className="text-zinc-400 text-base font-text">
             Still need help?{" "}
-            <a href="mailto:support@snapbackapp.com" className="text-primary hover:underline">
-              support@snapbackapp.com
+            <a href="mailto:support@66labs.dev" className="text-primary hover:underline">
+              support@66labs.dev
             </a>
           </p>
         </div>
