@@ -1,4 +1,4 @@
-export const LATEST_VERSION = "0.50.0";
+export const LATEST_VERSION = "0.50.1";
 export const DISCOUNT_SOLD_OUT = true;
 export const DOWNLOAD_URL = `https://dl.66labs.dev/Snapback/Snapback-${LATEST_VERSION}.dmg`;
 export const PRO_PURCHASE_URL =
