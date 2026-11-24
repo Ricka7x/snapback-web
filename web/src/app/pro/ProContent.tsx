@@ -9,8 +9,17 @@ import {
   SpinnerIcon,
   TagIcon,
 } from "@phosphor-icons/react"
-import { DISCOUNT_SOLD_OUT, PRO_AVAILABLE, PRO_PURCHASE_URL } from "@/lib/constants"
+import {
+  BLACK_FRIDAY_CODE,
+  BLACK_FRIDAY_END,
+  BLACK_FRIDAY_PRICE,
+  BLACK_FRIDAY_PURCHASE_URL,
+  DISCOUNT_SOLD_OUT,
+  PRO_AVAILABLE,
+  PRO_PURCHASE_URL,
+} from "@/lib/constants"
 import { trackEvent } from "@/lib/analytics"
+import { useBlackFriday } from "@/lib/blackFriday"
 
 const LOOPS_FORM_ENDPOINT = "https://app.loops.so/api/newsletter-form/cmp35lqn404k40iym3d4cl21w"
 const DISCOUNT_DEADLINE = new Date("2026-06-08T00:00:00Z")
@@ -86,12 +95,12 @@ const fullPrice = "$9.99"
 // Email form — used as primary CTA before launch, secondary after
 // ---------------------------------------------------------------------------
 
-function CountdownTimer() {
+function CountdownTimer({ deadline = DISCOUNT_DEADLINE }: { deadline?: Date }) {
   const [remaining, setRemaining] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
   useEffect(() => {
     const tick = () => {
-      const diff = Math.max(0, DISCOUNT_DEADLINE.getTime() - Date.now())
+      const diff = Math.max(0, deadline.getTime() - Date.now())
       setRemaining({
         days: Math.floor(diff / 86400000),
         hours: Math.floor((diff % 86400000) / 3600000),
@@ -102,7 +111,7 @@ function CountdownTimer() {
     tick()
     const id = setInterval(tick, 1000)
     return () => clearInterval(id)
-  }, [])
+  }, [deadline])
 
   const blocks = [
     { label: "Days", value: remaining.days },
@@ -203,14 +212,30 @@ function EmailForm({ compact = false }: { compact?: boolean }) {
 // ---------------------------------------------------------------------------
 
 function HeroCTA() {
+  const blackFriday = useBlackFriday()
+
   if (PRO_AVAILABLE) {
     return (
       <div className="flex flex-col items-center gap-6">
+        {/* Black Friday offer: the price shown is full price, the code is applied at checkout */}
+        {blackFriday && (
+          <div className="flex flex-col items-center gap-3">
+            <div className="flex items-center gap-2">
+              <TagIcon size={14} weight="bold" className="text-accent shrink-0" />
+              <span className="text-accent text-sm font-semibold">
+                Black Friday: 40% off, applied at checkout (code {BLACK_FRIDAY_CODE})
+              </span>
+            </div>
+            <span className="text-zinc-500 text-[10px] uppercase tracking-[0.2em] font-semibold">Black Friday ends in</span>
+            <CountdownTimer deadline={BLACK_FRIDAY_END} />
+          </div>
+        )}
+
         {/* Pricing */}
         <div className="flex flex-col items-center gap-1.5">
           <div className="flex items-baseline gap-3">
-            <span className="font-display text-5xl font-bold text-white">{proPrice}</span>
-            {!DISCOUNT_SOLD_OUT && (
+            <span className="font-display text-5xl font-bold text-white">{blackFriday ? BLACK_FRIDAY_PRICE : proPrice}</span>
+            {(blackFriday || !DISCOUNT_SOLD_OUT) && (
               <span className="text-zinc-600 line-through text-2xl">{fullPrice}</span>
             )}
           </div>
@@ -220,12 +245,12 @@ function HeroCTA() {
         {/* Anti-piracy */}
         <div className="flex items-center gap-1.5 text-zinc-500 text-xs">
           <ShieldWarningIcon size={12} weight="fill" className="text-red-400/60 shrink-0" />
-          <span>At $9.99, pirating it isn&apos;t worth the malware risk.</span>
+          <span>At {blackFriday ? BLACK_FRIDAY_PRICE : "$9.99"}, pirating it isn&apos;t worth the malware risk.</span>
         </div>
 
         {/* Buy button */}
         <a
-          href={PRO_PURCHASE_URL}
+          href={blackFriday ? BLACK_FRIDAY_PURCHASE_URL : PRO_PURCHASE_URL}
           onClick={() => trackEvent("pro_purchase_click", { location: "pro_page_top" })}
           className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-8 py-4 rounded-xl text-base hover:bg-accent-hover hover:shadow-[0_8px_30px_rgba(254,100,69,0.3)] transition-all"
         >
@@ -267,6 +292,8 @@ function HeroCTA() {
 // ---------------------------------------------------------------------------
 
 function BottomCTA() {
+  const blackFriday = useBlackFriday()
+
   if (PRO_AVAILABLE) {
     return (
       <section className="py-32 border-t border-white/5">
@@ -287,15 +314,16 @@ function BottomCTA() {
               variants={fadeUp}
               className="text-zinc-400 text-lg mb-8 font-text"
             >
-              {proPrice} one-time. No subscription. Free users keep everything they have now.
+              {blackFriday && <span className="text-zinc-600 line-through mr-2">{fullPrice}</span>}
+              {blackFriday ? BLACK_FRIDAY_PRICE : proPrice} one-time. No subscription. Free users keep everything they have now.
             </motion.p>
             <motion.div variants={fadeUp} className="flex flex-col items-center gap-3">
               <a
-                href={PRO_PURCHASE_URL}
+                href={blackFriday ? BLACK_FRIDAY_PURCHASE_URL : PRO_PURCHASE_URL}
                 onClick={() => trackEvent("pro_purchase_click", { location: "pro_page_bottom" })}
                 className="inline-flex items-center gap-2 bg-accent text-white font-semibold px-8 py-4 rounded-xl text-base hover:bg-accent-hover hover:shadow-[0_8px_30px_rgba(254,100,69,0.3)] transition-all"
               >
-                Buy for {proPrice}
+                Buy for {blackFriday ? BLACK_FRIDAY_PRICE : proPrice}
                 <ArrowRightIcon size={16} weight="bold" />
               </a>
               <div className="flex items-center gap-1.5 text-red-400/70">

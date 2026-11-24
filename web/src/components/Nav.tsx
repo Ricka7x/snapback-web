@@ -2,10 +2,11 @@
 
 import { useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
-import { DOWNLOAD_URL, LATEST_VERSION, DISCOUNT_SOLD_OUT, PRO_AVAILABLE } from "@/lib/constants"
+import { BLACK_FRIDAY_PURCHASE_URL, DOWNLOAD_URL, LATEST_VERSION, DISCOUNT_SOLD_OUT, PRO_AVAILABLE } from "@/lib/constants"
 import Link from "next/link"
 import { ArrowRightIcon } from "@phosphor-icons/react"
 import { trackEvent } from "@/lib/analytics"
+import { useBlackFriday } from "@/lib/blackFriday"
 
 const navLinks = [
   { href: "/pro", label: "Pro" },
@@ -29,6 +30,7 @@ function scrollToSection(href: string) {
 
 export default function Nav() {
   const pathname = usePathname()
+  const blackFriday = useBlackFriday()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
   const versionDisplay = LATEST_VERSION.split('.').slice(0, 2).join('.')
@@ -55,15 +57,22 @@ export default function Nav() {
       <div className="fixed top-0 left-0 right-0 z-100">
         {/* Pro announcement banner */}
         <Link
-          href="/pro/"
-          onClick={() => trackEvent("pro_cta_click", { location: "nav_banner" })}
+          // During Black Friday the banner goes straight to checkout with the code applied, since
+          // sending people to /pro/ did nothing when they were already on that page.
+          href={blackFriday ? BLACK_FRIDAY_PURCHASE_URL : "/pro/"}
+          onClick={() => trackEvent("pro_cta_click", { location: blackFriday ? "nav_banner_black_friday" : "nav_banner" })}
           className="flex items-center justify-center gap-2 bg-[#080808]/80 backdrop-blur-xl border-b border-accent/20 px-4 py-2 text-[12px] font-medium text-accent hover:bg-[#080808]/90 transition-colors group"
         >
           <span className="relative flex h-1.5 w-1.5 shrink-0">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
             <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent" />
           </span>
-          {PRO_AVAILABLE ? (
+          {blackFriday ? (
+            <>
+              <span className="sm:hidden">Black Friday · Snapback Pro <strong className="font-semibold">40% off</strong></span>
+              <span className="hidden sm:inline">Black Friday: Snapback Pro is <strong className="font-semibold">40% off</strong> until Nov 30</span>
+            </>
+          ) : PRO_AVAILABLE ? (
             <>
               <span className="sm:hidden">Snapback Pro is here · get it now</span>
               <span className="hidden sm:inline">Snapback Pro is now available · get it now</span>
