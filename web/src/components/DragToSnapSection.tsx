@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import { HandIcon, CursorIcon } from "@phosphor-icons/react"
+import { CursorIcon } from "@phosphor-icons/react"
 import Image from "next/image"
 import { getBlurDataURL } from "@/lib/assetPlaceholders"
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 
 export const metadata: Metadata = {
   title: "Snapback Pro Guide: Palette, HUDs, Themes & Layouts",
@@ -139,7 +140,7 @@ export default function ProGuidePage() {
             </div>
 
             <div className="rounded-2xl overflow-hidden border border-white/8 bg-[#0c0e14]">
-              <img src={step.image} alt={step.imageAlt} className="w-full h-auto" />
+              <Image src={step.image} alt={step.imageAlt} width={0} height={0} sizes="100vw" className="w-full h-auto" />
             </div>
 
             <ol className="space-y-4">

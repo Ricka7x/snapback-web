@@ -31,7 +31,7 @@ export default function TermsPage() {
         <h1>Terms &amp; Conditions</h1>
         <p>Last updated November 23, 2026</p>
         <p>
-          These Terms &amp; Conditions ("Terms") govern your use of the Snapback macOS application and website. By using Snapback, you agree to these Terms. Snapback is made by 66 labs, an independent studio, and you can reach us at hello@66labs.dev.
+          These Terms &amp; Conditions (&quot;Terms&quot;) govern your use of the Snapback macOS application and website. By using Snapback, you agree to these Terms. Snapback is made by 66 labs, an independent studio, and you can reach us at hello@66labs.dev.
         </p>
         <h2>License</h2>
         <ul>

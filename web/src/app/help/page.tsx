@@ -226,7 +226,7 @@ export default function HelpPage() {
             Help Center
           </h1>
           <p className="text-zinc-400 text-lg leading-[1.7] font-text">
-            Everything you need to know about Snapback. Can't find what you're looking for?{" "}
+            Everything you need to know about Snapback. Can&apos;t find what you&apos;re looking for?{" "}
             <a href="mailto:support@66labs.dev" className="text-primary hover:underline">
               Contact support
             </a>

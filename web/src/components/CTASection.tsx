@@ -36,7 +36,7 @@ export default function CTASection() {
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] }}
         className="relative z-10 max-w-2xl mx-auto text-center"
       >
-        <img
+        <Image
           src="/assets/logo.svg"
           alt="Snapback"
           width={56}

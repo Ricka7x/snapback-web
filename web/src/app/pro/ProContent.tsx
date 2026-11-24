@@ -2,6 +2,7 @@
 
 import { useState, useEffect, ChangeEvent } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import {
   ArrowRightIcon,
   CheckCircleIcon,
@@ -510,9 +511,12 @@ export default function ProContent() {
                   variants={fadeUp}
                   className="flex-1 rounded-2xl overflow-hidden border border-white/8 bg-[#0c0e14]"
                 >
-                  <img
+                  <Image
                     src={feature.image}
                     alt={feature.imageAlt}
+                    width={0}
+                    height={0}
+                    sizes="100vw"
                     className="w-full h-auto"
                   />
                 </motion.div>

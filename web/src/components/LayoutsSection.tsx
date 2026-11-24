@@ -2,7 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
-import { LayoutIcon, GridFourIcon } from "@phosphor-icons/react"
+import { LayoutIcon } from "@phosphor-icons/react"
 import Image from "next/image"
 import { getBlurDataURL } from "@/lib/assetPlaceholders"
 
@@ -13,24 +13,6 @@ const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] } },
 }
-
-const layouts = [
-  {
-    icon: <GridFourIcon size={20} weight="light" className="text-primary/80 mb-3" />,
-    title: "Halves",
-    body: "Two apps, equal split.",
-  },
-  {
-    icon: <LayoutIcon size={20} weight="light" className="text-primary/80 mb-3" />,
-    title: "Thirds",
-    body: "Three columns, balanced.",
-  },
-  {
-    icon: <GridFourIcon size={20} weight="light" className="text-primary/80 mb-3" />,
-    title: "Full",
-    body: "One app front and center.",
-  },
-]
 
 export default function LayoutsSection() {
   const ref = useRef<HTMLDivElement>(null)

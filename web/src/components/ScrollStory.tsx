@@ -1,10 +1,10 @@
 "use client"
 
 import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { useScroll, type MotionValue } from 'framer-motion';
 
 interface ScrollStoryProps {
-  children: (progress: any) => React.ReactNode;
+  children: (progress: MotionValue<number>) => React.ReactNode;
 }
 
 export default function ScrollStory({ children }: ScrollStoryProps) {

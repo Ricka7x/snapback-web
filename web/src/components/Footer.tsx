@@ -1,5 +1,6 @@
 import { CookieSettingsButton } from "./AnalyticsConsent"
 import Link from "next/link";
+import Image from "next/image";
 
 const FOUNDED_YEAR = 2024
 
@@ -12,7 +13,7 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8 mb-10">
           {/* Brand */}
           <div className="flex items-center gap-3">
-            <img src="/assets/logo.svg" width={36} height={36} alt="Snapback" className="w-9 h-9 rounded-xl" loading="lazy" />
+            <Image src="/assets/logo.svg" width={36} height={36} alt="Snapback" className="w-9 h-9 rounded-xl" loading="lazy" />
             <div>
               <p className="text-white/80 text-sm font-semibold leading-none mb-1">Snapback</p>
               <p className="text-zinc-400 text-xs font-text">Built for Mac power users who move fast.</p>

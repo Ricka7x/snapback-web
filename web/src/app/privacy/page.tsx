@@ -60,12 +60,12 @@ export default function PrivacyPolicyPage() {
         <p>
           The Snapback app uses <a href="https://telemetrydeck.com">TelemetryDeck</a> for privacy-friendly analytics. TelemetryDeck is designed to be GDPR and CCPA compliant and does not collect personal data or IP addresses. You can review their privacy policy at{" "}
           <a href="https://telemetrydeck.com/privacy">telemetrydeck.com/privacy</a>.
-          Our website uses <a href="https://loops.so">Loops</a> to manage email subscriptions for our product waitlist. When you submit your email address, it is stored securely by Loops and used to send you launch updates and discount information. You can unsubscribe at any time. You can review Loops' privacy policy at{" "}
+          Our website uses <a href="https://loops.so">Loops</a> to manage email subscriptions for our product waitlist. When you submit your email address, it is stored securely by Loops and used to send you launch updates and discount information. You can unsubscribe at any time. You can review Loops&apos; privacy policy at{" "}
           <a href="https://loops.so/privacy">loops.so/privacy</a>.{" "}
           Our website uses <a href="https://clarity.microsoft.com">Microsoft Clarity</a> to capture behavioral metrics, heatmaps, and session recordings using cookies and other tracking technologies. Clarity does not collect personally identifiable information. For more information about how Microsoft collects and uses your data, visit the{" "}
           <a href="https://privacy.microsoft.com/privacystatement">Microsoft Privacy Statement</a>.{" "}
           Our website also uses <a href="https://marketingplatform.google.com/about/analytics/">Google Analytics</a> to collect traffic and usage data via cookies. This data is processed by Google and does not include personally identifiable information. You can opt out using the{" "}
-          <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics Opt-out Browser Add-on</a>. You can review Google's privacy policy at{" "}
+          <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics Opt-out Browser Add-on</a>. You can review Google&apos;s privacy policy at{" "}
           <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.
         </p>
         <h2>Purchases</h2>

@@ -217,7 +217,7 @@ export default function DeeplinksGuidePage() {
       <div className="rounded-xl border border-white/8 bg-white/[0.03] px-5 py-4 mb-14">
         <p className="text-zinc-400 text-sm leading-[1.8] font-text">
           <span className="text-zinc-300 font-semibold">How it works. </span>
-          When you restore a workspace, Snapback fires the deeplink for each app window in that workspace. The app must be running or installed for the link to work. Only apps listed below are supported. If yours isn't here, let us know and we'll look into adding it.
+          When you restore a workspace, Snapback fires the deeplink for each app window in that workspace. The app must be running or installed for the link to work. Only apps listed below are supported. If yours isn&apos;t here, let us know and we&apos;ll look into adding it.
         </p>
       </div>
 
@@ -288,7 +288,7 @@ export default function DeeplinksGuidePage() {
           <a href="mailto:support@66labs.dev" className="text-primary hover:underline">
             Let us know
           </a>{" "}
-          and we'll look into adding support.
+          and we&apos;ll look into adding support.
         </p>
       </div>
     </div>

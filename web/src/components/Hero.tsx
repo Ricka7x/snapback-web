@@ -1,18 +1,17 @@
 "use client"
 
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion"
-import { useRef, useState, useEffect } from "react"
+import { useRef, useSyncExternalStore } from "react"
 import { ArrowRightIcon } from "@phosphor-icons/react"
 import { trackEvent } from "@/lib/analytics"
 import { DOWNLOAD_URL } from "@/lib/constants"
 
+const subscribeNoop = () => () => {}
+
 export default function Hero() {
   const ref = useRef<HTMLDivElement>(null)
-  const [videoReady, setVideoReady] = useState(false)
-
-  useEffect(() => {
-    setVideoReady(true)
-  }, [])
+  // False while rendering on the server and during hydration, true once mounted in the browser.
+  const videoReady = useSyncExternalStore(subscribeNoop, () => true, () => false)
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] })
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "18%"])
 
